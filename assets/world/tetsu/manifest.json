@@ -1,0 +1,128 @@
+{
+ "parts": [
+  {
+   "name": "plot",
+   "triangles": 9436
+  },
+  {
+   "name": "rk_chalk",
+   "triangles": 2440
+  },
+  {
+   "name": "rk_pad",
+   "triangles": 768
+  },
+  {
+   "name": "rk_stripes",
+   "triangles": 3296
+  },
+  {
+   "name": "rk_ring",
+   "triangles": 2468
+  },
+  {
+   "name": "rk_gantry_legs",
+   "triangles": 4352
+  },
+  {
+   "name": "rk_gantry_top",
+   "triangles": 2924
+  },
+  {
+   "name": "rk_walkway",
+   "triangles": 1388
+  },
+  {
+   "name": "rk_fuel",
+   "triangles": 1400
+  },
+  {
+   "name": "rk_engine",
+   "triangles": 1124
+  },
+  {
+   "name": "rk_hull_lower",
+   "triangles": 1312
+  },
+  {
+   "name": "rk_hull_upper",
+   "triangles": 1056
+  },
+  {
+   "name": "rk_hatch",
+   "triangles": 2680
+  },
+  {
+   "name": "rk_portholes",
+   "triangles": 2392
+  },
+  {
+   "name": "rk_bands",
+   "triangles": 1440
+  },
+  {
+   "name": "rk_fin_left",
+   "triangles": 280
+  },
+  {
+   "name": "rk_fin_right",
+   "triangles": 280
+  },
+  {
+   "name": "rk_fin_back",
+   "triangles": 280
+  },
+  {
+   "name": "rk_nose",
+   "triangles": 1732
+  },
+  {
+   "name": "rk_beacon",
+   "triangles": 684
+  },
+  {
+   "name": "rk_pad_lights",
+   "triangles": 1024
+  },
+  {
+   "name": "rk_countdown",
+   "triangles": 2816
+  },
+  {
+   "name": "rk_dish",
+   "triangles": 1032
+  },
+  {
+   "name": "rk_flag",
+   "triangles": 528
+  },
+  {
+   "name": "rk_finale",
+   "triangles": 1820
+  },
+  {
+   "name": "site_start",
+   "triangles": 8260
+  },
+  {
+   "name": "site_frame",
+   "triangles": 8260
+  },
+  {
+   "name": "site_walls",
+   "triangles": 8112
+  },
+  {
+   "name": "site_roof",
+   "triangles": 7360
+  },
+  {
+   "name": "site_tidy",
+   "triangles": 7160
+  },
+  {
+   "name": "site_done",
+   "triangles": 7532
+  }
+ ]
+}

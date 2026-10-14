@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f5ee" />
+    <meta name="description" content="What Moku sees, what stays on your Mac, and what never leaves it. The privacy policy for Moku, a little companion for your Mac." />
+    <title>Privacy · Moku</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- The text's font, asked for with the HTML, so it's in place before the page shows and never reflows it. -->
+    <link rel="preload" href="/src/fonts/sans-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/src/fonts.css" />
+    <style>
+      :root { --paper: #f7f5ee; --ink: #30372b; --green: #344633; --muted: #6b6d60; --sage: #d8ddc9; --line: #dcded1; --serif: 'Instrument Serif', 'Instrument Serif fallback', Georgia, serif; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 'DM Sans', 'DM Sans fallback', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+      a { color: var(--green); text-underline-offset: 3px; }
+      .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+      header { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; }
+      .brand { font: 600 26px/1 'DM Sans', 'DM Sans fallback', sans-serif; letter-spacing: -0.03em; color: var(--ink); text-decoration: none; }
+      .brand span { color: #91a47c; }
+      .brand .beta { font: 600 11px/1 'DM Sans', 'DM Sans fallback', sans-serif; font-style: normal; letter-spacing: 0.14em; text-transform: uppercase; color: #5f6f4c; border: 1px solid #b9c4a5; border-radius: 999px; padding: 4px 8px 3px; margin-left: 8px; vertical-align: middle; position: relative; top: -4px; }
+      header nav a { font-size: 15px; color: var(--muted); text-decoration: none; }
+      header nav a:hover { color: var(--ink); }
+      .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; color: var(--muted); margin: 40px 0 8px; }
+      h1 { font: 400 clamp(44px, 8vw, 68px)/1.02 var(--serif); letter-spacing: -0.01em; margin: 0 0 12px; }
+      h1 em { color: #6a7b4e; }
+      .updated { color: var(--muted); font-size: 15px; margin: 0 0 36px; }
+      .tldr { background: #fffdf7; border: 1px solid var(--line); border-radius: 22px; padding: 26px 28px; margin: 0 0 48px; }
+      .tldr h2 { font: 400 30px/1.1 var(--serif); margin: 0 0 12px; }
+      .tldr ul { margin: 0; padding: 0; list-style: none; }
+      .tldr li { position: relative; padding: 7px 0 7px 26px; }
+      .tldr li::before { content: '✳'; position: absolute; left: 0; top: 7px; color: #91a47c; font-size: 14px; }
+      h2 { font: 400 34px/1.1 var(--serif); margin: 52px 0 12px; }
+      h3 { font-size: 17px; font-weight: 600; margin: 28px 0 6px; }
+      p, li { color: #3d4437; }
+      ul { padding-left: 22px; }
+      li { margin: 6px 0; }
+      .never li { list-style: none; margin-left: -22px; padding-left: 26px; position: relative; }
+      .never li::before { content: '×'; position: absolute; left: 2px; color: #a36b4f; font-weight: 600; }
+      code { font-size: 15px; background: #eeede3; padding: 1px 6px; border-radius: 6px; }
+      footer { border-top: 1px solid var(--line); margin-top: 64px; padding: 26px 0 48px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+      /* Phones and tablets: every link is a 44 px tap; the extra height is padding that negative margins take back, so nothing moves. */
+      @media (pointer: coarse) {
+        .brand, header nav a, footer > a { display: inline-block; padding-block: 9px; margin-block: -9px; }
+        header nav a { min-width: 44px; text-align: center; padding-block: 10px; margin-block: -10px; }
+        footer > a { padding-block: 11px; margin-block: -11px; }
+      }
+      @media (max-width: 520px) { body { font-size: 16px; } .tldr { padding: 22px 20px; } h2 { font-size: 30px; } }
+    </style>
+    <script type="module" src="/src/visits.js"></script>
+    <script type="module" src="/src/vercel-insights.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header><a class="brand" href="/">moku<span>✳</span><em class="beta">beta</em></a><nav><a href="/">Home</a></nav></header>
+      <main>
+        <div class="eyebrow">PRIVACY POLICY</div>
+        <h1>Your screen stays <em>yours.</em></h1>
+        <p class="updated">Last updated October 12, 2026 · Moku beta for Mac</p>
+
+        <section class="tldr" aria-labelledby="tldr">
+          <h2 id="tldr">The short version</h2>
+          <ul>
+            <li><strong>Screenshots never leave your Mac.</strong> If you turn on Screen Recording (it’s optional: the welcome doesn’t ask for it, Settings does), Moku reads the text on your screen right on your Mac, then lets the picture go.</li>
+            <li><strong>Everything Moku remembers lives on your Mac,</strong> not on our servers: your days, your houses, your name.</li>
+            <li><strong>To tell work from a detour, a short excerpt of on-screen text goes to an AI model.</strong> Every request asks for zero data retention, and we don’t keep it either.</li>
+            <li><strong>Moku tells us how it’s used, never what you do.</strong> Things like “a break started” or “the popover opened”, in numbers and fixed words. Never your apps, windows, sites, screen or typing. This is always on.</li>
+            <li><strong>We never sell your data,</strong> share it with advertisers, use it to train AI, or use what’s on your screen for analytics.</li>
+            <li><strong>You’re in charge.</strong> Take a break, delete your history, or quit whenever you like.</li>
+          </ul>
+        </section>
+
+        <h2>What stays on your Mac</h2>
+        <ul>
+          <li><strong>What’s on your screen.</strong> Moku uses macOS’s own text recognition, on your Mac. The screen images are never saved or sent anywhere.</li>
+          <li><strong>Your history, and how long it stays.</strong> It is all stored in a folder on your Mac (<code>~/.moku</code>), in three tiers:
+            <ul>
+              <li><strong>Screen text</strong> is kept for an hour at most, then deleted.</li>
+              <li><strong>The moment-by-moment detail</strong> is kept for 90 days, then deleted. That is each check’s app, window title and web address, what Moku made of it, and the record of Moku’s AI requests (which hold no screen text by then). A day’s detail goes once the whole day is more than 90 days old. Moku clears it in the background while it runs.</li>
+              <li><strong>Each day’s summary</strong> is kept until you delete your data. It is what Your day shows for that day: the apps, sites and window titles behind each goal and how long you spent, your detours and comebacks, what you finished, your house and Moku’s note.</li>
+            </ul>
+            <em>Settings › Privacy › Delete my data…</em> erases your history, what Moku learned about your work and your houses. Your name and your settings stay.</li>
+          <li><strong>Your typing.</strong> Moku counts how often you type, click and scroll, to know whether you’re at your desk. It never records which keys you press.</li>
+          <li><strong>Full screen.</strong> To hide itself while a video fills your screen, Moku checks the size and place of your windows (not their contents) and asks macOS which apps are keeping the display awake, as video players do while they play. For a browser it also checks whether the page address it already reads is on a site for watching, such as YouTube or Instagram. It stays on your Mac and is not saved.</li>
+          <li><strong>Sound.</strong> Moku never records audio. macOS calls the permission “Screen &amp; System Audio Recording”; Moku only uses the screen part.</li>
+        </ul>
+
+        <h2>What leaves your Mac, and why</h2>
+        <h3>To understand your work</h3>
+        <p>Every few seconds while you work, Moku sends the name of the app you’re in, the window title, the web address you’re on, and a short excerpt of the text in that window. To tell which of your goals that work belongs to, and to name a new one, it may also include the short titles and one-line summaries of your recent goals. When Moku writes you a line, it may also include your first name.</p>
+        <p>Moku never reads the text in password managers, authenticator apps or crypto wallets, or on password-vault web pages, and it doesn’t send their window titles: only which app is in front.</p>
+        <p>You can also pick any number of apps in <em>Settings › Privacy › Apps where Moku steps aside</em>. Moku hides while one of them is in front. For each, you choose “Hide Moku” (Moku still watches it as usual, so the work counts) or “Hide, don’t watch”: then Moku reads nothing from it and sends nothing about it, not even its name, and only checks your microphone, camera and other apps’ windows so it still stays hidden during a call. That list stays on your Mac.</p>
+        <p>This goes through our relay to Vercel AI Gateway, which passes it to the AI model. Every request asks for zero data retention, so the gateway only sends it to model providers that have agreed with Vercel not to store it. Our relay doesn’t store it either: it notes only which device asked, which model answered, how long it took and how many tokens it used.</p>
+        <h3>To write Your day</h3>
+        <p>When you open Your day, Moku asks the AI model for the day’s note and a line for each goal. For that it sends a summary of the day: the sites and apps you used with the minutes in each, what you did there in a few words, your goals’ titles, what you finished, and when your best comeback was. It goes the same way, with zero data retention.</p>
+        <h3>To give you access</h3>
+        <p>The first time you open Moku, it sends a one-way fingerprint (a hash) of your Mac’s hardware ID to set up your access: a trial, or an invite. Never your name or your email.</p>
+        <p>To make sure a trial goes to a real Mac running the real Moku, our relay can ask your Mac to prove it, using Apple’s App Attest. Only when it asks, and only for a trial (an invite code skips it): your Mac makes a throwaway cryptographic key, Apple signs a statement that the key lives in a genuine Mac’s security chip and that the app asking is Moku, signed by us, and Moku sends our relay that statement and the key’s ID along with the hash above. Apple’s servers see that a Moku on a Mac asked for the statement, like any app that uses App Attest; they are given nothing from your screen, your files or your account. Our relay checks the statement, keeps nothing of it but the throwaway key’s ID (so the same statement can’t be used for another Mac), and the key is never used again. A Mac that can’t do this (macOS 26 or older) carries on without it.</p>
+        <h3>If you buy Moku Pro</h3>
+        <p>Payments go through Dodo Payments, the merchant of record: Dodo is the seller, takes your payment details and email, and handles tax and invoices. We never see your card. When you start a checkout, our relay tells Dodo the same one-way fingerprint of your Mac, so your payment reaches this Mac without an account. From Dodo we keep only that fingerprint, your subscription’s ID, its status and until when it’s paid. Dodo’s notice to us also carries your email; we don’t keep it. Once a day, and every 30 seconds for a few minutes after you open a checkout, Moku asks our relay to renew its access: the same fingerprint, nothing else, and that’s how a payment reaches your Mac.</p>
+        <h3>To check Moku’s switches</h3>
+        <p>About every ten minutes, Moku asks our relay whether any of its switches have changed: whether the AI models are on, whether Moku should stay calm about detours, and whether your version is too old to keep. The request carries your Mac’s device ID (the same one-way fingerprint) and the Moku version, with the access key Moku got when it was set up. Nothing else. Our relay notes only which device asked and which version it runs.</p>
+        <h3>To keep the service running</h3>
+        <p>For each AI request, our relay records the model, the number of tokens, the cost and a short random device ID (and, if you joined with an invite, the invite’s name) in PostHog, an analytics service, so we can keep costs in check and spot problems. It never includes what was on your screen, the request or the answer. Once a day the relay also records two counts for the day before, how many Macs used Moku’s online brain and each one’s share of it for the new day, with nothing about any one Mac.</p>
+        <h3>If Moku crashes</h3>
+        <p>The next time it opens, Moku sends the crash report to PostHog, so we can fix it: the kind of error, which parts of Moku’s code it happened in, the app and macOS versions and the short device ID. Never what was on your screen, no file paths. From version 0.1.8, no location either: PostHog is told not to look up where the report came from (0.1.7 let it look up the city). Errors Moku carries on from go too, as one of the notes below (“Something fails inside Moku”).</p>
+        <h3>How Moku is used</h3>
+        <p>So we can tell whether Moku works for people, and where it gets in the way, Moku sends our relay a short note when one of the things below happens. This is always on; there’s no switch for it. Each note carries only the details listed, as a yes or no, a number, or one of a few fixed words, plus the Moku version and which companion keeps you company (Moku or Tetsu). Our relay checks every note against this list and drops anything else, then passes it to PostHog with the short device ID, your plan (a trial, or the name on your invite) and your approximate country. Your IP address isn’t passed on.</p>
+        <ul>
+          <li><strong>Moku opens:</strong> whether it’s the first time, the macOS version number, your Mac’s memory in steps (8, 16, 24, or 32 GB and up), whether it opened at login, after an update or because you opened it, whether Accessibility and Screen Recording are on, which companion keeps you company, how many displays you use, whether Reduce Motion and Low Power Mode are on, whether you had put the companion away, and whether the last time Moku ran it ended with a normal quit (a crash, a force quit or a power cut is the other word).</li>
+          <li><strong>Moku quits:</strong> how many minutes it ran, and how it was quit (its own menu, logging out, an update, a relaunch, or another way).</li>
+          <li><strong>Updates:</strong> each check for a new version (up to date, one found, or what kind of error: the download, its signature, the update feed, installing, no permission, the network, or another; for an error, the network's error number, the server's answer code, and which of Moku's two update servers it was); a new version downloaded (its number); the first launch of an update (the version it replaced, the new one, and how many hours after its release); and why a Mac hasn’t updated, when it can’t (a download or signature that failed, waiting a day for you to step away, no permission to replace the app, Moku not in Applications, or automatic updates turned off).</li>
+          <li><strong>“What’s new” after an update:</strong> that Moku showed it, whether you opened it or closed it, and how many seconds it stayed up. Opening it takes you to this website’s changelog in your browser.</li>
+          <li><strong>The welcome:</strong> each step it reaches (it opens or picks up again after Moku reopened, the hello, picking a companion, what Moku reads, each Allow button, Quit &amp; Reopen, Start or Skip); whether each permission was allowed there, and how many seconds after you pressed Allow; at the end, whether you finished or skipped it and how many seconds it took; and if you close it early, the last step it reached and the seconds.</li>
+          <li><strong>The companion is switched:</strong> from which to which, and whether in the welcome or in Settings.</li>
+          <li><strong>Your day’s numbers disagree:</strong> which two of its views (the tasks, the work rows, the house or the popover against the day’s focused time) and by how many minutes. Never what you worked on.</li>
+          <li><strong>The companion is hidden or shown again:</strong> whether you did it, or Moku stepped out for a call or screen sharing, and when it comes back (by you, by itself, or for the welcome), after how many seconds.</li>
+          <li><strong>The popover opens:</strong> from the menu bar, or by clicking Moku, and how many milliseconds it took to show.</li>
+          <li><strong>The companion appears after Moku opens:</strong> how many milliseconds it took, and whether the plain stand-in was drawn instead.</li>
+          <li><strong>Your day opens:</strong> from where (the popover’s button, its house or its numbers, a right-click menu on the menu bar icon or on Moku, a <code>moku://</code> link, or the “Today counted” card). <strong>When it has loaded:</strong> how many milliseconds it took, and whether the day could be shown. <strong>When it closes:</strong> how many seconds it was open, and how many of its folded parts you opened.</li>
+          <li><strong>One of the popover’s controls is used,</strong> or the same item in the menu bar icon’s right-click menu: which one (a break, hiding or showing Moku, Settings, saying hi again, putting Moku back in its corner, feedback or quitting), and whether it was the popover or the menu.</li>
+          <li><strong>Settings opens:</strong> which tab (General, Breaks &amp; Water or Privacy), and each tab you switch to.</li>
+          <li><strong>A setting changes:</strong> which one, and for a switch whether it went on or off. Never what you set it to. Five minutes later, or sooner if you change it back: whether it stayed changed, and after how many seconds.</li>
+          <li><strong>A permission is turned on in Settings:</strong> which one, and how many seconds after you pressed “Turn on…”.</li>
+          <li><strong>Your first ten focused minutes:</strong> how many minutes after Moku first opened.</li>
+          <li><strong>A detour goes on:</strong> each step Moku reaches (sad, a long detour, sitting up tall, the ten-minute step, where versions up to 0.1.11 asked you to focus; versions before 0.1.11 also had cross). After the ten-minute step, whether you came back within 2 minutes, later that day, or not that day, and after how many seconds.</li>
+          <li><strong>You come back from a detour:</strong> roughly how long it lasted (in steps like 1, 5 or 30 minutes), and whether it’s your first comeback of the day.</li>
+          <li><strong>“Where was I?” (versions 0.1.8 to 0.1.11 only):</strong> that the bubble showed, after a detour or after time away, and whether that window was already in front; and that you clicked “Take me there”: whether that app came to the front, and how many milliseconds it took.</li>
+          <li><strong>A house piece is earned:</strong> how many you’ve earned today.</li>
+          <li><strong>“Today counted”:</strong> the day’s card was shown, opened, closed, went away by itself, or was missed; and whether it was yesterday’s card or a goodbye as Moku quit.</li>
+          <li><strong>Moku suggests a break:</strong> which kind (water, a stretch, a look away, or a walk).</li>
+          <li><strong>A break</strong> starts, ends or is cut short: which, and how (the menu bar, Moku, a <code>moku://</code> link, the timer running out, or you getting back to work); when it starts, whether Moku had suggested one in the 10 minutes before; when it ends, how many seconds it lasted.</li>
+          <li><strong>A correction:</strong> a pat, “this was work” or “this wasn’t work”. Not what it was about.</li>
+          <li><strong>You try the same thing again within 30 seconds:</strong> which (“Take me there” in versions up to 0.1.11, a setting, opening Your day, hiding Moku, a break, or the popover opened and shut at once) and how many times in a row.</li>
+          <li><strong>Signs Moku got in your way:</strong> three or more quick clicks on the companion; hiding it, saying “this was work” or patting it, or quitting soon after it reacted to a detour; or deleting your data. Only which of these happened.</li>
+          <li><strong>Something fails inside Moku</strong> that it carries on from: what kind, from a fixed list (Moku’s brain not answering, too slow, refusing a request or failing at it; an answer from it or from our relay that Moku can’t read; Apple not giving the Mac its App Attest statement; an update that fails; the companion or its home not loading; a file Moku can’t save; an error inside Moku’s brain), the error’s family and number (like “url -1004”), where in Moku’s own code it happened (a file and a function, like “BrainClient.swift:today”), and how many times. Never the error’s message or a file path. Our relay passes it to PostHog as an error report, like a crash. The same kind from the same place at most once every 10 minutes, and no more than 30 an hour.</li>
+          <li><strong>Something goes wrong:</strong> what kind, from a fixed list (Moku’s brain restarted or isn’t answering; our relay refused (401, 402, 403 or 429) or is down; no network; the AI switched off; the plain stand-in drawn instead of the companion; a permission turned off; Moku’s history set aside because it was damaged), how many times, and for how many seconds. The same kind at most once every 10 minutes.</li>
+          <li><strong>Once a day, the day before in numbers:</strong> minutes at your Mac and minutes focused, comebacks and the longest stretch; detours by the step they reached; how many times you patted, hovered over, carried, threw or clicked the companion, clicked the menu bar icon, or opened and closed the popover at once; minutes it was hidden while you were at your Mac, by you or for calls; how often its little moments played (Tetsu’s scan and hologram, Moku’s petals, a sniff at a new window) and water reminders; how many of Moku’s checks said work, a switch to another goal, a detour or not sure, and how many corrections you made; how quickly Moku’s brain and its two AI models answered (the middle and the slowest 5%, in steps); Moku’s typical memory use (in steps of 50 MB) and share of the processor (in steps); how many times Moku froze for more than a quarter of a second or the companion skipped frames; how many days since Moku first opened; and the macOS version number.</li>
+        </ul>
+        <!-- The notes above, by the names the app and the relay use (a test checks both against this line): usage-events: app_error app_opened app_quit ask_outcome break break_suggested comeback companion_changed correction day_card day_closed day_loaded day_opened day_summary drift_step first_focus frustration hidden house_piece launch_speed numbers_disagree permission_answered popover_action popover_opened repeat resume_offered resume_used setting_changed setting_outcome settings_opened shown trouble update_check update_downloaded update_installed update_stuck welcome_finished welcome_left welcome_step whats_new -->
+        <p>Never in these notes: the names of your apps, window titles, web addresses, anything on your screen, your goals or what you work on, your name, or anything you type. If Moku is offline, the notes wait on your Mac (200 at most, for a week at most) and go when it’s back. The day’s counts wait on your Mac until the day is over.</p>
+        <h3>Only if you turn it on: daily counts</h3>
+        <p><em>Settings › Share daily counts</em> is off unless you switch it on. When it’s on, Moku sends yesterday in numbers once a day: things like minutes watched, how many checks and comebacks, how quickly the AI answered, the app and macOS versions, and which permissions are on. Numbers only: no app names, window titles, sites or text.</p>
+        <h3>Updates</h3>
+        <p>Once a day Moku checks for a new version, like any Mac app, which tells our update server which version you have (the check goes through our relay to Cloudflare R2, which holds the update files). It also checks when our relay says your version is too old, at most once an hour.</p>
+
+        <h2>What we never do</h2>
+        <ul class="never">
+          <li>Sell your data, or share it with advertisers or data brokers.</li>
+          <li>Use your data to train AI models, ours or anyone else’s.</li>
+          <li>Use what’s on your screen for analytics or advertising.</li>
+          <li>Record the keys you type, or any audio.</li>
+        </ul>
+
+        <h2>You’re in charge</h2>
+        <ul>
+          <li><strong>Take a break</strong> and Moku stops watching until you’re back.</li>
+          <li><strong>Give Moku a pat</strong> during a detour to tell him it’s fine.</li>
+          <li><strong>Calls and screen sharing:</strong> Moku steps out of the picture on his own.</li>
+          <li><strong>Delete your history</strong> in <em>Settings › Privacy › Delete my data…</em></li>
+          <li><strong>Turn off permissions</strong> any time in <em>System Settings › Privacy &amp; Security</em>.</li>
+          <li><strong>Uninstall</strong> by quitting Moku and dragging it from Applications to the Trash. Delete <code>~/.moku</code> to remove what it stored.</li>
+        </ul>
+
+        <h2>This website</h2>
+        <p>hellomoku.com sets no cookies, has no ads and no trackers from advertisers or social networks, and serves its fonts itself. The only things it keeps in your browser are two of your own choices (whether its animations are paused, and which kind of work its demo shows), and they never leave it. Like any website, our host keeps standard server logs for a short time.</p>
+        <p><strong>It counts visits, without cookies,</strong> so I can see whether people find Moku and where they come from. Each page you open gets a new random ID that lives only in that page and is never stored, so nothing in these counts ties one visit to the next, or a visit to you or to Moku on your Mac. The site sends:</p>
+        <ul>
+          <li><strong>When a page opens:</strong> which page; the word in the link that brought you, if it had one (like “?ref=reddit”); the name of the site that linked here, if one did (like “www.reddit.com”, never the page on it); and whether you’re on a phone, a tablet or a computer.</li>
+          <li><strong>When you leave it:</strong> how long it was open, how long it was in view, and how far down you read.</li>
+          <li><strong>When you press a download button,</strong> which one; <strong>when you pick a companion,</strong> which one and where.</li>
+        </ul>
+        <p>Our relay adds your browser’s and system’s family (like “Safari on macOS”) and your country, then passes it on to PostHog. Your IP address never reaches PostHog. If your browser asks sites not to track it (Global Privacy Control or Do Not Track), the site sends none of this.</p>
+        <!-- The visit counts above, by the names the site and the relay use (a test checks the relay against this line): web-visits: pageview(ref from) pageleave(seconds visible scroll) download_clicked(where) companion_picked(companion where) -->
+        <p><strong>Our host, Vercel, counts visits and speed too,</strong> with its Web Analytics and Speed Insights, so I can see how many people come and how fast the site is for them. Neither sets a cookie, and both scripts come from hellomoku.com itself. For each page you open, Web Analytics records which page (with the word in the link that brought you, like “?ref=reddit”), the site that linked here, your country, region and city (worked out from your IP address), and your browser, system and kind of device. To count each visitor once, Vercel makes a one-way hash from your request and throws it away after 24 hours, so your visits on the same day can count as one person; it doesn’t keep your IP address. Speed Insights records how quickly the page loaded and answered your clicks and taps, and which part of the page was slowest, with which page, your network’s speed (like “4g”), your browser, system, kind of device and country, and no ID at all. If your browser asks sites not to track it, neither runs.</p>
+        <p><strong>Downloads are counted too.</strong> When you download Moku from hellomoku.com/download, our relay counts one download with the word in the link (or whether it came from the site or straight to the link) and your country, under a new random ID each time. No IP address. Link previews and bots aren’t counted.</p>
+        <p>If the website breaks in your browser, it tells me what broke, so I can fix it: the error’s name and message (any web address in it cut to the site and the page, no query), where in the site’s own script, which page, and your browser’s and system’s family (like “Safari on macOS”). It goes through our relay to PostHog with no cookie, no ID and no IP address, and nothing else about you or your visit. Errors from anything else running in your browser, like an extension, aren’t sent.</p>
+
+        <h2>Questions, feedback or complaints</h2>
+        <p>For any queries, write to me at <a href="mailto:hello@hellomoku.com">hello@hellomoku.com</a>. I read every message. — Charles</p>
+
+        <h2>Changes</h2>
+        <p>If anything here changes, we’ll update this page and the date at the top.</p>
+      </main>
+      <footer><span>© 2026 Moku · <a href="mailto:hello@hellomoku.com">hello@hellomoku.com</a></span><a href="/">Back to Moku</a></footer>
+    </div>
+  </body>
+</html>

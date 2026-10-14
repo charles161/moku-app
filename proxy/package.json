@@ -1,0 +1,17 @@
+{
+  "name": "moku-proxy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Moku's gateway proxy: testers call the Vercel AI Gateway with their own token; the key stays server-side.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "new-token": "node scripts/new-token.js",
+    "local": "node scripts/serve-local.js",
+    "new-invite": "node scripts/new-invite.js",
+    "check-flags": "node scripts/check-flags.js"
+  }
+}

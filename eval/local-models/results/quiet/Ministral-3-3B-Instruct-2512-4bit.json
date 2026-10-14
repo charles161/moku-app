@@ -1,0 +1,531 @@
+{
+ "model": "mlx-community/Ministral-3-3B-Instruct-2512-4bit",
+ "downloadBytes": 2779152776,
+ "otherGpuBusyPercent": [
+  6,
+  0,
+  0
+ ],
+ "gpuBusyAfterPercent": [
+  99,
+  0,
+  0
+ ],
+ "swapUsedBytes": 15685973442,
+ "importSec": 1.29,
+ "loadSec": 2.02,
+ "coldStartSec": 4.54,
+ "peakMlxBytes": 2664897136,
+ "peakRssBytes": 2473902080,
+ "prefixTokens": 308,
+ "prefixCache": true,
+ "prefixMaxDiff": 0.0018,
+ "promptTokensP50": 540.5,
+ "latencyMs": {
+  "p50": 1022.3,
+  "p95": 2162.0,
+  "max": 2271.3
+ },
+ "latencyFullPrefillMs": {
+  "p50": 3241.5,
+  "p95": 3555.8,
+  "n": 12
+ },
+ "answerTokenIds": {
+  "work": [
+   2196,
+   2905,
+   10215,
+   12133
+  ],
+  "distraction": [
+   8542,
+   25557,
+   27559,
+   80519
+  ]
+ },
+ "firstScreenPWork": 0.009,
+ "items": [
+  {
+   "key": "2eb92dc39899c703",
+   "pWork": 0.00901,
+   "answerMass": 0.8965,
+   "topIsAnswer": true,
+   "ms": 228.6,
+   "tokens": 340
+  },
+  {
+   "key": "e70e97cf9173c944",
+   "pWork": 0.00648,
+   "answerMass": 0.9612,
+   "topIsAnswer": true,
+   "ms": 411.2,
+   "tokens": 345
+  },
+  {
+   "key": "1a7403dcdade4aed",
+   "pWork": 0.01484,
+   "answerMass": 0.9524,
+   "topIsAnswer": true,
+   "ms": 2162.0,
+   "tokens": 819
+  },
+  {
+   "key": "2b062f95c5f15c8c",
+   "pWork": 0.00017,
+   "answerMass": 0.9717,
+   "topIsAnswer": true,
+   "ms": 2271.3,
+   "tokens": 848
+  },
+  {
+   "key": "bd9a370387238d1b",
+   "pWork": 0.95146,
+   "answerMass": 0.8802,
+   "topIsAnswer": true,
+   "ms": 1776.3,
+   "tokens": 743
+  },
+  {
+   "key": "c7ea6926501fc01b",
+   "pWork": 0.89371,
+   "answerMass": 0.8703,
+   "topIsAnswer": true,
+   "ms": 2052.9,
+   "tokens": 799
+  },
+  {
+   "key": "4ab2a4145f0c4b7f",
+   "pWork": 0.98854,
+   "answerMass": 0.8927,
+   "topIsAnswer": true,
+   "ms": 1934.7,
+   "tokens": 775
+  },
+  {
+   "key": "cbdc311ccf3c576e",
+   "pWork": 0.99214,
+   "answerMass": 0.9121,
+   "topIsAnswer": true,
+   "ms": 2046.8,
+   "tokens": 799
+  },
+  {
+   "key": "2fb73ff2d0b2f9ff",
+   "pWork": 0.99005,
+   "answerMass": 0.8924,
+   "topIsAnswer": true,
+   "ms": 1915.4,
+   "tokens": 774
+  },
+  {
+   "key": "5f6bf4fa9c1f51dc",
+   "pWork": 0.99431,
+   "answerMass": 0.9135,
+   "topIsAnswer": true,
+   "ms": 1954.4,
+   "tokens": 787
+  },
+  {
+   "key": "61c4455e34dce0f2",
+   "pWork": 0.00024,
+   "answerMass": 0.955,
+   "topIsAnswer": true,
+   "ms": 2210.8,
+   "tokens": 839
+  },
+  {
+   "key": "3047f3fe930a1ef6",
+   "pWork": 0.3178,
+   "answerMass": 0.8969,
+   "topIsAnswer": true,
+   "ms": 508.2,
+   "tokens": 429
+  },
+  {
+   "key": "5fa907932a37159f",
+   "pWork": 0.90413,
+   "answerMass": 0.8713,
+   "topIsAnswer": true,
+   "ms": 2147.9,
+   "tokens": 806
+  },
+  {
+   "key": "730f65517410970c",
+   "pWork": 0.03017,
+   "answerMass": 0.9338,
+   "topIsAnswer": true,
+   "ms": 267.4,
+   "tokens": 354
+  },
+  {
+   "key": "1d7f17ef5dc8d4b3",
+   "pWork": 0.00013,
+   "answerMass": 0.9809,
+   "topIsAnswer": true,
+   "ms": 271.9,
+   "tokens": 353
+  },
+  {
+   "key": "9aa9a42b81af9197",
+   "pWork": 0.96927,
+   "answerMass": 0.8667,
+   "topIsAnswer": true,
+   "ms": 1997.6,
+   "tokens": 764
+  },
+  {
+   "key": "5b1dca7a4c808d04",
+   "pWork": 0.75578,
+   "answerMass": 0.8046,
+   "topIsAnswer": true,
+   "ms": 911.8,
+   "tokens": 532
+  },
+  {
+   "key": "d513bcaa36a1b5ae",
+   "pWork": 0.6931,
+   "answerMass": 0.7984,
+   "topIsAnswer": true,
+   "ms": 1022.3,
+   "tokens": 545
+  },
+  {
+   "key": "1069ad5273c1d066",
+   "pWork": 0.79236,
+   "answerMass": 0.8134,
+   "topIsAnswer": true,
+   "ms": 885.0,
+   "tokens": 533
+  },
+  {
+   "key": "6df932f146ef180c",
+   "pWork": 0.33708,
+   "answerMass": 0.7963,
+   "topIsAnswer": true,
+   "ms": 1027.1,
+   "tokens": 536
+  },
+  {
+   "key": "c60083c7a2f10291",
+   "pWork": 0.6238,
+   "answerMass": 0.7932,
+   "topIsAnswer": true,
+   "ms": 885.2,
+   "tokens": 533
+  },
+  {
+   "key": "c85455fc2792fdb3",
+   "pWork": 0.36079,
+   "answerMass": 0.8027,
+   "topIsAnswer": true,
+   "ms": 912.8,
+   "tokens": 527
+  },
+  {
+   "key": "83c25783773c7b40",
+   "pWork": 0.98336,
+   "answerMass": 0.9216,
+   "topIsAnswer": true,
+   "ms": 1956.4,
+   "tokens": 758
+  },
+  {
+   "key": "be44da142967b46b",
+   "pWork": 0.98832,
+   "answerMass": 0.9033,
+   "topIsAnswer": true,
+   "ms": 1903.9,
+   "tokens": 775
+  },
+  {
+   "key": "712f91954365a49f",
+   "pWork": 0.99041,
+   "answerMass": 0.8808,
+   "topIsAnswer": true,
+   "ms": 1960.9,
+   "tokens": 763
+  },
+  {
+   "key": "d1fc62a93e7d9b06",
+   "pWork": 0.99035,
+   "answerMass": 0.8918,
+   "topIsAnswer": true,
+   "ms": 1953.8,
+   "tokens": 765
+  },
+  {
+   "key": "c6c409e7a99de462",
+   "pWork": 0.98599,
+   "answerMass": 0.8918,
+   "topIsAnswer": true,
+   "ms": 1865.5,
+   "tokens": 765
+  },
+  {
+   "key": "e010fe855568ce58",
+   "pWork": 0.98758,
+   "answerMass": 0.9036,
+   "topIsAnswer": true,
+   "ms": 1891.5,
+   "tokens": 774
+  },
+  {
+   "key": "1d36f47cf1d61cab",
+   "pWork": 0.98448,
+   "answerMass": 0.9126,
+   "topIsAnswer": true,
+   "ms": 1888.6,
+   "tokens": 774
+  },
+  {
+   "key": "10a22c1bfbee4ae5",
+   "pWork": 0.99044,
+   "answerMass": 0.929,
+   "topIsAnswer": true,
+   "ms": 395.0,
+   "tokens": 397
+  },
+  {
+   "key": "f74e5ba55842f779",
+   "pWork": 0.99242,
+   "answerMass": 0.929,
+   "topIsAnswer": true,
+   "ms": 391.8,
+   "tokens": 397
+  },
+  {
+   "key": "2036a0ed6504e12f",
+   "pWork": 0.99126,
+   "answerMass": 0.9492,
+   "topIsAnswer": true,
+   "ms": 407.4,
+   "tokens": 401
+  },
+  {
+   "key": "523060259063c50f",
+   "pWork": 0.99321,
+   "answerMass": 0.9368,
+   "topIsAnswer": true,
+   "ms": 397.2,
+   "tokens": 396
+  },
+  {
+   "key": "d497be37cf5017ea",
+   "pWork": 0.99018,
+   "answerMass": 0.9367,
+   "topIsAnswer": true,
+   "ms": 410.1,
+   "tokens": 398
+  },
+  {
+   "key": "f43a175dfa22821a",
+   "pWork": 0.98573,
+   "answerMass": 0.9287,
+   "topIsAnswer": true,
+   "ms": 415.8,
+   "tokens": 403
+  },
+  {
+   "key": "eccf9db5902d1f2f",
+   "pWork": 0.99115,
+   "answerMass": 0.9365,
+   "topIsAnswer": true,
+   "ms": 414.2,
+   "tokens": 403
+  },
+  {
+   "key": "5147b6ef75d96550",
+   "pWork": 0.99394,
+   "answerMass": 0.9215,
+   "topIsAnswer": true,
+   "ms": 524.8,
+   "tokens": 410
+  },
+  {
+   "key": "5fb62c3bad36349d",
+   "pWork": 0.97689,
+   "answerMass": 0.8658,
+   "topIsAnswer": true,
+   "ms": 1972.1,
+   "tokens": 766
+  },
+  {
+   "key": "6fd3316d5b1e45ba",
+   "pWork": 0.97876,
+   "answerMass": 0.8901,
+   "topIsAnswer": true,
+   "ms": 1884.1,
+   "tokens": 772
+  },
+  {
+   "key": "bf7f78c882b06133",
+   "pWork": 0.98012,
+   "answerMass": 0.9116,
+   "topIsAnswer": true,
+   "ms": 1935.9,
+   "tokens": 768
+  },
+  {
+   "key": "06ffb0196021764d",
+   "pWork": 0.98192,
+   "answerMass": 0.9203,
+   "topIsAnswer": true,
+   "ms": 2140.5,
+   "tokens": 787
+  },
+  {
+   "key": "d12dc5fd1cc40812",
+   "pWork": 0.98742,
+   "answerMass": 0.8786,
+   "topIsAnswer": true,
+   "ms": 1885.0,
+   "tokens": 764
+  },
+  {
+   "key": "8134d2f7b55ef136",
+   "pWork": 0.98881,
+   "answerMass": 0.8911,
+   "topIsAnswer": true,
+   "ms": 1823.6,
+   "tokens": 752
+  },
+  {
+   "key": "d6ef5b287b1aed70",
+   "pWork": 0.98798,
+   "answerMass": 0.8915,
+   "topIsAnswer": true,
+   "ms": 1769.2,
+   "tokens": 750
+  },
+  {
+   "key": "633fd7cf8eaef5c1",
+   "pWork": 0.92265,
+   "answerMass": 0.8691,
+   "topIsAnswer": true,
+   "ms": 1931.9,
+   "tokens": 763
+  },
+  {
+   "key": "bf8d6b7c18424897",
+   "pWork": 0.97539,
+   "answerMass": 0.8908,
+   "topIsAnswer": true,
+   "ms": 1923.5,
+   "tokens": 769
+  },
+  {
+   "key": "77b9001964f9f042",
+   "pWork": 0.98197,
+   "answerMass": 0.8661,
+   "topIsAnswer": true,
+   "ms": 1975.3,
+   "tokens": 778
+  },
+  {
+   "key": "3d01f4ae713234b7",
+   "pWork": 0.99033,
+   "answerMass": 0.8794,
+   "topIsAnswer": true,
+   "ms": 1914.7,
+   "tokens": 777
+  },
+  {
+   "key": "ead936ebc20f0d65",
+   "pWork": 0.66955,
+   "answerMass": 0.9039,
+   "topIsAnswer": true,
+   "ms": 381.4,
+   "tokens": 397
+  },
+  {
+   "key": "693d5fc91d94de1e",
+   "pWork": 0.8261,
+   "answerMass": 0.9245,
+   "topIsAnswer": true,
+   "ms": 389.3,
+   "tokens": 400
+  },
+  {
+   "key": "5b18c740fb4c7f9f",
+   "pWork": 0.86056,
+   "answerMass": 0.9241,
+   "topIsAnswer": true,
+   "ms": 395.1,
+   "tokens": 401
+  },
+  {
+   "key": "37433956f55765af",
+   "pWork": 0.74775,
+   "answerMass": 0.9292,
+   "topIsAnswer": true,
+   "ms": 402.7,
+   "tokens": 403
+  },
+  {
+   "key": "b809bc8e03f35f16",
+   "pWork": 0.8973,
+   "answerMass": 0.9047,
+   "topIsAnswer": true,
+   "ms": 399.2,
+   "tokens": 405
+  },
+  {
+   "key": "84546717b62761e1",
+   "pWork": 0.72136,
+   "answerMass": 0.8881,
+   "topIsAnswer": true,
+   "ms": 526.2,
+   "tokens": 408
+  },
+  {
+   "key": "d0cca3bb54a6a7e6",
+   "pWork": 0.49593,
+   "answerMass": 0.9086,
+   "topIsAnswer": true,
+   "ms": 535.0,
+   "tokens": 415
+  },
+  {
+   "key": "7a0ae55dbfa81397",
+   "pWork": 0.9344,
+   "answerMass": 0.9295,
+   "topIsAnswer": true,
+   "ms": 520.0,
+   "tokens": 416
+  },
+  {
+   "key": "5661a78a7f65539b",
+   "pWork": 0.61512,
+   "answerMass": 0.9012,
+   "topIsAnswer": true,
+   "ms": 533.7,
+   "tokens": 419
+  },
+  {
+   "key": "231877ba5873f71b",
+   "pWork": 0.84258,
+   "answerMass": 0.8875,
+   "topIsAnswer": true,
+   "ms": 533.3,
+   "tokens": 421
+  },
+  {
+   "key": "6846298bc308d6b4",
+   "pWork": 0.94608,
+   "answerMass": 0.8915,
+   "topIsAnswer": true,
+   "ms": 529.5,
+   "tokens": 422
+  },
+  {
+   "key": "5ee8f99bea363eab",
+   "pWork": 0.82723,
+   "answerMass": 0.9268,
+   "topIsAnswer": true,
+   "ms": 526.1,
+   "tokens": 426
+  }
+ ]
+}

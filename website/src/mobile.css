@@ -1,0 +1,131 @@
+/* Phone and tablet compositions keep the same character, with their own scale. */
+.timeline-navigation { display: none; }
+@media (max-width: 959px) {
+  html { scroll-padding-bottom: 88px; }
+  /* The 3 px reading bar reads as a stray line at a phone's top edge; the chapter dock shows where you are. */
+  .reading-progress, .motion-enabled .reading-progress { display: none; }
+  .wrap { width: min(760px, calc(100% - 40px)); }
+  .section-label, .eyebrow { font-size: 11px; line-height: 1.6; letter-spacing: .1em; }
+  /* Phones and tablets read small labels at 11 px or more, and every control is a 44 px tap. */
+  .beta-badge { font-size: 11px; }
+  /* A 44 px tap without moving the wordmark or its ✳ (aligned to the box's top). */
+  .brand { padding-block: 6px; margin-block: -6px; }
+  .site-footer .brand { padding-block: 8px; margin-block: -8px; }
+  .desktop-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+  .work-tab, .day-works button, .work-tabs { min-height: 44px; }
+  .friend-kind { font-size: 11px; }
+  .friend-soon { font-size: 11px; padding: 6px 9px 5px; }
+  .yd-ribbon > p, .yd-label, .yd-stages { font-size: 11px; }
+  .demo-actions .motion-toggle { font-size: 11px; min-height: 44px; }
+  .chapter-nav {
+    --chapter-ink: #687b4e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4px;
+    top: auto;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    left: 50%;
+    right: auto;
+    width: min(420px, calc(100% - 32px));
+    padding: 5px;
+    transform: translateX(-50%);
+    border: 1px solid #d8dfce;
+    border-radius: 32px;
+    background: #f7f5eef2;
+    box-shadow: 0 6px 30px #2635231c;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    color: #58654b;
+    z-index: 60;
+  }
+  .chapter-nav { transition: opacity .25s ease, translate .25s ease, visibility 0s; }
+  .chapter-nav.at-hello { opacity: 0; translate: 0 16px; visibility: hidden; transition: opacity .25s ease, translate .25s ease, visibility 0s .25s; }
+  .chapter-nav a { flex: 1; width: auto; height: 44px; border-radius: 24px; font-size: 12px; }
+  .chapter-nav a::before, .chapter-nav a > span:first-child { display: none; }
+  .chapter-nav a > span + span,
+  .chapter-nav.on-dark a > span + span {
+    position: static;
+    padding: 0;
+    background: none;
+    color: inherit;
+    opacity: 1;
+    font-size: 12px;
+    font-weight: 500;
+    pointer-events: auto;
+  }
+  .chapter-nav [aria-current], .chapter-nav.on-dark [aria-current] { background: #344633; color: #fffdf6; }
+  .chapter-nav a:active { background: #e1e7d6; }
+  .chapter-nav.on-dark { color: #58654b; }
+  .button, .text-link, .motion-toggle { min-height: 44px; }
+  .motion-toggle { letter-spacing: .035em; }
+  .site-header { height: 72px; }
+  .site-header .button-small { min-height: 44px; font-size: 12px; }
+  .desktop-nav { margin-left: 0; gap: 18px; font-size: 12px; }
+  .faq-section .section-label { font-size: 11px; }
+  .faq-section h2 { font-size: clamp(48px, 7vw, 64px); }
+  .faq-list summary { font-size: 15px; line-height: 1.5; min-height: 64px; }
+  .faq-list details > div { font-size: 14px; line-height: 1.8; }
+  .closing .button { min-height: 52px; font-size: 14px; }
+  .closing-note { font-size: 12px; }
+  .site-footer { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+  .site-footer p { font-size: 12px; line-height: 1.7; }
+  .footer-links { font-size: 13px; gap: 18px; }
+  .footer-links a, .footer-links button { display: inline-flex; align-items: center; min-height: 44px; }
+  .back-top { width: 44px; height: 44px; justify-content: center; }
+  .footer-bottom { font-size: 11px; line-height: 1.6; gap: 12px; }
+  .timeline-navigation { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 10px; }
+  .timeline-navigation button { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 10px 14px; border: 1px solid #dfe5d3; border-radius: 10px; background: transparent; font-size: 12px; }
+  .timeline-navigation button:active { background: #e8eedc; }
+  .timeline-navigation button:disabled { opacity: .35; }
+  .timeline-position { font-size: 11px; color: #6b785d; font-variant-numeric: tabular-nums; }
+}
+
+@media (max-width: 599px) {
+  .desktop-nav { display: none; }
+  .site-header { height: 68px; }
+  .brand { font-size: 32px; }
+  .faq-section { display: block; padding-block: 48px 60px; }
+  .faq-section h2 { font-size: clamp(45px, 12vw, 64px); margin-top: 20px; }
+  .faq-bunny { width: 112px; right: -4px; bottom: -10px; opacity: .5; }
+  .faq-list { margin-top: 30px; }
+  .faq-list summary { padding-block: 20px; gap: 18px; }
+  .faq-list summary > span { flex-shrink: 0; }
+  .closing-inner { width: calc(100% - 40px); padding-block: 58px 64px; }
+  .closing h2 { font-size: clamp(45px, 12.5vw, 69px); margin-top: 22px; }
+  .closing .button { width: min(100%, 300px); margin-top: 26px; }
+  .closing-flower { font-size: 130px; right: -28px; bottom: -42px; }
+  .site-footer { display: flex; flex-wrap: wrap; gap: 24px; padding-top: 32px; }
+  .site-footer > div:first-child { flex: 1 1 100%; }
+  .site-footer p { margin-top: 10px; }
+  .footer-links { width: 100%; justify-content: space-between; }
+  .footer-links a:first-child { display: inline-flex; }
+  .footer-bottom { width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 0; gap: 6px 18px; }
+}
+
+@media (max-width: 359px) {
+  .wrap { width: calc(100% - 32px); }
+  /* The friends' swipe row bleeds to the edges of this narrower gutter, not 4 px past them. */
+  .friend-list { margin-inline: -16px; padding-inline: 16px; scroll-padding-inline: 16px; }
+  .chapter-nav a > span + span { font-size: 11px; }
+}
+
+/* A tablet held sideways (an iPad at 1024 px and up) gets the desktop layout, but it's read
+   and tapped by hand: its small labels are 11 px and every control a 44 px tap, as on phones.
+   A mouse or trackpad never matches this, so desktops keep their look. */
+@media (min-width: 960px) and (pointer: coarse) {
+  .eyebrow, .section-label, .beta-badge, .friend-kind, .closing-note, .footer-bottom,
+  .yd-ribbon > p, .yd-label, .yd-stages, .house-scene-title > span, .house-view-controls button,
+  .world-section .house-preview-note, .timeline-labels, .world-section .house-replay,
+  .world-copy .world-detail, .house-facts div > span, .demo-actions .motion-toggle { font-size: 11px; }
+  .motion-enabled .world-scroll-cue, .motion-enabled .world-pin .world-copy .world-detail, .world-copy .section-label { font-size: 11px; }
+  .chapter-nav { right: 6px; }
+  .chapter-nav a { width: 44px; height: 44px; font-size: 11px; }
+  .site-header .brand { padding-block: 4px; margin-block: -4px; }
+  .site-footer .brand { padding-block: 6px; margin-block: -6px; }
+  .desktop-nav a, .footer-links a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; }
+  .back-top { width: 44px; height: 44px; justify-content: center; }
+  .work-tab, .work-tabs, .day-works button, .companion-pill, .motion-toggle, .text-link, .faq-list summary { min-height: 44px; }
+  .house-view-controls button { min-height: 44px; min-width: 44px; }
+  #world-progress { height: 44px; }
+}

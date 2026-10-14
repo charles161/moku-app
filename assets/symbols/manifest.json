@@ -1,0 +1,680 @@
+{
+  "schemaVersion": 1,
+  "alpha": "straight RGBA",
+  "coordinates": "top-left origin, +x right, +y down",
+  "headAnchorForShared768Preview": [
+    384.0,
+    407.844
+  ],
+  "compositorManifest": "previews/compositor.json",
+  "placement": "At 120 pt canvas, multiply offsets by 120 pt and add to projected head anchor. For 3D, project the head joint; keep sprites screen-facing. Pivot is center. Do not scale by alpha bounds.",
+  "behavior": "Optional sixth expression channel. Follow creativeTiming for brief entry, held or periodically twinkling states; a held sprite is static. Faces/ears carry the mood without symbols. Disappointment emits one sigh then nothing persists. Micro-expressions never trigger manpu. Cancel symbols on speech/travel/hidden state as appropriate; Reduce Motion uses the static glyph.",
+  "sprites": [
+    {
+      "name": "sparkles",
+      "for": [
+        "happy",
+        "proud"
+      ],
+      "sheet": "sparkles_sheet.png",
+      "still": "sparkles.png",
+      "frameCount": 6,
+      "columns": 6,
+      "frameSizePixels": [
+        256,
+        256
+      ],
+      "frameDurationSeconds": 0.12,
+      "loop": false,
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "anchor": "head",
+      "offsetFromHeadInCanvasNormalized": [
+        0.26,
+        -0.1
+      ],
+      "sizeInCanvasNormalized": 0.2,
+      "referenceCanvasPoints": 120,
+      "displaySizePoints": 24,
+      "visibleGlyphSizePoints": [
+        14.62,
+        15.19
+      ],
+      "densities": {
+        "2x": {
+          "sheet": "sparkles_sheet@2x.png",
+          "still": "sparkles@2x.png",
+          "frameSizePixels": [
+            48,
+            48
+          ]
+        },
+        "3x": {
+          "sheet": "sparkles_sheet@3x.png",
+          "still": "sparkles@3x.png",
+          "frameSizePixels": [
+            72,
+            72
+          ]
+        }
+      },
+      "reducedMotion": {
+        "stillFrame": 2,
+        "animate": "opacity only",
+        "durationSeconds": 0.7
+      },
+      "creativeTiming": {
+        "happyEntrySeconds": 1.2,
+        "proudTwinkleEverySeconds": 4,
+        "twinkleSeconds": 0.7
+      }
+    },
+    {
+      "name": "question",
+      "for": [
+        "curious"
+      ],
+      "sheet": "question_sheet.png",
+      "still": "question.png",
+      "frameCount": 6,
+      "columns": 6,
+      "frameSizePixels": [
+        256,
+        256
+      ],
+      "frameDurationSeconds": 0.12,
+      "loop": false,
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "anchor": "head",
+      "offsetFromHeadInCanvasNormalized": [
+        -0.25,
+        -0.13
+      ],
+      "sizeInCanvasNormalized": 0.2,
+      "referenceCanvasPoints": 120,
+      "displaySizePoints": 24,
+      "visibleGlyphSizePoints": [
+        9.56,
+        13.69
+      ],
+      "densities": {
+        "2x": {
+          "sheet": "question_sheet@2x.png",
+          "still": "question@2x.png",
+          "frameSizePixels": [
+            48,
+            48
+          ]
+        },
+        "3x": {
+          "sheet": "question_sheet@3x.png",
+          "still": "question@3x.png",
+          "frameSizePixels": [
+            72,
+            72
+          ]
+        }
+      },
+      "reducedMotion": {
+        "stillFrame": 2,
+        "animate": "opacity only",
+        "durationSeconds": 0.7
+      },
+      "creativeTiming": {
+        "durationSeconds": 6,
+        "bobPoints": 1
+      }
+    },
+    {
+      "name": "sweat",
+      "for": [
+        "concerned"
+      ],
+      "sheet": "sweat_sheet.png",
+      "still": "sweat.png",
+      "frameCount": 6,
+      "columns": 6,
+      "frameSizePixels": [
+        256,
+        256
+      ],
+      "frameDurationSeconds": 0.12,
+      "loop": false,
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "anchor": "head",
+      "offsetFromHeadInCanvasNormalized": [
+        0.26,
+        -0.19
+      ],
+      "sizeInCanvasNormalized": 0.2,
+      "referenceCanvasPoints": 120,
+      "displaySizePoints": 24,
+      "visibleGlyphSizePoints": [
+        9.38,
+        15.0
+      ],
+      "densities": {
+        "2x": {
+          "sheet": "sweat_sheet@2x.png",
+          "still": "sweat@2x.png",
+          "frameSizePixels": [
+            48,
+            48
+          ]
+        },
+        "3x": {
+          "sheet": "sweat_sheet@3x.png",
+          "still": "sweat@3x.png",
+          "frameSizePixels": [
+            72,
+            72
+          ]
+        }
+      },
+      "reducedMotion": {
+        "stillFrame": 2,
+        "animate": "opacity only",
+        "durationSeconds": 0.7
+      },
+      "creativeTiming": {
+        "slidePoints": 3,
+        "slideSeconds": 1.2,
+        "thenHold": true
+      }
+    },
+    {
+      "name": "steam",
+      "for": [
+        "annoyed"
+      ],
+      "sheet": "steam_sheet.png",
+      "still": "steam.png",
+      "frameCount": 6,
+      "columns": 6,
+      "frameSizePixels": [
+        256,
+        256
+      ],
+      "frameDurationSeconds": 0.12,
+      "loop": false,
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "anchor": "head",
+      "offsetFromHeadInCanvasNormalized": [
+        0.26,
+        -0.1
+      ],
+      "sizeInCanvasNormalized": 0.2,
+      "referenceCanvasPoints": 120,
+      "displaySizePoints": 24,
+      "visibleGlyphSizePoints": [
+        15.19,
+        13.41
+      ],
+      "densities": {
+        "2x": {
+          "sheet": "steam_sheet@2x.png",
+          "still": "steam@2x.png",
+          "frameSizePixels": [
+            48,
+            48
+          ]
+        },
+        "3x": {
+          "sheet": "steam_sheet@3x.png",
+          "still": "steam@3x.png",
+          "frameSizePixels": [
+            72,
+            72
+          ]
+        }
+      },
+      "reducedMotion": {
+        "stillFrame": 2,
+        "animate": "opacity only",
+        "durationSeconds": 0.7
+      },
+      "creativeTiming": {
+        "durationSeconds": 0.8,
+        "entryOnly": true,
+        "optionalAlternativeTo": "pop_vein"
+      }
+    },
+    {
+      "name": "zzz",
+      "for": [
+        "sleepy"
+      ],
+      "sheet": "zzz_sheet.png",
+      "still": "zzz.png",
+      "frameCount": 6,
+      "columns": 6,
+      "frameSizePixels": [
+        256,
+        256
+      ],
+      "frameDurationSeconds": 0.22,
+      "loop": false,
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "anchor": "head",
+      "offsetFromHeadInCanvasNormalized": [
+        0.26,
+        -0.1
+      ],
+      "sizeInCanvasNormalized": 0.2,
+      "referenceCanvasPoints": 120,
+      "displaySizePoints": 24,
+      "visibleGlyphSizePoints": [
+        13.59,
+        13.59
+      ],
+      "densities": {
+        "2x": {
+          "sheet": "zzz_sheet@2x.png",
+          "still": "zzz@2x.png",
+          "frameSizePixels": [
+            48,
+            48
+          ]
+        },
+        "3x": {
+          "sheet": "zzz_sheet@3x.png",
+          "still": "zzz@3x.png",
+          "frameSizePixels": [
+            72,
+            72
+          ]
+        }
+      },
+      "reducedMotion": {
+        "stillFrame": 2,
+        "animate": "opacity only",
+        "durationSeconds": 0.7
+      },
+      "creativeTiming": {
+        "risePoints": 12,
+        "durationSeconds": 3,
+        "repeatEverySeconds": 4,
+        "staggerSeconds": [
+          0,
+          0.5,
+          1
+        ]
+      }
+    },
+    {
+      "name": "heart",
+      "for": [
+        "pat_reaction"
+      ],
+      "sheet": "heart_sheet.png",
+      "still": "heart.png",
+      "frameCount": 6,
+      "columns": 6,
+      "frameSizePixels": [
+        256,
+        256
+      ],
+      "frameDurationSeconds": 0.12,
+      "loop": false,
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "anchor": "head",
+      "offsetFromHeadInCanvasNormalized": [
+        0.26,
+        -0.1
+      ],
+      "sizeInCanvasNormalized": 0.2,
+      "referenceCanvasPoints": 120,
+      "displaySizePoints": 24,
+      "visibleGlyphSizePoints": [
+        13.31,
+        12.0
+      ],
+      "densities": {
+        "2x": {
+          "sheet": "heart_sheet@2x.png",
+          "still": "heart@2x.png",
+          "frameSizePixels": [
+            48,
+            48
+          ]
+        },
+        "3x": {
+          "sheet": "heart_sheet@3x.png",
+          "still": "heart@3x.png",
+          "frameSizePixels": [
+            72,
+            72
+          ]
+        }
+      },
+      "reducedMotion": {
+        "stillFrame": 2,
+        "animate": "opacity only",
+        "durationSeconds": 0.7
+      },
+      "creativeTiming": {
+        "durationSeconds": 0.7,
+        "trigger": "pat"
+      }
+    },
+    {
+      "name": "bounce",
+      "for": [
+        "happy"
+      ],
+      "sheet": "bounce_sheet.png",
+      "still": "bounce.png",
+      "frameCount": 6,
+      "columns": 6,
+      "frameSizePixels": [
+        256,
+        256
+      ],
+      "frameDurationSeconds": 0.12,
+      "loop": false,
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "anchor": "head",
+      "offsetFromHeadInCanvasNormalized": [
+        0.26,
+        -0.1
+      ],
+      "sizeInCanvasNormalized": 0.2,
+      "referenceCanvasPoints": 120,
+      "displaySizePoints": 24,
+      "visibleGlyphSizePoints": [
+        17.91,
+        12.19
+      ],
+      "densities": {
+        "2x": {
+          "sheet": "bounce_sheet@2x.png",
+          "still": "bounce@2x.png",
+          "frameSizePixels": [
+            48,
+            48
+          ]
+        },
+        "3x": {
+          "sheet": "bounce_sheet@3x.png",
+          "still": "bounce@3x.png",
+          "frameSizePixels": [
+            72,
+            72
+          ]
+        }
+      },
+      "reducedMotion": {
+        "stillFrame": 2,
+        "animate": "opacity only",
+        "durationSeconds": 0.7
+      },
+      "creativeTiming": {
+        "durationSeconds": 1.2,
+        "oscillations": 2
+      }
+    },
+    {
+      "name": "exclamation",
+      "for": [
+        "curious"
+      ],
+      "sheet": "exclamation_sheet.png",
+      "still": "exclamation.png",
+      "frameCount": 6,
+      "columns": 6,
+      "frameSizePixels": [
+        256,
+        256
+      ],
+      "frameDurationSeconds": 0.12,
+      "loop": false,
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "anchor": "head",
+      "offsetFromHeadInCanvasNormalized": [
+        0.26,
+        -0.1
+      ],
+      "sizeInCanvasNormalized": 0.2,
+      "referenceCanvasPoints": 120,
+      "displaySizePoints": 24,
+      "visibleGlyphSizePoints": [
+        3.94,
+        13.69
+      ],
+      "densities": {
+        "2x": {
+          "sheet": "exclamation_sheet@2x.png",
+          "still": "exclamation@2x.png",
+          "frameSizePixels": [
+            48,
+            48
+          ]
+        },
+        "3x": {
+          "sheet": "exclamation_sheet@3x.png",
+          "still": "exclamation@3x.png",
+          "frameSizePixels": [
+            72,
+            72
+          ]
+        }
+      },
+      "reducedMotion": {
+        "stillFrame": 2,
+        "animate": "opacity only",
+        "durationSeconds": 0.7
+      },
+      "creativeTiming": {
+        "durationSeconds": 0.4,
+        "then": "question"
+      }
+    },
+    {
+      "name": "sigh",
+      "for": [
+        "disappointed"
+      ],
+      "sheet": "sigh_sheet.png",
+      "still": "sigh.png",
+      "frameCount": 6,
+      "columns": 6,
+      "frameSizePixels": [
+        256,
+        256
+      ],
+      "frameDurationSeconds": 0.12,
+      "loop": false,
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "anchor": "head",
+      "offsetFromHeadInCanvasNormalized": [
+        0.26,
+        -0.1
+      ],
+      "sizeInCanvasNormalized": 0.2,
+      "referenceCanvasPoints": 120,
+      "displaySizePoints": 24,
+      "visibleGlyphSizePoints": [
+        15.66,
+        9.84
+      ],
+      "densities": {
+        "2x": {
+          "sheet": "sigh_sheet@2x.png",
+          "still": "sigh@2x.png",
+          "frameSizePixels": [
+            48,
+            48
+          ]
+        },
+        "3x": {
+          "sheet": "sigh_sheet@3x.png",
+          "still": "sigh@3x.png",
+          "frameSizePixels": [
+            72,
+            72
+          ]
+        }
+      },
+      "reducedMotion": {
+        "stillFrame": 2,
+        "animate": "opacity only",
+        "durationSeconds": 0.7
+      },
+      "creativeTiming": {
+        "durationSeconds": 1.5,
+        "entryOnly": true
+      }
+    },
+    {
+      "name": "pop_vein",
+      "for": [
+        "annoyed"
+      ],
+      "sheet": "pop_vein_sheet.png",
+      "still": "pop_vein.png",
+      "frameCount": 6,
+      "columns": 6,
+      "frameSizePixels": [
+        256,
+        256
+      ],
+      "frameDurationSeconds": 0.12,
+      "loop": false,
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "anchor": "head",
+      "offsetFromHeadInCanvasNormalized": [
+        0.26,
+        -0.1
+      ],
+      "sizeInCanvasNormalized": 0.2,
+      "referenceCanvasPoints": 120,
+      "displaySizePoints": 24,
+      "visibleGlyphSizePoints": [
+        10.69,
+        12.94
+      ],
+      "densities": {
+        "2x": {
+          "sheet": "pop_vein_sheet@2x.png",
+          "still": "pop_vein@2x.png",
+          "frameSizePixels": [
+            48,
+            48
+          ]
+        },
+        "3x": {
+          "sheet": "pop_vein_sheet@3x.png",
+          "still": "pop_vein@3x.png",
+          "frameSizePixels": [
+            72,
+            72
+          ]
+        }
+      },
+      "reducedMotion": {
+        "stillFrame": 2,
+        "animate": "opacity only",
+        "durationSeconds": 0.7
+      },
+      "creativeTiming": {
+        "pulseScales": [
+          1,
+          1.25,
+          1,
+          1.25,
+          1
+        ],
+        "thenHoldOpacity": 0.8
+      }
+    },
+    {
+      "name": "hmph",
+      "for": [
+        "proud",
+        "annoyed"
+      ],
+      "sheet": "hmph_sheet.png",
+      "still": "hmph.png",
+      "frameCount": 6,
+      "columns": 6,
+      "frameSizePixels": [
+        256,
+        256
+      ],
+      "frameDurationSeconds": 0.12,
+      "loop": false,
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "anchor": "head",
+      "offsetFromHeadInCanvasNormalized": [
+        0.26,
+        -0.1
+      ],
+      "sizeInCanvasNormalized": 0.2,
+      "referenceCanvasPoints": 120,
+      "displaySizePoints": 24,
+      "visibleGlyphSizePoints": [
+        13.69,
+        6.66
+      ],
+      "densities": {
+        "2x": {
+          "sheet": "hmph_sheet@2x.png",
+          "still": "hmph@2x.png",
+          "frameSizePixels": [
+            48,
+            48
+          ]
+        },
+        "3x": {
+          "sheet": "hmph_sheet@3x.png",
+          "still": "hmph@3x.png",
+          "frameSizePixels": [
+            72,
+            72
+          ]
+        }
+      },
+      "reducedMotion": {
+        "stillFrame": 2,
+        "animate": "opacity only",
+        "durationSeconds": 0.7
+      },
+      "creativeTiming": {
+        "durationSeconds": 0.8,
+        "entryOnly": true
+      }
+    }
+  ]
+}

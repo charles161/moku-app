@@ -1,0 +1,3887 @@
+{
+  "schemaVersion": 1,
+  "assetRoot": "assets",
+  "pathResolution": "All texture paths are relative to the assets directory, not this JSON file.",
+  "matching": "Exact material name or aliases; preserve unmatched materials.",
+  "normalConvention": "OpenGL tangent space +Y, RGB XYZ mapped from -1..1 to 0..1",
+  "notes": [
+    "Normal texture already bakes four mirrored felt repeats; runtime tiling MUST remain 1x1.",
+    "Preserve imported texture coordinates and blend shapes. Apply overrides to a copy of each existing PhysicallyBasedMaterial.",
+    "RealityKit PhysicallyBasedMaterial exposes sheen color but not sheen roughness on the installed macOS SDK. Apply sheenColor, keep sheenRoughness as authoring metadata; do not substitute clearcoat.",
+    "White baseTint on textured ivory materials preserves baked cream color and blush. Texture color is sRGB; numeric tint values are linear."
+  ],
+  "materials": [
+    {
+      "name": "Ivory woven plush",
+      "aliases": [
+        "Ivory_woven_plush"
+      ],
+      "baseTint": [
+        1,
+        1,
+        1,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": "character/v0_felt_color.png",
+      "roughness": 0.93,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.86,
+        0.74,
+        0.57
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.8,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.48,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Ivory face diffuse blush",
+      "aliases": [
+        "Ivory_face_diffuse_blush"
+      ],
+      "baseTint": [
+        1,
+        1,
+        1,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": "character/v0_ivory_felt_albedo.png",
+      "roughness": 0.93,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.86,
+        0.74,
+        0.57
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.8,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.48,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Petal pink velour",
+      "aliases": [
+        "Petal_pink_velour"
+      ],
+      "baseTint": [
+        0.64,
+        0.31,
+        0.29,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.94,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.86,
+        0.74,
+        0.57
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.8,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.48,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Warm milk plush",
+      "aliases": [
+        "Warm_milk_plush"
+      ],
+      "baseTint": [
+        0.91,
+        0.82,
+        0.68,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.93,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.86,
+        0.74,
+        0.57
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.8,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.48,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Ivory woven fuzz",
+      "aliases": [
+        "Ivory_woven_fuzz"
+      ],
+      "baseTint": [
+        1,
+        1,
+        1,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": "character/felt_fuzz.png",
+      "roughness": 0.93,
+      "metallic": 0.0,
+      "specular": 0.0,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.8,
+      "normalMapPath": "character/felt_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.48,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Ivory face fuzz",
+      "aliases": [
+        "Ivory_face_fuzz"
+      ],
+      "baseTint": [
+        1,
+        1,
+        1,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": "character/face_fuzz.png",
+      "roughness": 0.93,
+      "metallic": 0.0,
+      "specular": 0.0,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.8,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.48,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Warm milk fuzz",
+      "aliases": [
+        "Warm_milk_fuzz"
+      ],
+      "baseTint": [
+        1,
+        1,
+        1,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": "character/milk_fuzz.png",
+      "roughness": 0.93,
+      "metallic": 0.0,
+      "specular": 0.0,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.8,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.48,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Cocoa glass eyes",
+      "aliases": [
+        "Cocoa_glass_eyes"
+      ],
+      "baseTint": [
+        0.042,
+        0.016,
+        0.006,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.23,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Deep cocoa pupil",
+      "aliases": [
+        "Deep_cocoa_pupil"
+      ],
+      "baseTint": [
+        0.014,
+        0.006,
+        0.003,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.19,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Softbox catchlights",
+      "aliases": [
+        "Softbox_catchlights"
+      ],
+      "baseTint": [
+        1,
+        0.94,
+        0.8,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.25,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Espresso embroidery",
+      "aliases": [
+        "Espresso_embroidery"
+      ],
+      "baseTint": [
+        0.105,
+        0.042,
+        0.023,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Rose nose",
+      "aliases": [
+        "Rose_nose"
+      ],
+      "baseTint": [
+        0.43,
+        0.16,
+        0.14,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.77,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Expression blush",
+      "aliases": [
+        "Expression_blush"
+      ],
+      "baseTint": [
+        1,
+        1,
+        1,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": "character/expression_blush.png",
+      "roughness": 1,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false,
+      "opacityMode": "textureAlpha",
+      "preserveImportedOpacity": true,
+      "alphaMode": "blend",
+      "opacityTexturePath": "character/expression_blush.png",
+      "alphaChannel": "a",
+      "alphaCutoff": null
+    },
+    {
+      "name": "Petal mouth interior",
+      "aliases": [
+        "Petal_mouth_interior"
+      ],
+      "baseTint": [
+        0.578,
+        0.202,
+        0.202,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Soft pink tongue",
+      "aliases": [
+        "Soft_pink_tongue"
+      ],
+      "baseTint": [
+        0.791,
+        0.367,
+        0.352,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.93,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Face decals",
+      "aliases": [
+        "Face_decals"
+      ],
+      "baseTint": [
+        1,
+        1,
+        1,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": "character/face_decal_blank.png",
+      "roughness": 1,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false,
+      "opacityMode": "textureAlpha",
+      "preserveImportedOpacity": true,
+      "alphaMode": "cutout",
+      "alphaCutoff": 0.5,
+      "opacityTexturePath": "character/face_decal_blank.png",
+      "atlasPath": "character/face_atlas.png",
+      "atlasOpacityPath": "character/face_atlas_opacity.png",
+      "atlasOpacitySemantic": "scalar",
+      "atlasManifestPath": "character/face_atlas.json",
+      "optIn": true
+    },
+    {
+      "name": "Craft moss",
+      "aliases": [
+        "Craft_moss"
+      ],
+      "baseTint": [
+        0.20000000298023224,
+        0.3100000023841858,
+        0.11999999731779099,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0.07000000104308128,
+        0.10850000083446502,
+        0.04199999906122684
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft cork",
+      "aliases": [
+        "Craft_cork"
+      ],
+      "baseTint": [
+        0.2800000011920929,
+        0.1599999964237213,
+        0.07999999821186066,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft walnut",
+      "aliases": [
+        "Craft_walnut"
+      ],
+      "baseTint": [
+        0.2199999988079071,
+        0.10499999672174454,
+        0.04399999976158142,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft birch",
+      "aliases": [
+        "Craft_birch"
+      ],
+      "baseTint": [
+        0.7900000214576721,
+        0.75,
+        0.6000000238418579,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft plank",
+      "aliases": [
+        "Craft_plank"
+      ],
+      "baseTint": [
+        0.550000011920929,
+        0.33000001311302185,
+        0.15000000596046448,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft slate",
+      "aliases": [
+        "Craft_slate"
+      ],
+      "baseTint": [
+        0.3199999928474426,
+        0.3799999952316284,
+        0.3499999940395355,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft roof",
+      "aliases": [
+        "Craft_roof"
+      ],
+      "baseTint": [
+        0.18000000715255737,
+        0.3199999928474426,
+        0.28999999165534973,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0.06300000250339508,
+        0.11199999749660491,
+        0.1014999970793724
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft paper",
+      "aliases": [
+        "Craft_paper"
+      ],
+      "baseTint": [
+        0.9200000166893005,
+        0.8399999737739563,
+        0.6499999761581421,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft ink",
+      "aliases": [
+        "Craft_ink"
+      ],
+      "baseTint": [
+        0.07000000029802322,
+        0.23999999463558197,
+        0.30000001192092896,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft sage",
+      "aliases": [
+        "Craft_sage"
+      ],
+      "baseTint": [
+        0.20000000298023224,
+        0.36000001430511475,
+        0.17000000178813934,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0.07000000104308128,
+        0.12600000500679015,
+        0.059500000625848766
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft pine",
+      "aliases": [
+        "Craft_pine"
+      ],
+      "baseTint": [
+        0.07500000298023224,
+        0.2199999988079071,
+        0.14000000059604645,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0.026250001043081284,
+        0.07699999958276749,
+        0.04900000020861625
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft blossom",
+      "aliases": [
+        "Craft_blossom"
+      ],
+      "baseTint": [
+        0.7699999809265137,
+        0.4300000071525574,
+        0.4300000071525574,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0.26949999332427976,
+        0.15050000250339507,
+        0.15050000250339507
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft maple",
+      "aliases": [
+        "Craft_maple"
+      ],
+      "baseTint": [
+        0.6899999976158142,
+        0.25,
+        0.07500000298023224,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0.24149999916553497,
+        0.0875,
+        0.026250001043081284
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft leafLight",
+      "aliases": [
+        "Craft_leafLight"
+      ],
+      "baseTint": [
+        0.3799999952316284,
+        0.47999998927116394,
+        0.20000000298023224,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0.13299999833106993,
+        0.16799999624490736,
+        0.07000000104308128
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft amber",
+      "aliases": [
+        "Craft_amber"
+      ],
+      "baseTint": [
+        0.9300000071525574,
+        0.5799999833106995,
+        0.18000000715255737,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Craft petal",
+      "aliases": [
+        "Craft_petal"
+      ],
+      "baseTint": [
+        0.9200000166893005,
+        0.699999988079071,
+        0.4000000059604645,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.23,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Name tag cotton paper",
+      "aliases": [
+        "Name_tag_cotton_paper"
+      ],
+      "baseTint": [
+        0.92,
+        0.84,
+        0.66,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.96,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Name tag ink",
+      "aliases": [
+        "Name_tag_ink"
+      ],
+      "baseTint": [
+        0.2,
+        0.12,
+        0.07,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.94,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Grass felt",
+      "aliases": [
+        "Grass_felt"
+      ],
+      "baseTint": [
+        0.21223075741405523,
+        0.3662525955988395,
+        0.10461648409110419,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.04669076663109215,
+        0.08057557103174469,
+        0.02301562650004292
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Grass deep",
+      "aliases": [
+        "Grass_deep"
+      ],
+      "baseTint": [
+        0.1119324278369056,
+        0.25415209433082675,
+        0.0595112381629812,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.024625134124119232,
+        0.055913460752781884,
+        0.013092472395855865
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Grass light",
+      "aliases": [
+        "Grass_light"
+      ],
+      "baseTint": [
+        0.38132601143253014,
+        0.5520114015120001,
+        0.1946178304415758,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.08389172251515663,
+        0.12144250833264003,
+        0.04281592269714667
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Earth face",
+      "aliases": [
+        "Earth_face"
+      ],
+      "baseTint": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": "world/home/earth_face.png",
+      "roughness": 0.96,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Earth chamber",
+      "aliases": [
+        "Earth_chamber"
+      ],
+      "baseTint": [
+        0.10224173308810132,
+        0.046665086336880095,
+        0.024157632448504756,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.97,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.02249318127938229,
+        0.010266318994113621,
+        0.005314679138671046
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Earth dark",
+      "aliases": [
+        "Earth_dark"
+      ],
+      "baseTint": [
+        0.04817182422688942,
+        0.02315336617811041,
+        0.012983032342173012,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.97,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.010597801329915672,
+        0.00509374055918429,
+        0.0028562671152780627
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Earth side",
+      "aliases": [
+        "Earth_side"
+      ],
+      "baseTint": [
+        0.14702726649759498,
+        0.06847816984440017,
+        0.033104766570885055,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.96,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.0323459986294709,
+        0.015065197365768036,
+        0.0072830486455947125
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Pebble",
+      "aliases": [
+        "Pebble"
+      ],
+      "baseTint": [
+        0.39157247774972326,
+        0.32314320911295075,
+        0.25015828472995344,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.8,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Root",
+      "aliases": [
+        "Root"
+      ],
+      "baseTint": [
+        0.06847816984440017,
+        0.03189603307301153,
+        0.01599629336550963,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.015065197365768036,
+        0.007017127276062537,
+        0.003519184540412119
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Stone",
+      "aliases": [
+        "Stone"
+      ],
+      "baseTint": [
+        0.33245153634617935,
+        0.2961382707983211,
+        0.25015828472995344,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.85,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Honey wood",
+      "aliases": [
+        "Honey_wood"
+      ],
+      "baseTint": [
+        0.5394794890121072,
+        0.25415209433082675,
+        0.09084171118340768,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.7,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Walnut",
+      "aliases": [
+        "Walnut"
+      ],
+      "baseTint": [
+        0.1946178304415758,
+        0.07618538148130785,
+        0.026241221894849898,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.72,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Plank",
+      "aliases": [
+        "Plank"
+      ],
+      "baseTint": [
+        0.43415363617474895,
+        0.20507873639031693,
+        0.07818742180518633,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.75,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Plank dark",
+      "aliases": [
+        "Plank_dark"
+      ],
+      "baseTint": [
+        0.2704977910130658,
+        0.12477181756095049,
+        0.05126945837404324,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.78,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Bark",
+      "aliases": [
+        "Bark"
+      ],
+      "baseTint": [
+        0.19806931955994886,
+        0.09084171118340768,
+        0.03688945040110004,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.04357525030318875,
+        0.01998517646034969,
+        0.008115679088242008
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Bark light",
+      "aliases": [
+        "Bark_light"
+      ],
+      "baseTint": [
+        0.32314320911295075,
+        0.16826940018969075,
+        0.08021982031446832,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.07109150600484916,
+        0.037019268041731966,
+        0.01764836046918303
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Shingle",
+      "aliases": [
+        "Shingle"
+      ],
+      "baseTint": [
+        0.3419144249086609,
+        0.10224173308810132,
+        0.04518620438567554,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.85,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.07522117347990541,
+        0.02249318127938229,
+        0.00994096496484862
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Door green",
+      "aliases": [
+        "Door_green"
+      ],
+      "baseTint": [
+        0.1119324278369056,
+        0.26225065752969623,
+        0.10224173308810132,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.7,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Brass",
+      "aliases": [
+        "Brass"
+      ],
+      "baseTint": [
+        0.6583748172794485,
+        0.38132601143253014,
+        0.06847816984440017,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.35,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Iron",
+      "aliases": [
+        "Iron"
+      ],
+      "baseTint": [
+        0.042311410620809675,
+        0.03688945040110004,
+        0.03433980680868217,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.6,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Plaster",
+      "aliases": [
+        "Plaster"
+      ],
+      "baseTint": [
+        0.8307698767746546,
+        0.7230551289219693,
+        0.5520114015120001,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.18276937289042403,
+        0.15907212836283324,
+        0.12144250833264003
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Cream felt",
+      "aliases": [
+        "Cream_felt"
+      ],
+      "baseTint": [
+        0.8879231178819663,
+        0.7912979403326302,
+        0.6239603916750761,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.1953430859340326,
+        0.17408554687317865,
+        0.13727128616851675
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Rust felt",
+      "aliases": [
+        "Rust_felt"
+      ],
+      "baseTint": [
+        0.5271151257058131,
+        0.12743768043564743,
+        0.04518620438567554,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.11596532765527888,
+        0.028036289695842435,
+        0.00994096496484862
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Mustard felt",
+      "aliases": [
+        "Mustard_felt"
+      ],
+      "baseTint": [
+        0.6938717612919899,
+        0.3712376804741491,
+        0.052860647023180246,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.15265178748423777,
+        0.08167228970431281,
+        0.011629342345099655
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Teal felt",
+      "aliases": [
+        "Teal_felt"
+      ],
+      "baseTint": [
+        0.07818742180518633,
+        0.25415209433082675,
+        0.2581828529215958,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.017201232797140992,
+        0.055913460752781884,
+        0.05680022764275108
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Rose felt",
+      "aliases": [
+        "Rose_felt"
+      ],
+      "baseTint": [
+        0.6583748172794485,
+        0.2831487404299921,
+        0.26225065752969623,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.14484245980147867,
+        0.062292722894598265,
+        0.05769514465653317
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Indigo felt",
+      "aliases": [
+        "Indigo_felt"
+      ],
+      "baseTint": [
+        0.06847816984440017,
+        0.10461648409110419,
+        0.23074004852434915,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.015065197365768036,
+        0.02301562650004292,
+        0.05076281067535681
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Sage felt",
+      "aliases": [
+        "Sage_felt"
+      ],
+      "baseTint": [
+        0.27467731206038465,
+        0.4232676699860717,
+        0.20863687014525575,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.06042900865328462,
+        0.09311888739693577,
+        0.04590011143195626
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Plum felt",
+      "aliases": [
+        "Plum_felt"
+      ],
+      "baseTint": [
+        0.20863687014525575,
+        0.07036009569659588,
+        0.14702726649759498,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.04590011143195626,
+        0.015479221053251092,
+        0.0323459986294709
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Paper",
+      "aliases": [
+        "Paper"
+      ],
+      "baseTint": [
+        0.9046611743911496,
+        0.83879901174074,
+        0.7011018919329731,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Ink",
+      "aliases": [
+        "Ink"
+      ],
+      "baseTint": [
+        0.042311410620809675,
+        0.042311410620809675,
+        0.06480326669290577,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Cork",
+      "aliases": [
+        "Cork"
+      ],
+      "baseTint": [
+        0.467783796112159,
+        0.26635560480286247,
+        0.11443537382697373,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.10291243514467498,
+        0.05859823305662974,
+        0.02517578224193422
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Terracotta",
+      "aliases": [
+        "Terracotta"
+      ],
+      "baseTint": [
+        0.5271151257058131,
+        0.1651321945016676,
+        0.07036009569659588,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.85,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Ceramic white",
+      "aliases": [
+        "Ceramic_white"
+      ],
+      "baseTint": [
+        0.8962693533742664,
+        0.8631572134541023,
+        0.8069522576692516,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.45,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Ceramic blue",
+      "aliases": [
+        "Ceramic_blue"
+      ],
+      "baseTint": [
+        0.1589608350608804,
+        0.27467731206038465,
+        0.45078578283822346,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.45,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Carrot",
+      "aliases": [
+        "Carrot"
+      ],
+      "baseTint": [
+        0.8148465722161012,
+        0.25415209433082675,
+        0.042311410620809675,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.8,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.17926624588754228,
+        0.055913460752781884,
+        0.009308510336578129
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Leaf",
+      "aliases": [
+        "Leaf"
+      ],
+      "baseTint": [
+        0.1119324278369056,
+        0.32314320911295075,
+        0.0595112381629812,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.024625134124119232,
+        0.07109150600484916,
+        0.013092472395855865
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Leaf dark",
+      "aliases": [
+        "Leaf_dark"
+      ],
+      "baseTint": [
+        0.04970656598412723,
+        0.1946178304415758,
+        0.042311410620809675,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.010935444516507992,
+        0.04281592269714667,
+        0.009308510336578129
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Cabbage",
+      "aliases": [
+        "Cabbage"
+      ],
+      "baseTint": [
+        0.39157247774972326,
+        0.5840784178911641,
+        0.25415209433082675,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.08614594510493911,
+        0.1284972519360561,
+        0.055913460752781884
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Pumpkin",
+      "aliases": [
+        "Pumpkin"
+      ],
+      "baseTint": [
+        0.7454042095403874,
+        0.24228112246555486,
+        0.042311410620809675,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.85,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.16398892609888524,
+        0.05330184694242207,
+        0.009308510336578129
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Petal white",
+      "aliases": [
+        "Petal_white"
+      ],
+      "baseTint": [
+        0.9215818562772946,
+        0.8713671191987972,
+        0.7758222183174236,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.20274800838100482,
+        0.19170076622373539,
+        0.1706808880298332
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Petal yellow",
+      "aliases": [
+        "Petal_yellow"
+      ],
+      "baseTint": [
+        0.8879231178819663,
+        0.5840784178911641,
+        0.07227185068231748,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.1953430859340326,
+        0.1284972519360561,
+        0.015899807150109847
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Petal pink",
+      "aliases": [
+        "Petal_pink"
+      ],
+      "baseTint": [
+        0.799102738014409,
+        0.35153259950043936,
+        0.43415363617474895,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.17580260236317,
+        0.07733717189009666,
+        0.09551379995844476
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Petal blue",
+      "aliases": [
+        "Petal_blue"
+      ],
+      "baseTint": [
+        0.27467731206038465,
+        0.39157247774972326,
+        0.7454042095403874,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.06042900865328462,
+        0.08614594510493911,
+        0.16398892609888524
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Petal red",
+      "aliases": [
+        "Petal_red"
+      ],
+      "baseTint": [
+        0.6724431569576875,
+        0.10224173308810132,
+        0.06847816984440017,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.14793749453069124,
+        0.02249318127938229,
+        0.015065197365768036
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Soil",
+      "aliases": [
+        "Soil"
+      ],
+      "baseTint": [
+        0.10461648409110419,
+        0.042311410620809675,
+        0.021219010376003555,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.98,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.02301562650004292,
+        0.009308510336578129,
+        0.0046681822827207824
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Bread",
+      "aliases": [
+        "Bread"
+      ],
+      "baseTint": [
+        0.6444796819705821,
+        0.32314320911295075,
+        0.10702310297826761,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.14178553003352806,
+        0.07109150600484916,
+        0.023545082655218874
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Jam red",
+      "aliases": [
+        "Jam_red"
+      ],
+      "baseTint": [
+        0.4793201831008268,
+        0.03189603307301153,
+        0.042311410620809675,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.4,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Jam amber",
+      "aliases": [
+        "Jam_amber"
+      ],
+      "baseTint": [
+        0.6938717612919899,
+        0.2704977910130658,
+        0.024157632448504756,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.4,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Jam green",
+      "aliases": [
+        "Jam_green"
+      ],
+      "baseTint": [
+        0.21223075741405523,
+        0.3662525955988395,
+        0.06480326669290577,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.4,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Jam plum",
+      "aliases": [
+        "Jam_plum"
+      ],
+      "baseTint": [
+        0.1559264637078274,
+        0.042311410620809675,
+        0.1119324278369056,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.4,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Glass",
+      "aliases": [
+        "Glass"
+      ],
+      "baseTint": [
+        0.7156935005064807,
+        0.8069522576692516,
+        0.7912979403326302,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.15,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Wall sage",
+      "aliases": [
+        "Wall_sage"
+      ],
+      "baseTint": [
+        0.4851499400560704,
+        0.5972017883637634,
+        0.38132601143253014,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.10673298681233548,
+        0.13138439344002795,
+        0.08389172251515663
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Wall cream",
+      "aliases": [
+        "Wall_cream"
+      ],
+      "baseTint": [
+        0.8307698767746546,
+        0.7230551289219693,
+        0.5520114015120001,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.18276937289042403,
+        0.15907212836283324,
+        0.12144250833264003
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Wall butter",
+      "aliases": [
+        "Wall_butter"
+      ],
+      "baseTint": [
+        0.8631572134541023,
+        0.6866853124353135,
+        0.32314320911295075,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.18989458695990252,
+        0.15107076873576897,
+        0.07109150600484916
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Wall rose",
+      "aliases": [
+        "Wall_rose"
+      ],
+      "baseTint": [
+        0.7758222183174236,
+        0.47353149614800955,
+        0.4232676699860717,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.1706808880298332,
+        0.1041769291525621,
+        0.09311888739693577
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Wall teal",
+      "aliases": [
+        "Wall_teal"
+      ],
+      "baseTint": [
+        0.238397573812271,
+        0.4072402119017367,
+        0.3662525955988395,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.05244746623869962,
+        0.08959284661838207,
+        0.08057557103174469
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Roof teal",
+      "aliases": [
+        "Roof_teal"
+      ],
+      "baseTint": [
+        0.07818742180518633,
+        0.20863687014525575,
+        0.1946178304415758,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.85,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.017201232797140992,
+        0.04590011143195626,
+        0.04281592269714667
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Roof terracotta",
+      "aliases": [
+        "Roof_terracotta"
+      ],
+      "baseTint": [
+        0.4793201831008268,
+        0.11697066775851084,
+        0.04970656598412723,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.85,
+      "metallic": 0.0,
+      "specular": 0.16,
+      "sheenColor": [
+        0.1054504402821819,
+        0.025733546906872386,
+        0.010935444516507992
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": "character/plush_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.3,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Trim",
+      "aliases": [
+        "Trim"
+      ],
+      "baseTint": [
+        0.9046611743911496,
+        0.8307698767746546,
+        0.7230551289219693,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.8,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Lamp glow",
+      "aliases": [
+        "Lamp_glow"
+      ],
+      "baseTint": [
+        1.0,
+        0.6307571363461468,
+        0.25415209433082675,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.5,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false,
+      "emissive": [
+        1.0,
+        0.6307571363461468,
+        0.25415209433082675
+      ],
+      "emissiveIntensity": 1.6
+    },
+    {
+      "name": "Star glow",
+      "aliases": [
+        "Star_glow"
+      ],
+      "baseTint": [
+        1.0,
+        0.8962693533742664,
+        0.5520114015120001,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.5,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false,
+      "emissive": [
+        1.0,
+        0.8962693533742664,
+        0.5520114015120001
+      ],
+      "emissiveIntensity": 1.6
+    },
+    {
+      "name": "Window glow",
+      "aliases": [
+        "Window_glow"
+      ],
+      "baseTint": [
+        1.0,
+        0.5840784178911641,
+        0.18782077230067787,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.5,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 0.85,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false,
+      "emissive": [
+        1.0,
+        0.5840784178911641,
+        0.18782077230067787
+      ],
+      "emissiveIntensity": 1.6
+    },
+    {
+      "name": "Walnut bark",
+      "aliases": [
+        "Walnut_bark"
+      ],
+      "baseTint": [
+        0.23,
+        0.12,
+        0.065,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Daisy milk",
+      "aliases": [
+        "Daisy_milk"
+      ],
+      "baseTint": [
+        0.95,
+        0.86,
+        0.63,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.85,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Sage ceramic",
+      "aliases": [
+        "Sage_ceramic"
+      ],
+      "baseTint": [
+        0.24,
+        0.36,
+        0.24,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.4,
+      "metallic": 0.0,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Water surface",
+      "aliases": [
+        "Water_surface"
+      ],
+      "baseTint": [
+        0.25,
+        0.43,
+        0.39,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.13,
+      "metallic": 0.15,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    }
+  ]
+}

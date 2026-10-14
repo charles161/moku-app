@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f5ee" />
+    <meta name="description" content="Thanks for getting Moku Pro." />
+    <meta name="robots" content="noindex" />
+    <title>Thanks · Moku</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- The text's font, asked for with the HTML, so it's in place before the page shows and never reflows it. -->
+    <link rel="preload" href="/src/fonts/sans-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/src/fonts.css" />
+    <style>
+      :root { --paper: #f7f5ee; --ink: #30372b; --green: #344633; --muted: #6b6d60; --sage: #d8ddc9; --line: #dcded1; --serif: 'Instrument Serif', 'Instrument Serif fallback', Georgia, serif; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 'DM Sans', 'DM Sans fallback', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+      a { color: var(--green); text-underline-offset: 3px; }
+      .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+      header { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; }
+      .brand { font: 600 26px/1 'DM Sans', 'DM Sans fallback', sans-serif; letter-spacing: -0.03em; color: var(--ink); text-decoration: none; }
+      .brand span { color: #91a47c; }
+      .brand .beta { font: 600 11px/1 'DM Sans', 'DM Sans fallback', sans-serif; font-style: normal; letter-spacing: 0.14em; text-transform: uppercase; color: #5f6f4c; border: 1px solid #b9c4a5; border-radius: 999px; padding: 4px 8px 3px; margin-left: 8px; vertical-align: middle; position: relative; top: -4px; }
+      header nav a { font-size: 15px; color: var(--muted); text-decoration: none; }
+      header nav a:hover { color: var(--ink); }
+      .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; color: var(--muted); margin: 40px 0 8px; }
+      h1 { font: 400 clamp(44px, 8vw, 68px)/1.02 var(--serif); letter-spacing: -0.01em; margin: 0 0 12px; }
+      h1 em { color: #6a7b4e; }
+      .updated { color: var(--muted); font-size: 15px; margin: 0 0 36px; }
+      .tldr { background: #fffdf7; border: 1px solid var(--line); border-radius: 22px; padding: 26px 28px; margin: 0 0 48px; }
+      .tldr h2 { font: 400 30px/1.1 var(--serif); margin: 0 0 12px; }
+      .tldr ul { margin: 0; padding: 0; list-style: none; }
+      .tldr li { position: relative; padding: 7px 0 7px 26px; }
+      .tldr li::before { content: '✳'; position: absolute; left: 0; top: 7px; color: #91a47c; font-size: 14px; }
+      h2 { font: 400 34px/1.1 var(--serif); margin: 52px 0 12px; }
+      h3 { font-size: 17px; font-weight: 600; margin: 28px 0 6px; }
+      p, li { color: #3d4437; }
+      ul { padding-left: 22px; }
+      li { margin: 6px 0; }
+      .never li { list-style: none; margin-left: -22px; padding-left: 26px; position: relative; }
+      .never li::before { content: '×'; position: absolute; left: 2px; color: #a36b4f; font-weight: 600; }
+      code { font-size: 15px; background: #eeede3; padding: 1px 6px; border-radius: 6px; }
+      footer { border-top: 1px solid var(--line); margin-top: 64px; padding: 26px 0 48px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+      /* Phones and tablets: every link is a 44 px tap; the extra height is padding that negative margins take back, so nothing moves. */
+      @media (pointer: coarse) {
+        .brand, header nav a, footer > a { display: inline-block; padding-block: 9px; margin-block: -9px; }
+        header nav a { min-width: 44px; text-align: center; padding-block: 10px; margin-block: -10px; }
+        footer > a { padding-block: 11px; margin-block: -11px; }
+      }
+      @media (max-width: 520px) { body { font-size: 16px; } .tldr { padding: 22px 20px; } h2 { font-size: 30px; } }
+    </style>
+    <script type="module" src="/src/visits.js"></script>
+    <script type="module" src="/src/vercel-insights.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header><a class="brand" href="/">moku<span>✳</span><em class="beta">beta</em></a><nav><a href="/">Home</a></nav></header>
+      <main>
+        <div class="eyebrow">MOKU PRO</div>
+        <h1>Thank you. <em>Truly.</em></h1>
+        <p>Moku Pro reaches your Mac by itself within a minute: nothing to type, no account. Moku goes back to its sharper
+          judging and its own notes on your day. You can close this tab.</p>
+        <p>Your receipt comes by email from Dodo Payments, who sell Moku on our behalf. To cancel any time, write to me; Pro
+          stays until the end of what you’ve paid for.</p>
+        <p>If anything doesn’t look right, write to me at <a href="mailto:hello@hellomoku.com">hello@hellomoku.com</a>. — Charles</p>
+      </main>
+      <footer><span>© 2026 Moku · <a href="mailto:hello@hellomoku.com">hello@hellomoku.com</a></span><a href="/">Back to Moku</a></footer>
+    </div>
+  </body>
+</html>

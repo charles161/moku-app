@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "drink_water": {
+    "file": "../props/water_cup.usdz",
+    "joint": "hand_R",
+    "wrapperLocalMatrixColumnMajor": [
+      0.9808691143989563,
+      0.10701920837163925,
+      0.162610724568367,
+      0.0,
+      0.16261087357997894,
+      -0.9096632599830627,
+      -0.3821914792060852,
+      0.0,
+      0.10701930522918701,
+      0.40132221579551697,
+      -0.9096630811691284,
+      0.0,
+      0.1469963788986206,
+      0.06698872894048691,
+      -0.0955040454864502,
+      1.0
+    ],
+    "instructions": "Attach a wrapper to hand_R joint world pose; set wrapper local matrix from these columns. Add the imported cup root under that wrapper without replacing its authored root transform.",
+    "visibleNormalizedTime": [
+      0.06,
+      0.9
+    ]
+  },
+  "carry_lantern": {
+    "file": "../props/lantern.usdz",
+    "joint": "hand_R",
+    "wrapperLocalMatrixColumnMajor": [
+      0.7598837614059448,
+      0.3953171968460083,
+      0.5160432457923889,
+      0.0,
+      0.5763407349586487,
+      -0.22247488796710968,
+      -0.6782448291778564,
+      0.0,
+      -0.16711358726024628,
+      0.8859565258026123,
+      -0.43261265754699707,
+      0.0,
+      -0.1506069004535675,
+      0.10749693214893341,
+      0.17430379986763,
+      1.0
+    ],
+    "instructions": "Same wrapper convention as drink_water. Follow composed hand_R world transform; retain imported lantern root coordinate conversion. Hide the 2D lantern while carrying.",
+    "visibleNormalizedTime": [
+      0,
+      1
+    ],
+    "holdJointEulerDegrees": {
+      "arm_R": [
+        -45.00000125223908,
+        0.0,
+        -34.99999983559887
+      ],
+      "hand_R": [
+        9.99999970909292,
+        0.0,
+        0.0
+      ]
+    },
+    "holdClip": "carry_lantern",
+    "handleAnchorAuthoring": [
+      0,
+      0,
+      0.272
+    ],
+    "baseAuthoringAtPreview": [
+      -0.12018155306577682,
+      -0.2202526479959488,
+      0.08948463201522827
+    ]
+  },
+  "name_tag_hold": {
+    "file": "../props/name_tag.usdz",
+    "joint": "hand_R",
+    "wrapperLocalMatrixColumnMajor": [
+      0.8659842610359192,
+      0.4189394414424896,
+      0.2730585038661957,
+      0.0,
+      0.4801431894302368,
+      -0.5439650416374207,
+      -0.6881601810455322,
+      0.0,
+      -0.13976310193538666,
+      0.7270429730415344,
+      -0.6722158789634705,
+      0.0,
+      0.09101574867963791,
+      0.1342707872390747,
+      -0.05079084634780884,
+      1.0
+    ],
+    "instructions": "Apply nameTagHold joint pose, then attach this wrapper to hand_R. The tag stays below the chin; text goes on its front (-Y authoring / +Z runtime) paper face. Do not scale the rig to fit the tag."
+  },
+  "build_hammer": {
+    "file": "../props/hammer.usdz",
+    "joint": "hand_R",
+    "wrapperLocalMatrixColumnMajor": [
+      0.9808692932128906,
+      0.10701937973499298,
+      0.16261066496372223,
+      0.0,
+      0.1657145917415619,
+      -0.020718889310956,
+      -0.9859558343887329,
+      0.0,
+      -0.10214731842279434,
+      0.9940409660339355,
+      -0.03805716335773468,
+      0.0,
+      2.0489096641540527e-08,
+      2.60770320892334e-08,
+      -1.1175870895385742e-08,
+      1.0
+    ],
+    "visibleNormalizedTime": [
+      0,
+      1
+    ],
+    "instructions": "Attach wrapper to composed hand_R world pose. Keep imported prop root conversion. Home scene only; hide on desktop."
+  },
+  "tea_sit": {
+    "file": "../props/water_cup.usdz",
+    "joint": "hand_R",
+    "wrapperLocalMatrixColumnMajor": [
+      0.9808691740036011,
+      0.10701925307512283,
+      0.162610724568367,
+      0.0,
+      0.16261081397533417,
+      -0.9096633791923523,
+      -0.38219156861305237,
+      0.0,
+      0.10701926052570343,
+      0.4013223350048065,
+      -0.9096630811691284,
+      0.0,
+      0.14439205825328827,
+      0.09268110990524292,
+      -0.08829816430807114,
+      1.0
+    ],
+    "visibleNormalizedTime": [
+      0,
+      1
+    ],
+    "instructions": "Attach wrapper to composed hand_R world pose. Keep imported prop root conversion. Home scene only; hide on desktop."
+  }
+}

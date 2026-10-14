@@ -1,0 +1,13 @@
+# Binary files: never diff or merge as text. The art (assets/, website/public/) is committed as ordinary git blobs;
+# it has its own licence (assets/LICENSE-ASSETS.md).
+*.usdz  binary
+*.usdc  binary
+*.blend binary
+*.zip   binary
+*.icns  binary
+*.mp4   binary
+*.png   binary
+*.jpg   binary
+*.webp  binary
+*.woff2 binary
+*.wasm  binary

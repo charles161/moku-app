@@ -1,0 +1,148 @@
+{
+ "parts": [
+  {
+   "name": "plot",
+   "triangles": 10768
+  },
+  {
+   "name": "tree_seed",
+   "triangles": 1248
+  },
+  {
+   "name": "tree_sapling",
+   "triangles": 2220
+  },
+  {
+   "name": "tree_young",
+   "triangles": 2696
+  },
+  {
+   "name": "tree_grown",
+   "triangles": 5072
+  },
+  {
+   "name": "tree_full",
+   "triangles": 8600
+  },
+  {
+   "name": "th_brackets",
+   "triangles": 276
+  },
+  {
+   "name": "th_deck",
+   "triangles": 2256
+  },
+  {
+   "name": "th_ladder",
+   "triangles": 1012
+  },
+  {
+   "name": "th_rail",
+   "triangles": 1656
+  },
+  {
+   "name": "th_back",
+   "triangles": 376
+  },
+  {
+   "name": "th_walls",
+   "triangles": 752
+  },
+  {
+   "name": "th_front",
+   "triangles": 816
+  },
+  {
+   "name": "th_window",
+   "triangles": 340
+  },
+  {
+   "name": "th_roof_l",
+   "triangles": 752
+  },
+  {
+   "name": "th_roof_r",
+   "triangles": 942
+  },
+  {
+   "name": "th_flowers",
+   "triangles": 444
+  },
+  {
+   "name": "th_lantern",
+   "triangles": 180
+  },
+  {
+   "name": "swing",
+   "triangles": 372
+  },
+  {
+   "name": "bunting",
+   "triangles": 228
+  },
+  {
+   "name": "windchime",
+   "triangles": 204
+  },
+  {
+   "name": "hammock",
+   "triangles": 1116
+  },
+  {
+   "name": "roof_flag",
+   "triangles": 96
+  },
+  {
+   "name": "rope_ladder",
+   "triangles": 736
+  },
+  {
+   "name": "kite",
+   "triangles": 306
+  },
+  {
+   "name": "nest_deck",
+   "triangles": 184
+  },
+  {
+   "name": "nest_rail",
+   "triangles": 2256
+  },
+  {
+   "name": "nest_roof",
+   "triangles": 428
+  },
+  {
+   "name": "nest_ladder",
+   "triangles": 644
+  },
+  {
+   "name": "slide",
+   "triangles": 4800
+  },
+  {
+   "name": "zip_post",
+   "triangles": 184
+  },
+  {
+   "name": "zipline",
+   "triangles": 2584
+  },
+  {
+   "name": "bell",
+   "triangles": 144
+  },
+  {
+   "name": "balloon",
+   "triangles": 624
+  },
+  {
+   "name": "chimney",
+   "triangles": 488
+  },
+  {
+   "name": "string_lights",
+   "triangles": 864
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+# Secrets and local configuration: never commit these.
+.env
+.env.*
+*.env
+!.env.example
+!*/.env.example
+.mcp.json
+credentials.env
+
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+
+# Build outputs
+.build/
+build/
+dist/
+moku-brain
+*.swiftmodule
+*.swiftdoc
+*.swiftsourceinfo
+.vercel/
+.wrangler/
+
+# Local data, logs and QA captures
+*.sqlite*
+*.log
+assets/reports/
+assets/previews/*
+!assets/previews/stage_*.png
+app/MokuVisual/screenshots/
+test-results/
+
+# Editors and tools
+.DS_Store
+.omc/
+.claude/
+*.blend1

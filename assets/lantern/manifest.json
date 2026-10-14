@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "sourceModel": "props/lantern.usdz",
+  "displaySizePoints": [
+    26,
+    34
+  ],
+  "alpha": "straight RGBA PNG",
+  "layers": "Use body + separate flame at identical bounds, or the composite; do not use both paths together. All states share one camera and pixel registration.",
+  "anchorsNormalizedTopLeft": {
+    "ground": [
+      0.49999988079071045,
+      0.9162519350647926
+    ],
+    "flame": [
+      0.44378942251205444,
+      0.6360577046871185
+    ],
+    "handle": [
+      0.49999988079071045,
+      0.1354210376739502
+    ]
+  },
+  "states": [
+    {
+      "name": "lit",
+      "intensity": 1,
+      "flameColorSRGB": "#F3B04E",
+      "files": {
+        "2x": {
+          "body": "body_lit@2x.png",
+          "flame": "flame_lit@2x.png",
+          "composite": "lit@2x.png",
+          "sizePixels": [
+            52,
+            68
+          ]
+        },
+        "3x": {
+          "body": "body_lit@3x.png",
+          "flame": "flame_lit@3x.png",
+          "composite": "lit@3x.png",
+          "sizePixels": [
+            78,
+            102
+          ]
+        }
+      }
+    },
+    {
+      "name": "low",
+      "intensity": 0.65,
+      "flameColorSRGB": "#E6CC98",
+      "files": {
+        "2x": {
+          "body": "body_low@2x.png",
+          "flame": "flame_low@2x.png",
+          "composite": "low@2x.png",
+          "sizePixels": [
+            52,
+            68
+          ]
+        },
+        "3x": {
+          "body": "body_low@3x.png",
+          "flame": "flame_low@3x.png",
+          "composite": "low@3x.png",
+          "sizePixels": [
+            78,
+            102
+          ]
+        }
+      }
+    },
+    {
+      "name": "ember",
+      "intensity": 0.15,
+      "flameColorSRGB": "#D9A25A",
+      "files": {
+        "2x": {
+          "body": "body_ember@2x.png",
+          "flame": "flame_ember@2x.png",
+          "composite": "ember@2x.png",
+          "sizePixels": [
+            52,
+            68
+          ]
+        },
+        "3x": {
+          "body": "body_ember@3x.png",
+          "flame": "flame_ember@3x.png",
+          "composite": "ember@3x.png",
+          "sizePixels": [
+            78,
+            102
+          ]
+        }
+      }
+    }
+  ],
+  "spark": {
+    "displaySizePoints": [
+      12,
+      12
+    ],
+    "2x": "spark@2x.png",
+    "3x": "spark@3x.png",
+    "visibleGlyphPoints": [
+      3.4,
+      8.6
+    ],
+    "colorsSRGB": [
+      "#F3B04E",
+      "#FFE7B0"
+    ]
+  },
+  "carryAttachment": "character/prop_attachments.json#carry_lantern",
+  "carry": "Hide 2D sprite during live carrying; attach props/lantern.usdz via published hand_R wrapper. Re-show 2D sprite after setting down.",
+  "glassMaterialNames": [
+    "Amber glow",
+    "Amber_glow"
+  ],
+  "carryEmission": "Multiply the imported glass emission by the current normalized WorkState intensity, clamped to at least 0.15. Do not switch the carried lantern to full brightness just because it is 3D.",
+  "minimumIntensity": 0.15,
+  "returnFlare": {
+    "peakIntensity": 1.4,
+    "riseSeconds": 0.25,
+    "sparkCount": [
+      3,
+      5
+    ],
+    "sparkLifetimeSeconds": 1.2,
+    "sparkRisePoints": [
+      20,
+      40
+    ]
+  },
+  "glow": {
+    "colorSRGB": "#F6BE62",
+    "radiusPoints": 22,
+    "groundPoolFocusedPoints": [
+      120,
+      36
+    ],
+    "groundPoolFocusedOpacity": 0.22,
+    "groundPoolFloorOpacity": 0.03
+  },
+  "faceLight": {
+    "colorSRGB": "#FFC874",
+    "radiusPoints": 90,
+    "blendMode": "softLight",
+    "mask": "current character image alpha"
+  },
+  "reducedMotion": "Crossfade phases over 1 s; no gutter, sparks or motion. Never extinguish the ember.",
+  "runtime": "Core Animation sprites/gradients; no per-frame RealityKit rendering for the standing lantern. Runtime owns WorkState timing, gaze/light masks and power checks."
+}

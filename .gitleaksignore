@@ -1,0 +1,67 @@
+# Reviewed gitleaks false positives (file:rule:line). Each one was checked by hand; nothing here is a credential.
+# A change that moves one of these lines makes CI flag it again: review it, then update the line number here.
+
+# PostHog's project key (phc_…): write-only and made to ship inside apps, as PostHog documents; not a secret.
+app/Moku/Sources/Moku/CrashReports.swift:generic-api-key:20
+
+# A fake relay token in a Swift test fixture.
+app/MokuMind/Tests/MokuMindTests/RelayAccessTests.swift:generic-api-key:66
+
+# A fixed, sequential hex test token for the brain's bearer-auth tests.
+brain-go/internal/brain/access_test.go:generic-api-key:15
+
+# eval/local-models/results: 16-hex cache keys of judged screens ("key": …), not credentials.
+eval/local-models/results/Ministral-3-3B-Instruct-2512-4bit.json:generic-api-key:251
+eval/local-models/results/Ministral-3-3B-Instruct-2512-4bit.json:generic-api-key:315
+eval/local-models/results/Ministral-3-3B-Instruct-2512-4bit.json:generic-api-key:1187
+eval/local-models/results/Ministral-3-3B-Instruct-2512-4bit.json:generic-api-key:1323
+eval/local-models/results/Qwen3-4B-Instruct-2507-4bit.json:generic-api-key:251
+eval/local-models/results/Qwen3-4B-Instruct-2507-4bit.json:generic-api-key:315
+eval/local-models/results/Qwen3-4B-Instruct-2507-4bit.json:generic-api-key:1187
+eval/local-models/results/Qwen3-4B-Instruct-2507-4bit.json:generic-api-key:1323
+eval/local-models/results/Qwen3.5-2B-MLX-4bit.json:generic-api-key:251
+eval/local-models/results/Qwen3.5-2B-MLX-4bit.json:generic-api-key:315
+eval/local-models/results/Qwen3.5-2B-MLX-4bit.json:generic-api-key:1187
+eval/local-models/results/Qwen3.5-2B-MLX-4bit.json:generic-api-key:1323
+eval/local-models/results/Qwen3.5-4B-MLX-4bit.json:generic-api-key:251
+eval/local-models/results/Qwen3.5-4B-MLX-4bit.json:generic-api-key:315
+eval/local-models/results/Qwen3.5-4B-MLX-4bit.json:generic-api-key:1187
+eval/local-models/results/Qwen3.5-4B-MLX-4bit.json:generic-api-key:1323
+eval/local-models/results/embed-lr.json:generic-api-key:291
+eval/local-models/results/embed-lr.json:generic-api-key:331
+eval/local-models/results/embed-lr.json:generic-api-key:846
+eval/local-models/results/embed-lr.json:generic-api-key:1026
+eval/local-models/results/embed-lr.json:generic-api-key:1086
+eval/local-models/results/embed-lr.json:generic-api-key:1231
+eval/local-models/results/embed-lr.json:generic-api-key:1236
+eval/local-models/results/embed-lr.json:generic-api-key:1686
+eval/local-models/results/embed-lr.json:generic-api-key:1771
+eval/local-models/results/embed-lr.json:generic-api-key:2011
+eval/local-models/results/embed-lr.json:generic-api-key:2026
+eval/local-models/results/gemma-4-e2b-it-4bit.json:generic-api-key:251
+eval/local-models/results/gemma-4-e2b-it-4bit.json:generic-api-key:315
+eval/local-models/results/gemma-4-e2b-it-4bit.json:generic-api-key:1187
+eval/local-models/results/gemma-4-e2b-it-4bit.json:generic-api-key:1323
+eval/local-models/results/granite-4.1-3b-4bit.json:generic-api-key:251
+eval/local-models/results/granite-4.1-3b-4bit.json:generic-api-key:315
+eval/local-models/results/granite-4.1-3b-4bit.json:generic-api-key:1187
+eval/local-models/results/granite-4.1-3b-4bit.json:generic-api-key:1323
+eval/local-models/results/quiet/Ministral-3-3B-Instruct-2512-4bit.json:generic-api-key:251
+eval/local-models/results/quiet/Ministral-3-3B-Instruct-2512-4bit.json:generic-api-key:315
+eval/local-models/results/quiet/Qwen3-4B-Instruct-2507-4bit.json:generic-api-key:251
+eval/local-models/results/quiet/Qwen3-4B-Instruct-2507-4bit.json:generic-api-key:315
+eval/local-models/results/quiet/Qwen3.5-2B-MLX-4bit.json:generic-api-key:251
+eval/local-models/results/quiet/Qwen3.5-2B-MLX-4bit.json:generic-api-key:315
+eval/local-models/results/quiet/Qwen3.5-4B-MLX-4bit.json:generic-api-key:251
+eval/local-models/results/quiet/Qwen3.5-4B-MLX-4bit.json:generic-api-key:315
+eval/local-models/results/quiet/gemma-4-e2b-it-4bit.json:generic-api-key:251
+eval/local-models/results/quiet/gemma-4-e2b-it-4bit.json:generic-api-key:315
+eval/local-models/results/quiet/granite-4.1-3b-4bit.json:generic-api-key:251
+eval/local-models/results/quiet/granite-4.1-3b-4bit.json:generic-api-key:315
+eval/local-models/results/server-ministral-3b-q4km.json:generic-api-key:147
+eval/local-models/results/server-ministral-3b-q4km.json:generic-api-key:187
+eval/local-models/results/server-ministral-3b-q4km.json:generic-api-key:732
+eval/local-models/results/server-ministral-3b-q4km.json:generic-api-key:817
+
+# Shell variable names (calibrate_key, brain_ldflags), not a secret.
+scripts/build-app.sh:generic-api-key:34

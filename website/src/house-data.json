@@ -1,0 +1,53 @@
+{
+  "goalMinutes": 240,
+  "minutesPerPiece": 10,
+  "pieceNames": [
+    "the stakes and string",
+    "the stone footings",
+    "the floor joists",
+    "the floor",
+    "the corner posts",
+    "the top beams",
+    "the rafters",
+    "the ridge beam",
+    "the back wall",
+    "the left wall",
+    "the right wall",
+    "the front wall",
+    "the round door",
+    "the windows",
+    "the left roof",
+    "the right roof",
+    "the roof trim",
+    "the chimney",
+    "the porch",
+    "the flower boxes",
+    "the porch lamp",
+    "the fence",
+    "the garden",
+    "the finishing touches"
+  ],
+  "pieces": 24,
+  "stages": [
+    {
+      "first": 0,
+      "name": "The ground"
+    },
+    {
+      "first": 4,
+      "name": "The frame"
+    },
+    {
+      "first": 8,
+      "name": "The walls"
+    },
+    {
+      "first": 14,
+      "name": "The roof"
+    },
+    {
+      "first": 18,
+      "name": "The home"
+    }
+  ]
+}

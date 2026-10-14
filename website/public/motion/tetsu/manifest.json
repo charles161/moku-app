@@ -1,0 +1,408 @@
+{
+  "content-blink": {
+    "fps": 60,
+    "frames": 17,
+    "seconds": 0.28,
+    "duration": 280,
+    "url": "/motion/tetsu/content-blink.webp?v=72da29559e",
+    "bytes": 13650,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-blink.320.webp?v=b83997379a",
+        "bytes": 5174
+      }
+    }
+  },
+  "content-ear-left": {
+    "fps": 50,
+    "frames": 55,
+    "seconds": 1.1,
+    "duration": 1100,
+    "url": "/motion/tetsu/content-ear-left.webp?v=4d0c5da4de",
+    "bytes": 63016,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-ear-left.320.webp?v=78d51cd911",
+        "bytes": 31494
+      }
+    }
+  },
+  "content-ear-right": {
+    "fps": 50,
+    "frames": 55,
+    "seconds": 1.1,
+    "duration": 1100,
+    "url": "/motion/tetsu/content-ear-right.webp?v=972deffa6c",
+    "bytes": 63474,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-ear-right.320.webp?v=75b932c85c",
+        "bytes": 30700
+      }
+    }
+  },
+  "content-foot": {
+    "fps": 30,
+    "frames": 54,
+    "seconds": 1.8,
+    "duration": 1800,
+    "url": "/motion/tetsu/content-foot.webp?v=bae75f0f9f",
+    "bytes": 36538,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-foot.320.webp?v=2252d6252b",
+        "bytes": 14576
+      }
+    }
+  },
+  "content-glance": {
+    "fps": 30,
+    "frames": 36,
+    "seconds": 1.2,
+    "duration": 1200,
+    "url": "/motion/tetsu/content-glance.webp?v=86015a5e99",
+    "bytes": 249916,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-glance.320.webp?v=f5403ed260",
+        "bytes": 98298
+      }
+    }
+  },
+  "content-head": {
+    "fps": 24,
+    "frames": 77,
+    "seconds": 3.2,
+    "duration": 3200,
+    "url": "/motion/tetsu/content-head.webp?v=442a5bc0c6",
+    "bytes": 159296,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-head.320.webp?v=b59de12720",
+        "bytes": 63182
+      }
+    }
+  },
+  "content-hover-in": {
+    "fps": 50,
+    "frames": 85,
+    "seconds": 1.7,
+    "duration": 1700,
+    "url": "/motion/tetsu/content-hover-in.webp?v=a5eaea4f5c",
+    "bytes": 12362,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-hover-in.320.webp?v=ff66bed23d",
+        "bytes": 4926
+      }
+    }
+  },
+  "content-hover-out": {
+    "fps": 50,
+    "frames": 23,
+    "seconds": 0.45,
+    "duration": 450,
+    "url": "/motion/tetsu/content-hover-out.webp?v=56dd8c1665",
+    "bytes": 12308,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-hover-out.320.webp?v=e674157751",
+        "bytes": 4890
+      }
+    }
+  },
+  "content-idle": {
+    "fps": 1,
+    "frames": 1,
+    "seconds": 0,
+    "duration": 0,
+    "url": "/motion/tetsu/content-idle.webp?v=6dfa4b1284",
+    "bytes": 43032,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-idle.320.webp?v=12265e80ff",
+        "bytes": 20228
+      }
+    }
+  },
+  "content-nose": {
+    "fps": 50,
+    "frames": 20,
+    "seconds": 0.4,
+    "duration": 400,
+    "url": "/motion/tetsu/content-nose.webp?v=f1efb4b641",
+    "bytes": 28208,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-nose.320.webp?v=bdffdfd891",
+        "bytes": 13548
+      }
+    }
+  },
+  "content-pat": {
+    "fps": 50,
+    "frames": 75,
+    "seconds": 1.5,
+    "duration": 1500,
+    "url": "/motion/tetsu/content-pat.webp?v=6d8035d53c",
+    "bytes": 481268,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-pat.320.webp?v=b7995a9dba",
+        "bytes": 197212
+      }
+    }
+  },
+  "content-paw": {
+    "fps": 24,
+    "frames": 62,
+    "seconds": 2.6,
+    "duration": 2600,
+    "url": "/motion/tetsu/content-paw.webp?v=d5b1b0a811",
+    "bytes": 46506,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-paw.320.webp?v=079c6e6343",
+        "bytes": 20432
+      }
+    }
+  },
+  "content-scan": {
+    "fps": 30,
+    "frames": 66,
+    "seconds": 2.2,
+    "duration": 2200,
+    "url": "/motion/tetsu/content-scan.webp?v=60450a0920",
+    "bytes": 65430,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-scan.320.webp?v=fd7c3eba65",
+        "bytes": 16956
+      }
+    }
+  },
+  "content-slow-blink": {
+    "fps": 30,
+    "frames": 21,
+    "seconds": 0.7,
+    "duration": 700,
+    "url": "/motion/tetsu/content-slow-blink.webp?v=54ed639977",
+    "bytes": 14080,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-slow-blink.320.webp?v=30f5fda0f4",
+        "bytes": 5284
+      }
+    }
+  },
+  "content-to-disappointed": {
+    "fps": 50,
+    "frames": 150,
+    "seconds": 3,
+    "duration": 3000,
+    "url": "/motion/tetsu/content-to-disappointed.webp?v=6f46185eb1",
+    "bytes": 1290744,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-to-disappointed.320.webp?v=216219d9e1",
+        "bytes": 491410
+      }
+    }
+  },
+  "content-to-happy": {
+    "fps": 50,
+    "frames": 40,
+    "seconds": 0.8,
+    "duration": 800,
+    "url": "/motion/tetsu/content-to-happy.webp?v=cc1cd072a6",
+    "bytes": 238734,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-to-happy.320.webp?v=9c44b6665b",
+        "bytes": 103338
+      }
+    }
+  },
+  "content-wave": {
+    "fps": 24,
+    "frames": 53,
+    "seconds": 2.2083333333333335,
+    "duration": 2208,
+    "url": "/motion/tetsu/content-wave.webp?v=b0b7532803",
+    "bytes": 499764,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/content-wave.320.webp?v=d7c043d859",
+        "bytes": 208314
+      }
+    }
+  },
+  "disappointed-blink": {
+    "fps": 60,
+    "frames": 17,
+    "seconds": 0.28,
+    "duration": 280,
+    "url": "/motion/tetsu/disappointed-blink.webp?v=e20549f50c",
+    "bytes": 13470,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/disappointed-blink.320.webp?v=b7fd155b90",
+        "bytes": 4938
+      }
+    }
+  },
+  "disappointed-idle": {
+    "fps": 1,
+    "frames": 1,
+    "seconds": 0,
+    "duration": 0,
+    "url": "/motion/tetsu/disappointed-idle.webp?v=bb7ed1582f",
+    "bytes": 39572,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/disappointed-idle.320.webp?v=41b49deffc",
+        "bytes": 18490
+      }
+    }
+  },
+  "disappointed-pout": {
+    "fps": 30,
+    "frames": 30,
+    "seconds": 1,
+    "duration": 1000,
+    "url": "/motion/tetsu/disappointed-pout.webp?v=c214adb587",
+    "bytes": 10492,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/disappointed-pout.320.webp?v=678c8fbe88",
+        "bytes": 3486
+      }
+    }
+  },
+  "disappointed-slow-blink": {
+    "fps": 30,
+    "frames": 21,
+    "seconds": 0.7,
+    "duration": 700,
+    "url": "/motion/tetsu/disappointed-slow-blink.webp?v=1e41dd6cc0",
+    "bytes": 12420,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/disappointed-slow-blink.320.webp?v=3117a2947f",
+        "bytes": 4686
+      }
+    }
+  },
+  "disappointed-to-content": {
+    "fps": 50,
+    "frames": 120,
+    "seconds": 2.4,
+    "duration": 2400,
+    "url": "/motion/tetsu/disappointed-to-content.webp?v=3f1d1b8bb9",
+    "bytes": 1121980,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/disappointed-to-content.320.webp?v=b5ada3f5f4",
+        "bytes": 442958
+      }
+    }
+  },
+  "disappointed-to-happy": {
+    "fps": 50,
+    "frames": 30,
+    "seconds": 0.6,
+    "duration": 600,
+    "url": "/motion/tetsu/disappointed-to-happy.webp?v=1e5d22d7b4",
+    "bytes": 303684,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/disappointed-to-happy.320.webp?v=9752a54177",
+        "bytes": 122688
+      }
+    }
+  },
+  "happy-ear-left": {
+    "fps": 50,
+    "frames": 55,
+    "seconds": 1.1,
+    "duration": 1100,
+    "url": "/motion/tetsu/happy-ear-left.webp?v=0f2d7dcc3f",
+    "bytes": 64966,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/happy-ear-left.320.webp?v=0d848e109f",
+        "bytes": 31274
+      }
+    }
+  },
+  "happy-head": {
+    "fps": 24,
+    "frames": 77,
+    "seconds": 3.2,
+    "duration": 3200,
+    "url": "/motion/tetsu/happy-head.webp?v=f1b891cc3d",
+    "bytes": 151762,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/happy-head.320.webp?v=bca9c3bd41",
+        "bytes": 63500
+      }
+    }
+  },
+  "happy-idle": {
+    "fps": 1,
+    "frames": 1,
+    "seconds": 0,
+    "duration": 0,
+    "url": "/motion/tetsu/happy-idle.webp?v=665fdf9d4d",
+    "bytes": 42310,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/happy-idle.320.webp?v=29cfbdfdec",
+        "bytes": 20458
+      }
+    }
+  },
+  "happy-paw": {
+    "fps": 24,
+    "frames": 62,
+    "seconds": 2.6,
+    "duration": 2600,
+    "url": "/motion/tetsu/happy-paw.webp?v=0b2cf70a50",
+    "bytes": 45904,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/happy-paw.320.webp?v=5b275b35c2",
+        "bytes": 21018
+      }
+    }
+  },
+  "happy-to-content": {
+    "fps": 50,
+    "frames": 60,
+    "seconds": 1.2,
+    "duration": 1200,
+    "url": "/motion/tetsu/happy-to-content.webp?v=7c7c860a95",
+    "bytes": 305260,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/happy-to-content.320.webp?v=08443da40c",
+        "bytes": 125726
+      }
+    }
+  },
+  "happy-to-disappointed": {
+    "fps": 50,
+    "frames": 150,
+    "seconds": 3,
+    "duration": 3000,
+    "url": "/motion/tetsu/happy-to-disappointed.webp?v=5c0c8a2021",
+    "bytes": 1292632,
+    "variants": {
+      "320": {
+        "url": "/motion/tetsu/happy-to-disappointed.320.webp?v=b7ad7e4414",
+        "bytes": 504108
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+import {createFocus} from '../../../brain/src/focus.ts';
+import {DEFAULT_CONFIG} from '../../../brain/src/contract.ts';
+import {writeFileSync, mkdirSync} from 'node:fs';
+const folder=process.argv[2];mkdirSync(folder,{recursive:true});
+const focus=createFocus({store:{learnedRulesFor:()=>[]},models:{judge:()=>{throw Error('Known feed must not call a model')}},config:()=>({...DEFAULT_CONFIG,graceSec:1})});
+const screen={bundleId:'com.google.Chrome',appName:'Google Chrome',title:'Feed | LinkedIn',url:'https://www.linkedin.com/feed/',textHash:'scripted-linkedin-feed'};
+const started=performance.now();
+const result=await focus({sample:{id:'linkedin-feed',ts:Date.now(),app:{bundleId:screen.bundleId,name:screen.appName},activity:{idleSeconds:0},context:{inCall:false,sharingScreen:false}},screen,text:'LinkedIn feed',previous:null});
+if(result.state!=='drifting'||!result.reason.startsWith('[known-feed]'))throw Error('Expected actual known-feed shortcut');
+writeFileSync(folder+'/verdict.json',JSON.stringify({sampleId:'linkedin-feed',thread:null,isNewThread:false,latencyMs:Math.round(performance.now()-started),...result},null,2));
+console.log(result);

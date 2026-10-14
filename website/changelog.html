@@ -1,0 +1,286 @@
+<!doctype html>
+<!-- Written by scripts/changelog.mjs from CHANGELOG.md: edit that file, then npm run changelog. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f5ee" />
+    <meta name="description" content="What changed in each version of Moku, the little companion for your Mac, newest first. The latest is 0.1.13." />
+    <title>Changelog · Moku</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- The text's font, asked for with the HTML, so it's in place before the page shows and never reflows it. -->
+    <link rel="preload" href="/src/fonts/sans-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/src/fonts.css" />
+    <style>
+      :root { --paper: #f7f5ee; --ink: #30372b; --green: #344633; --muted: #6b6d60; --sage: #d8ddc9; --line: #dcded1; --serif: 'Instrument Serif', 'Instrument Serif fallback', Georgia, serif; }
+      * { box-sizing: border-box; }
+      html { scroll-padding-top: 24px; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 'DM Sans', 'DM Sans fallback', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+      a { color: var(--green); text-underline-offset: 3px; }
+      .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+      header { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; }
+      .brand { font: 600 26px/1 'DM Sans', 'DM Sans fallback', sans-serif; letter-spacing: -0.03em; color: var(--ink); text-decoration: none; }
+      .brand span { color: #91a47c; }
+      .brand .beta { font: 600 11px/1 'DM Sans', 'DM Sans fallback', sans-serif; font-style: normal; letter-spacing: 0.14em; text-transform: uppercase; color: #5f6f4c; border: 1px solid #b9c4a5; border-radius: 999px; padding: 4px 8px 3px; margin-left: 8px; vertical-align: middle; position: relative; top: -4px; }
+      header nav a { font-size: 15px; color: var(--muted); text-decoration: none; }
+      header nav a:hover { color: var(--ink); }
+      .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; color: var(--muted); margin: 40px 0 8px; }
+      h1 { font: 400 clamp(44px, 8vw, 68px)/1.02 var(--serif); letter-spacing: -0.01em; margin: 0 0 12px; }
+      h1 em { color: #6a7b4e; }
+      .intro { color: var(--muted); margin: 0 0 40px; }
+      .release { border-top: 1px solid var(--line); padding: 30px 0 8px; }
+      .release:target { background: #fffdf7; border: 1px solid var(--line); border-radius: 22px; padding: 26px 28px 10px; margin: 0 -28px 24px; }
+      .release h2 { font: 400 36px/1.1 var(--serif); margin: 0 0 4px; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+      .release h2 a { color: inherit; text-decoration: none; }
+      .release h2 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+      .date { font: 400 15px/1 'DM Sans', 'DM Sans fallback', sans-serif; color: var(--muted); }
+      h3 { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #5f6f4c; margin: 22px 0 4px; }
+      p, li { color: #3d4437; }
+      ul { padding-left: 22px; margin: 0 0 8px; }
+      li { margin: 6px 0; }
+      .quiet { color: var(--muted); }
+      code { font-size: 15px; background: #eeede3; padding: 1px 6px; border-radius: 6px; }
+      footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 26px 0 48px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+      /* Phones and tablets: every link is a 44 px tap; the extra height is padding that negative margins take back, so nothing moves. */
+      @media (pointer: coarse) {
+        .brand, header nav a, footer > a { display: inline-block; padding-block: 9px; margin-block: -9px; }
+        header nav a { min-width: 44px; text-align: center; padding-block: 10px; margin-block: -10px; }
+        footer > a { padding-block: 11px; margin-block: -11px; }
+        .release h2 a { display: inline-block; padding-block: 5px; margin-block: -5px; }
+      }
+      @media (max-width: 520px) { body { font-size: 16px; } .release h2 { font-size: 32px; } .release:target { padding: 22px 20px 8px; margin: 0 -20px 20px; } }
+    </style>
+    <script type="module" src="/src/visits.js"></script>
+    <script type="module" src="/src/vercel-insights.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header><a class="brand" href="/">moku<span>✳</span><em class="beta">beta</em></a><nav><a href="/">Home</a></nav></header>
+      <main>
+        <div class="eyebrow">CHANGELOG</div>
+        <h1>What’s new in <em>Moku.</em></h1>
+        <p class="intro">Every version, newest first. Moku updates itself quietly while you’re away, then tells you when there’s something new to see here.</p>
+        <section class="release" id="0.1.13" aria-labelledby="v0.1.13">
+          <h2 id="v0.1.13"><a href="#0.1.13">0.1.13</a> <span class="date">October 14, 2026</span></h2>
+          <h3>Added</h3>
+          <ul>
+            <li><strong>Moku Pro</strong>, $6 a month or $48 a year, in Settings › Moku’s brain. It opens for buying soon: then the checkout opens in your browser, and Pro turns on here by itself once it’s paid. No account and nothing to type. Sold by Dodo Payments; cancel any time.</li>
+          </ul>
+          <h3>Fixed</h3>
+          <ul>
+            <li>Moku now hides over a full-screen reel or video in a browser even when the browser doesn’t keep the display awake (a muted reel on Instagram, say): a full-screen browser on YouTube, Instagram, Netflix, Prime Video, Hotstar and other sites for watching counts. Switch that window to a page of work and Moku comes back.</li>
+          </ul>
+          <h3>Privacy</h3>
+          <ul>
+            <li>For Moku Pro, payments go through Dodo Payments, the seller of record. Our relay keeps only your Mac’s fingerprint, the subscription’s ID, its status and until when it’s paid; never your card or your email.</li>
+          </ul>
+        </section>
+        <section class="release" id="0.1.12" aria-labelledby="v0.1.12">
+          <h2 id="v0.1.12"><a href="#0.1.12">0.1.12</a> <span class="date">October 14, 2026</span></h2>
+          <h3>Added</h3>
+          <ul>
+            <li>With several screens, Moku follows you: once you’ve worked on another screen for about 30 seconds, it fades over to that screen’s corner (seated, no walking). A quick glance at the other screen doesn’t move it.</li>
+            <li>Right-click Moku to correct it: <strong>This is work</strong> during a drift (the drift counts as work and Moku settles), or <strong>This isn’t work</strong> (counted as a detour from when that window came up, with no sad move). Moku learns the app or site either way. In Your day, the <strong>…</strong> to correct a line now shows faintly, so it’s easy to find.</li>
+            <li>Moku hides itself while a video plays full screen on its display (in a browser, QuickTime, IINA, VLC, TV…) and comes back when full screen ends; pausing doesn’t bring it back over the film, and neither does a break. An editor or any other app in full screen doesn’t hide it. Another display’s full-screen video doesn’t hide it, and neither does a call ending nor “Hide Moku” bring it back early.</li>
+            <li>Settings › Privacy › <strong>Apps where Moku steps aside</strong>: pick any number of apps, from the ones open now or from Applications. Moku hides while one is in front. For each, choose <strong>Hide Moku</strong> (the work you do there still counts) or <strong>Hide, don’t watch</strong> (Moku reads nothing from it, judges nothing and sends nothing; a call is still noticed, so Moku stays hidden on a shared screen). Remove one with the minus button.</li>
+          </ul>
+          <h3>Changed</h3>
+          <ul>
+            <li>No more task labels popping up beside Moku (“launching moku desktop app”). It nods when you start on something, and resting the pointer on it shows what you’re on and your minutes on it today.</li>
+            <li>Sharper Moku and Tetsu: they’re drawn at 1.75 times the pixels your screen shows, then scaled down, so the eyes, the mouth and the outline have smooth edges instead of pixel steps. It costs a little more only while they move.</li>
+            <li>In a corner, Moku and Tetsu turn their heads only a little toward your work; their eyes do more of the looking. The head used to turn almost to a profile.</li>
+            <li>The welcome asks only for Accessibility. Screen Recording is optional: Moku goes by the app, the window’s name and the address, and Settings can let it read a few words from the window too.</li>
+            <li>Moku and Tetsu are smaller: what Settings calls 1× is 87% of the old size (“cuteness wins”). Your chosen size keeps its number, so it’s 13% smaller too.</li>
+            <li>When you drift, Moku shows its sadness once: a sigh with a sad face, then its eyes go back to your work and its face back to normal, all within three seconds. It no longer stares at you, folds its arms or stays sad for the whole drift. It shows its sadness at most once every three minutes: a quick second drift is watched calmly, and coming back from it doesn’t flip the face to happy.</li>
+            <li>Moku’s online brain now has a fair daily share for each Mac on a trial, so it stays affordable however many people join. A Mac that uses its share is judged by Moku’s own rules until midnight UTC. Invited friends aren’t limited.</li>
+            <li>The popover says so plainly (“Moku’s thinking offline for the rest of today”), and Moku asks again only when the day turns. When a trial ends, Moku waits hours before asking again, and an invite code typed in turns the online brain back on at once.</li>
+          </ul>
+          <h3>Fixed</h3>
+          <ul>
+            <li>Crash reports could be lost: Moku marked one as sent even when it hadn’t gone through, looked only once at launch, and skipped the brain’s own reports. Now a report is kept until PostHog has answered, and Moku looks again a minute after launch and every hour.</li>
+            <li>Moku wrote about 2 GB a day to your disk without need: macOS kept a copy of every answer from Moku’s own brain, a few seconds apart. Moku’s calls now keep nothing, and the old copies are cleared at launch.</li>
+            <li>A crash right after Moku reopened itself quietly (after you change companions) was counted as a normal quit.</li>
+          </ul>
+          <h3>Privacy</h3>
+          <ul>
+            <li>Moku no longer leaves a copy of its answers from the relay in your Mac’s cache folder (~/Library/Caches/ai.lightslips.moku). That copy included this Mac’s relay token in plain text. It’s cleared at launch.</li>
+            <li>When our relay asks (it doesn’t yet), a trial’s first request carries Apple’s App Attest statement: a throwaway key and Apple’s signed word that it came from a real Mac running Moku, so trials can’t be made up for Macs that don’t exist. An invite skips it, and a Mac that can’t do it (macOS 26 or older) carries on without. The relay keeps only the key’s ID. Never anything about your screen, files or account.</li>
+            <li>Each launch also says whether the last one ended with a normal quit or not (a crash, a force quit, a power cut), one word, so a crash is still noticed when its report can’t be sent. Nothing else is added.</li>
+            <li>Once a day our relay records how many Macs used Moku’s online brain the day before and each one’s share for the new day: two counts, nothing about any one Mac.</li>
+            <li>When an update check fails, Moku also sends the network’s error number, the server’s answer code and which of its two update servers it was, so a Mac that can’t update can be helped. Never the address.</li>
+          </ul>
+        </section>
+        <section class="release" id="0.1.11" aria-labelledby="v0.1.11">
+          <h2 id="v0.1.11"><a href="#0.1.11">0.1.11</a> <span class="date">October 8, 2026</span></h2>
+          <h3>Changed</h3>
+          <ul>
+            <li>Drifting, Moku and Tetsu look sad, never angry: no cross brows or folded arms a minute in.</li>
+            <li>Moku closes its eyes happily only when you pat it or rest the pointer on it. The look-up while you work is a smile with its eyes open, and so is its proud face after a long stretch of focus.</li>
+          </ul>
+          <h3>Fixed</h3>
+          <ul>
+            <li>The popover’s “···” menu opens on the first click. It used to vanish at once the first time, and open on the second.</li>
+            <li>A call that drops for a moment no longer flashes the companion back for a few seconds: it stays hidden until the call has been over for half a minute.</li>
+            <li>The welcome shows its companion even if you had hidden it. “Say hi again” (or installing again) after hiding Moku or Tetsu opened the welcome with an empty stage; now the companion comes out for it and stays out.</li>
+            <li>Your day’s numbers agree everywhere. The tasks line counts Other work too (“8 tasks and other work, 4h 3m”, not “8 tasks, 2h 59m” under a header of 4h 3m); the tasks and the work rows add up to the header to the minute; the week strip shows the day on show as its header does; the house’s pieces are one per 10 focused minutes in every view; and a morning Moku couldn’t judge, after last night’s work, counts the same in the popover and in Your day.</li>
+            <li>Your day says what the popover says. Opened again while it was open, or left open while you worked, it kept the day as it was when it first opened (2h 51m and 6 returns beside the popover’s 3h 30m and 9). Now it asks again, and the numbers change in place.</li>
+            <li>The usage numbers no longer count a relaunch, an update or a logout of Moku as quitting after a nudge. Only your own quit counts.</li>
+          </ul>
+          <h3>Privacy</h3>
+          <ul>
+            <li>The day’s summary counts the minutes the companion was hidden as they pass, split into hidden by you and hidden for calls (it used to add them only when it came back, so a hide still on at midnight counted nothing), and Moku’s opening says whether you had put the companion away. Detours while you’ve hidden the companion aren’t counted as nudges: you didn’t see them.</li>
+            <li>When Your day’s numbers disagree about today, Moku sends which two views and by how many minutes (<code>numbers_disagree</code>), so we can fix it. Never what you worked on.</li>
+            <li>When you answer “What’s new”, Moku also sends how many seconds its bubble stayed up (<code>whats_new</code>). Never what you worked on.</li>
+          </ul>
+        </section>
+        <section class="release" id="0.1.10" aria-labelledby="v0.1.10">
+          <h2 id="v0.1.10"><a href="#0.1.10">0.1.10</a> <span class="date">October 6, 2026</span></h2>
+          <h3>Changed</h3>
+          <ul>
+            <li>Updates are much smaller: a new version usually comes as just what changed (about 1 MB rather than 48), so it gets through on slow and mobile networks. A Mac whose copy doesn’t match downloads the whole update instead.</li>
+            <li>An update whose download fails is tried again after 10 minutes, 30 minutes and 2 hours, rather than the next day. Settings says how the last check went and, when it failed, when Moku tries again.</li>
+          </ul>
+          <h3>Fixed</h3>
+          <ul>
+            <li>From this version, a Mac that installed Moku from the download gets the small updates too: the download’s app is now exactly the one updates are made from.</li>
+            <li>“Say hi again” during a break ends the break: the timer over the companion goes and the popover’s button says “Break” again. Before, the button still said “End break” and pressing it started a new break.</li>
+            <li>moku://day, moku://break and moku://settings work when Moku isn’t running: Moku opens and does what the link says. Before, it only opened.</li>
+            <li>Delete my data empties the menu bar’s house and the popover at once. Before, they showed today’s house for up to a minute more.</li>
+            <li>Opening Moku again while it runs (from Applications, Spotlight or Launchpad) opens its popover, so you can see it’s there. Before, nothing happened.</li>
+            <li>The ✕ on the break timer only ends the break. A double-click, or a click as the time ran out, started a new one.</li>
+            <li>Opening Your day or Settings brings only that window forward. Before, Moku’s other windows left behind your apps came forward with it.</li>
+            <li>Opening Your day while it’s open brings it forward where you put it, at today. Before, it jumped back to the middle of the screen, faded in again and rebuilt the house from nothing.</li>
+            <li>After “Say hi again”, macOS’s Quit &amp; Reopen for Screen Recording brings the welcome back where it was. Before, Moku reopened without it, though the welcome had said it would pick up right there.</li>
+            <li>After you change companions, Moku reopens itself (to free memory) only when you’re away, the screen is locked or the Mac sleeps. Before, two minutes without touching the Mac was enough, so it could vanish and come back while you watched a video or read.</li>
+            <li>In the welcome, the companion stays in its window: it can’t be dragged out, and a display change leaves it there. Before, a drag moved its home, and the welcome ended with it there.</li>
+            <li>Opening Settings again while you type your name keeps what you typed. Before, it went back to the saved name.</li>
+            <li>From this version on, going back to an older Moku (after a newer one) keeps your name and your breaks and water. Before, one setting it didn’t know made it ignore all of them.</li>
+            <li>“What’s new” and “Where was I?” stay while the pointer is on them, so they never vanish as you go to click. Before, they went when their time ran out, even under the pointer.</li>
+            <li>Quitting with ⌘Q while the popover is open closes it first, so the day’s goodbye card shows alone.</li>
+            <li>An invite link that opens Moku for the first time no longer opens Settings over the welcome: Settings shows the invite once the welcome is over.</li>
+            <li>In the welcome, right-clicking the companion does nothing. Before, its menu could hide it from the welcome or open Settings over it.</li>
+            <li>Delete my data also clears an open Your day, which went on showing the days just deleted.</li>
+            <li>A pat plays its little reaction once. Before, a pat while the companion moved home played it again when it arrived.</li>
+            <li>“What’s new” counts as seen only once its bubble has been up. Before, a call starting at that moment meant it was never shown; now it’s shown at the next launch.</li>
+            <li>Your day’s work rows add up to its focused minutes. A stretch Moku couldn’t judge right after work (a neutral app) counted as focus but had no row.</li>
+            <li>The menu bar’s house fills as much as the popover says. Before, it filled in eighths rounded up and counted the empty space around the house, so at 69% built it looked 93% full.</li>
+          </ul>
+          <h3>Privacy</h3>
+          <ul>
+            <li>When something inside Moku fails and it carries on (its brain not answering, an update that fails, a file it can’t save), Moku tells us what kind and where in its own code, from a fixed list, at most once every 10 minutes. Never the error’s message, a file path or anything on your screen. Listed on /privacy.</li>
+          </ul>
+        </section>
+        <section class="release" id="0.1.9" aria-labelledby="v0.1.9">
+          <h2 id="v0.1.9"><a href="#0.1.9">0.1.9</a> <span class="date">October 6, 2026</span></h2>
+          <h3>Added</h3>
+          <ul>
+            <li><strong>What’s new after an update</strong>: at the first calm moment after Moku updates, the companion says so in its bubble (Moku: “I updated! See what’s new”; Tetsu: “&gt; updated: see what’s new”). A click opens that version on hellomoku.com/changelog; ✕ or 15 s closes it. Once per version, never in a meeting, a call, a break or the first minutes of focus.</li>
+          </ul>
+          <h3>Fixed</h3>
+          <ul>
+            <li>Switching between Moku and Tetsu in the welcome is instant (it took 1.2 to 1.6 s with the screen frozen for most of it). Every companion load also holds the screen about 40% less, at launch too.</li>
+            <li>The menu bar icon opens the popover and nothing else. Settings, Your day or an alert left open behind your apps no longer jumps forward with it.</li>
+            <li>Moku’s little moves are spread across the minute: the ear about 20 s after the look-up and smile, a paw or foot about 40 s after. They no longer all come together with the smile. Blinks are unchanged.</li>
+          </ul>
+          <h3>Privacy</h3>
+          <ul>
+            <li>Moku tells us more about how it’s used, still in numbers and fixed words only: each welcome step, the companion switched, hidden and shown, how far detours go and whether the ask works, breaks suggested and taken, what went wrong, how quickly things open, what you try again, signs Moku got in the way, updates, whether “What’s new” was opened, and once a day the day before in numbers. Never your apps, windows, sites, screen, goals or typing. Every note is listed on /privacy.</li>
+          </ul>
+        </section>
+        <section class="release" id="0.1.8" aria-labelledby="v0.1.8">
+          <h2 id="v0.1.8"><a href="#0.1.8">0.1.8</a> <span class="date">October 5, 2026</span></h2>
+          <h3>Added</h3>
+          <ul>
+            <li><strong>Tetsu</strong>, a small desk robot, as a second companion: an LED face, servo moves, a scan beam over your window, a hologram of today’s rocket, a dot-matrix speech bubble. Choose in the welcome or Settings.</li>
+            <li><strong>“Today counted”</strong>: once a day, as work winds down, a card with today’s house, your focused time, how often you came back and your longest stretch. A missed day shows the next morning as “Yesterday counted”.</li>
+            <li><strong>“Where was I?”</strong>: coming back from a drift of 2 minutes or more, or 10 minutes away, Moku names the task and the window you left, with <strong>Take me there</strong>. Never in a meeting, a call or a break.</li>
+            <li><strong>A new welcome</strong>: the live companion greets you by name, shows what it reads, and the screen darkens round the menu bar’s house, which pulses in place where macOS put it.</li>
+            <li><strong>Your day by task</strong>: the workflow in order, the detours where they happened, the steps in plain words.</li>
+            <li>Settings: water and break reminders, easy to find and to switch off.</li>
+            <li>A throw sends the companion along its line to the screen’s edge, where it stays.</li>
+          </ul>
+          <h3>Changed</h3>
+          <ul>
+            <li><strong>One behaviour</strong> for everyone: Calm, Lively and the other choices are gone; saved choices are cleared.</li>
+            <li>Companions stay seated (no standing or walking for now) and never jump.</li>
+            <li>Moku looks like the first version again: whiter, evenly lit, round dark eyes with two sparkles.</li>
+            <li>About a third fewer AI calls an hour (343 to 130 in our sessions): a window keeps its answer, lectures and reference pages aren’t drifts.</li>
+            <li>Energy: face shapes on the GPU (about 10% of a core instead of 21.5%), fewer little moves after 10 minutes of unbroken focus, faces at 30 Hz on older macOS, a quiet relaunch after a companion change to free memory.</li>
+          </ul>
+          <h3>Fixed</h3>
+          <ul>
+            <li>Permission prompts no longer come back at every launch; Moku asks only in the welcome.</li>
+            <li>The popover stays open when clicked from a Mac that holds focus.</li>
+            <li>The brain falls back to ports 8021–8029 when 8020 is taken; one Moku runs at a time.</li>
+          </ul>
+          <h3>Privacy</h3>
+          <ul>
+            <li><strong>Delete my data</strong> now erases everything at once, including the database’s write-ahead log, the logs and the window “Where was I?” was keeping.</li>
+            <li>Password managers, authenticators, wallets and vault pages are never read.</li>
+            <li>History: screen text an hour, the moment-by-moment detail 90 days, each day’s summary until you delete it.</li>
+            <li>No location in crash reports or model calls; crash reports never name your home folder.</li>
+            <li>The privacy page says Your day sends a summary of the day to the AI for its note.</li>
+          </ul>
+        </section>
+        <section class="release" id="0.1.7" aria-labelledby="v0.1.7">
+          <h2 id="v0.1.7"><a href="#0.1.7">0.1.7</a> <span class="date">October 2, 2026</span></h2>
+          <h3>Changed</h3>
+          <ul>
+            <li>The brain’s world snapshot no longer burns CPU; Moku’s window is sRGB (no colour conversion every frame).</li>
+            <li>A behind-the-scenes test of how many AI calls could be skipped (measured only, never acted on; removed in 0.1.8).</li>
+          </ul>
+        </section>
+        <section class="release" id="0.1.6" aria-labelledby="v0.1.6">
+          <h2 id="v0.1.6"><a href="#0.1.6">0.1.6</a> <span class="date">October 1, 2026</span></h2>
+          <h3>Added</h3>
+          <ul>
+            <li>Crash reports to PostHog’s error tracking (no screen content).</li>
+          </ul>
+        </section>
+        <section class="release" id="0.1.5" aria-labelledby="v0.1.5">
+          <h2 id="v0.1.5"><a href="#0.1.5">0.1.5</a> <span class="date">October 1, 2026</span></h2>
+          <h3>Added</h3>
+          <ul>
+            <li>A beta badge and a Feedback button.</li>
+          </ul>
+          <h3>Changed</h3>
+          <ul>
+            <li>No “thinks on your Mac” anywhere without the local model.</li>
+          </ul>
+        </section>
+        <section class="release" id="0.1.4" aria-labelledby="v0.1.4">
+          <h2 id="v0.1.4"><a href="#0.1.4">0.1.4</a> <span class="date">October 1, 2026</span></h2>
+          <h3>Added</h3>
+          <ul>
+            <li>Move to Applications.</li>
+          </ul>
+          <h3>Fixed</h3>
+          <ul>
+            <li>The welcome carries on after macOS’s Quit &amp; Reopen; System Settings comes to the front for permissions.</li>
+          </ul>
+        </section>
+        <section class="release" id="0.1.3" aria-labelledby="v0.1.3">
+          <h2 id="v0.1.3"><a href="#0.1.3">0.1.3</a> <span class="date">October 1, 2026</span></h2>
+          <h3>Added</h3>
+          <ul>
+            <li>Auto-update with Sparkle: a daily check, a quiet download, installed while you’re away.</li>
+            <li>The app icon: Moku hugging its little house.</li>
+            <li>Moku dozes on a break and wakes gently; blinks open slowly.</li>
+            <li>Your day grouped by app, with what you did under each.</li>
+          </ul>
+          <h3>Fixed</h3>
+          <ul>
+            <li>Cancelling a break no longer snaps Moku.</li>
+          </ul>
+        </section>
+        <section class="release before" aria-labelledby="before">
+          <h2 id="before">Before 0.1.3</h2>
+          <ul>
+            <li>September 23, 2026, <strong>v0</strong>: the first Moku. It notices drift and rewards the return, builds a house from focused minutes, and lives in the corner of the screen.</li>
+          </ul>
+        </section>
+      </main>
+      <footer><span>© 2026 Moku · <a href="mailto:hello@hellomoku.com">hello@hellomoku.com</a> · <a href="/privacy">Privacy</a></span><a href="/">Back to Moku</a></footer>
+    </div>
+  </body>
+</html>

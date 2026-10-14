@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+from pathlib import Path
+from PIL import Image, ImageDraw, ImageFont
+import json, hashlib
+root=Path(__file__).resolve().parents[1];folder=root/'screenshots/review/v1-p0-fix'
+font=ImageFont.truetype('/System/Library/Fonts/Helvetica.ttc',22)
+small=ImageFont.truetype('/System/Library/Fonts/Helvetica.ttc',17)
+def figure(path):
+ im=Image.open(path).convert('RGBA');bounds=im.getchannel('A').point(lambda x:255 if x>=16 else 0).getbbox();im=im.crop(bounds);scale=min(270/im.width,240/im.height);return im.resize((round(im.width*scale),round(im.height*scale)),Image.Resampling.LANCZOS)
+def sheet(name, entries, background="#f6f2e9"):
+ ink = "#364035" if background=="#f6f2e9" else "#f6f2e9"
+ im=Image.new('RGBA',(len(entries)*310,325),background);d=ImageDraw.Draw(im)
+ for i,(path,label) in enumerate(entries):
+  f=figure(path);im.alpha_composite(f,(i*310+(310-f.width)//2,20+240-f.height));d.text((i*310+12,282),label,fill=ink,font=small)
+ im.convert('RGB').save(folder/name)
+sheet('gaze-before-after.png',[(root/'screenshots/review/gaze-work.png','Brief 2 · preserved'),(folder/'before/gaze-work.png','P0 · before'),(folder/'candidate/idle-focus-rig.png','Fixed · up toward work'),(folder/'approved-look-v0.png','Approved v0 desktop crop')])
+sheet('celebration-before-after.png',[(folder/'before/audit/content-big_celebrate/0008.png','Before · clipped at 0.67 s'),(folder/'before/audit/disappointed-big_celebrate/0006.png','Before · detached at 0.50 s'),(folder/'candidate/gesture-rig.png','Fixed · jump peak 0.75 s'),(folder/'approved-look-v0.png','Approved v0 desktop crop')])
+sheet('lighting-before-after.png',[(folder/'before/lantern-focused.png','Before · ambient lantern spill'),(folder/'candidate/idle-focus.png','Fixed · original contact shadow'),(folder/'approved-look-v0.png','Approved v0 desktop crop')])
+sheet('lighting-before-after-dark.png',[(folder/'before/lantern-focused.png','Before · ambient lantern spill'),(folder/'candidate/idle-focus.png','Fixed · original contact shadow'),(folder/'approved-look-v0.png','Approved v0 desktop crop')], '#252b2b')
+rows=json.loads((folder/'audit/clipping.json').read_text())
+clips=sorted({r['clip'] for r in rows})
+lines=['# Every mood × clip render audit','', '8 moods. All alpha >0; eight-connected components; no ignored islands. 12 Hz plus each endpoint. One fixed camera, 640 px texture, unchanged studio/material data. Each checked frame must have one component and a clear texture edge. Bind matrices and hierarchy must match the base.','', '| Clip | Frames (8 moods) | Result | Max bind delta |','|---|---:|---|---:|']
+for clip in clips:
+ group=[r for r in rows if r['clip']==clip];lines.append(f"| {clip} | {sum(r['frames'] for r in group)} | {'PASS' if all(r['pass'] for r in group) else 'FAIL'} | {max(r['bindDelta'] for r in group):.6f} |")
+lines += ['',f"Total: {len(rows)} combinations, {sum(r['frames'] for r in rows)} frames.", '', 'Full per-frame failure details: `audit/clipping.json`. No alpha coverage is excluded and no islands are ignored: even a detached one-pixel antialiased island fails.']
+(folder/'clipping-report.md').write_text('\n'.join(lines)+'\n')
+assets=root.parent.parent/'assets';manifest={}
+for path in [root/'.build/release/MokuVisualDemo',root/'.build/MokuVisualDemo.app/Contents/MacOS/MokuVisualDemo',*sorted((assets/'character').rglob('*.usdz')),assets/'character/moods.json',assets/'runtime/studio.json',assets/'runtime/materials.json']:
+ manifest[str(path.relative_to(root.parent.parent))]=hashlib.sha256(path.read_bytes()).hexdigest()
+(folder/'tested-inputs.json').write_text(json.dumps(manifest,indent=2)+'\n')
+(folder/'index.html').write_text('''<!doctype html><meta charset="utf-8"><title>Moku · Feedback 3 review</title><style>body{margin:32px;max-width:1100px;background:#f6f2e9;color:#364035;font:16px/1.5 system-ui}img{max-width:100%;display:block}a{color:#426e52}.sheet{width:620px}.stage{width:320px;display:inline-block;background:#e8e5de}</style><h1>Feedback 3 · ready for review</h1><p>Offscreen runtime captures. Charles's running Moku.app was not touched. Gaze figures below are fitted to a 120 pt maximum height at @2×. The approved desktop crop includes its original background.</p><h2>Eyes up toward the work</h2><img class="sheet" src="gaze-before-after.png"><h2>Celebration: attached ears, clear edges</h2><img class="sheet" src="celebration-before-after.png"><p><a href="clipping-report.md">Every clip / mood report</a> · <a href="audit/clipping.json">Machine-readable audit</a></p><h2>Original shadow, no ambient lantern lighting</h2><img class="sheet" src="lighting-before-after.png"><img class="sheet" src="lighting-before-after-dark.png"><p>The original shadow layer is unchanged and is rendered directly by the offscreen compositor. The retained P0 before capture omitted that layer in its old diagnostic compositor. Per Charles’s latest instruction, the standing lantern is also removed. At Moku’s feet there is only the original shadow; no pool, glow or face-light layers remain.</p><h2>Gentle focus → drift → return</h2><p>Known-feed verdict → real behavior engine (1 s grace) → real stage. The before sequence already includes the immediate-first-reaction fix; it preserves the old abrupt mood/arm and head motions. Subsequent disappointed tier and full return are controlled stage inputs at 5 s and 9 s. The paired strips use a fixed crop and scale; manpu is a representative still, not evidence of its animation timing.</p><img src="drift-focus-strip.png"><img src="drift-return-strip.png"><p><a href="drift-after/drift-check.json">Timing, continuity and silhouette checks</a> · <a href="drift-comparison.json">Before/after measurements</a></p><h2>Same camera / canvas for every pose</h2><p>These use exactly the same position and display scale; no individual-pose fitting.</p><img class="stage" src="candidate/idle-focus.png"><img class="stage" src="candidate/looking-at-you.png"><img class="stage" src="candidate/drift.png"><img class="stage" src="candidate/gesture.png"><p><a href="golden-comparison/index.html">Four-pose golden comparison</a> · <a href="performance.json">CPU and memory</a> · <a href="tested-inputs.json">Tested binary / art hashes</a></p><p>The four candidate poses await Charles's approval. No approval or golden baseline has been fabricated.</p>''')

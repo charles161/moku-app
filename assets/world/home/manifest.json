@@ -1,0 +1,544 @@
+{
+ "parts": [
+  {
+   "name": "round_door",
+   "triangles": 4424
+  },
+  {
+   "name": "lantern_post",
+   "triangles": 736
+  },
+  {
+   "name": "mailbox",
+   "triangles": 628
+  },
+  {
+   "name": "doormat",
+   "triangles": 376
+  },
+  {
+   "name": "rug_round",
+   "triangles": 624
+  },
+  {
+   "name": "coat_hooks",
+   "triangles": 852
+  },
+  {
+   "name": "bench",
+   "triangles": 752
+  },
+  {
+   "name": "boots",
+   "triangles": 752
+  },
+  {
+   "name": "umbrella_stand",
+   "triangles": 388
+  },
+  {
+   "name": "sconce",
+   "triangles": 500
+  },
+  {
+   "name": "fern",
+   "triangles": 1888
+  },
+  {
+   "name": "picture_small",
+   "triangles": 636
+  },
+  {
+   "name": "welcome_sign",
+   "triangles": 376
+  },
+  {
+   "name": "desk",
+   "triangles": 1208
+  },
+  {
+   "name": "stool",
+   "triangles": 648
+  },
+  {
+   "name": "desk_lamp",
+   "triangles": 412
+  },
+  {
+   "name": "book_stack",
+   "triangles": 564
+  },
+  {
+   "name": "notebook",
+   "triangles": 1408
+  },
+  {
+   "name": "mug",
+   "triangles": 432
+  },
+  {
+   "name": "wall_shelf",
+   "triangles": 564
+  },
+  {
+   "name": "books_row",
+   "triangles": 1316
+  },
+  {
+   "name": "plant_small",
+   "triangles": 708
+  },
+  {
+   "name": "map",
+   "triangles": 800
+  },
+  {
+   "name": "clock",
+   "triangles": 400
+  },
+  {
+   "name": "rug_rect",
+   "triangles": 752
+  },
+  {
+   "name": "floor_cushion",
+   "triangles": 440
+  },
+  {
+   "name": "globe",
+   "triangles": 884
+  },
+  {
+   "name": "pinboard",
+   "triangles": 1128
+  },
+  {
+   "name": "pendant_lamp",
+   "triangles": 452
+  },
+  {
+   "name": "painting",
+   "triangles": 636
+  },
+  {
+   "name": "stove",
+   "triangles": 628
+  },
+  {
+   "name": "kettle",
+   "triangles": 584
+  },
+  {
+   "name": "table_round",
+   "triangles": 432
+  },
+  {
+   "name": "chair",
+   "triangles": 1268
+  },
+  {
+   "name": "jar_a",
+   "triangles": 180
+  },
+  {
+   "name": "jar_b",
+   "triangles": 180
+  },
+  {
+   "name": "jar_c",
+   "triangles": 180
+  },
+  {
+   "name": "jar_d",
+   "triangles": 180
+  },
+  {
+   "name": "jar_e",
+   "triangles": 180
+  },
+  {
+   "name": "teapot",
+   "triangles": 568
+  },
+  {
+   "name": "cups",
+   "triangles": 312
+  },
+  {
+   "name": "bread",
+   "triangles": 888
+  },
+  {
+   "name": "herbs_a",
+   "triangles": 592
+  },
+  {
+   "name": "herbs_b",
+   "triangles": 592
+  },
+  {
+   "name": "herbs_c",
+   "triangles": 592
+  },
+  {
+   "name": "pan",
+   "triangles": 260
+  },
+  {
+   "name": "plate_rack",
+   "triangles": 492
+  },
+  {
+   "name": "bowl_carrots",
+   "triangles": 940
+  },
+  {
+   "name": "vase_flowers",
+   "triangles": 948
+  },
+  {
+   "name": "bed",
+   "triangles": 976
+  },
+  {
+   "name": "quilt",
+   "triangles": 188
+  },
+  {
+   "name": "patch_0",
+   "triangles": 188
+  },
+  {
+   "name": "patch_1",
+   "triangles": 188
+  },
+  {
+   "name": "patch_2",
+   "triangles": 188
+  },
+  {
+   "name": "patch_3",
+   "triangles": 188
+  },
+  {
+   "name": "patch_4",
+   "triangles": 188
+  },
+  {
+   "name": "patch_5",
+   "triangles": 188
+  },
+  {
+   "name": "patch_6",
+   "triangles": 188
+  },
+  {
+   "name": "pillow",
+   "triangles": 324
+  },
+  {
+   "name": "nightstand",
+   "triangles": 456
+  },
+  {
+   "name": "bed_lamp",
+   "triangles": 296
+  },
+  {
+   "name": "dresser",
+   "triangles": 1232
+  },
+  {
+   "name": "mirror",
+   "triangles": 720
+  },
+  {
+   "name": "paper_star",
+   "triangles": 128
+  },
+  {
+   "name": "plush_bunny",
+   "triangles": 552
+  },
+  {
+   "name": "plush_carrot",
+   "triangles": 248
+  },
+  {
+   "name": "slippers",
+   "triangles": 552
+  },
+  {
+   "name": "frame_tiny",
+   "triangles": 636
+  },
+  {
+   "name": "bedside_books",
+   "triangles": 376
+  },
+  {
+   "name": "book_0",
+   "triangles": 376
+  },
+  {
+   "name": "book_1",
+   "triangles": 376
+  },
+  {
+   "name": "book_2",
+   "triangles": 376
+  },
+  {
+   "name": "book_3",
+   "triangles": 376
+  },
+  {
+   "name": "book_4",
+   "triangles": 376
+  },
+  {
+   "name": "book_5",
+   "triangles": 376
+  },
+  {
+   "name": "book_6",
+   "triangles": 376
+  },
+  {
+   "name": "book_7",
+   "triangles": 376
+  },
+  {
+   "name": "book_8",
+   "triangles": 376
+  },
+  {
+   "name": "book_9",
+   "triangles": 376
+  },
+  {
+   "name": "armchair",
+   "triangles": 1088
+  },
+  {
+   "name": "floor_lamp",
+   "triangles": 348
+  },
+  {
+   "name": "side_table",
+   "triangles": 352
+  },
+  {
+   "name": "ladder",
+   "triangles": 920
+  },
+  {
+   "name": "carrot",
+   "triangles": 312
+  },
+  {
+   "name": "cabbage",
+   "triangles": 788
+  },
+  {
+   "name": "lettuce",
+   "triangles": 700
+  },
+  {
+   "name": "flower_a",
+   "triangles": 540
+  },
+  {
+   "name": "flower_b",
+   "triangles": 540
+  },
+  {
+   "name": "flower_c",
+   "triangles": 540
+  },
+  {
+   "name": "flower_d",
+   "triangles": 540
+  },
+  {
+   "name": "flower_e",
+   "triangles": 540
+  },
+  {
+   "name": "sunflower",
+   "triangles": 1028
+  },
+  {
+   "name": "pumpkin",
+   "triangles": 1436
+  },
+  {
+   "name": "bush",
+   "triangles": 804
+  },
+  {
+   "name": "fence_post",
+   "triangles": 382
+  },
+  {
+   "name": "stepping_stone",
+   "triangles": 140
+  },
+  {
+   "name": "scarecrow",
+   "triangles": 600
+  },
+  {
+   "name": "watering_can",
+   "triangles": 392
+  },
+  {
+   "name": "birdhouse",
+   "triangles": 700
+  },
+  {
+   "name": "soil_bed",
+   "triangles": 376
+  },
+  {
+   "name": "telescope",
+   "triangles": 388
+  },
+  {
+   "name": "bulb",
+   "triangles": 128
+  },
+  {
+   "name": "star",
+   "triangles": 64
+  },
+  {
+   "name": "burrow/island",
+   "triangles": 16770
+  },
+  {
+   "name": "burrow/hill_0",
+   "triangles": 16120
+  },
+  {
+   "name": "burrow/hill_1",
+   "triangles": 16738
+  },
+  {
+   "name": "burrow/hill_2",
+   "triangles": 17241
+  },
+  {
+   "name": "burrow/hill_3",
+   "triangles": 17752
+  },
+  {
+   "name": "burrow/hill_4",
+   "triangles": 18079
+  },
+  {
+   "name": "burrow/hill_5",
+   "triangles": 18590
+  },
+  {
+   "name": "burrow/hill_decor",
+   "triangles": 9776
+  },
+  {
+   "name": "burrow/tree",
+   "triangles": 4252
+  },
+  {
+   "name": "burrow/outline_entry",
+   "triangles": 3312
+  },
+  {
+   "name": "burrow/outline_study",
+   "triangles": 3312
+  },
+  {
+   "name": "burrow/outline_kitchen",
+   "triangles": 3312
+  },
+  {
+   "name": "burrow/outline_bedroom",
+   "triangles": 3312
+  },
+  {
+   "name": "burrow/outline_library",
+   "triangles": 3312
+  },
+  {
+   "name": "burrow/room_entry",
+   "triangles": 2068
+  },
+  {
+   "name": "burrow/room_study",
+   "triangles": 3008
+  },
+  {
+   "name": "burrow/room_kitchen",
+   "triangles": 2820
+  },
+  {
+   "name": "burrow/room_bedroom",
+   "triangles": 3196
+  },
+  {
+   "name": "burrow/room_library",
+   "triangles": 5264
+  },
+  {
+   "name": "burrow/garden_beds",
+   "triangles": 1128
+  },
+  {
+   "name": "burrow/observatory",
+   "triangles": 612
+  },
+  {
+   "name": "treehouse/island",
+   "triangles": 16770
+  },
+  {
+   "name": "treehouse/tree",
+   "triangles": 4336
+  },
+  {
+   "name": "treehouse/crown",
+   "triangles": 20280
+  },
+  {
+   "name": "treehouse/room_entry",
+   "triangles": 6422
+  },
+  {
+   "name": "treehouse/room_study",
+   "triangles": 7362
+  },
+  {
+   "name": "treehouse/room_kitchen",
+   "triangles": 6986
+  },
+  {
+   "name": "treehouse/room_bedroom",
+   "triangles": 7550
+  },
+  {
+   "name": "treehouse/room_library",
+   "triangles": 9618
+  },
+  {
+   "name": "treehouse/stair",
+   "triangles": 20020
+  },
+  {
+   "name": "treehouse/garden_beds",
+   "triangles": 1128
+  },
+  {
+   "name": "treehouse/observatory",
+   "triangles": 2968
+  }
+ ]
+}

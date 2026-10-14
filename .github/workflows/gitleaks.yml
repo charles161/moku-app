@@ -1,0 +1,37 @@
+# Secret scanning on every push and pull request. Fails the run if gitleaks finds a secret in any commit.
+# Reviewed false positives (test fixtures, cache hashes) are listed by file, rule and line in .gitleaksignore.
+name: gitleaks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0  # every commit, not only the last one
+
+      - name: Install gitleaks (checksum-verified release binary)
+        env:
+          GITLEAKS_VERSION: 8.30.1
+          GITLEAKS_SHA256: 551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb
+        run: |
+          curl -fsSL -o gitleaks.tar.gz \
+            "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz"
+          echo "${GITLEAKS_SHA256}  gitleaks.tar.gz" | sha256sum -c -
+          tar -xzf gitleaks.tar.gz gitleaks
+          sudo install -m 0755 gitleaks /usr/local/bin/gitleaks
+          rm gitleaks gitleaks.tar.gz
+          gitleaks version
+
+      # Only the commit being built and its ancestors (a pull request's merge commit includes the PR's commits);
+      # without --log-opts gitleaks would scan every ref the checkout fetched.
+      - name: Scan the history of this commit
+        run: gitleaks git . --log-opts="${{ github.sha }}" --redact --verbose --exit-code 1

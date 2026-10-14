@@ -1,0 +1,6 @@
+# Deploy only what the relay runs: the function, its config and package.json. On this project Vercel serves any
+# other file in this folder publicly (scripts, tests, local tool state), so everything else stays behind.
+/*
+!/api
+!/vercel.json
+!/package.json

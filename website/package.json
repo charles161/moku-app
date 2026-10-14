@@ -1,0 +1,27 @@
+{
+  "name": "moku-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test src/*.test.js",
+    "dev": "vite --host 127.0.0.1 --port 5186 --strictPort",
+    "changelog": "node scripts/changelog.mjs",
+    "prebuild": "node scripts/changelog.mjs",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173 --strictPort",
+    "check:network": "vite build && node scripts/check-network.cjs",
+    "check:sync": "vite build && node scripts/check-sync.cjs",
+    "check:browsers": "vite build && node scripts/check-browsers.cjs",
+    "check:house": "vite build && node scripts/check-house.cjs"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  },
+  "dependencies": {
+    "@vercel/analytics": "2.0.1",
+    "@vercel/speed-insights": "2.0.0",
+    "motion": "^13.4.6",
+    "three": "^0.186.1"
+  }
+}

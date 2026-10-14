@@ -1,0 +1,581 @@
+{
+  "schemaVersion": 2,
+  "angleUnit": "degrees",
+  "rotationSpace": "jointLocalXYZ",
+  "rigRevision": 5,
+  "earTransitionManifest": "ear_transitions.json",
+  "poseLibraryRule": "Reset unspecified weights/joint offsets to zero before applying a complete library pose. Layer only explicitly chosen body/ear/face groups.",
+  "earPoses": {
+    "LOP": {
+      "blendShapes": {},
+      "jointEulerDegrees": {}
+    },
+    "LIFT": {
+      "blendShapes": {},
+      "jointEulerDegrees": {
+        "ear_L_01": [
+          -1.2602,
+          -0.1337,
+          -9.9211
+        ],
+        "ear_L_02": [
+          -1.2729,
+          -0.3704,
+          -5.856
+        ],
+        "ear_R_01": [
+          -1.2602,
+          0.1337,
+          9.9211
+        ],
+        "ear_R_02": [
+          -1.2729,
+          0.3704,
+          5.856
+        ]
+      }
+    },
+    "ANTENNA_L": {
+      "blendShapes": {},
+      "jointEulerDegrees": {
+        "ear_L_01": [
+          13.8056,
+          1.5144,
+          -1.9646
+        ],
+        "ear_L_02": [
+          7.6502,
+          1.5486,
+          -1.8628
+        ],
+        "ear_R_01": [
+          -3.4409,
+          0.3968,
+          -4.4605
+        ]
+      }
+    },
+    "FORWARD": {
+      "blendShapes": {},
+      "jointEulerDegrees": {
+        "ear_L_01": [
+          2.1701,
+          0.3705,
+          -14.398
+        ],
+        "ear_L_02": [
+          -1.7047,
+          -0.4647,
+          -7.8096
+        ],
+        "ear_R_01": [
+          2.1701,
+          -0.3705,
+          14.398
+        ],
+        "ear_R_02": [
+          -1.7047,
+          0.4647,
+          7.8096
+        ]
+      }
+    },
+    "CURTAIN": {
+      "blendShapes": {},
+      "jointEulerDegrees": {
+        "ear_L_01": [
+          2.6418,
+          0.8584,
+          -26.5491
+        ],
+        "ear_L_02": [
+          -0.8175,
+          0.8199,
+          -30.5534
+        ],
+        "ear_R_01": [
+          2.6418,
+          -0.8584,
+          26.5491
+        ],
+        "ear_R_02": [
+          -0.8175,
+          -0.8199,
+          30.5534
+        ]
+      }
+    },
+    "PINNED": {
+      "blendShapes": {},
+      "jointEulerDegrees": {
+        "ear_L_01": [
+          -20.8653,
+          -2.9819,
+          8.2011
+        ],
+        "ear_L_02": [
+          -9.4924,
+          -2.2602,
+          2.0133
+        ],
+        "ear_R_01": [
+          -20.8653,
+          2.9819,
+          -8.2011
+        ],
+        "ear_R_02": [
+          -9.4924,
+          2.2602,
+          -2.0133
+        ]
+      }
+    },
+    "MELT": {
+      "blendShapes": {},
+      "jointEulerDegrees": {
+        "ear_L_01": [
+          6.106,
+          1.4714,
+          -31.0499
+        ],
+        "ear_L_02": [
+          2.1565,
+          1.8554,
+          -35.3225
+        ],
+        "ear_R_01": [
+          6.106,
+          -1.4714,
+          31.0499
+        ],
+        "ear_R_02": [
+          2.1565,
+          -1.8554,
+          35.3225
+        ]
+      }
+    },
+    "ANTENNA_R": {
+      "blendShapes": {
+        "ear_antenna_R": 1
+      },
+      "jointEulerDegrees": {
+        "ear_L_01": [
+          0,
+          0,
+          0
+        ],
+        "ear_R_01": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "bodyPoses": {
+    "lean_in": {
+      "jointEulerDegrees": {
+        "chest": [
+          6,
+          0,
+          0
+        ],
+        "head": [
+          3,
+          0,
+          0
+        ]
+      }
+    },
+    "slump": {
+      "jointEulerDegrees": {
+        "chest": [
+          9,
+          0,
+          0
+        ],
+        "head": [
+          19,
+          -12,
+          0
+        ]
+      }
+    },
+    "chest_out": {
+      "jointEulerDegrees": {
+        "chest": [
+          -5,
+          0,
+          0
+        ],
+        "head": [
+          -15,
+          0,
+          0
+        ]
+      }
+    },
+    "three_quarter": {
+      "jointEulerDegrees": {
+        "chest": [
+          0,
+          9,
+          0
+        ],
+        "head": [
+          -9,
+          24,
+          4
+        ]
+      }
+    },
+    "paws_lap": {
+      "blendShapes": {
+        "arms_fold": 0,
+        "paws_lap": 1
+      },
+      "jointEulerDegrees": {
+        "arm_L": [
+          -33.3316,
+          -6.6612,
+          22.0019
+        ],
+        "arm_R": [
+          -29.4679,
+          6.2095,
+          -23.3084
+        ]
+      }
+    },
+    "arms_crossed": {
+      "blendShapes": {
+        "arms_fold": 1,
+        "paws_lap": 0
+      },
+      "jointEulerDegrees": {
+        "arm_L": [
+          22.3667,
+          -6.4232,
+          -31.6895
+        ],
+        "hand_L": [
+          -14.0418,
+          -6.1498,
+          67.9211
+        ],
+        "arm_R": [
+          22.3667,
+          6.4232,
+          31.6895
+        ],
+        "hand_R": [
+          -14.0418,
+          6.1498,
+          -67.9211
+        ]
+      }
+    }
+  },
+  "moods": {
+    "content": {
+      "blendShapes": {},
+      "jointEulerDegrees": {},
+      "posture": "Upright, attentive: two open eyes on the matrix",
+      "faceDecal": "content"
+    },
+    "happy": {
+      "blendShapes": {
+        "eyes_happy": 0.85,
+        "smile": 1,
+        "brows_up": 0.3
+      },
+      "jointEulerDegrees": {
+        "head": [
+          -4.9879,
+          0.3483,
+          -3.9848
+        ],
+        "ear_L_01": [
+          -1.2602,
+          -0.1337,
+          -9.9211
+        ],
+        "ear_L_02": [
+          -1.2729,
+          -0.3704,
+          -5.856
+        ],
+        "ear_R_01": [
+          -1.2602,
+          0.1337,
+          9.9211
+        ],
+        "ear_R_02": [
+          -1.2729,
+          0.3704,
+          5.856
+        ]
+      },
+      "posture": "Pixel arcs for eyes, antennae splayed",
+      "faceDecal": "happy"
+    },
+    "proud": {
+      "blendShapes": {
+        "eyes_proud": 0.55,
+        "smile": 0.6
+      },
+      "jointEulerDegrees": {
+        "head": [
+          -8.9879,
+          -0.4691,
+          2.9631
+        ],
+        "chest": [
+          -3.0,
+          0.0,
+          0.0
+        ],
+        "ear_L_01": [
+          0.3715,
+          0.0824,
+          2.9755
+        ],
+        "ear_R_01": [
+          0.3715,
+          -0.0824,
+          -2.9755
+        ]
+      },
+      "posture": "Chin up, flat-topped eyes",
+      "faceDecal": "proud"
+    },
+    "curious": {
+      "blendShapes": {
+        "eyes_wide": 0.75,
+        "brow_raise_L": 0.6
+      },
+      "jointEulerDegrees": {
+        "head": [
+          0.9782,
+          0.2079,
+          11.9982
+        ],
+        "ear_L_01": [
+          13.8056,
+          1.5144,
+          -1.9646
+        ],
+        "ear_L_02": [
+          7.6502,
+          1.5486,
+          -1.8628
+        ],
+        "ear_R_01": [
+          -3.4409,
+          0.3968,
+          -4.4605
+        ]
+      },
+      "posture": "Head tilt, wide eyes, one antenna leaning in",
+      "faceDecal": "curious"
+    },
+    "concerned": {
+      "blendShapes": {
+        "brows_concern": 1,
+        "frown": 0.55,
+        "eyes_wide": 0.12
+      },
+      "jointEulerDegrees": {
+        "head": [
+          6.9736,
+          -0.6086,
+          -4.9629
+        ],
+        "ear_L_01": [
+          2.1701,
+          0.3705,
+          -14.398
+        ],
+        "ear_L_02": [
+          -1.7047,
+          -0.4647,
+          -7.8096
+        ],
+        "ear_R_01": [
+          2.1701,
+          -0.3705,
+          14.398
+        ],
+        "ear_R_02": [
+          -1.7047,
+          0.4647,
+          7.8096
+        ]
+      },
+      "posture": "Tilted eyes, antennae easing down",
+      "faceDecal": "concerned"
+    },
+    "disappointed": {
+      "blendShapes": {
+        "brows_concern": 0.6,
+        "lid_sad": 0.8,
+        "blink_L": 0.35,
+        "blink_R": 0.35,
+        "frown": 0.85,
+        "arms_fold": 0,
+        "paws_lap": 1,
+        "led_dim": 0.6
+      },
+      "jointEulerDegrees": {
+        "head": [
+          12.0,
+          0.0,
+          -0.0
+        ],
+        "chest": [
+          4.0,
+          0.0,
+          -0.0
+        ],
+        "ear_L_01": [
+          2.6418,
+          0.8584,
+          -26.5491
+        ],
+        "ear_L_02": [
+          -0.8175,
+          0.8199,
+          -30.5534
+        ],
+        "ear_R_01": [
+          2.6418,
+          -0.8584,
+          26.5491
+        ],
+        "ear_R_02": [
+          -0.8175,
+          -0.8199,
+          30.5534
+        ],
+        "arm_L": [
+          -33.3316,
+          -6.6612,
+          22.0019
+        ],
+        "arm_R": [
+          -29.4679,
+          6.2095,
+          -23.3084
+        ]
+      },
+      "posture": "Sad tilted eyes, antennae wilted, LEDs dim",
+      "faceDecal": "disappointed",
+      "transitionIn": "fold_arms",
+      "transitionOut": "unfold_arms",
+      "idleAnimation": "disappointed_hold"
+    },
+    "annoyed": {
+      "blendShapes": {
+        "brows_angry": 1,
+        "blink_L": 0.25,
+        "blink_R": 0.25,
+        "frown": 0.4,
+        "arms_fold": 1
+      },
+      "jointEulerDegrees": {
+        "head": [
+          0.0,
+          0.0,
+          -7.0
+        ],
+        "ear_L_01": [
+          -20.8653,
+          -2.9819,
+          8.2011
+        ],
+        "ear_L_02": [
+          -9.4924,
+          -2.2602,
+          2.0133
+        ],
+        "ear_R_01": [
+          -20.8653,
+          2.9819,
+          -8.2011
+        ],
+        "ear_R_02": [
+          -9.4924,
+          2.2602,
+          -2.0133
+        ],
+        "arm_L": [
+          22.3667,
+          -6.4232,
+          -31.6895
+        ],
+        "hand_L": [
+          -14.0418,
+          -6.1498,
+          67.9211
+        ],
+        "arm_R": [
+          22.3667,
+          6.4232,
+          31.6895
+        ],
+        "hand_R": [
+          -14.0418,
+          6.1498,
+          -67.9211
+        ]
+      },
+      "posture": "Cross eyes in amber, antennae swept back",
+      "faceDecal": "annoyed",
+      "transitionIn": "cross_arms",
+      "transitionOut": "uncross_arms",
+      "idleAnimation": "annoyed_hold"
+    },
+    "sleepy": {
+      "blendShapes": {
+        "eyes_dot": 1,
+        "sleep_z": 1,
+        "led_dim": 1
+      },
+      "jointEulerDegrees": {
+        "head": [
+          12.9064,
+          1.5709,
+          6.8223
+        ],
+        "chest": [
+          5.0,
+          0.0,
+          -0.0
+        ],
+        "ear_L_01": [
+          6.106,
+          1.4714,
+          -31.0499
+        ],
+        "ear_L_02": [
+          2.1565,
+          1.8554,
+          -35.3225
+        ],
+        "ear_R_01": [
+          6.106,
+          -1.4714,
+          31.0499
+        ],
+        "ear_R_02": [
+          2.1565,
+          -1.8554,
+          35.3225
+        ]
+      },
+      "posture": "Powered down: two dots and a z",
+      "faceDecal": "sleepy"
+    }
+  }
+}

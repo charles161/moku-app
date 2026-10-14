@@ -1,0 +1,1409 @@
+{
+ "materials": [
+  {
+   "name": "Grass felt",
+   "baseTint": [
+    0.21223075741405523,
+    0.3662525955988395,
+    0.10461648409110419,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.04669076663109215,
+    0.08057557103174469,
+    0.02301562650004292
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Grass deep",
+   "baseTint": [
+    0.1119324278369056,
+    0.25415209433082675,
+    0.0595112381629812,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.024625134124119232,
+    0.055913460752781884,
+    0.013092472395855865
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Grass light",
+   "baseTint": [
+    0.38132601143253014,
+    0.5520114015120001,
+    0.1946178304415758,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.08389172251515663,
+    0.12144250833264003,
+    0.04281592269714667
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Earth face",
+   "baseTint": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "roughness": 0.96,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85,
+   "baseColorTexturePath": "world/home/earth_face.png"
+  },
+  {
+   "name": "Earth chamber",
+   "baseTint": [
+    0.10224173308810132,
+    0.046665086336880095,
+    0.024157632448504756,
+    1.0
+   ],
+   "roughness": 0.97,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.02249318127938229,
+    0.010266318994113621,
+    0.005314679138671046
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Earth dark",
+   "baseTint": [
+    0.04817182422688942,
+    0.02315336617811041,
+    0.012983032342173012,
+    1.0
+   ],
+   "roughness": 0.97,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.010597801329915672,
+    0.00509374055918429,
+    0.0028562671152780627
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Earth side",
+   "baseTint": [
+    0.14702726649759498,
+    0.06847816984440017,
+    0.033104766570885055,
+    1.0
+   ],
+   "roughness": 0.96,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.0323459986294709,
+    0.015065197365768036,
+    0.0072830486455947125
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Pebble",
+   "baseTint": [
+    0.39157247774972326,
+    0.32314320911295075,
+    0.25015828472995344,
+    1.0
+   ],
+   "roughness": 0.8,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Root",
+   "baseTint": [
+    0.06847816984440017,
+    0.03189603307301153,
+    0.01599629336550963,
+    1.0
+   ],
+   "roughness": 0.9,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.015065197365768036,
+    0.007017127276062537,
+    0.003519184540412119
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Stone",
+   "baseTint": [
+    0.33245153634617935,
+    0.2961382707983211,
+    0.25015828472995344,
+    1.0
+   ],
+   "roughness": 0.85,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Honey wood",
+   "baseTint": [
+    0.5394794890121072,
+    0.25415209433082675,
+    0.09084171118340768,
+    1.0
+   ],
+   "roughness": 0.7,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Walnut",
+   "baseTint": [
+    0.1946178304415758,
+    0.07618538148130785,
+    0.026241221894849898,
+    1.0
+   ],
+   "roughness": 0.72,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Plank",
+   "baseTint": [
+    0.43415363617474895,
+    0.20507873639031693,
+    0.07818742180518633,
+    1.0
+   ],
+   "roughness": 0.75,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Plank dark",
+   "baseTint": [
+    0.2704977910130658,
+    0.12477181756095049,
+    0.05126945837404324,
+    1.0
+   ],
+   "roughness": 0.78,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Bark",
+   "baseTint": [
+    0.19806931955994886,
+    0.09084171118340768,
+    0.03688945040110004,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.04357525030318875,
+    0.01998517646034969,
+    0.008115679088242008
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Bark light",
+   "baseTint": [
+    0.32314320911295075,
+    0.16826940018969075,
+    0.08021982031446832,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.07109150600484916,
+    0.037019268041731966,
+    0.01764836046918303
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Shingle",
+   "baseTint": [
+    0.3419144249086609,
+    0.10224173308810132,
+    0.04518620438567554,
+    1.0
+   ],
+   "roughness": 0.85,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.07522117347990541,
+    0.02249318127938229,
+    0.00994096496484862
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Door green",
+   "baseTint": [
+    0.1119324278369056,
+    0.26225065752969623,
+    0.10224173308810132,
+    1.0
+   ],
+   "roughness": 0.7,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Brass",
+   "baseTint": [
+    0.6583748172794485,
+    0.38132601143253014,
+    0.06847816984440017,
+    1.0
+   ],
+   "roughness": 0.35,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Iron",
+   "baseTint": [
+    0.042311410620809675,
+    0.03688945040110004,
+    0.03433980680868217,
+    1.0
+   ],
+   "roughness": 0.6,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Plaster",
+   "baseTint": [
+    0.8307698767746546,
+    0.7230551289219693,
+    0.5520114015120001,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.18276937289042403,
+    0.15907212836283324,
+    0.12144250833264003
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Cream felt",
+   "baseTint": [
+    0.8879231178819663,
+    0.7912979403326302,
+    0.6239603916750761,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.1953430859340326,
+    0.17408554687317865,
+    0.13727128616851675
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Rust felt",
+   "baseTint": [
+    0.5271151257058131,
+    0.12743768043564743,
+    0.04518620438567554,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.11596532765527888,
+    0.028036289695842435,
+    0.00994096496484862
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Mustard felt",
+   "baseTint": [
+    0.6938717612919899,
+    0.3712376804741491,
+    0.052860647023180246,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.15265178748423777,
+    0.08167228970431281,
+    0.011629342345099655
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Teal felt",
+   "baseTint": [
+    0.07818742180518633,
+    0.25415209433082675,
+    0.2581828529215958,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.017201232797140992,
+    0.055913460752781884,
+    0.05680022764275108
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Rose felt",
+   "baseTint": [
+    0.6583748172794485,
+    0.2831487404299921,
+    0.26225065752969623,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.14484245980147867,
+    0.062292722894598265,
+    0.05769514465653317
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Indigo felt",
+   "baseTint": [
+    0.06847816984440017,
+    0.10461648409110419,
+    0.23074004852434915,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.015065197365768036,
+    0.02301562650004292,
+    0.05076281067535681
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Sage felt",
+   "baseTint": [
+    0.27467731206038465,
+    0.4232676699860717,
+    0.20863687014525575,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.06042900865328462,
+    0.09311888739693577,
+    0.04590011143195626
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Plum felt",
+   "baseTint": [
+    0.20863687014525575,
+    0.07036009569659588,
+    0.14702726649759498,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.04590011143195626,
+    0.015479221053251092,
+    0.0323459986294709
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Paper",
+   "baseTint": [
+    0.9046611743911496,
+    0.83879901174074,
+    0.7011018919329731,
+    1.0
+   ],
+   "roughness": 0.9,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Ink",
+   "baseTint": [
+    0.042311410620809675,
+    0.042311410620809675,
+    0.06480326669290577,
+    1.0
+   ],
+   "roughness": 0.9,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Cork",
+   "baseTint": [
+    0.467783796112159,
+    0.26635560480286247,
+    0.11443537382697373,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.10291243514467498,
+    0.05859823305662974,
+    0.02517578224193422
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Terracotta",
+   "baseTint": [
+    0.5271151257058131,
+    0.1651321945016676,
+    0.07036009569659588,
+    1.0
+   ],
+   "roughness": 0.85,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Ceramic white",
+   "baseTint": [
+    0.8962693533742664,
+    0.8631572134541023,
+    0.8069522576692516,
+    1.0
+   ],
+   "roughness": 0.45,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Ceramic blue",
+   "baseTint": [
+    0.1589608350608804,
+    0.27467731206038465,
+    0.45078578283822346,
+    1.0
+   ],
+   "roughness": 0.45,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Carrot",
+   "baseTint": [
+    0.8148465722161012,
+    0.25415209433082675,
+    0.042311410620809675,
+    1.0
+   ],
+   "roughness": 0.8,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.17926624588754228,
+    0.055913460752781884,
+    0.009308510336578129
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Leaf",
+   "baseTint": [
+    0.1119324278369056,
+    0.32314320911295075,
+    0.0595112381629812,
+    1.0
+   ],
+   "roughness": 0.9,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.024625134124119232,
+    0.07109150600484916,
+    0.013092472395855865
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Leaf dark",
+   "baseTint": [
+    0.04970656598412723,
+    0.1946178304415758,
+    0.042311410620809675,
+    1.0
+   ],
+   "roughness": 0.9,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.010935444516507992,
+    0.04281592269714667,
+    0.009308510336578129
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Cabbage",
+   "baseTint": [
+    0.39157247774972326,
+    0.5840784178911641,
+    0.25415209433082675,
+    1.0
+   ],
+   "roughness": 0.9,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.08614594510493911,
+    0.1284972519360561,
+    0.055913460752781884
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Pumpkin",
+   "baseTint": [
+    0.7454042095403874,
+    0.24228112246555486,
+    0.042311410620809675,
+    1.0
+   ],
+   "roughness": 0.85,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.16398892609888524,
+    0.05330184694242207,
+    0.009308510336578129
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Petal white",
+   "baseTint": [
+    0.9215818562772946,
+    0.8713671191987972,
+    0.7758222183174236,
+    1.0
+   ],
+   "roughness": 0.9,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.20274800838100482,
+    0.19170076622373539,
+    0.1706808880298332
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Petal yellow",
+   "baseTint": [
+    0.8879231178819663,
+    0.5840784178911641,
+    0.07227185068231748,
+    1.0
+   ],
+   "roughness": 0.9,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.1953430859340326,
+    0.1284972519360561,
+    0.015899807150109847
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Petal pink",
+   "baseTint": [
+    0.799102738014409,
+    0.35153259950043936,
+    0.43415363617474895,
+    1.0
+   ],
+   "roughness": 0.9,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.17580260236317,
+    0.07733717189009666,
+    0.09551379995844476
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Petal blue",
+   "baseTint": [
+    0.27467731206038465,
+    0.39157247774972326,
+    0.7454042095403874,
+    1.0
+   ],
+   "roughness": 0.9,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.06042900865328462,
+    0.08614594510493911,
+    0.16398892609888524
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Petal red",
+   "baseTint": [
+    0.6724431569576875,
+    0.10224173308810132,
+    0.06847816984440017,
+    1.0
+   ],
+   "roughness": 0.9,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.14793749453069124,
+    0.02249318127938229,
+    0.015065197365768036
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Soil",
+   "baseTint": [
+    0.10461648409110419,
+    0.042311410620809675,
+    0.021219010376003555,
+    1.0
+   ],
+   "roughness": 0.98,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.02301562650004292,
+    0.009308510336578129,
+    0.0046681822827207824
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Bread",
+   "baseTint": [
+    0.6444796819705821,
+    0.32314320911295075,
+    0.10702310297826761,
+    1.0
+   ],
+   "roughness": 0.9,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.14178553003352806,
+    0.07109150600484916,
+    0.023545082655218874
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Jam red",
+   "baseTint": [
+    0.4793201831008268,
+    0.03189603307301153,
+    0.042311410620809675,
+    1.0
+   ],
+   "roughness": 0.4,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Jam amber",
+   "baseTint": [
+    0.6938717612919899,
+    0.2704977910130658,
+    0.024157632448504756,
+    1.0
+   ],
+   "roughness": 0.4,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Jam green",
+   "baseTint": [
+    0.21223075741405523,
+    0.3662525955988395,
+    0.06480326669290577,
+    1.0
+   ],
+   "roughness": 0.4,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Jam plum",
+   "baseTint": [
+    0.1559264637078274,
+    0.042311410620809675,
+    0.1119324278369056,
+    1.0
+   ],
+   "roughness": 0.4,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Glass",
+   "baseTint": [
+    0.7156935005064807,
+    0.8069522576692516,
+    0.7912979403326302,
+    1.0
+   ],
+   "roughness": 0.15,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Wall sage",
+   "baseTint": [
+    0.4851499400560704,
+    0.5972017883637634,
+    0.38132601143253014,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.10673298681233548,
+    0.13138439344002795,
+    0.08389172251515663
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Wall cream",
+   "baseTint": [
+    0.8307698767746546,
+    0.7230551289219693,
+    0.5520114015120001,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.18276937289042403,
+    0.15907212836283324,
+    0.12144250833264003
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Wall butter",
+   "baseTint": [
+    0.8631572134541023,
+    0.6866853124353135,
+    0.32314320911295075,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.18989458695990252,
+    0.15107076873576897,
+    0.07109150600484916
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Wall rose",
+   "baseTint": [
+    0.7758222183174236,
+    0.47353149614800955,
+    0.4232676699860717,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.1706808880298332,
+    0.1041769291525621,
+    0.09311888739693577
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Wall teal",
+   "baseTint": [
+    0.238397573812271,
+    0.4072402119017367,
+    0.3662525955988395,
+    1.0
+   ],
+   "roughness": 0.95,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.05244746623869962,
+    0.08959284661838207,
+    0.08057557103174469
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Roof teal",
+   "baseTint": [
+    0.07818742180518633,
+    0.20863687014525575,
+    0.1946178304415758,
+    1.0
+   ],
+   "roughness": 0.85,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.017201232797140992,
+    0.04590011143195626,
+    0.04281592269714667
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Roof terracotta",
+   "baseTint": [
+    0.4793201831008268,
+    0.11697066775851084,
+    0.04970656598412723,
+    1.0
+   ],
+   "roughness": 0.85,
+   "normalMapPath": "character/plush_normal.png",
+   "normalScale": 0.3,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0.1054504402821819,
+    0.025733546906872386,
+    0.010935444516507992
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Trim",
+   "baseTint": [
+    0.9046611743911496,
+    0.8307698767746546,
+    0.7230551289219693,
+    1.0
+   ],
+   "roughness": 0.8,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85
+  },
+  {
+   "name": "Lamp glow",
+   "baseTint": [
+    1.0,
+    0.6307571363461468,
+    0.25415209433082675,
+    1.0
+   ],
+   "roughness": 0.5,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85,
+   "emissive": [
+    1.0,
+    0.6307571363461468,
+    0.25415209433082675
+   ],
+   "emissiveIntensity": 1.6
+  },
+  {
+   "name": "Star glow",
+   "baseTint": [
+    1.0,
+    0.8962693533742664,
+    0.5520114015120001,
+    1.0
+   ],
+   "roughness": 0.5,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85,
+   "emissive": [
+    1.0,
+    0.8962693533742664,
+    0.5520114015120001
+   ],
+   "emissiveIntensity": 1.6
+  },
+  {
+   "name": "Window glow",
+   "baseTint": [
+    1.0,
+    0.5840784178911641,
+    0.18782077230067787,
+    1.0
+   ],
+   "roughness": 0.5,
+   "normalMapPath": null,
+   "normalScale": 1.0,
+   "normalTiling": [
+    1,
+    1
+   ],
+   "sheenColor": [
+    0,
+    0,
+    0
+   ],
+   "sheenRoughness": 0.85,
+   "emissive": [
+    1.0,
+    0.5840784178911641,
+    0.18782077230067787
+   ],
+   "emissiveIntensity": 1.6
+  }
+ ]
+}

@@ -1,0 +1,445 @@
+{
+  "schemaVersion": 1,
+  "atlasPath": "character/face_atlas.png",
+  "opacityAtlasPath": "character/face_atlas_opacity.png",
+  "opacitySemantic": "scalar",
+  "sizePixels": [
+    2048,
+    2048
+  ],
+  "cellSizePixels": [
+    512,
+    512
+  ],
+  "columns": 4,
+  "rows": 4,
+  "material": "Face decals",
+  "aliases": [
+    "Face_decals"
+  ],
+  "defaultTexturePath": "character/face_decal_blank.png",
+  "defaultMode": "morphs; transparent shell until runtime enables atlas mode",
+  "alphaCutoff": 0.5,
+  "shellOffsetMeters": 0.0005,
+  "uvCoordinates": "u increases with character +X; v increases with head height. uvOffset is the tested RealityKit imported-mesh transform (rowFromTop/4). blenderUVOffset is the authoring USD bottom-left transform. Do not interchange these values.",
+  "enable": "Cache the Face_decals material slot before mutation: imported names can disappear after texture changes. Set the color atlas as base color, separate opacityAtlasPath as PhysicallyBasedMaterial.Opacity scalar texture with scale 1, transparent blending, white tint and opacity threshold 0.5. Base-color alpha alone is insufficient in the tested RealityRenderer path. Set scale/offset from the selected cell. Apply face_decals=1 to hide 3D mouths/brows, and per-eye hidden morphs from this cell. Keep skinned geometry, ear/posture/lid morphs and open-eye joints.",
+  "disable": "Restore transparent default texture and face_decals/eye_hidden_L/eye_hidden_R=0; authored mood morphs provide the complete fallback face.",
+  "microCells": {
+    "brow_raise_L": {
+      "cell": "brow_raise_L",
+      "mirrorU": false
+    },
+    "brow_raise_R": {
+      "cell": "brow_raise_L",
+      "mirrorU": true
+    },
+    "lips_press": {
+      "cell": "lip_press"
+    },
+    "pout": {
+      "cell": "small_pout"
+    },
+    "cheek_release": {
+      "cell": "pff"
+    },
+    "slow_blink": {
+      "cell": "blink"
+    },
+    "eyes_narrow": {
+      "mode": "existing open-eye morph"
+    }
+  },
+  "microComposition": "Cells are complete faces, not additive masks. For 0.2\u20130.5 subtle atlas micros, crossfade cached current/micro face frames at that strength; mirror brow_raise_L in U for the right brow. Retain the full geometry-morph mode where atlas micro compositing is not integrated. Do not hide the original lips and expect lips_press alone to change a painted mouth.",
+  "blinkTransitionMilliseconds": 60,
+  "cells": [
+    {
+      "name": "content",
+      "index": 0,
+      "column": 0,
+      "rowFromTop": 0,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "blenderUVOffset": [
+        0.0,
+        0.75
+      ],
+      "hideEyes": [],
+      "morphs": {
+        "face_decals": 1
+      },
+      "standalone": "character/face_content.png"
+    },
+    {
+      "name": "happy",
+      "index": 1,
+      "column": 1,
+      "rowFromTop": 0,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.25,
+        0.0
+      ],
+      "blenderUVOffset": [
+        0.25,
+        0.75
+      ],
+      "hideEyes": [
+        "L",
+        "R"
+      ],
+      "morphs": {
+        "face_decals": 1,
+        "eye_hidden_L": 1,
+        "eye_hidden_R": 1
+      },
+      "standalone": "character/face_happy.png"
+    },
+    {
+      "name": "proud",
+      "index": 2,
+      "column": 2,
+      "rowFromTop": 0,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.5,
+        0.0
+      ],
+      "blenderUVOffset": [
+        0.5,
+        0.75
+      ],
+      "hideEyes": [
+        "L",
+        "R"
+      ],
+      "morphs": {
+        "face_decals": 1,
+        "eye_hidden_L": 1,
+        "eye_hidden_R": 1
+      },
+      "standalone": "character/face_proud.png"
+    },
+    {
+      "name": "curious",
+      "index": 3,
+      "column": 3,
+      "rowFromTop": 0,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.75,
+        0.0
+      ],
+      "blenderUVOffset": [
+        0.75,
+        0.75
+      ],
+      "hideEyes": [],
+      "morphs": {
+        "face_decals": 1
+      },
+      "standalone": "character/face_curious.png"
+    },
+    {
+      "name": "concerned",
+      "index": 4,
+      "column": 0,
+      "rowFromTop": 1,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.0,
+        0.25
+      ],
+      "blenderUVOffset": [
+        0.0,
+        0.5
+      ],
+      "hideEyes": [],
+      "morphs": {
+        "face_decals": 1
+      },
+      "standalone": "character/face_concerned.png"
+    },
+    {
+      "name": "disappointed",
+      "index": 5,
+      "column": 1,
+      "rowFromTop": 1,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.25,
+        0.25
+      ],
+      "blenderUVOffset": [
+        0.25,
+        0.5
+      ],
+      "hideEyes": [],
+      "morphs": {
+        "face_decals": 1
+      },
+      "standalone": "character/face_disappointed.png"
+    },
+    {
+      "name": "annoyed",
+      "index": 6,
+      "column": 2,
+      "rowFromTop": 1,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.5,
+        0.25
+      ],
+      "blenderUVOffset": [
+        0.5,
+        0.5
+      ],
+      "hideEyes": [],
+      "morphs": {
+        "face_decals": 1
+      },
+      "standalone": "character/face_annoyed.png"
+    },
+    {
+      "name": "sleepy",
+      "index": 7,
+      "column": 3,
+      "rowFromTop": 1,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.75,
+        0.25
+      ],
+      "blenderUVOffset": [
+        0.75,
+        0.5
+      ],
+      "hideEyes": [
+        "L"
+      ],
+      "morphs": {
+        "face_decals": 1,
+        "eye_hidden_L": 1
+      },
+      "standalone": "character/face_sleepy.png"
+    },
+    {
+      "name": "smile_at_you",
+      "index": 8,
+      "column": 0,
+      "rowFromTop": 2,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.0,
+        0.5
+      ],
+      "blenderUVOffset": [
+        0.0,
+        0.25
+      ],
+      "hideEyes": [],
+      "morphs": {
+        "face_decals": 1
+      },
+      "standalone": "character/face_smile_at_you.png"
+    },
+    {
+      "name": "wink",
+      "index": 9,
+      "column": 1,
+      "rowFromTop": 2,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.25,
+        0.5
+      ],
+      "blenderUVOffset": [
+        0.25,
+        0.25
+      ],
+      "hideEyes": [
+        "L"
+      ],
+      "morphs": {
+        "face_decals": 1,
+        "eye_hidden_L": 1
+      },
+      "standalone": "character/face_wink.png"
+    },
+    {
+      "name": "lip_press",
+      "index": 10,
+      "column": 2,
+      "rowFromTop": 2,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.5,
+        0.5
+      ],
+      "blenderUVOffset": [
+        0.5,
+        0.25
+      ],
+      "hideEyes": [],
+      "morphs": {
+        "face_decals": 1
+      },
+      "standalone": "character/face_lip_press.png"
+    },
+    {
+      "name": "small_pout",
+      "index": 11,
+      "column": 3,
+      "rowFromTop": 2,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.75,
+        0.5
+      ],
+      "blenderUVOffset": [
+        0.75,
+        0.25
+      ],
+      "hideEyes": [],
+      "morphs": {
+        "face_decals": 1
+      },
+      "standalone": "character/face_small_pout.png"
+    },
+    {
+      "name": "pff",
+      "index": 12,
+      "column": 0,
+      "rowFromTop": 3,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.0,
+        0.75
+      ],
+      "blenderUVOffset": [
+        0.0,
+        0.0
+      ],
+      "hideEyes": [],
+      "morphs": {
+        "face_decals": 1
+      },
+      "standalone": "character/face_pff.png"
+    },
+    {
+      "name": "blink",
+      "index": 13,
+      "column": 1,
+      "rowFromTop": 3,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.25,
+        0.75
+      ],
+      "blenderUVOffset": [
+        0.25,
+        0.0
+      ],
+      "hideEyes": [
+        "L",
+        "R"
+      ],
+      "morphs": {
+        "face_decals": 1,
+        "eye_hidden_L": 1,
+        "eye_hidden_R": 1
+      },
+      "standalone": "character/face_blink.png"
+    },
+    {
+      "name": "brow_raise_L",
+      "index": 14,
+      "column": 2,
+      "rowFromTop": 3,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.5,
+        0.75
+      ],
+      "blenderUVOffset": [
+        0.5,
+        0.0
+      ],
+      "hideEyes": [],
+      "morphs": {
+        "face_decals": 1
+      },
+      "standalone": "character/face_brow_raise_L.png"
+    },
+    {
+      "name": "blank",
+      "index": 15,
+      "column": 3,
+      "rowFromTop": 3,
+      "uvScale": [
+        0.25,
+        0.25
+      ],
+      "uvOffset": [
+        0.75,
+        0.75
+      ],
+      "blenderUVOffset": [
+        0.75,
+        0.0
+      ],
+      "hideEyes": [],
+      "morphs": {
+        "face_decals": 0
+      },
+      "standalone": "character/face_blank.png"
+    }
+  ]
+}

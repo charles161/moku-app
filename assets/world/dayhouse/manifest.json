@@ -1,0 +1,128 @@
+{
+ "parts": [
+  {
+   "name": "plot",
+   "triangles": 9096
+  },
+  {
+   "name": "hs_stakes",
+   "triangles": 752
+  },
+  {
+   "name": "hs_footings",
+   "triangles": 2340
+  },
+  {
+   "name": "hs_joists",
+   "triangles": 1316
+  },
+  {
+   "name": "hs_floor",
+   "triangles": 2068
+  },
+  {
+   "name": "hs_posts",
+   "triangles": 1128
+  },
+  {
+   "name": "hs_plates",
+   "triangles": 940
+  },
+  {
+   "name": "hs_rafters",
+   "triangles": 1104
+  },
+  {
+   "name": "hs_ridge",
+   "triangles": 384
+  },
+  {
+   "name": "hs_wall_back",
+   "triangles": 2264
+  },
+  {
+   "name": "hs_wall_left",
+   "triangles": 3008
+  },
+  {
+   "name": "hs_wall_right",
+   "triangles": 2068
+  },
+  {
+   "name": "hs_wall_front",
+   "triangles": 1820
+  },
+  {
+   "name": "hs_door",
+   "triangles": 1676
+  },
+  {
+   "name": "hs_windows",
+   "triangles": 7456
+  },
+  {
+   "name": "hs_roof_left",
+   "triangles": 5488
+  },
+  {
+   "name": "hs_roof_right",
+   "triangles": 5488
+  },
+  {
+   "name": "hs_trim",
+   "triangles": 556
+  },
+  {
+   "name": "hs_chimney",
+   "triangles": 824
+  },
+  {
+   "name": "hs_porch",
+   "triangles": 1636
+  },
+  {
+   "name": "hs_flowerboxes",
+   "triangles": 1656
+  },
+  {
+   "name": "hs_lamp",
+   "triangles": 248
+  },
+  {
+   "name": "hs_fence",
+   "triangles": 9460
+  },
+  {
+   "name": "hs_garden",
+   "triangles": 3308
+  },
+  {
+   "name": "hs_finale",
+   "triangles": 1952
+  },
+  {
+   "name": "site_start",
+   "triangles": 5876
+  },
+  {
+   "name": "site_frame",
+   "triangles": 6148
+  },
+  {
+   "name": "site_walls",
+   "triangles": 5676
+  },
+  {
+   "name": "site_roof",
+   "triangles": 5940
+  },
+  {
+   "name": "site_tidy",
+   "triangles": 4004
+  },
+  {
+   "name": "site_done",
+   "triangles": 5268
+  }
+ ]
+}

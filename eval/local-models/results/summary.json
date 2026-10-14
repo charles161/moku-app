@@ -1,0 +1,422 @@
+{
+ "bar": {
+  "agreement": 0.97,
+  "mustPass": 1.0,
+  "p95Ms": 1000,
+  "memoryBytes": 3000000000.0,
+  "coldStartSec": 5.0
+ },
+ "jev": {
+  "mustPass": 0.9881656804733728,
+  "mustPassCount": "167/169",
+  "mustPassMisses": {
+   "Telegram (Claude, Telegram, Cursor, chatgpt.com, acme.example working)": 2
+  },
+  "liveMustPass": "131/160",
+  "nowVsLive": 0.8342857142857143,
+  "confidentShare": 0.7371428571428571
+ },
+ "models": [
+  {
+   "model": "mlx-community/Ministral-3-3B-Instruct-2512-4bit",
+   "screens": 184,
+   "hard": 175,
+   "agreement": 0.9542857142857143,
+   "agreementAllJev": 0.9542857142857143,
+   "agreementLiveJev": 0.7885714285714286,
+   "bestThresholdAgreement": 0.9771428571428571,
+   "bestThreshold": 0.31,
+   "bestThresholdMustPass": "167/169",
+   "mustPass": 0.9763313609467456,
+   "mustPassCount": "165/169",
+   "mustPassMisses": {
+    "Telegram (Claude, Telegram, Cursor, chatgpt.com, acme.example working)": 3,
+    "acme.example (Claude, Telegram, Cursor, chatgpt.com, acme.example working)": 1
+   },
+   "cascade": {
+    "coverage": 0.6685714285714286,
+    "agreementCovered": 0.9743589743589743,
+    "mustPassWrongCovered": 2
+   },
+   "confidentWrong": 4,
+   "confidentWrongRate": 0.022857142857142857,
+   "confidentShare": 0.8,
+   "p50Ms": 1022.3,
+   "p95Ms": 2162.0,
+   "p50MsNoCache": 3241.5,
+   "memoryBytes": 2664897136,
+   "downloadBytes": 2779152776,
+   "coldStartSec": 4.54,
+   "loadSec": 2.02,
+   "quiet": true,
+   "otherGpuBusyPercent": [
+    6,
+    0,
+    0
+   ],
+   "swapUsedBytes": 15685973442,
+   "loadedRun": {
+    "p50Ms": 1978.3,
+    "p95Ms": 2744.7,
+    "coldStartSec": 6.17,
+    "otherGpuBusyPercent": [
+     5,
+     0,
+     0
+    ]
+   },
+   "answerMassP50": 0.9203,
+   "fails": [
+    "agreement",
+    "must-pass",
+    "p95"
+   ]
+  },
+  {
+   "model": "mlx-community/Qwen3.5-4B-MLX-4bit",
+   "screens": 184,
+   "hard": 175,
+   "agreement": 0.9371428571428572,
+   "agreementAllJev": 0.9371428571428572,
+   "agreementLiveJev": 0.8628571428571429,
+   "bestThresholdAgreement": 0.9485714285714286,
+   "bestThreshold": 0.54,
+   "bestThresholdMustPass": "160/169",
+   "mustPass": 0.9526627218934911,
+   "mustPassCount": "161/169",
+   "mustPassMisses": {
+    "Telegram (Claude, Telegram, Cursor, chatgpt.com, acme.example working)": 1,
+    "WhatsApp (personal WhatsApp chats drifting)": 1,
+    "youtube.com (YouTube (home and every video) drifting)": 6
+   },
+   "cascade": {
+    "coverage": 0.7428571428571429,
+    "agreementCovered": 0.9769230769230769,
+    "mustPassWrongCovered": 1
+   },
+   "confidentWrong": 4,
+   "confidentWrongRate": 0.022857142857142857,
+   "confidentShare": 0.8114285714285714,
+   "p50Ms": 1425.6,
+   "p95Ms": 3841.3,
+   "p50MsNoCache": 4195.9,
+   "memoryBytes": 3482918558,
+   "downloadBytes": 3061132920,
+   "coldStartSec": 5.76,
+   "loadSec": 2.33,
+   "quiet": true,
+   "otherGpuBusyPercent": [
+    0,
+    0,
+    5
+   ],
+   "swapUsedBytes": 16990276157,
+   "loadedRun": {
+    "p50Ms": 2456.9,
+    "p95Ms": 3355.1,
+    "coldStartSec": 6.77,
+    "otherGpuBusyPercent": [
+     5,
+     0,
+     8
+    ]
+   },
+   "answerMassP50": 0.9991,
+   "fails": [
+    "agreement",
+    "must-pass",
+    "p95",
+    "memory",
+    "cold start"
+   ]
+  },
+  {
+   "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+   "screens": 184,
+   "hard": 175,
+   "agreement": 0.9142857142857143,
+   "agreementAllJev": 0.9142857142857143,
+   "agreementLiveJev": 0.8857142857142857,
+   "bestThresholdAgreement": 0.92,
+   "bestThreshold": 0.68,
+   "bestThresholdMustPass": "156/169",
+   "mustPass": 0.9171597633136095,
+   "mustPassCount": "155/169",
+   "mustPassMisses": {
+    "Telegram (Claude, Telegram, Cursor, chatgpt.com, acme.example working)": 2,
+    "youtube.com (YouTube (home and every video) drifting)": 11,
+    "WhatsApp (personal WhatsApp chats drifting)": 1
+   },
+   "cascade": {
+    "coverage": 0.9714285714285714,
+    "agreementCovered": 0.9235294117647059,
+    "mustPassWrongCovered": 12
+   },
+   "confidentWrong": 14,
+   "confidentWrongRate": 0.08,
+   "confidentShare": 0.9771428571428571,
+   "p50Ms": 1355.3,
+   "p95Ms": 3523.4,
+   "p50MsNoCache": 4063.5,
+   "memoryBytes": 3068132452,
+   "downloadBytes": 2278972236,
+   "coldStartSec": 5.01,
+   "loadSec": 1.43,
+   "quiet": true,
+   "otherGpuBusyPercent": [
+    5,
+    0,
+    0
+   ],
+   "swapUsedBytes": 15591150714,
+   "loadedRun": {
+    "p50Ms": 2389.3,
+    "p95Ms": 3346.0,
+    "coldStartSec": 5.62,
+    "otherGpuBusyPercent": [
+     5,
+     0,
+     0
+    ]
+   },
+   "answerMassP50": 1.0,
+   "fails": [
+    "agreement",
+    "must-pass",
+    "p95",
+    "memory",
+    "cold start"
+   ]
+  },
+  {
+   "model": "mlx-community/gemma-4-e2b-it-4bit",
+   "screens": 184,
+   "hard": 175,
+   "agreement": 0.8171428571428572,
+   "agreementAllJev": 0.8171428571428572,
+   "agreementLiveJev": 0.9485714285714286,
+   "bestThresholdAgreement": 0.8285714285714286,
+   "bestThreshold": 0.8,
+   "bestThresholdMustPass": "140/169",
+   "mustPass": 0.8165680473372781,
+   "mustPassCount": "138/169",
+   "mustPassMisses": {
+    "Telegram (Claude, Telegram, Cursor, chatgpt.com, acme.example working)": 2,
+    "WhatsApp (personal WhatsApp chats drifting)": 5,
+    "youtube.com (YouTube (home and every video) drifting)": 24
+   },
+   "cascade": {
+    "coverage": 0.9428571428571428,
+    "agreementCovered": 0.8303030303030303,
+    "mustPassWrongCovered": 27
+   },
+   "confidentWrong": 28,
+   "confidentWrongRate": 0.16,
+   "confidentShare": 0.9542857142857143,
+   "p50Ms": 292.9,
+   "p95Ms": 1965.4,
+   "p50MsNoCache": 706.9,
+   "memoryBytes": 3581902848,
+   "downloadBytes": 3583088661,
+   "coldStartSec": 4.7,
+   "loadSec": 2.58,
+   "quiet": true,
+   "otherGpuBusyPercent": [
+    6,
+    0,
+    0
+   ],
+   "swapUsedBytes": 14001698242,
+   "loadedRun": {
+    "p50Ms": 398.6,
+    "p95Ms": 863.6,
+    "coldStartSec": 5.43,
+    "otherGpuBusyPercent": [
+     8,
+     5,
+     0
+    ]
+   },
+   "answerMassP50": 1.0,
+   "fails": [
+    "agreement",
+    "must-pass",
+    "p95",
+    "memory"
+   ]
+  },
+  {
+   "model": "mlx-community/Qwen3.5-2B-MLX-4bit",
+   "screens": 184,
+   "hard": 175,
+   "agreement": 0.6742857142857143,
+   "agreementAllJev": 0.6742857142857143,
+   "agreementLiveJev": 0.7714285714285715,
+   "bestThresholdAgreement": 0.6914285714285714,
+   "bestThreshold": 0.65,
+   "bestThresholdMustPass": "117/169",
+   "mustPass": 0.6923076923076923,
+   "mustPassCount": "117/169",
+   "mustPassMisses": {
+    "WhatsApp (personal WhatsApp chats drifting)": 30,
+    "youtube.com (YouTube (home and every video) drifting)": 22
+   },
+   "cascade": {
+    "coverage": 0.13142857142857142,
+    "agreementCovered": 1.0,
+    "mustPassWrongCovered": 0
+   },
+   "confidentWrong": 7,
+   "confidentWrongRate": 0.04,
+   "confidentShare": 0.30857142857142855,
+   "p50Ms": 533.2,
+   "p95Ms": 2046.3,
+   "p50MsNoCache": 1615.5,
+   "memoryBytes": 2041667988,
+   "downloadBytes": 1749083534,
+   "coldStartSec": 4.89,
+   "loadSec": 2.32,
+   "quiet": true,
+   "otherGpuBusyPercent": [
+    5,
+    0,
+    0
+   ],
+   "swapUsedBytes": 18240241664,
+   "loadedRun": {
+    "p50Ms": 914.1,
+    "p95Ms": 1706.1,
+    "coldStartSec": 5.47,
+    "otherGpuBusyPercent": [
+     5,
+     0,
+     0
+    ]
+   },
+   "answerMassP50": 0.9858,
+   "fails": [
+    "agreement",
+    "must-pass",
+    "p95"
+   ]
+  },
+  {
+   "model": "mlx-community/Qwen3-Embedding-0.6B-4bit-DWQ + logistic regression",
+   "screens": 440,
+   "hard": 175,
+   "agreement": 0.6228571428571429,
+   "agreementAllJev": 0.6682577565632458,
+   "agreementLiveJev": 0.49142857142857144,
+   "bestThresholdAgreement": 0.6228571428571429,
+   "bestThreshold": 0.5,
+   "bestThresholdMustPass": "108/169",
+   "mustPass": 0.6390532544378699,
+   "mustPassCount": "108/169",
+   "mustPassMisses": {
+    "Telegram (Claude, Telegram, Cursor, chatgpt.com, acme.example working)": 8,
+    "WhatsApp (personal WhatsApp chats drifting)": 28,
+    "acme.example (Claude, Telegram, Cursor, chatgpt.com, acme.example working)": 18,
+    "youtube.com (YouTube (home and every video) drifting)": 3,
+    "ats.example (smoke: the 4 HR screens \u2192 one hiring thread)": 1,
+    "linkedin.com (smoke: LinkedIn profile \u2192 working)": 1,
+    "acme.example (smoke: job descriptions \u2192 working, career, a job-search phrase)": 1,
+    "linkedin.com (smoke: job descriptions \u2192 working, career, a job-search phrase)": 1
+   },
+   "cascade": {
+    "coverage": 0.0,
+    "agreementCovered": NaN,
+    "mustPassWrongCovered": 0
+   },
+   "confidentWrong": 0,
+   "confidentWrongRate": 0.0,
+   "confidentShare": 0.0,
+   "p50Ms": 301.4,
+   "p95Ms": 1159.3,
+   "p50MsNoCache": null,
+   "memoryBytes": 1115701456,
+   "downloadBytes": 351233351,
+   "coldStartSec": 5.92,
+   "loadSec": 1.32,
+   "quiet": false,
+   "otherGpuBusyPercent": [
+    5,
+    0,
+    0
+   ],
+   "swapUsedBytes": null,
+   "loadedRun": {
+    "p50Ms": 301.4,
+    "p95Ms": 1159.3,
+    "coldStartSec": 5.92,
+    "otherGpuBusyPercent": [
+     5,
+     0,
+     0
+    ]
+   },
+   "answerMassP50": null,
+   "fails": [
+    "agreement",
+    "must-pass",
+    "p95",
+    "cold start"
+   ]
+  },
+  {
+   "model": "mlx-community/granite-4.1-3b-4bit",
+   "screens": 184,
+   "hard": 175,
+   "agreement": 0.5942857142857143,
+   "agreementAllJev": 0.5942857142857143,
+   "agreementLiveJev": 0.42857142857142855,
+   "bestThresholdAgreement": 0.7028571428571428,
+   "bestThreshold": 0.02,
+   "bestThresholdMustPass": "125/169",
+   "mustPass": 0.6272189349112426,
+   "mustPassCount": "106/169",
+   "mustPassMisses": {
+    "Telegram (Claude, Telegram, Cursor, chatgpt.com, acme.example working)": 50,
+    "acme.example (Claude, Telegram, Cursor, chatgpt.com, acme.example working)": 12,
+    "youtube.com (smoke: Morris traversal tutorial \u2192 working on DSA, learning)": 1
+   },
+   "cascade": {
+    "coverage": 0.8114285714285714,
+    "agreementCovered": 0.6126760563380281,
+    "mustPassWrongCovered": 47
+   },
+   "confidentWrong": 57,
+   "confidentWrongRate": 0.32571428571428573,
+   "confidentShare": 0.8342857142857143,
+   "p50Ms": 2726.6,
+   "p95Ms": 4967.9,
+   "p50MsNoCache": 3671.9,
+   "memoryBytes": 2897974466,
+   "downloadBytes": 2134391329,
+   "coldStartSec": 4.68,
+   "loadSec": 1.5,
+   "quiet": true,
+   "otherGpuBusyPercent": [
+    5,
+    0,
+    0
+   ],
+   "swapUsedBytes": 14385089085,
+   "loadedRun": {
+    "p50Ms": 3614.6,
+    "p95Ms": 4476.6,
+    "coldStartSec": 5.32,
+    "otherGpuBusyPercent": [
+     5,
+     0,
+     5
+    ]
+   },
+   "answerMassP50": 1.0,
+   "fails": [
+    "agreement",
+    "must-pass",
+    "p95"
+   ]
+  }
+ ]
+}

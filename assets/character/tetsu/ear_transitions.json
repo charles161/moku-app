@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "durationSeconds": 0.36,
+  "shapeRevision": 3,
+  "timing": {
+    "riseSeconds": 0.36,
+    "middlePhaseRange": [
+      0.3,
+      0.7
+    ],
+    "middleMaximumSeconds": 0.08333333333333333,
+    "overshootFraction": 0.08,
+    "fall": "reverse path, softer landing bounce; clamp morph phase to 0\u20261 and use joint rotation for overshoot"
+  },
+  "reverseUsesSamePath": true,
+  "interpolation": "piecewise linear weights between adjacent keyposes; ease phase, not weights twice",
+  "clearControls": [
+    "ears_curtain",
+    "ears_pinned",
+    "ears_lift",
+    "ear_antenna_L",
+    "ear_antenna_R",
+    "ears_lift_0625",
+    "ears_lift_125",
+    "ears_lift_1875",
+    "ears_lift_250",
+    "ears_lift_3125",
+    "ears_lift_375",
+    "ears_lift_4375",
+    "ears_lift_500",
+    "ears_lift_5625",
+    "ears_lift_625",
+    "ears_lift_6875",
+    "ears_lift_750",
+    "ears_lift_8125",
+    "ears_lift_875",
+    "ears_lift_9375",
+    "ear_antenna_L_0625",
+    "ear_antenna_L_125",
+    "ear_antenna_L_1875",
+    "ear_antenna_L_250",
+    "ear_antenna_L_3125",
+    "ear_antenna_L_375",
+    "ear_antenna_L_4375",
+    "ear_antenna_L_500",
+    "ear_antenna_L_5625",
+    "ear_antenna_L_625",
+    "ear_antenna_L_6875",
+    "ear_antenna_L_750",
+    "ear_antenna_L_8125",
+    "ear_antenna_L_875",
+    "ear_antenna_L_9375",
+    "ear_antenna_R_0625",
+    "ear_antenna_R_125",
+    "ear_antenna_R_1875",
+    "ear_antenna_R_250",
+    "ear_antenna_R_3125",
+    "ear_antenna_R_375",
+    "ear_antenna_R_4375",
+    "ear_antenna_R_500",
+    "ear_antenna_R_5625",
+    "ear_antenna_R_625",
+    "ear_antenna_R_6875",
+    "ear_antenna_R_750",
+    "ear_antenna_R_8125",
+    "ear_antenna_R_875",
+    "ear_antenna_R_9375"
+  ],
+  "paths": [
+    {
+      "target": "ears_lift",
+      "keyposes": [
+        {
+          "phase": 0,
+          "blendShapes": {},
+          "jointEulerDegrees": {}
+        },
+        {
+          "phase": 0.9375,
+          "blendShapes": {
+            "ears_lift_9375": 1
+          },
+          "jointEulerDegrees": {}
+        },
+        {
+          "phase": 1,
+          "blendShapes": {
+            "ears_lift": 1
+          },
+          "jointEulerDegrees": {}
+        }
+      ]
+    },
+    {
+      "target": "ear_antenna_L",
+      "keyposes": [
+        {
+          "phase": 0,
+          "blendShapes": {},
+          "jointEulerDegrees": {}
+        },
+        {
+          "phase": 0.9375,
+          "blendShapes": {
+            "ear_antenna_L_9375": 1
+          },
+          "jointEulerDegrees": {}
+        },
+        {
+          "phase": 1,
+          "blendShapes": {
+            "ear_antenna_L": 1
+          },
+          "jointEulerDegrees": {}
+        }
+      ]
+    },
+    {
+      "target": "ear_antenna_R",
+      "keyposes": [
+        {
+          "phase": 0,
+          "blendShapes": {},
+          "jointEulerDegrees": {}
+        },
+        {
+          "phase": 0.9375,
+          "blendShapes": {
+            "ear_antenna_R_9375": 1
+          },
+          "jointEulerDegrees": {}
+        },
+        {
+          "phase": 1,
+          "blendShapes": {
+            "ear_antenna_R": 1
+          },
+          "jointEulerDegrees": {}
+        }
+      ]
+    }
+  ],
+  "routing": "To or from LIFT / ANTENNA, use these paths through LOP. Other endpoints first return to LOP. Never add intermediate controls to terminal morphs. Ear joints use zero offsets along these paths; apply final pose joint offsets after arrival."
+}

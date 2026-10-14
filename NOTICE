@@ -1,0 +1,80 @@
+Moku
+Copyright (c) 2026 Charles Maria Joseph
+
+Moku's source code is under the MIT license (LICENSE). Its art is all rights reserved (assets/LICENSE-ASSETS.md).
+
+Moku uses the third-party components below. Each keeps its own license; the full texts come with each component (in
+its source repository or package, or in this repository where noted).
+
+
+The macOS app (app/)
+--------------------
+
+Sparkle 2.10.0 (auto-update), fetched by Swift Package Manager (app/Moku/Package.resolved)
+  https://github.com/sparkle-project/Sparkle
+  MIT License. Copyright (c) 2006-2013 Andy Matuschak, (c) 2009-2013 Elgato Systems GmbH, (c) 2011-2014 Kornel
+  Lesiński, (c) 2015-2017 Mayur Pawashe, (c) 2014 C.W. Betts, (c) 2014 Petroules Corporation, (c) 2014 Big Nerd Ranch.
+  Sparkle includes parts under their own licenses:
+    bsdiff 4.3 (bspatch.c, bsdiff.c): BSD 2-Clause. Copyright 2003-2005 Colin Percival.
+    sais-lite: MIT. Copyright (c) 2008-2010 Yuta Mori.
+    Portable C implementation of Ed25519: zlib License. Copyright (c) 2015 Orson Peters.
+    SUSignatureVerifier.m: BSD 2-Clause. Copyright (c) 2011 Mark Hamlin.
+
+
+The brain (brain-go/), Go modules compiled into it (brain-go/go.mod)
+-------------------------------------------------------------------
+
+modernc.org/sqlite v1.40.0             BSD 3-Clause   Copyright (c) 2017 The Sqlite Authors
+modernc.org/libc v1.66.10              BSD 3-Clause   Copyright (c) 2017 The Libc Authors; (c) 2009 The Go Authors
+modernc.org/mathutil v1.7.1            BSD 3-Clause   Copyright (c) 2014 The mathutil Authors
+modernc.org/memory v1.11.0             BSD 3-Clause   Copyright (c) 2017 The Memory Authors; (c) 2009 The Go Authors;
+                                                      (c) 2011 Evan Shaw
+golang.org/x/sys v0.36.0               BSD 3-Clause   Copyright 2009 The Go Authors
+golang.org/x/exp v0.0.0-20250620022241-b7579e27df2b
+                                       BSD 3-Clause   Copyright 2009 The Go Authors
+github.com/google/uuid v1.6.0          BSD 3-Clause   Copyright (c) 2009, 2014 Google Inc.
+github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec
+                                       BSD 3-Clause   Copyright (c) 2012 The Go Authors
+github.com/dustin/go-humanize v1.0.1   MIT            Copyright (c) 2005-2008 Dustin Sallings
+github.com/mattn/go-isatty v0.0.20     MIT            Copyright (c) Yasuhiro Matsumoto
+github.com/ncruces/go-strftime v0.1.9  MIT            Copyright (c) 2022 Nuno Cruces
+
+The SQLite library that modernc.org/sqlite translates to Go is in the public domain.
+
+
+The website (website/), npm packages bundled into the site (website/package-lock.json)
+------------------------------------------------------------------------------------
+
+three 0.186.1                  MIT          Copyright (c) 2010-2026 three.js authors
+motion 13.4.6                  MIT          Copyright (c) 2024 Motion B.V.
+framer-motion 13.4.6           MIT          Copyright (c) 2018 Framer B.V.
+motion-dom 13.4.5              MIT          Copyright (c) 2024 Motion B.V.
+motion-utils 13.3.0            MIT          Copyright (c) 2024 Motion B.V.
+@vercel/analytics 2.0.1        MIT          Copyright (c) 2026 Vercel, Inc.
+@vercel/speed-insights 2.0.0   Apache-2.0   Copyright 2023 Vercel, Inc.
+tslib 2.8.1                    0BSD         Copyright (c) Microsoft Corporation
+
+Vite (MIT) builds the site; it is a development tool and isn't shipped.
+
+Files in this repository:
+
+Draco 3D decoder (website/public/vendor/draco/draco_decoder.wasm, draco_wasm_wrapper.js), as distributed with three.js
+  https://github.com/google/draco. Apache License 2.0 (website/public/vendor/draco/DRACO-LICENSE.txt).
+  three.js's own license for these files: MIT (website/public/vendor/draco/THREE-LICENSE.txt).
+
+DM Sans (website/fonts/sans-normal.woff2, website/src/fonts/sans-normal.woff2)
+  SIL Open Font License 1.1. Copyright 2014 The DM Sans Project Authors (https://github.com/googlefonts/dm-fonts).
+  Full text: website/fonts/dmsans-OFL.txt and website/src/fonts/dmsans-OFL.txt.
+
+Instrument Serif (website/fonts/serif-*.woff2; website/src/fonts/serif-*.woff2, subset to the characters the site
+uses)
+  SIL Open Font License 1.1. Copyright 2022 The Instrument Serif Project Authors
+  (https://github.com/Instrument/instrument-serif).
+  Full text: website/fonts/instrumentserif-OFL.txt and website/src/fonts/instrumentserif-OFL.txt.
+
+
+Optional, not in this repository
+--------------------------------
+
+llama.cpp server (scripts/fetch-llama-runtime.sh downloads an official release for a build that includes the local
+fallback model; release builds don't). https://github.com/ggml-org/llama.cpp. MIT License.

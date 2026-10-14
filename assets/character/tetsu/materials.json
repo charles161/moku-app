@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "assetRoot": "assets",
+  "pathResolution": "All texture paths are relative to the assets directory, not this JSON file.",
+  "matching": "Exact material name or aliases. These rules win over runtime/materials.json for the same name: the hidden pupils keep Moku's name (Deep cocoa pupil) so FacialMorphs finds the face.",
+  "notes": [
+    "flush: true marks what changes when Tetsu is cross: the status LEDs turn from cyan to flushColor (amber). The display draws its own amber.",
+    "Tetsu display: the emissive texture is drawn by the app (PixelFace.swift, from pixel_face.json)."
+  ],
+  "materials": [
+    {
+      "name": "Tetsu brushed shell",
+      "aliases": [
+        "Tetsu_brushed_shell"
+      ],
+      "baseTint": [
+        0.8,
+        0.81,
+        0.82,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.3,
+      "metallic": 0.55,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": "character/tetsu/brushed_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.45,
+      "normalTiling": [
+        2.0,
+        2.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Tetsu chest panel",
+      "aliases": [
+        "Tetsu_chest_panel"
+      ],
+      "baseTint": [
+        0.88,
+        0.88,
+        0.87,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.26,
+      "metallic": 0.4,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": "character/tetsu/brushed_normal.png",
+      "normalMapColorSpace": "raw",
+      "normalScale": 0.25,
+      "normalTiling": [
+        2.0,
+        2.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Tetsu gunmetal",
+      "aliases": [
+        "Tetsu_gunmetal"
+      ],
+      "baseTint": [
+        0.11,
+        0.12,
+        0.13,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.3,
+      "metallic": 0.7,
+      "specular": 0.5,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Tetsu polished ring",
+      "aliases": [
+        "Tetsu_polished_ring"
+      ],
+      "baseTint": [
+        0.86,
+        0.87,
+        0.89,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.16,
+      "metallic": 1.0,
+      "specular": 0.6,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Tetsu seam",
+      "aliases": [
+        "Tetsu_seam"
+      ],
+      "baseTint": [
+        0.022,
+        0.024,
+        0.028,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.7,
+      "metallic": 0.0,
+      "specular": 0.2,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Tetsu display",
+      "aliases": [
+        "Tetsu_display"
+      ],
+      "baseTint": [
+        0.006,
+        0.008,
+        0.01,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.07,
+      "metallic": 0.0,
+      "specular": 1.0,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Deep cocoa pupil",
+      "aliases": [
+        "Deep_cocoa_pupil"
+      ],
+      "baseTint": [
+        0.008,
+        0.01,
+        0.012,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.1,
+      "metallic": 0.0,
+      "specular": 0.9,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false
+    },
+    {
+      "name": "Tetsu LED",
+      "aliases": [
+        "Tetsu_LED"
+      ],
+      "baseTint": [
+        0.3,
+        0.92,
+        1.0,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.3,
+      "metallic": 0.0,
+      "specular": 0.2,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false,
+      "emissive": [
+        0.3,
+        0.92,
+        1.0
+      ],
+      "emissiveIntensity": 2.4,
+      "flush": true,
+      "flushColor": [
+        1.0,
+        0.58,
+        0.1
+      ]
+    },
+    {
+      "name": "Tetsu amber light",
+      "aliases": [
+        "Tetsu_amber_light"
+      ],
+      "baseTint": [
+        1.0,
+        0.58,
+        0.1,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.3,
+      "metallic": 0.0,
+      "specular": 0.2,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false,
+      "emissive": [
+        1.0,
+        0.58,
+        0.1
+      ],
+      "emissiveIntensity": 1.6
+    },
+    {
+      "name": "Tetsu visor glint",
+      "aliases": [
+        "Tetsu_visor_glint"
+      ],
+      "baseTint": [
+        0.85,
+        0.88,
+        0.92,
+        1.0
+      ],
+      "tintColorSpace": "linearSRGB",
+      "baseTintMode": "multiplyTexture",
+      "baseColorTexturePath": null,
+      "roughness": 0.3,
+      "metallic": 0.0,
+      "specular": 0.2,
+      "sheenColor": [
+        0,
+        0,
+        0
+      ],
+      "sheenColorSpace": "linearSRGB",
+      "sheenRoughness": 1.0,
+      "normalMapPath": null,
+      "normalMapColorSpace": "raw",
+      "normalScale": 1.0,
+      "normalTiling": [
+        1.0,
+        1.0
+      ],
+      "uvOffset": [
+        0.0,
+        0.0
+      ],
+      "opacity": 1.0,
+      "doubleSided": false,
+      "emissive": [
+        0.85,
+        0.88,
+        0.92
+      ],
+      "emissiveIntensity": 0.22
+    }
+  ]
+}

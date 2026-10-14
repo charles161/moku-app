@@ -1,0 +1,40 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "regions": [
+    "bom1"
+  ],
+  "redirects": [
+    {
+      "source": "/download",
+      "destination": "https://updates.hellomoku.com/downloads/Moku-0.1.13.dmg",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/v4/ai/:path*",
+      "destination": "/api/proxy?path=:path*"
+    },
+    {
+      "source": "/v1/:path*",
+      "destination": "/api/proxy?path=v1/:path*"
+    },
+    {
+      "source": "/health",
+      "destination": "/api/proxy?path=health"
+    },
+    {
+      "source": "/get",
+      "destination": "/api/proxy?path=get"
+    },
+    {
+      "source": "/updates/:path*",
+      "destination": "https://updates.hellomoku.com/updates/:path*"
+    }
+  ],
+  "functions": {
+    "api/proxy.js": {
+      "maxDuration": 60
+    }
+  }
+}

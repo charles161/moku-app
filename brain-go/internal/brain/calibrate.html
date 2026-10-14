@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calibrating Moku</title>
+<style nonce="{{nonce}}">
+  :root {
+    --paper: #f7f5ee; --card: #fffdf7; --ink: #2a2f27; --muted: #6b7064; --line: #e4e0d3;
+    --forest: #344633; --sage: #8a9a7b; --sage-soft: #e6ebdd; --amber: #b7791f; --amber-soft: #f6ead2;
+    --rose: #a2463f; --rose-soft: #f5e1de; --sky: #3c6a8a; --sky-soft: #e0eaf1; --grey-soft: #ecebe6;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+  main { max-width: 1040px; margin: 0 auto; padding: 28px 20px 80px; }
+  h1, h2 { font-family: "Iowan Old Style", "Palatino", Georgia, serif; font-weight: 500; color: var(--forest); }
+  h1 { font-size: 30px; margin: 0 0 2px; }
+  h2 { font-size: 21px; margin: 36px 0 10px; }
+  .sub { color: var(--muted); margin: 0 0 18px; }
+  button, select, input { font: inherit; color: inherit; }
+  button { border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 4px 10px; cursor: pointer; }
+  button:hover { border-color: var(--sage); }
+  button.primary { background: var(--forest); color: #fff; border-color: var(--forest); }
+  select, input[type=text] { border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: 4px 8px; }
+  .bar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; }
+  .bar .date { font-family: "Iowan Old Style", Georgia, serif; font-size: 18px; min-width: 120px; text-align: center; }
+  .grow { flex: 1; }
+  .muted { color: var(--muted); }
+  .moment { display: grid; grid-template-columns: 96px 1fr auto; gap: 12px; align-items: start; background: var(--card);
+            border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin-bottom: 8px; }
+  .moment.rated { opacity: 0.72; }
+  .when { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 13px; padding-top: 2px; }
+  .where { font-weight: 600; }
+  .title { color: var(--muted); overflow-wrap: anywhere; }
+  .answer { margin-top: 5px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .badge { font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; border-radius: 999px; padding: 2px 8px; }
+  .k-goal { background: var(--sage-soft); color: var(--forest); }
+  .k-switch { background: var(--sky-soft); color: var(--sky); }
+  .k-new { background: var(--amber-soft); color: var(--amber); }
+  .k-unclear { background: var(--grey-soft); color: var(--muted); }
+  .k-drift { background: var(--rose-soft); color: var(--rose); }
+  .small { font-size: 12px; color: var(--muted); }
+  .actions { display: flex; gap: 6px; }
+  .actions button { width: 38px; }
+  .fix { grid-column: 2 / 4; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; border-top: 1px dashed var(--line); padding-top: 8px; }
+  .verdict { font-size: 13px; }
+  .ok { color: var(--forest); font-weight: 600; } .no { color: var(--rose); font-weight: 600; }
+  table { border-collapse: collapse; width: 100%; background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+  th { font-size: 12px; color: var(--muted); font-weight: 600; background: #faf8f1; }
+  tr:last-child td { border-bottom: 0; }
+  .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; background: var(--rose); }
+  .dot.pass { background: var(--sage); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .goal { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .goal .name { font-weight: 600; min-width: 220px; }
+  details summary { cursor: pointer; padding: 10px 0; }
+  .empty { padding: 24px; text-align: center; color: var(--muted); background: var(--card); border: 1px dashed var(--line); border-radius: 12px; }
+  @media (max-width: 720px) { .moment { grid-template-columns: 1fr; } .fix { grid-column: 1; } .grid2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Calibrating Moku</h1>
+  <p class="sub">Was Moku right? Every drift, every switch and every new goal, plus a fifth of the rest: about five minutes a day. This page is local: nothing on it leaves your Mac.</p>
+  <div class="bar">
+    <button id="prev" aria-label="The day before">‹</button>
+    <span class="date" id="date"></span>
+    <button id="next" aria-label="The day after">›</button>
+    <label><input type="checkbox" id="all"> Show all</label>
+    <span class="grow"></span>
+    <span class="muted" id="progress"></span>
+  </div>
+  <section id="moments"></section>
+
+  <h2>Where it stands</h2>
+  <table id="exit"></table>
+
+  <div class="grid2">
+    <div><h2>Calibration</h2><p class="small">Of the moments Moku said at this probability, how many you marked right.</p><table id="bins"></table></div>
+    <div><h2>Worst apps and sites</h2><p class="small">Where Moku was wrong most.</p><table id="worst"></table></div>
+  </div>
+
+  <h2>By day</h2>
+  <table id="days"></table>
+
+  <h2>Your goals</h2>
+  <p class="small">Rename one, merge a duplicate into the goal it repeats, or mark one as not a real goal (its time stays, without the goal).</p>
+  <section id="goals"></section>
+</main>
+<script nonce="{{nonce}}">
+"use strict";
+const state = { date: null, all: false, day: null };
+
+// el: an element from plain text only (never HTML: window titles are someone else's words).
+function el(tag, attrs, ...kids) {
+  const node = document.createElement(tag);
+  for (const [key, value] of Object.entries(attrs || {})) {
+    if (key === "class") node.className = value;
+    else if (key.startsWith("on")) node.addEventListener(key.slice(2), value);
+    else if (value !== false && value != null) node.setAttribute(key, value === true ? "" : value);
+  }
+  for (const kid of kids.flat()) if (kid != null && kid !== false) node.append(kid instanceof Node ? kid : String(kid));
+  return node;
+}
+
+async function api(path, body) {
+  const response = await fetch(path, body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : {});
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error || response.status);
+  return data;
+}
+
+const clock = (ms) => new Date(ms).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: false });
+const pct = (p) => (p == null ? "–" : Math.round(p * 100) + "%");
+const kindName = { goal: "on goal", switch: "switch", new: "new goal", unclear: "work, no goal", drift: "drift" };
+const truthName = { goal: "goal", new: "a new goal", drift: "a drift", personal: "personal but fine" };
+
+function shiftDate(date, days) {
+  const [y, m, d] = date.split("-").map(Number);
+  const next = new Date(y, m - 1, d + days, 12);
+  return [next.getFullYear(), String(next.getMonth() + 1).padStart(2, "0"), String(next.getDate()).padStart(2, "0")].join("-");
+}
+
+async function load() {
+  const query = new URLSearchParams({ all: state.all ? "1" : "0" });
+  if (state.date) query.set("date", state.date);
+  const [day, report] = await Promise.all([api("/calibrate/day?" + query), api("/calibrate/report")]);
+  state.day = day;
+  state.date = day.date;
+  document.getElementById("date").textContent = new Date(day.date + "T12:00").toLocaleDateString([], { weekday: "short", day: "numeric", month: "short" });
+  document.getElementById("progress").textContent = day.rated + " rated of " + day.shown + " to rate";
+  renderMoments(day);
+  renderReport(report);
+  renderGoals(day.goals);
+}
+
+function renderMoments(day) {
+  const list = document.getElementById("moments");
+  list.replaceChildren();
+  if (!day.moments.length) {
+    list.append(el("div", { class: "empty" }, "Nothing to rate on this day yet."));
+    return;
+  }
+  for (const m of day.moments) list.append(momentCard(m, day.goals));
+}
+
+function momentCard(m, goals) {
+  const answer = el("div", { class: "answer" },
+    el("span", { class: "badge k-" + m.kind }, kindName[m.kind] || m.kind),
+    m.goalTitle ? el("span", {}, m.goalTitle) : null,
+    m.fromGoal ? el("span", { class: "small" }, "from " + m.fromGoal) : null,
+    m.p != null ? el("span", { class: "small" }, "p " + m.p.toFixed(2)) : null,
+    el("span", { class: "small" }, m.rule),
+    m.nudged ? el("span", { class: "small" }, "· asked you to come back") : null);
+  const card = el("div", { class: "moment" + (m.rating ? " rated" : "") },
+    el("div", { class: "when" }, clock(m.start) + "–" + clock(m.end)),
+    el("div", {}, el("div", {}, el("span", { class: "where" }, m.place), el("span", { class: "title" }, m.title ? " · " + m.title : "")), answer));
+  if (m.rating) {
+    const r = m.rating;
+    const said = r.ok ? el("span", { class: "ok" }, "✓ right")
+      : el("span", { class: "no" }, "✗ " + (r.truth === "goal" ? (goals.find((g) => g.id === r.goalId) || {}).title || "a goal" : r.truth === "new" ? "new: " + r.title : truthName[r.truth]));
+    card.append(el("div", { class: "actions verdict" }, said, el("button", { onclick: () => rate(m, null) }, "undo")));
+    return card;
+  }
+  const fix = el("div", { class: "fix", hidden: true });
+  card.append(el("div", { class: "actions" },
+    el("button", { title: "Moku was right", "aria-label": "Right", onclick: () => rate(m, { ok: true }) }, "✓"),
+    el("button", { title: "Moku was wrong", "aria-label": "Wrong", onclick: () => { fix.hidden = !fix.hidden; } }, "✗")));
+  const pick = el("select", {}, el("option", { value: "" }, "It was one of my goals…"),
+    goals.filter((g) => g.id !== m.goalId || m.kind === "drift").map((g) => el("option", { value: g.id }, g.title)));
+  const newTitle = el("input", { type: "text", placeholder: "or a new goal, in your words", maxlength: "60" });
+  fix.append(...[el("span", { class: "small" }, "What was it?"), pick, newTitle,
+    el("button", { class: "primary", onclick: () => {
+      if (newTitle.value.trim()) rate(m, { ok: false, truth: "new", title: newTitle.value.trim() });
+      else if (pick.value) rate(m, { ok: false, truth: "goal", goalId: pick.value });
+    } }, "Save"),
+    m.kind !== "drift" ? el("button", { onclick: () => rate(m, { ok: false, truth: "drift" }) }, "A drift") : null,
+    el("button", { onclick: () => rate(m, { ok: false, truth: "personal" }) }, "Personal but fine")].filter(Boolean));
+  card.append(fix);
+  return card;
+}
+
+async function rate(m, rating) {
+  try {
+    if (rating) await api("/calibrate/rate", Object.assign({ date: state.date, momentId: m.id }, rating));
+    else await api("/calibrate/unrate", { momentId: m.id });
+    await load();
+  } catch (error) { alert("Couldn't save: " + error.message); }
+}
+
+function table(id, head, rows) {
+  const t = document.getElementById(id);
+  t.replaceChildren(el("tr", {}, head.map((h) => el("th", {}, h))), ...rows.map((cells) => el("tr", {}, cells.map((c) => el("td", {}, c)))));
+}
+
+function renderReport(report) {
+  table("exit", ["", "Criterion", "Target", "Now"], report.bar.map((line) =>
+    [el("span", { class: "dot" + (line.pass ? " pass" : "") }), line.what, line.target, line.value]));
+  const cost = report.cost;
+  const money = (x) => (x == null ? "–" : "$" + x.toFixed(4));
+  document.getElementById("exit").append(el("tr", {}, el("td", {}), el("td", { colspan: "3", class: "small" },
+    "Jev per active hour: " + money(cost.nowPerHour) + " now, " + money(cost.beforePerHour) + " the week before. Latency now p50 " +
+    (cost.nowP50 / 1000).toFixed(1) + " s, slowest " + (cost.nowMax / 1000).toFixed(1) + " s; before p50 " + (cost.beforeP50 / 1000).toFixed(1) + " s.")));
+  table("bins", ["Moku said p", "Moments", "Mean p", "Right"], report.bins.map((b) =>
+    [b.from.toFixed(1) + "–" + b.to.toFixed(1), b.n, b.meanP == null ? "–" : b.meanP.toFixed(2), pct(b.right)]));
+  table("worst", ["Place", "Rated", "Wrong"], report.worst.length ? report.worst.map((w) => [w.place, w.rated, w.wrong]) : [["Nothing wrong yet", "", ""]]);
+  table("days", ["Day", "Rated", "Goal right", "Drift precision", "Drift recall", "Nudges on work", "Personal"],
+    report.days.map((d) => [d.date, d.rated, pct(d.goalRight), pct(d.driftPrecision), pct(d.driftRecall), d.nudgesOnWork, d.personal]));
+}
+
+function renderGoals(goals) {
+  const box = document.getElementById("goals");
+  const older = el("details", {}, el("summary", { class: "small" }, "Goals with no time this day (" + goals.filter((g) => !g.minutes).length + ")"));
+  box.replaceChildren();
+  for (const g of goals) {
+    const name = el("span", { class: "name", title: g.summary }, g.title);
+    const merge = el("select", {}, el("option", { value: "" }, "Merge into…"), goals.filter((o) => o.id !== g.id).map((o) => el("option", { value: o.id }, o.title)));
+    merge.addEventListener("change", () => {
+      const into = goals.find((o) => o.id === merge.value);
+      if (into && confirm("Merge “" + g.title + "” into “" + into.title + "”?")) goalEdit({ id: g.id, mergeInto: into.id });
+      else merge.value = "";
+    });
+    (g.minutes ? box : older).append(el("div", { class: "goal" }, name, el("span", { class: "small" }, g.minutes + " min this day"), el("span", { class: "grow" }),
+      el("button", { onclick: () => { const title = prompt("Rename “" + g.title + "”", g.title); if (title && title.trim()) goalEdit({ id: g.id, title: title.trim() }); } }, "Rename"),
+      merge,
+      el("button", { onclick: () => { if (confirm("“" + g.title + "” isn’t a real goal? Its time stays, without the goal.")) goalEdit({ id: g.id, notAGoal: true }); } }, "Not a real goal")));
+  }
+  box.append(older);
+}
+
+async function goalEdit(body) {
+  try { await api("/calibrate/goal", body); await load(); } catch (error) { alert("Couldn't save: " + error.message); }
+}
+
+document.getElementById("prev").addEventListener("click", () => { state.date = shiftDate(state.date, -1); load(); });
+document.getElementById("next").addEventListener("click", () => { state.date = shiftDate(state.date, 1); load(); });
+document.getElementById("all").addEventListener("change", (event) => { state.all = event.target.checked; load(); });
+load().catch((error) => document.getElementById("moments").replaceChildren(el("div", { class: "empty" }, "The brain didn't answer: " + error.message)));
+</script>
+</body>
+</html>

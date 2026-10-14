@@ -1,0 +1,38 @@
+/* Small details share the same quiet, hand-drawn language as Moku. */
+.house-home-note { display: none; }
+.chapter-nav { --chapter-ink: #687b4e; }
+.chapter-nav.on-dark { --chapter-ink: #d0ddb5; }
+.chapter-nav a { width: 34px; height: 38px; }
+.chapter-nav a::before { content: ''; position: absolute; inset: 1px; border-radius: 50%; background: conic-gradient(var(--chapter-ink) var(--chapter-progress, 0deg), transparent 0); mask: radial-gradient(farthest-side, transparent calc(100% - 1px), #000 0); opacity: 0; transition: opacity .25s; pointer-events: none; }
+.chapter-nav a[aria-current]::before { opacity: 1; }
+.chapter-nav.on-dark a > span + span { background: #f2f3e7; color: #344633; }
+.house-view-controls button { transition: background .2s, border-color .2s, box-shadow .2s; }
+.house-view-controls button:focus-visible { outline-offset: 3px; }
+.faq-list summary { transition: color .2s; }
+@media (hover: hover) { .faq-list summary:hover { color: #6a7b4e; } }
+.faq-list details[open] summary { color: #637348; }
+.faq-list details > div { animation: answer-appear .25s ease both; }
+@keyframes answer-appear { from { opacity: 0; } to { opacity: 1; } }
+
+@media (min-width: 960px) and (min-height: 620px) {
+  .motion-enabled .world-scroll-cue { font-size: 9px; letter-spacing: .1em; }
+  .motion-enabled .world-pin .world-copy > p { font-size: 12px; }
+  .house-scene-title > span { font-size: 9px; }
+  .timeline-labels { font-size: 9px; letter-spacing: .06em; }
+  .world-section .house-preview-note { font-size: 9px; }
+}
+@media (min-width: 1200px) {
+  .house-home-note { display: block; position: absolute; top: 74px; right: 18px; width: 170px; color: #dae3c8; font: italic 24px/1.1 var(--serif); text-align: right; opacity: calc(var(--house-evening, 0) * var(--house-complete, 0)); transform: rotate(5deg); transition: opacity .4s; pointer-events: none; }
+  .house-home-note svg { display: block; margin-left: auto; width: 83px; height: 48px; fill: none; stroke: #bac9a3; stroke-width: 1.1; stroke-linecap: round; }
+}
+@media (max-width: 959px) {
+  .timeline-labels { font-size: 9px; letter-spacing: 0; }
+  .house-preview-note { font-size: 9px; }
+}
+@media (max-width: 560px) {
+  .timeline-labels { font-size: 8px; }
+  .house-replay { min-height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-list details > div { animation: none; }
+}

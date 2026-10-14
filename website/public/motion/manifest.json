@@ -1,0 +1,394 @@
+{
+  "content-blink": {
+    "fps": 60,
+    "frames": 17,
+    "seconds": 0.28,
+    "duration": 280,
+    "url": "/motion/content-blink.webp?v=e35db6d79e",
+    "bytes": 39876,
+    "variants": {
+      "320": {
+        "url": "/motion/content-blink.320.webp?v=466f88151f",
+        "bytes": 10096
+      }
+    }
+  },
+  "content-ear-left": {
+    "fps": 50,
+    "frames": 55,
+    "seconds": 1.1,
+    "duration": 1100,
+    "url": "/motion/content-ear-left.webp?v=492fe91bcb",
+    "bytes": 142904,
+    "variants": {
+      "320": {
+        "url": "/motion/content-ear-left.320.webp?v=03eaab5038",
+        "bytes": 53420
+      }
+    }
+  },
+  "content-ear-right": {
+    "fps": 50,
+    "frames": 55,
+    "seconds": 1.1,
+    "duration": 1100,
+    "url": "/motion/content-ear-right.webp?v=3e2ee04576",
+    "bytes": 315466,
+    "variants": {
+      "320": {
+        "url": "/motion/content-ear-right.320.webp?v=0e85d59a71",
+        "bytes": 101112
+      }
+    }
+  },
+  "content-foot": {
+    "fps": 30,
+    "frames": 54,
+    "seconds": 1.8,
+    "duration": 1800,
+    "url": "/motion/content-foot.webp?v=185525821b",
+    "bytes": 90844,
+    "variants": {
+      "320": {
+        "url": "/motion/content-foot.320.webp?v=04f11e6b46",
+        "bytes": 28966
+      }
+    }
+  },
+  "content-glance": {
+    "fps": 30,
+    "frames": 36,
+    "seconds": 1.2,
+    "duration": 1200,
+    "url": "/motion/content-glance.webp?v=db87293f21",
+    "bytes": 285682,
+    "variants": {
+      "320": {
+        "url": "/motion/content-glance.320.webp?v=fb6a8123d2",
+        "bytes": 98338
+      }
+    }
+  },
+  "content-head": {
+    "fps": 24,
+    "frames": 77,
+    "seconds": 3.2,
+    "duration": 3200,
+    "url": "/motion/content-head.webp?v=ef598eb608",
+    "bytes": 492488,
+    "variants": {
+      "320": {
+        "url": "/motion/content-head.320.webp?v=2d3e0567e2",
+        "bytes": 165248
+      }
+    }
+  },
+  "content-hover-in": {
+    "fps": 50,
+    "frames": 85,
+    "seconds": 1.7,
+    "duration": 1700,
+    "url": "/motion/content-hover-in.webp?v=22337e4f14",
+    "bytes": 631190,
+    "variants": {
+      "320": {
+        "url": "/motion/content-hover-in.320.webp?v=15f49457c9",
+        "bytes": 217316
+      }
+    }
+  },
+  "content-hover-out": {
+    "fps": 50,
+    "frames": 23,
+    "seconds": 0.45,
+    "duration": 450,
+    "url": "/motion/content-hover-out.webp?v=8b2f60ac9e",
+    "bytes": 9786,
+    "variants": {
+      "320": {
+        "url": "/motion/content-hover-out.320.webp?v=bacec88dd5",
+        "bytes": 2736
+      }
+    }
+  },
+  "content-idle": {
+    "fps": 1,
+    "frames": 1,
+    "seconds": 0,
+    "duration": 0,
+    "url": "/motion/content-idle.webp?v=79ce7e701c",
+    "bytes": 37118,
+    "variants": {
+      "320": {
+        "url": "/motion/content-idle.320.webp?v=589a0d2e29",
+        "bytes": 15290
+      }
+    }
+  },
+  "content-nose": {
+    "fps": 50,
+    "frames": 20,
+    "seconds": 0.4,
+    "duration": 400,
+    "url": "/motion/content-nose.webp?v=e380137ca5",
+    "bytes": 22474,
+    "variants": {
+      "320": {
+        "url": "/motion/content-nose.320.webp?v=9f6f14d678",
+        "bytes": 5202
+      }
+    }
+  },
+  "content-pat": {
+    "fps": 50,
+    "frames": 75,
+    "seconds": 1.5,
+    "duration": 1500,
+    "url": "/motion/content-pat.webp?v=fc5a8728a9",
+    "bytes": 593760,
+    "variants": {
+      "320": {
+        "url": "/motion/content-pat.320.webp?v=45c1fa15f7",
+        "bytes": 210516
+      }
+    }
+  },
+  "content-paw": {
+    "fps": 24,
+    "frames": 62,
+    "seconds": 2.6,
+    "duration": 2600,
+    "url": "/motion/content-paw.webp?v=18aa28a9ba",
+    "bytes": 40238,
+    "variants": {
+      "320": {
+        "url": "/motion/content-paw.320.webp?v=125ede36a3",
+        "bytes": 3922
+      }
+    }
+  },
+  "content-slow-blink": {
+    "fps": 30,
+    "frames": 21,
+    "seconds": 0.7,
+    "duration": 700,
+    "url": "/motion/content-slow-blink.webp?v=96a0915c1c",
+    "bytes": 47878,
+    "variants": {
+      "320": {
+        "url": "/motion/content-slow-blink.320.webp?v=27e88c5569",
+        "bytes": 13488
+      }
+    }
+  },
+  "content-to-disappointed": {
+    "fps": 50,
+    "frames": 150,
+    "seconds": 3,
+    "duration": 3000,
+    "url": "/motion/content-to-disappointed.webp?v=1c0209168f",
+    "bytes": 803862,
+    "variants": {
+      "320": {
+        "url": "/motion/content-to-disappointed.320.webp?v=f5ca078046",
+        "bytes": 372402
+      }
+    }
+  },
+  "content-to-happy": {
+    "fps": 50,
+    "frames": 40,
+    "seconds": 0.8,
+    "duration": 800,
+    "url": "/motion/content-to-happy.webp?v=82645971ef",
+    "bytes": 334362,
+    "variants": {
+      "320": {
+        "url": "/motion/content-to-happy.320.webp?v=229c630924",
+        "bytes": 114364
+      }
+    }
+  },
+  "content-wave": {
+    "fps": 24,
+    "frames": 53,
+    "seconds": 2.2083333333333335,
+    "duration": 2208,
+    "url": "/motion/content-wave.webp?v=de2d7ffcf7",
+    "bytes": 433904,
+    "variants": {
+      "320": {
+        "url": "/motion/content-wave.320.webp?v=3834dd3a93",
+        "bytes": 152654
+      }
+    }
+  },
+  "disappointed-blink": {
+    "fps": 60,
+    "frames": 17,
+    "seconds": 0.28,
+    "duration": 280,
+    "url": "/motion/disappointed-blink.webp?v=27410a7b5c",
+    "bytes": 16604,
+    "variants": {
+      "320": {
+        "url": "/motion/disappointed-blink.320.webp?v=88f4e21588",
+        "bytes": 5938
+      }
+    }
+  },
+  "disappointed-idle": {
+    "fps": 1,
+    "frames": 1,
+    "seconds": 0,
+    "duration": 0,
+    "url": "/motion/disappointed-idle.webp?v=adffcd38f9",
+    "bytes": 33968,
+    "variants": {
+      "320": {
+        "url": "/motion/disappointed-idle.320.webp?v=ac1aae471e",
+        "bytes": 14148
+      }
+    }
+  },
+  "disappointed-pout": {
+    "fps": 30,
+    "frames": 30,
+    "seconds": 1,
+    "duration": 1000,
+    "url": "/motion/disappointed-pout.webp?v=5a31b3f4d0",
+    "bytes": 22164,
+    "variants": {
+      "320": {
+        "url": "/motion/disappointed-pout.320.webp?v=37e44eed9a",
+        "bytes": 5116
+      }
+    }
+  },
+  "disappointed-slow-blink": {
+    "fps": 30,
+    "frames": 21,
+    "seconds": 0.7,
+    "duration": 700,
+    "url": "/motion/disappointed-slow-blink.webp?v=0545b20805",
+    "bytes": 27386,
+    "variants": {
+      "320": {
+        "url": "/motion/disappointed-slow-blink.320.webp?v=d5a78c2878",
+        "bytes": 7292
+      }
+    }
+  },
+  "disappointed-to-content": {
+    "fps": 50,
+    "frames": 120,
+    "seconds": 2.4,
+    "duration": 2400,
+    "url": "/motion/disappointed-to-content.webp?v=b8c3a457be",
+    "bytes": 930978,
+    "variants": {
+      "320": {
+        "url": "/motion/disappointed-to-content.320.webp?v=b22372230f",
+        "bytes": 298950
+      }
+    }
+  },
+  "disappointed-to-happy": {
+    "fps": 50,
+    "frames": 30,
+    "seconds": 0.6,
+    "duration": 600,
+    "url": "/motion/disappointed-to-happy.webp?v=a1470a2f55",
+    "bytes": 247340,
+    "variants": {
+      "320": {
+        "url": "/motion/disappointed-to-happy.320.webp?v=5a0832eb71",
+        "bytes": 81124
+      }
+    }
+  },
+  "happy-ear-left": {
+    "fps": 50,
+    "frames": 55,
+    "seconds": 1.1,
+    "duration": 1100,
+    "url": "/motion/happy-ear-left.webp?v=79d79bb9ef",
+    "bytes": 156306,
+    "variants": {
+      "320": {
+        "url": "/motion/happy-ear-left.320.webp?v=84465f6a81",
+        "bytes": 56680
+      }
+    }
+  },
+  "happy-head": {
+    "fps": 24,
+    "frames": 77,
+    "seconds": 3.2,
+    "duration": 3200,
+    "url": "/motion/happy-head.webp?v=7954adb034",
+    "bytes": 507942,
+    "variants": {
+      "320": {
+        "url": "/motion/happy-head.320.webp?v=96442269a6",
+        "bytes": 171898
+      }
+    }
+  },
+  "happy-idle": {
+    "fps": 1,
+    "frames": 1,
+    "seconds": 0,
+    "duration": 0,
+    "url": "/motion/happy-idle.webp?v=cdb0dfbbc2",
+    "bytes": 39362,
+    "variants": {
+      "320": {
+        "url": "/motion/happy-idle.320.webp?v=21d1fbab96",
+        "bytes": 15908
+      }
+    }
+  },
+  "happy-paw": {
+    "fps": 24,
+    "frames": 62,
+    "seconds": 2.6,
+    "duration": 2600,
+    "url": "/motion/happy-paw.webp?v=c1099b0e54",
+    "bytes": 41734,
+    "variants": {
+      "320": {
+        "url": "/motion/happy-paw.320.webp?v=8fc016c41f",
+        "bytes": 4036
+      }
+    }
+  },
+  "happy-to-content": {
+    "fps": 50,
+    "frames": 60,
+    "seconds": 1.2,
+    "duration": 1200,
+    "url": "/motion/happy-to-content.webp?v=6ea43a8bda",
+    "bytes": 507022,
+    "variants": {
+      "320": {
+        "url": "/motion/happy-to-content.320.webp?v=a2aabe2bdf",
+        "bytes": 172230
+      }
+    }
+  },
+  "happy-to-disappointed": {
+    "fps": 50,
+    "frames": 150,
+    "seconds": 3,
+    "duration": 3000,
+    "url": "/motion/happy-to-disappointed.webp?v=83da205cf4",
+    "bytes": 1225722,
+    "variants": {
+      "320": {
+        "url": "/motion/happy-to-disappointed.320.webp?v=4faf3b64b0",
+        "bytes": 394226
+      }
+    }
+  }
+}

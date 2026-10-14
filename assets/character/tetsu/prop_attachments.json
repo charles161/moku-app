@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "drink_water": {
+    "file": "battery_cell.usdz",
+    "joint": "hand_R",
+    "wrapperLocalMatrixColumnMajor": [
+      0.6774178147315979,
+      0.7345990538597107,
+      -0.038345035165548325,
+      0.0,
+      0.342045396566391,
+      -0.36071324348449707,
+      -0.8676928281784058,
+      0.0,
+      -0.651237428188324,
+      0.5746750831604004,
+      -0.495619535446167,
+      0.0,
+      0.027063526213169098,
+      0.19884410500526428,
+      0.041945017874240875,
+      1.0
+    ],
+    "instructions": "Attach a wrapper to hand_R joint world pose; set wrapper local matrix from these columns. Add the imported cup root under that wrapper without replacing its authored root transform.",
+    "visibleNormalizedTime": [
+      0.06,
+      0.9
+    ]
+  },
+  "carry_lantern": {
+    "file": "../../props/lantern.usdz",
+    "joint": "hand_R",
+    "wrapperLocalMatrixColumnMajor": [
+      0.7616404294967651,
+      0.612470269203186,
+      0.21162424981594086,
+      0.0,
+      0.5471828579902649,
+      -0.43293458223342896,
+      -0.7163507342338562,
+      0.0,
+      -0.34712380170822144,
+      0.6613993644714355,
+      -0.6648732423782349,
+      0.0,
+      -0.15074479579925537,
+      0.15854565799236298,
+      0.16873733699321747,
+      1.0
+    ],
+    "instructions": "Same wrapper convention as drink_water. Follow composed hand_R world transform; retain imported lantern root coordinate conversion. Hide the 2D lantern while carrying.",
+    "visibleNormalizedTime": [
+      0,
+      1
+    ],
+    "holdJointEulerDegrees": {
+      "arm_R": [
+        -45.00000125223908,
+        0.0,
+        -34.99999983559887
+      ],
+      "hand_R": [
+        9.99999970909292,
+        0.0,
+        0.0
+      ]
+    },
+    "holdClip": "carry_lantern",
+    "handleAnchorAuthoring": [
+      0,
+      0,
+      0.272
+    ],
+    "baseAuthoringAtPreview": [
+      -0.13290759921073914,
+      -0.13120098412036896,
+      0.021347790956497192
+    ]
+  },
+  "build_hammer": {
+    "file": "../../props/hammer.usdz",
+    "joint": "hand_R",
+    "wrapperLocalMatrixColumnMajor": [
+      0.9976076483726501,
+      -0.03988749533891678,
+      -0.056469302624464035,
+      0.0,
+      -0.06001541018486023,
+      -0.09416739642620087,
+      -0.9937458634376526,
+      0.0,
+      0.034320902079343796,
+      0.9947569966316223,
+      -0.0963362604379654,
+      0.0,
+      3.771856427192688e-08,
+      0.12400001287460327,
+      9.313225746154785e-10,
+      1.0
+    ],
+    "visibleNormalizedTime": [
+      0,
+      1
+    ],
+    "instructions": "Attach wrapper to composed hand_R world pose. Keep imported prop root conversion. Home scene only; hide on desktop."
+  },
+  "tea_sit": {
+    "file": "../../props/water_cup.usdz",
+    "joint": "hand_R",
+    "wrapperLocalMatrixColumnMajor": [
+      0.8275133967399597,
+      0.5594894886016846,
+      -0.04684090614318848,
+      0.0,
+      0.2491007149219513,
+      -0.4406365156173706,
+      -0.8624315857887268,
+      0.0,
+      -0.5031607151031494,
+      0.7020057439804077,
+      -0.5040015578269958,
+      0.0,
+      0.057908087968826294,
+      0.20952272415161133,
+      0.0501670241355896,
+      1.0
+    ],
+    "visibleNormalizedTime": [
+      0,
+      1
+    ],
+    "instructions": "Attach wrapper to composed hand_R world pose. Keep imported prop root conversion. Home scene only; hide on desktop."
+  }
+}

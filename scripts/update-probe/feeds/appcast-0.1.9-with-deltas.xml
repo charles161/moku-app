@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Moku</title>
+        <item>
+            <title>0.1.9</title>
+            <pubDate>Tue, 06 Oct 2026 14:51:13 +0530</pubDate>
+            <sparkle:version>202610061446</sparkle:version>
+            <sparkle:shortVersionString>0.1.9</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://moku-proxy.vercel.app/updates/Moku-0.1.9.zip" length="48073297" type="application/octet-stream" sparkle:edSignature="IrRtADcU6kT8D5O4f0H6JLGyui8tpwXF8tpMm+PEe51sFxRG38w0w7UW6PcZ8kXDsgnayWdyxUROIR8laZjZDA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://moku-proxy.vercel.app/updates/Moku202610061446-202610052259.delta" sparkle:deltaFrom="202610052259" length="974502" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="74aM1hQov76X7J/0f0CvJGFRAKXWRVYm1xfizpF3XQozcRJQseIEsDypfhv4Mj/86yuDEvnHx9NAZKOMpdNxDQ=="/>
+                <enclosure url="https://moku-proxy.vercel.app/updates/Moku202610061446-202610021015.delta" sparkle:deltaFrom="202610021015" length="9565186" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="GouzkOIEQnZBpDfRlKE0w5p04ZujPSCMFzHsrmaIPHDPatg4h8l+eO+cJklqzgGrF3DO9j5aqOXeFAaSPxwqAg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.1.8</title>
+            <pubDate>Mon, 05 Oct 2026 21:26:15 +0530</pubDate>
+            <sparkle:version>202610052259</sparkle:version>
+            <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://moku-proxy.vercel.app/updates/Moku-0.1.8.zip" length="47934722" type="application/octet-stream" sparkle:edSignature="jITM55zOGUqVF41w9s3KdRTdkd9CJA9J1rG5vweh+70rz683bHV+P4jcFk5lyfXNd1n50sFQc0ofS/a6sdnGAA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://moku-proxy.vercel.app/updates/Moku202610052259-202610021015.delta" sparkle:deltaFrom="202610021015" length="9423654" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="/L5UzVPshLvgg6ceC2G9AmX+8SGqTyRd8CId2y9Bu/PvnBtXTJShohVnKyvt5f+fFmvDls/eiXm+RQm7M8T7Ag=="/>
+                <enclosure url="https://moku-proxy.vercel.app/updates/Moku202610052259-202610010131.delta" sparkle:deltaFrom="202610010131" length="9459434" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="RD9m576OECj+h4jeMdIusnrlFYt7sICkSGUZhQB+MwZWVSoIjTianmbP23iBhF1RyqGcWJpe4OMlOwYxKn7SAA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.1.7</title>
+            <pubDate>Fri, 02 Oct 2026 10:16:44 +0530</pubDate>
+            <sparkle:version>202610021015</sparkle:version>
+            <sparkle:shortVersionString>0.1.7</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://moku-proxy.vercel.app/updates/Moku-0.1.7.zip" length="38983458" type="application/octet-stream" sparkle:edSignature="4vDVDVJLzVe8UgZ/qP4lxNm3rUngsuhlASWF7i3Rot0YoGQMJk+sT+RS/DcIg6cp0FzLNOJKzR4MiijoBG/7Ag=="/>
+            <sparkle:deltas>
+                <enclosure url="https://moku-proxy.vercel.app/updates/Moku202610021015-202610010131.delta" sparkle:deltaFrom="202610010131" length="504130" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0dhfgsK4Dpkav2NIphe3YQKHbwygzYug14saInx55kJlon2FJptvqZofGGZM0F5jRkfdkwVj3FeV5E2Kw16nCg=="/>
+                <enclosure url="https://moku-proxy.vercel.app/updates/Moku202610021015-202610010114.delta" sparkle:deltaFrom="202610010114" length="635254" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="eSOqSh9EuStLc9TDoz472KRdMKXR92mdgeH8i8Q03AUHb5xi3yscB+KLntU6GklDv3e7UjrHOWRtDsezHZ/zDg=="/>
+            </sparkle:deltas>
+        </item>
+    </channel>
+</rss>

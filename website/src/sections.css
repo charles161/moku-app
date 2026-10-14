@@ -1,0 +1,208 @@
+/* The sections after the house: Your day as one card (the launch film's), the
+   companions row, and the closing line. */
+
+h1, h2 { text-wrap: balance; }
+
+/* Your day (your-day.js): the app's window (Today.swift), drawn from an example day of
+   the kind of work on show in the hero: the day and its note, today's house as it stands,
+   the day's numbers and ribbon, then each task with its workflow, steps and comebacks. */
+.day-section { padding-block: clamp(80px, 12svh, 140px) clamp(64px, 9svh, 110px); }
+.day-heading { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); align-items: end; gap: 20px clamp(32px, 5vw, 80px); }
+.day-heading .section-label { grid-column: 1 / -1; }
+.day-heading h2 { font-size: clamp(50px, 5.2vw, 78px); }
+.day-heading h2 em { display: block; color: #7a8264; }
+.day-intro > p { max-width: 44ch; font-size: 15px; line-height: 1.7; color: var(--muted); }
+.day-works { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-top: 18px; }
+.day-works > span { margin-right: 6px; font-size: 12px; color: var(--muted); }
+.day-works button { min-height: 34px; padding: 6px 14px; border-radius: 99px; background: transparent; font-size: 13px; font-weight: 500; color: #6b6d60; transition: background .2s, color .2s; }
+@media (hover: hover) { .day-works button:hover { background: #ecefe2; color: var(--ink); } }
+.day-works button[aria-pressed='true'] { background: #fffdf7; color: var(--ink); box-shadow: inset 0 0 0 1px #aab396, 0 1px 3px #34463314; }
+
+.day-window { --yd-ink: #2f342b; --yd-quiet: #6b6d60; --yd-sage: #8ca472; --yd-oat: #dfd3bb; margin-top: clamp(36px, 5svh, 56px); border-radius: 22px; background: #fbf9f3; color: var(--yd-ink); box-shadow: 0 40px 80px -42px #2a3a2446, 0 2px 6px #2a3a2408, 0 0 0 1px #2a3a240f; overflow: hidden; }
+.yd-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 4px 24px; padding: clamp(24px, 3vw, 36px) clamp(22px, 3vw, 40px) 22px; border-bottom: 1px solid #2a3a2414; }
+.yd-head h3 { font: 400 clamp(28px, 2.6vw, 38px)/1.1 var(--serif); letter-spacing: -.01em; }
+.yd-with { font-size: 11px; font-weight: 600; letter-spacing: .14em; color: var(--yd-quiet); }
+.yd-note { grid-column: 1 / -1; margin-top: 6px; font: 400 clamp(17px, 1.5vw, 21px)/1.4 var(--serif); color: #555a4c; text-wrap: pretty; }
+.yd-body { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); }
+.yd-home { padding: clamp(18px, 2.2vw, 28px); border-right: 1px solid #2a3a2414; }
+.yd-house { width: 100%; height: auto; aspect-ratio: 800 / 760; border-radius: 14px; background: #3d3f5c; object-fit: cover; }
+.yd-progress { margin-top: 18px; }
+.yd-progress > p:first-child { display: flex; align-items: baseline; gap: 8px; font: 400 15px var(--serif); color: var(--yd-quiet); }
+.yd-progress strong { font: 600 30px/1 var(--serif); color: var(--yd-ink); font-variant-numeric: tabular-nums; }
+.yd-progress > p:first-child > span { margin-left: auto; font: 400 12px 'DM Sans', sans-serif; font-variant-numeric: tabular-nums; }
+.yd-meter { position: relative; display: block; height: 9px; margin-top: 10px; border-radius: 9px; background: #2f342b14; overflow: hidden; }
+.yd-meter > .yd-fill { position: absolute; inset: 0 auto 0 0; width: calc(var(--built) * 100%); border-radius: inherit; background: linear-gradient(90deg, #9ebd80, #6ba39e); }
+.yd-meter > i:not(.yd-fill) { position: absolute; top: 0; bottom: 0; width: 1.5px; background: #fffffff0; }
+.yd-stages { display: flex; margin-top: 6px; font-size: 10px; color: #a3a597; }
+.yd-stages > span { text-align: center; }
+.yd-stages .is-done { color: var(--yd-quiet); }
+.yd-stages .is-current { color: var(--yd-ink); font-weight: 600; }
+.yd-next { margin-top: 8px; font-size: 12px; color: var(--yd-quiet); }
+.yd-work { min-width: 0; padding: clamp(20px, 2.4vw, 30px) clamp(18px, 2.6vw, 34px); }
+.yd-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; }
+.yd-metrics div { display: flex; flex-direction: column-reverse; }
+.yd-metrics dd { margin: 0; font: 500 clamp(30px, 2.6vw, 38px)/1 var(--serif); font-variant-numeric: tabular-nums; }
+.yd-metrics dt { margin-top: 6px; font-size: 12px; color: var(--yd-quiet); }
+.yd-ribbon { margin-top: 22px; }
+.yd-ribbon > span { position: relative; display: block; height: 22px; border-radius: 6px; background: #efe9dc; overflow: hidden; }
+.yd-ribbon i { position: absolute; top: 0; bottom: 0; }
+.yd-ribbon .yd-r-work { background: #97a87f; }
+.yd-ribbon .yd-r-drift { background: var(--yd-oat); }
+.yd-ribbon > p { display: flex; justify-content: space-between; margin-top: 5px; font-size: 10px; color: var(--yd-quiet); }
+.yd-label { margin-top: 26px; font-size: 10px; font-weight: 600; letter-spacing: .14em; color: var(--yd-ink); }
+.yd-tasks { display: grid; gap: 12px; margin: 12px 0 0; padding: 0; list-style: none; }
+.yd-task { padding: 16px 18px 15px; border-radius: 14px; background: #eef0e5; }
+.yd-task-top { display: flex; align-items: baseline; gap: 6px 12px; flex-wrap: wrap; }
+.yd-task-top h4 { margin: 0; font: 500 clamp(18px, 1.5vw, 20px)/1.2 var(--serif); }
+.yd-hours { margin-left: auto; font-size: 11px; color: var(--yd-quiet); white-space: nowrap; }
+.yd-task-top > b { font: 500 clamp(18px, 1.5vw, 20px)/1.2 var(--serif); font-variant-numeric: tabular-nums; }
+.yd-summary { margin-top: 6px; font: italic 400 15px/1.35 var(--serif); color: #5e6452; text-wrap: pretty; }
+.yd-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 6px; margin-top: 10px; font-size: 12px; color: var(--yd-quiet); }
+.yd-link { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.yd-app { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.yd-app b { font-weight: 600; color: var(--yd-ink); }
+.yd-arrow { color: #2f342b55; font-size: 11px; }
+.yd-detour { display: inline-flex; align-items: center; gap: 3px; padding: 2px 8px; border-radius: 99px; background: #dfd3bb8c; color: #6e6656; font-size: 11px; white-space: nowrap; }
+.yd-icon { display: inline-grid; place-items: center; flex: none; width: 17px; height: 17px; border-radius: 5px; font: 600 9px/1 'DM Sans', sans-serif; font-style: normal; }
+.yd-icon-writer { background: #f6f1e4; color: #4a4536; box-shadow: inset 0 0 0 1px #00000014; font: 700 10px/1 var(--serif); }
+.yd-icon-canvas { background: #e5e0f6; color: #5a4bb0; }
+.yd-icon-editor { background: #2a2d33; color: #9ec2ff; }
+.yd-icon-terminal { background: #1c1e21; color: #8fd18f; }
+.yd-icon-reader { background: #f4e2dc; color: #9c4b37; }
+.yd-icon-mail { background: #dfe9f6; color: #3c63a0; }
+.yd-icon-site { background: #d8ddc9; color: var(--yd-ink); font: 600 10px/1 var(--serif); }
+.yd-steps { margin-top: 9px; font-size: 12.5px; line-height: 1.5; color: #55584d; }
+.yd-how { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 9px; font-size: 11.5px; color: var(--yd-quiet); }
+.yd-how i { margin-right: 5px; font-style: normal; }
+.yd-also { margin-top: 12px; padding: 0 4px; font-size: 12px; color: var(--yd-quiet); }
+.yd-also b { margin-right: 6px; font-weight: 600; color: var(--yd-ink); }
+.yd-best { margin-top: 18px; padding: 16px 18px; border-radius: 14px; background: #e8ecdd; }
+.yd-best .yd-label { margin-top: 0; }
+.yd-best p + p { margin-top: 8px; font: 400 15px/1.45 var(--serif); }
+.yd-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 14px clamp(22px, 3vw, 40px); border-top: 1px solid #2a3a2414; font-size: 11px; color: var(--yd-quiet); }
+
+@media (max-width: 959px) {
+  .day-section { padding-block: 72px; }
+  .day-heading { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .day-intro > p { font-size: 16px; }
+}
+@media (max-width: 759px) {
+  .yd-body { grid-template-columns: minmax(0, 1fr); }
+  .yd-home { display: grid; grid-template-columns: minmax(0, 38%) minmax(0, 1fr); gap: 16px; align-items: center; border-right: 0; border-bottom: 1px solid #2a3a2414; }
+  .yd-progress { margin-top: 0; }
+  .yd-stages { display: none; }
+}
+@media (max-width: 599px) {
+  .day-section { padding-block: 60px 44px; }
+  .day-window { border-radius: 18px; }
+  .yd-head { grid-template-columns: minmax(0, 1fr); }
+  .yd-with { grid-row: 1; }
+  .yd-task { padding: 14px 14px 13px; }
+  .yd-hours { margin-left: 0; order: 3; flex-basis: 100%; }
+  .yd-task-top > b { margin-left: auto; }
+  .yd-foot { flex-direction: column; }
+}
+
+/* Moku and Tetsu (02): the bunny and the robot side by side, each in its own world
+   (its palette, from companions.js, set on the card by friends.js), playing its own
+   clips in front of its finished home. On phones they're a row you swipe. */
+.friends { padding-block: clamp(72px, 11svh, 132px) clamp(64px, 10svh, 116px); }
+.friends-heading { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: end; gap: 24px clamp(32px, 5vw, 80px); }
+.friends-heading .section-label { grid-column: 1 / -1; }
+.friends-heading h2 { font-size: clamp(50px, 5.4vw, 80px); }
+.friends-heading h2 em { display: block; color: #7a8264; }
+.friends-heading > p { max-width: 40ch; padding-bottom: .6em; font-size: 15px; line-height: 1.7; color: var(--muted); }
+.friend-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 2.8vw, 40px); margin: clamp(40px, 6svh, 60px) 0 0; padding: 0; list-style: none; }
+.friend {
+  --friend-paper: color-mix(in srgb, var(--desk-wall-top, #eef0e3) 55%, #fffdf8);
+  position: relative; display: flex; flex-direction: column; min-width: 0;
+  border-radius: 28px; background: var(--friend-paper); color: var(--ink);
+  box-shadow: 0 30px 60px -40px #2a3a2440, 0 0 0 1px #2a3a2412;
+  transition: box-shadow .35s ease, transform .35s cubic-bezier(.22, 1, .36, 1);
+}
+.friend.is-picked { box-shadow: 0 30px 60px -36px #2a3a2452, 0 0 0 2px var(--green); }
+.friend-stage { position: relative; aspect-ratio: 1 / .7; border-radius: 28px 28px 0 0; overflow: hidden; isolation: isolate; background: linear-gradient(180deg, var(--desk-wall-top, #eef0e3), var(--desk-wall-bottom, #c3cfb0)); }
+.friend-stage::before { content: ''; position: absolute; left: -30%; right: 18%; bottom: -46%; height: 70%; border-radius: 50%; background: var(--desk-hill, #a9b994); opacity: .55; }
+.friend-home { position: absolute; z-index: 1; right: 6%; top: 9%; width: 50%; height: auto; border-radius: 18px; box-shadow: 0 18px 36px -22px #1c2a1680, 0 0 0 1px #1c2a1612; }
+/* The clips' frame has room around the character (export-motion.py); this places its
+   feet near the stage's floor and its middle left of centre, over the home's corner. */
+.friend-actor { position: absolute; z-index: 2; left: -8%; top: 7%; width: 72%; aspect-ratio: 1; pointer-events: none; }
+.friend-actor::before { content: ''; position: absolute; left: 33%; right: 33%; bottom: 13%; height: 4.5%; border-radius: 50%; background: #23301c40; filter: blur(7px); }
+.friend-actor .moku-art > .companion-motion { animation: clip-in .12s ease-out both; }
+.friend-actor .moku-art > .companion-motion.is-leaving { opacity: 0; transition: opacity .12s ease-in; }
+.friend-actor.is-playing .moku-art > img:first-child { visibility: hidden; transition: visibility 0s linear .12s; }
+.friend-line {
+  position: absolute; z-index: 3; left: 50%; top: 10%; white-space: nowrap;
+  padding: 8px 13px; border-radius: 14px 14px 14px 3px;
+  background: #fffdf8; color: #2a2c25; font-size: 13px; font-weight: 500;
+  box-shadow: 0 6px 18px #1c2a1626, 0 0 0 .5px #0000001a;
+  opacity: 0; transform: translateY(6px) scale(.94); transform-origin: 0 100%;
+  transition: opacity .25s ease, transform .4s cubic-bezier(.22, 1, .36, 1);
+}
+.friend-line.on { opacity: 1; transform: none; }
+.friend-copy { flex: 1; display: flex; flex-direction: column; align-items: flex-start; padding: clamp(18px, 2vw, 26px) clamp(20px, 2.2vw, 30px) clamp(20px, 2.2vw, 28px); }
+.friend h3 { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; font: 400 clamp(34px, 3vw, 44px)/1 var(--serif); letter-spacing: -.02em; color: var(--green); }
+.friend-kind { font: 600 10px/1 'DM Sans', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.friend[data-friend='tetsu'] .friend-kind { font-family: ui-monospace, 'SF Mono', Menlo, monospace; letter-spacing: .04em; }
+.friend-soon { align-self: center; margin-left: auto; padding: 5px 9px 4px; border: 1px solid color-mix(in srgb, var(--green) 35%, transparent); border-radius: 99px; font: 600 9px/1 'DM Sans', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--green); }
+.friend-personality { max-width: 34ch; margin-top: 14px; font: italic 400 clamp(19px, 1.6vw, 23px)/1.3 var(--serif); color: #4c5244; text-wrap: pretty; }
+.friend-detail { display: flex; align-items: flex-start; gap: 10px; margin-top: 14px; font-size: 13px; line-height: 1.55; color: var(--muted); }
+.friend-detail .icon { width: 17px; height: 17px; margin-top: 1px; color: var(--companion-progress, var(--green)); }
+.friend-detail + .friend-detail { margin-top: 8px; }
+.friend-pick { position: static; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-top: auto; padding: 11px 20px; border-radius: 99px; border: 1px solid color-mix(in srgb, var(--green) 40%, transparent); background: transparent; color: var(--green); font-size: 13px; font-weight: 500; transition: background .2s, color .2s, border-color .2s; }
+.friend-copy > .friend-detail:last-of-type { margin-bottom: 22px; }
+/* The whole card picks. */
+.friend-pick::after { content: ''; position: absolute; inset: 0; z-index: 4; border-radius: 28px; }
+@media (hover: hover) { .friend:hover .friend-pick:not([aria-pressed='true']) { background: color-mix(in srgb, var(--green) 9%, transparent); } }
+.friend-pick[hidden] { display: none; }
+@media (hover: hover) { .friend:hover { transform: translateY(-3px); } }
+.friend-pick:focus-visible { outline-offset: 4px; }
+.friend-pick .picked-label { display: none; }
+.friend-pick[aria-pressed='true'] { background: var(--green); border-color: var(--green); color: var(--paper); }
+.friend-pick[aria-pressed='true'] .pick-label { display: none; }
+.friend-pick[aria-pressed='true'] .picked-label { display: inline-flex; align-items: center; gap: 8px; }
+.friend-pick[aria-pressed='true'] .picked-label::before { content: '✓'; }
+.friends:not(.has-choice) .friend-pick { display: none; }
+.friends-watch { margin-top: 34px; }
+.friends-watch .icon { transform: rotate(-45deg); }
+@media (hover: hover) { .friends-watch:hover .icon { transform: rotate(-45deg) translate(1px, -2px); } }
+.friends-watch.is-fresh .icon { animation: watch-up 1.2s cubic-bezier(.22, 1, .36, 1) 2; }
+@keyframes watch-up { 0%, 100% { translate: 0 0; } 40% { translate: 0 -5px; } }
+
+@media (max-width: 959px) {
+  .friends-heading { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .friends-heading > p { padding-bottom: 0; }
+}
+/* Phones and small tablets: a row you swipe, the next one peeking in. */
+@media (max-width: 799px) {
+  .friend-list {
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 84%; align-items: start;
+    gap: 14px; margin-inline: -20px; padding: 4px 20px 18px;
+    overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: 20px;
+    scrollbar-width: none;
+  }
+  .friend-list::-webkit-scrollbar { display: none; }
+  .friend { scroll-snap-align: start; border-radius: 24px; }
+  @media (hover: hover) { .friend:hover { transform: none; } }
+  .friend-stage { border-radius: 24px 24px 0 0; }
+  .friend-pick::after { border-radius: 24px; }
+  .friend h3 { font-size: 36px; }
+  .friend-personality { font-size: 19px; }
+  .friends-watch { margin-top: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .friend, .friend-line { transition: none; }
+  @media (hover: hover) { .friend:hover { transform: none; } }
+}
+#what-moku-reads { scroll-margin-top: 96px; }
+
+/* The closing: one line, one button, and today's plot. */
+.closing-art { position: relative; width: min(440px, 86vw); aspect-ratio: 1 / .78; }
+.closing-plot { position: absolute; top: 0; right: 0; width: 80%; height: auto; border-radius: 22px; box-shadow: 0 28px 56px -30px #3b2f1f66; }
+.closing-moku { position: absolute; left: -26%; bottom: -26%; width: 84%; height: auto; filter: drop-shadow(0 12px 12px #3b2f1f2e); }
+.closing h2 { margin-top: 40px; }
+.closing h2 em { display: block; }
+.closing .button { margin-top: 34px; }
+@media (max-width: 599px) {
+  .friends { padding-top: 48px; }
+}

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "blender": {
+      "type": "stdio",
+      "command": "~/.local/bin/blender-mcp",
+      "args": [],
+      "env": {
+        "BLENDER_PATH": "/Applications/Blender.app/Contents/MacOS/Blender"
+      }
+    }
+  }
+}

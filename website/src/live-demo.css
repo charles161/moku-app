@@ -1,0 +1,508 @@
+/* The hero: what Moku is, beside a quiet Mac with the companion small in its corner
+   (live-demo.js). Sizes inside the stage use --u, a fraction of the stage's width,
+   so it scales like a film. One camera films it: a wide shot of the work, a push-in
+   on the companion when you drift, back out when you return (a scale on .desk-inner,
+   set by live-demo.js). Phones get the same Mac, scaled down, with the text a visitor
+   reads on it kept legible (below). */
+
+.site-header { height: 76px; }
+
+/* The headline takes the width its words need; the demo takes all the rest (Charles,
+   2026-10-04: "so much center space, increase the width to flex 1 so it could take
+   remaining space"), with the companions beside its screen. The hero and the header
+   widen to 1560 px on big windows, so the demo grows with them. */
+.live-hero {
+  --hero-width: min(1560px, calc(100vw - 112px));
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: clamp(32px, 4.5vw, 72px);
+  min-height: min(calc(100svh - 76px), 900px);
+  padding-block: 4px 48px;
+}
+@media (min-width: 960px) {
+  .site-header.wrap, .live-hero.wrap { width: min(1560px, calc(100% - 112px)); }
+}
+.hero-copy { max-width: 34rem; padding-bottom: 40px; }
+.hero-copy h1 { font: 400 clamp(46px, 4.6vw, 92px)/.95 var(--serif); letter-spacing: -.035em; }
+.hero-copy h1 em { display: block; color: #6d7d55; }
+.hero-sub { max-width: 21.204em; margin-top: 24px; font-size: clamp(17px, 1.35vw, 20px); line-height: 1.55; color: #555b4c; }
+.hero-get { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 34px; }
+.pitch-note { font-size: 12px; color: var(--muted); }
+.pitch-mail, .for-phone { display: none; }
+.hero-privacy { display: flex; align-items: flex-start; gap: 10px; max-width: 31.464em; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; line-height: 1.6; color: #5e6455; }
+.hero-privacy .icon { width: 18px; height: 18px; margin-top: 1px; color: #6e8154; }
+.hero-privacy a { border-bottom: 1px solid #a8ae9a; white-space: nowrap; }
+@media (hover: hover) { .hero-privacy a:hover { border-color: var(--ink); } }
+
+/* The line under the headline and the privacy line set the column's width, and it holds while DM Sans
+   arrives: 31ch and 46ch in DM Sans (its 0 is .684em) written in em, since a ch is measured in
+   whatever font is in place, and the stand-in's narrower 0 moved the whole demo 60 px when DM Sans
+   swapped in (Chromium: 0.2 of layout shift, desktops). */
+/* Phones and tablets show the download link too, while friends share the page (Charles, 2026-10-06: "give the download
+   link in landing page instead of email invites", until he says to go back). Going back: revert this commit, which
+   restores "Send me the link for my Mac" (an email from you, to you) on phones and tablets. */
+
+.live-demo {
+  --dock-width: 0px; --dock-gap: 0px;
+  display: grid; grid-template-columns: var(--dock-width) minmax(0, 1fr); column-gap: var(--dock-gap);
+  width: 100%; min-width: min(100%, 440px); justify-self: stretch;
+}
+.live-demo.has-dock { --dock-width: 76px; --dock-gap: 16px; }
+/* Desktops: the screen is a 16:9 Mac screen (Charles: "a proper 9:16 ratio demo
+   screen", landscape, "only horizontal expansion"), as wide as the column allows, but
+   never taller than the screen's old height, so the whole hero stays in the window.
+   Where the height is the limit, the demo (dock, tabs, screen) is centred in its column.
+   The scene is sized from the screen's height (--stage, the width a 1 : .86 screen of
+   that height had), and laid out for 16:9: the windows a quarter wider, centred in the
+   desk left of the companion, which sits small in its corner. */
+@media (min-width: 960px) {
+  .live-demo {
+    --screen-cap: calc(.86 * min(var(--hero-width) * .58, (100svh - 306px) / .86, 920px));
+    width: min(100%, calc(var(--dock-width) + var(--dock-gap) + var(--screen-cap) * 16 / 9)); justify-self: center;
+  }
+  .live-demo > .desk-frame { container-type: size; aspect-ratio: 16 / 9; }
+  .live-demo > .desk-frame > .desk { aspect-ratio: auto; height: 100%; }
+  /* A short, wide screen: the scene's type and chrome are 12% larger than a 1 : .86
+     screen of this height had them, and the windows spread across its width
+     (demo-scenes.css). The companion keeps its size. */
+  .live-demo > .desk-frame .desk-inner { --stage: calc(100cqh / .86 * 1.12); }
+  .live-demo > .desk-frame .desk-moku { width: calc(100cqh / .86 * .3); right: calc(100cqh / .86 * .01); }
+}
+.live-demo > * { grid-column: 2; }
+.live-demo > .work-tabs { grid-row: 1; }
+.live-demo > .desk-frame, .live-demo > .demo-stills { grid-row: 2; }
+.desk-frame { position: relative; container: desk / inline-size; }
+
+/* The kinds of work, above the screen: the one on show is marked. No timer runs here. */
+/* Its row is there from the first paint, a tab high, so the screen below doesn't move when the
+   tabs arrive with the script (Chromium: 0.14 of layout shift on desktops). */
+.work-tabs { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; min-height: 36px; }
+.work-tabs[hidden] { display: none; }
+.work-tab { position: relative; min-height: 36px; padding: 7px 15px 8px; border-radius: 99px; background: transparent; font-size: 13px; font-weight: 500; color: #6b6d60; transition: background .2s, color .2s; }
+@media (hover: hover) { .work-tab:hover { color: var(--ink); background: #ecefe2; } }
+.work-tab[aria-pressed='true'] { color: var(--ink); background: #fffdf7; box-shadow: inset 0 0 0 1px #aab396, 0 1px 3px #34463314; }
+
+/* Who keeps you company: on the page beside the screen's left edge, from its top, a
+   face and a name each, in the work tabs' style, so they read as the demo's controls. */
+.live-demo > .companion-dock { grid-column: 1; grid-row: 2; align-self: start; }
+.companion-dock { display: flex; flex-direction: column; gap: 6px; }
+.companion-dock[hidden] { display: none; }
+.dock-pick { display: flex; flex-direction: column; align-items: center; gap: 7px; width: 100%; padding: 11px 4px 10px; border-radius: 20px; background: transparent; font: 500 12px/1 'DM Sans', sans-serif; color: #6b6d60; transition: background .2s, color .2s, box-shadow .2s; }
+.dock-pick .pill-face { width: 44px; height: 44px; transition: box-shadow .2s; }
+@media (hover: hover) { .dock-pick:hover { background: #ecefe2; color: var(--ink); } }
+.dock-pick[aria-pressed='true'] { background: #fffdf7; color: var(--ink); box-shadow: inset 0 0 0 1px #aab396, 0 1px 3px #34463314; }
+.dock-pick[aria-pressed='true'] .pill-face { box-shadow: 0 0 0 2px #fffdf7, 0 0 0 3.5px var(--companion-accent, #344633); }
+/* On phones the companions are a row under the quiet line instead. */
+@media (max-width: 599px) { .companion-dock { display: none !important; } .live-demo.has-dock { --dock-width: 0px; --dock-gap: 0px; } }
+@media (min-width: 600px) { .demo-actions .companion-pills { display: none !important; } }
+.desk {
+  position: relative;
+  aspect-ratio: 1 / .86;
+  border-radius: clamp(14px, 2.6cqw, 26px);
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--desk-wall-bottom, #c3cfb0);
+  box-shadow: 0 34px 80px -38px #2a3a2478, 0 4px 14px -8px #2a3a2430, 0 0 0 1px #2a3a2418;
+  user-select: none;
+}
+.desk-inner {
+  /* --stage is the scene's width: the desk's, or on a wide desktop (below) the width a
+     1 : .86 screen of the desk's height would have. Everything in the scene is sized
+     from it, so a wider desk shows more desk, not a bigger scene. */
+  --stage: 100cqw;
+  --u: calc(var(--stage) * .0145);
+  position: absolute;
+  inset: 0;
+  font: 400 calc(var(--u) * 1.2)/1.4 -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', system-ui, sans-serif;
+  color: #262823;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -.005em;
+}
+.desk-inner p { margin: 0; }
+.desk .g { width: 1.3em; height: 1.3em; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.desk .g.dim { opacity: .35; }
+
+/* Wallpaper: the site's paper and sage, as soft hills. While you drift, or while the
+   companion has noticed you leave, it greys. It reaches a quarter past the screen's
+   right and bottom edges (out of sight in the wide shot), so the camera can frame the
+   companion in its corner; .wall-screen is the screen itself, where the hills stand. */
+.desk-wall { position: absolute; left: 0; top: 0; width: 125%; height: 125%; background: linear-gradient(180deg, var(--desk-wall-top, #eef0e3) 0%, var(--desk-wall-bottom, #c3cfb0) 80%); overflow: hidden; }
+.wall-screen { position: absolute; left: 0; top: 0; width: 80%; height: 80%; }
+.desk-wall i { position: absolute; border-radius: 50%; }
+.wall-sun { width: calc(var(--stage) * .44); aspect-ratio: 1; right: calc(var(--stage) * .04); top: 6%; background: radial-gradient(circle, #fbf5e2 0 38%, #f6efd700 70%); }
+.wall-hill-far { width: calc(var(--stage) * 1.4); height: 62%; left: calc(var(--stage) * -.4); bottom: -30%; background: var(--desk-hill-far, #cdd6bd); }
+.wall-hill-near { width: calc(var(--stage) * 1.2); height: 58%; right: calc(var(--stage) * -.42); bottom: -30%; background: var(--desk-hill, #a9b994); }
+.desk-wall::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #e7e7e4 0%, #b4b5b1 80%); opacity: 0; transition: opacity .9s ease; }
+.desk[data-beat='drift'] .desk-wall::after, .desk[data-away] .desk-wall::after { opacity: 1; }
+/* Out of sight, the tab-leave moment cuts straight to the close-up. */
+.desk.is-cut *, .desk.is-cut *::after { transition: none !important; }
+
+/* The menu bar, with the time-lapse clock that says so. */
+.menubar {
+  position: absolute; inset: 0 0 auto; z-index: 35;
+  height: calc(var(--u) * 2.5);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 calc(var(--u) * 1.2);
+  font-size: calc(var(--u) * 1.12);
+  background: #faf9f3b8;
+  color: #1d1f1b;
+}
+.menubar-left, .menubar-right, .menubar-menus { display: flex; align-items: center; gap: calc(var(--u) * 1.5); }
+/* A real menu bar runs out of room before the status items and leaves out the menus
+   that don't fit, whole: these wrap onto a second row that never shows. */
+.menubar-left { flex: 1; min-width: 0; white-space: nowrap; }
+.menubar-menus { flex: 1; min-width: 0; flex-wrap: wrap; row-gap: 0; height: 1.4em; line-height: 1.4em; overflow: hidden; }
+.menubar-right { flex: none; margin-left: calc(var(--u) * 1.5); }
+.menubar-left strong { font-weight: 650; }
+.menubar-right { gap: calc(var(--u) * 1.1); }
+.menubar-right .g { width: calc(var(--u) * 1.45); height: calc(var(--u) * 1.45); }
+.menubar-battery { width: calc(var(--u) * 2.1) !important; }
+.menubar-moku { stroke-width: 2; }
+.menubar-clock { font-variant-numeric: tabular-nums; min-width: 6.2em; text-align: right; }
+.sped-up {
+  padding: calc(var(--u) * .12) calc(var(--u) * .65);
+  border-radius: calc(var(--u) * 1);
+  background: var(--companion-accent, #344633);
+  color: #f7f5ee;
+  font-size: calc(var(--u) * .86);
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+/* Windows: macOS proportions, the front one lifted and with coloured lights. */
+.scene { position: absolute; inset: 0; z-index: 2; }
+.win {
+  position: absolute;
+  left: var(--x); top: var(--y); width: var(--w); height: var(--h);
+  z-index: var(--z, 1);
+  display: flex; flex-direction: column;
+  border-radius: calc(var(--u) * .95);
+  overflow: hidden;
+  background: #fbfaf7;
+  box-shadow: 0 calc(var(--u) * .9) calc(var(--u) * 2.6) #1c2a1630, 0 0 0 .5px #00000026;
+  transition: box-shadow .25s ease;
+}
+.win.is-front { z-index: 5; box-shadow: 0 calc(var(--u) * 1.8) calc(var(--u) * 4.5) #1c2a1652, 0 0 0 .5px #0000002e; }
+.win-bar {
+  flex: none; height: calc(var(--u) * 2.9);
+  display: flex; align-items: center; gap: calc(var(--u) * 1);
+  padding: 0 calc(var(--u) * 1.1);
+  background: #f1f0ea;
+  border-bottom: 1px solid #00000010;
+}
+.win-title { flex: 1; margin-right: calc(var(--u) * 4.5); text-align: center; font-size: calc(var(--u) * 1.08); font-weight: 600; color: #3a3c36; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.win-title em { font-style: normal; font-weight: 400; color: #8a8b83; }
+.lights { display: flex; gap: calc(var(--u) * .6); flex: none; }
+.lights i { width: calc(var(--u) * 1.05); height: calc(var(--u) * 1.05); border-radius: 50%; background: #d7d6d0; box-shadow: inset 0 0 0 .5px #00000018; }
+.win.is-front .lights i:nth-child(1) { background: #ff5f57; }
+.win.is-front .lights i:nth-child(2) { background: #febc2e; }
+.win.is-front .lights i:nth-child(3) { background: #28c840; }
+
+/* Pointer targets the timeline names; the stage measures where they are. One set
+   inline (--ax, --ay) sits there in its box; one without sits where it falls in the text. */
+.at { position: absolute; left: var(--ax); top: var(--ay); width: 1px; height: 1px; pointer-events: none; }
+
+.pointer {
+  position: absolute; left: 0; top: 0; z-index: 40;
+  width: calc(var(--u) * 2.1); height: calc(var(--u) * 2.1);
+  margin: calc(var(--u) * -.3) 0 0 calc(var(--u) * -.44);
+  fill: #141414; stroke: #fff; stroke-width: 1.5; stroke-linejoin: round;
+  filter: drop-shadow(0 calc(var(--u) * .12) calc(var(--u) * .2) #0005);
+  transform-origin: 20% 15%;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+.pointer-ring {
+  position: absolute; left: calc(var(--u) * -1.3); top: calc(var(--u) * -1.3); z-index: 39;
+  width: calc(var(--u) * 2.6); height: calc(var(--u) * 2.6);
+  border-radius: 50%; border: calc(var(--u) * .18) solid var(--companion-accent, #344633);
+  opacity: 0; pointer-events: none;
+}
+
+/* The essay: one page, one paragraph at a time. */
+.doc-page {
+  flex: 1; margin: calc(var(--u) * 1.2) calc(var(--u) * 1.2) 0;
+  padding: calc(var(--u) * 2.6) calc(var(--u) * 3);
+  background: #fff;
+  box-shadow: 0 0 0 1px #00000009, 0 calc(var(--u) * .3) calc(var(--u) * 1.2) #0000000d;
+}
+.doc-title { font: 400 calc(var(--u) * 2.7)/1.05 var(--serif); letter-spacing: -.02em; color: #1f211c; }
+.doc-meta { margin: calc(var(--u) * .6) 0 calc(var(--u) * 1.5) !important; font-size: calc(var(--u) * .95); color: #8b8c82; font-variant-numeric: tabular-nums; }
+.doc-page > p:not(.doc-title, .doc-meta) { margin-bottom: calc(var(--u) * 1) !important; font: 400 calc(var(--u) * 1.3)/1.6 Charter, 'Iowan Old Style', Georgia, serif; color: #2c2d29; }
+.live-demo:not(.is-live) [data-type], .typed-text > span:not(.t, .caret) { color: transparent; }
+.doc-page > p { position: relative; }
+.caret { display: none; position: absolute; left: 0; top: 0; width: max(1.5px, calc(var(--u) * .12)); background: #2f6fd6; animation: caret-blink 1.06s steps(1) infinite; }
+.is-typing > .caret { animation: none; }
+.win.is-front .has-caret > .caret { display: inline-block; }
+@keyframes caret-blink { 0% { opacity: 1; } 50% { opacity: 0; } }
+
+/* The browsers: the feed (the drift) and the work that lives in one (demo-scenes.css). */
+.win-browser { background: #f3f3f1; }
+.browser-bar { position: relative; flex: none; display: flex; align-items: center; gap: calc(var(--u) * .9); height: calc(var(--u) * 3.3); padding: 0 calc(var(--u) * 1); background: #e9e9e6; }
+.tabs { flex: 1; min-width: 0; display: flex; align-items: center; gap: calc(var(--u) * .35); }
+.tab { display: flex; align-items: center; gap: calc(var(--u) * .55); width: calc(var(--u) * 14); height: calc(var(--u) * 2.3); padding: 0 calc(var(--u) * .9); border-radius: calc(var(--u) * .7); background: #fff; font-size: calc(var(--u) * .98); color: #3b3c38; box-shadow: 0 1px 2px #0000001a; }
+.tab > span { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tab-plus { margin-left: auto; width: calc(var(--u) * 2.2); display: grid; place-items: center; font-size: calc(var(--u) * 1.6); line-height: 1; color: #6d6e69; }
+.fav { flex: none; display: inline-block; width: calc(var(--u) * 1.15); height: calc(var(--u) * 1.15); border-radius: 50%; background: linear-gradient(135deg, #c9c9c5, #8f908b); }
+.browser-tools { flex: none; display: flex; align-items: center; gap: calc(var(--u) * .8); height: calc(var(--u) * 3); padding: 0 calc(var(--u) * 1); background: #f6f6f4; border-bottom: 1px solid #00000010; color: #6b6c68; }
+.address { flex: 1; min-width: 0; height: calc(var(--u) * 2.15); display: flex; align-items: center; gap: calc(var(--u) * .5); padding: 0 calc(var(--u) * .8); border-radius: calc(var(--u) * .7); background: #e9e9e6; font-size: calc(var(--u) * 1); color: #4a4b47; white-space: nowrap; overflow: hidden; }
+.address .g { width: calc(var(--u) * 1.05); height: calc(var(--u) * 1.05); color: #7b7c78; }
+
+/* The companion's corner: today's home chip above, the companion below, small beside the
+   windows as it is on a real Mac (Charles, 2026-10-04: "they seem too big relative to the
+   windows nearby"): about a third of the screen's height, feet on the same floor. */
+.house-chip {
+  position: absolute; z-index: 25; top: 8.5%; right: calc(var(--stage) * .035); width: calc(var(--stage) * .31);
+  display: grid; grid-template-columns: calc(var(--u) * 4.4) minmax(0, 1fr); gap: calc(var(--u) * .8); align-items: center;
+  padding: calc(var(--u) * .6);
+  border-radius: calc(var(--u) * 1.15);
+  background: #fbfaf6eb;
+  box-shadow: 0 calc(var(--u) * .5) calc(var(--u) * 1.6) #1c2a1626, 0 0 0 .5px #0000001a;
+  transform-origin: 70% 30%;
+}
+.chip-thumb { position: relative; width: calc(var(--u) * 4.4); height: calc(var(--u) * 4.4); border-radius: calc(var(--u) * .75); overflow: hidden; background: #3d3f5c; }
+.chip-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; transform: scale(1.35); }
+.chip-thumb [data-house-next] { opacity: 0; transition: opacity .6s ease; }
+.chip-thumb [data-house-next].on { opacity: 1; }
+.chip-copy { display: flex; flex-direction: column; gap: calc(var(--u) * .2); min-width: 0; }
+.chip-label { font-size: calc(var(--u) * .78); font-weight: 650; letter-spacing: .08em; text-transform: uppercase; color: #6f7a63; }
+.chip-stats { display: flex; flex-direction: column; font-size: calc(var(--u) * 1.02); line-height: 1.3; font-weight: 600; color: #25281f; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.chip-stats > span:last-child { font-weight: 500; color: #5d6553; }
+.chip-stats [data-comebacks] { display: inline-block; }
+/* The chip changes only at the payoff, quietly: the new render fades in and its numbers
+   change. The piece itself lands beside the companion, in the same glance as its cheer. */
+
+/* Its shadow sits under its feet (the renders' feet are 71% down Moku's frame, 81% down
+   Tetsu's), so it stays seated on the desk in the camera's close-up too. */
+.desk-moku { --floor: 26.5%; position: absolute; z-index: 30; right: calc(var(--stage) * .01); bottom: -1.2%; width: calc(var(--stage) * .3); aspect-ratio: 1; }
+.live-demo[data-companion='tetsu'] .desk-moku { --floor: 16.8%; }
+.desk-moku::before { content: ''; position: absolute; left: 31%; right: 31%; bottom: var(--floor); height: 4.5%; border-radius: 50%; background: #23301c47; filter: blur(calc(var(--u) * .6)); }
+.desk-moku .moku-art { display: block; position: relative; width: 100%; height: 100%; }
+.desk-moku .moku-art > img { display: block; width: 100%; height: 100%; object-fit: contain; pointer-events: none; transition: opacity .18s; }
+.desk-moku .moku-art > .companion-motion { position: absolute; inset: 0; animation: clip-in .12s ease-out both; }
+.desk-moku .moku-art > .companion-motion.is-leaving { opacity: 0; transition: opacity .12s ease-in; }
+/* The poster stays beneath a clip while it fades in (FADE_MS in native-motion.js). */
+.desk-moku.is-playing .moku-art > img:first-child { visibility: hidden; transition: visibility 0s linear .12s; }
+@keyframes clip-in { from { opacity: 0; } }
+.moku-line {
+  position: absolute; z-index: 2; right: 44%; top: -2%; white-space: nowrap;
+  padding: calc(var(--u) * .7) calc(var(--u) * 1.1);
+  border-radius: calc(var(--u) * 1.2) calc(var(--u) * 1.2) calc(var(--u) * .25) calc(var(--u) * 1.2);
+  background: #fffdf8; color: #2a2c25;
+  font-size: calc(var(--u) * 1.35); font-weight: 500;
+  box-shadow: 0 calc(var(--u) * .4) calc(var(--u) * 1.4) #1c2a1626, 0 0 0 .5px #0000001a;
+  opacity: 0; transform: translateY(calc(var(--u) * .5)) scale(.94); transform-origin: 100% 100%;
+  transition: opacity .25s ease, transform .4s cubic-bezier(.22, 1, .36, 1);
+}
+.moku-line.on { opacity: 1; transform: none; }
+/* The piece that lands: beside the companion, at its middle, left of it. */
+.moku-piece {
+  position: absolute; z-index: 2; right: 63%; top: 47%;
+  /* As wide as its words: anchored by its right edge in the small corner, it was squeezed to the
+     room left of that edge, and on phones its words ran out past the pill. */
+  width: max-content;
+  display: flex; align-items: center; gap: calc(var(--u) * .55);
+  padding: calc(var(--u) * .3) calc(var(--u) * .95) calc(var(--u) * .3) calc(var(--u) * .3);
+  border-radius: 99px;
+  background: var(--companion-accent, #344633); color: #f7f5ee;
+  font-size: max(11px, calc(var(--u) * 1.12)); font-weight: 600; white-space: nowrap;
+  box-shadow: 0 calc(var(--u) * .4) calc(var(--u) * 1.2) #1c2a1630;
+  opacity: 0; pointer-events: none; transform-origin: 100% 50%;
+}
+.moku-piece img { flex: none; width: max(20px, calc(var(--u) * 2.3)); height: max(20px, calc(var(--u) * 2.3)); border-radius: 50%; object-fit: cover; object-position: 50% 42%; background: #3d3f5c; }
+.moku-piece.is-landing { animation: piece-land 2.4s linear both; }
+.moku-piece.is-landed { opacity: 1; }
+@keyframes piece-land {
+  0% { opacity: 0; transform: translateY(calc(var(--u) * 1.2)) scale(.9); animation-timing-function: cubic-bezier(.22, 1, .36, 1); }
+  16% { opacity: 1; transform: none; }
+  80% { opacity: 1; transform: none; animation-timing-function: cubic-bezier(.4, 0, 1, 1); }
+  100% { opacity: 0; transform: translateY(calc(var(--u) * -.5)); }
+}
+/* Another companion takes the corner: the screen and the corner fade out, the loop
+   starts over at its hello, and they fade back in (live-demo.js). The state over the
+   desk fades out with them (a filter, as its own fades set its opacity), and the old
+   one is cleared while it's out, so it never shows over the new loop. */
+.desk :is(.scene, .house-chip, .desk-moku) { transition: opacity .2s ease; }
+.live-demo.is-switching .desk :is(.scene, .house-chip, .desk-moku) { opacity: 0; }
+.state-label { transition: filter .2s ease; }
+.live-demo.is-switching .state-label { filter: opacity(0); }
+
+/* Tetsu's hologram (RobotTalents.swift): today's rocket, as far as it's built,
+   projected over its head when a piece lands. It flickers on above a faint cone of
+   light from the visor, bobs, and flickers off, with the app's own timings. */
+.talent-hologram { position: absolute; z-index: 3; left: 50%; top: -19%; width: 22%; height: 49%; translate: -50% 0; opacity: 0; pointer-events: none; }
+.talent-hologram[hidden] { display: none; }
+.talent-hologram img { position: absolute; left: 0; top: 0; width: 100%; height: auto; filter: drop-shadow(0 0 2px #0d5973a0); }
+.holo-cone { position: absolute; left: 0; right: 0; top: 54%; bottom: 0; background: linear-gradient(180deg, #59edff24, #59edff00); clip-path: polygon(8% 0, 92% 0, calc(50% + 4px) 100%, calc(50% - 4px) 100%); }
+.talent-hologram.is-on { animation: holo-flicker 4.6s linear both; }
+.talent-hologram.is-on img { animation: holo-bob 1.1s ease-in-out infinite alternate; }
+@keyframes holo-flicker { 0% { opacity: 0; } 3% { opacity: .8; } 5% { opacity: .15; } 8% { opacity: .9; } 10% { opacity: .55; } 13% { opacity: .85; } 86% { opacity: .85; } 90% { opacity: .3; } 93% { opacity: .8; } 100% { opacity: 0; } }
+@keyframes holo-bob { from { translate: 0 -1.5px; } to { translate: 0 1.5px; } }
+/* Tetsu's scan beam (RobotTalents.swift's ScanBeam, drawn by live-demo.js from
+   companions.js's scanBeam): a thin cyan line in a narrow wedge from the visor,
+   fading with distance, sweeping from high on the work window to its foot. Its
+   length, sweep and timing come from that one config (--scan-*). */
+.talent-scan { position: absolute; z-index: 3; inset: 0; width: 100%; height: 100%; overflow: visible; opacity: 0; pointer-events: none; }
+.talent-scan[hidden] { display: none; }
+.scan-wedge { fill: #59edff; fill-opacity: .16; }
+.scan-line { stroke: #59edff; stroke-opacity: .8; stroke-width: .55; stroke-linecap: round; filter: drop-shadow(0 0 1.2px #59edff); }
+.scan-beam { transform-box: view-box; transform-origin: var(--scan-origin, 51px 43px); rotate: var(--scan-from, 40deg); }
+.talent-scan.is-on { animation: scan-fade var(--scan-seconds, 2.2s) linear both; }
+.talent-scan.is-on .scan-beam { animation: scan-sweep var(--scan-seconds, 2.2s) cubic-bezier(.42, 0, .58, 1) both; }
+@keyframes scan-fade { 0% { opacity: 0; } 10% { opacity: 1; } 86% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes scan-sweep { from { rotate: var(--scan-from, 40deg); } to { rotate: var(--scan-to, -10deg); } }
+
+/* The state, named over the desk (demo-timeline.js's captions): working, drifting, the
+   companion noticing, back to focus. One at a time, centred on the desk, or above the
+   companion's head in the close-up; a soft pill of frosted paper, outside the camera's
+   scale so it stays the same size and legible on phones. live-demo.js fades it. */
+.state-label {
+  position: absolute; z-index: 45; left: 50%; top: 50%;
+  display: flex; align-items: center; gap: .5em;
+  max-width: 88%;
+  padding: .42em 1em .46em .8em;
+  border-radius: 99px;
+  background: #f7f5eee0;
+  -webkit-backdrop-filter: blur(10px) saturate(1.15); backdrop-filter: blur(10px) saturate(1.15);
+  box-shadow: 0 12px 34px -14px #1c2a1652, 0 2px 6px -3px #1c2a1626, 0 0 0 .5px #2a3a2429;
+  font: 400 clamp(17px, 2.9cqw, 30px)/1.1 var(--serif); letter-spacing: -.01em;
+  color: #263222; white-space: nowrap;
+  translate: -50% -50%;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  will-change: opacity, transform;
+}
+.state-label[data-place='top'] { top: 13%; }
+.state-dot { flex: none; width: .36em; height: .36em; border-radius: 50%; background: #4f7a45; box-shadow: 0 0 0 .2em #4f7a4529; }
+.state-label[data-tone='drift'] .state-dot { background: #c4862f; box-shadow: 0 0 0 .2em #c4862f2e; }
+.state-word { font-style: italic; }
+.state-detail { padding-left: .62em; border-left: 1px solid #2a3a2430; font: 500 max(11px, .5em)/1.2 'DM Sans', sans-serif; letter-spacing: .01em; color: #5e6455; overflow: hidden; text-overflow: ellipsis; }
+.state-detail:empty { display: none; }
+.demo-stills .state-label { display: none; }
+
+/* Paused or off screen: CSS motion inside the stage holds still too. */
+.live-demo.is-paused .desk *, .live-demo.is-paused .desk *::after { animation-play-state: paused !important; }
+
+/* Beneath the stage: one quiet line, which invites the tab-leave moment and welcomes
+   you back (demo-timeline.js's quietLine), and the pause. */
+.demo-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin-top: 14px; }
+/* The line keeps to one row; the controls take the next one when there isn't room. */
+.demo-line { flex: 1 1 14em; min-width: 0; font: italic 400 clamp(17px, 1.35vw, 21px)/1.3 var(--serif); letter-spacing: -.005em; color: #5e6455; }
+.demo-actions { display: flex; align-items: center; gap: 18px; margin-left: auto; }
+.demo-actions .motion-toggle { font-size: 10px; color: var(--muted); padding-block: 8px; white-space: nowrap; }
+.live-demo.shows-stills > .desk-frame, .live-demo.shows-stills > .demo-bar .demo-line { display: none; }
+.live-demo.shows-stills .demo-bar { justify-content: flex-end; }
+.demo-stills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.demo-stills[hidden] { display: none; }
+.demo-stills figure { margin: 0; }
+.demo-stills figcaption { margin-top: 10px; font: 400 clamp(20px, 2vw, 26px)/1.1 var(--serif); }
+
+/* Who keeps you company: shown only when more than one companion has clips (main.js). */
+.companion-pills { display: flex; gap: 6px; }
+.companion-pills[hidden] { display: none; }
+.scene-pill { min-height: 36px; padding: 7px 15px; border-radius: 99px; border: 1px solid var(--line); background: transparent; font-size: 12px; color: #5f6556; transition: background .2s, color .2s, border-color .2s; }
+/* Each companion's face, cut from its own resting pose. */
+.companion-pill { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 4px 14px 4px 4px; }
+.pill-face { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--desk-wall-top, #eef0e3) no-repeat 53% 40% / 230%; box-shadow: inset 0 0 0 1px #2a3a2414; }
+@media (hover: hover) { .scene-pill:hover { background: #ecefe2; } }
+.scene-pill[aria-pressed='true'] { background: #fffdf7; border-color: #aab396; color: var(--ink); box-shadow: 0 1px 3px #34463314; }
+
+/* Phones: the same Mac, scaled down (Charles, 2026-10-05: the giant face "looks dumb
+   on mobile"). The windows and the companion keep their places, the companion small in
+   its corner as on a real Mac. The screen's own text is scenery at this size; what a
+   visitor reads on it (today's house, the companion's word, the piece that lands) is
+   set in px, 11 or more, instead of --u. */
+@media (max-width: 599px) {
+  .desk { border-radius: 14px; }
+  .house-chip {
+    top: calc(var(--u) * 3.6); right: 3%; width: auto; max-width: 56%;
+    grid-template-columns: 34px minmax(0, 1fr); gap: 8px;
+    padding: 5px 11px 5px 5px; border-radius: 11px;
+  }
+  .chip-thumb { width: 34px; height: 34px; border-radius: 7px; }
+  .chip-copy { gap: 1px; }
+  .chip-label { font-size: 11px; letter-spacing: .06em; line-height: 1.2; }
+  .chip-stats { font-size: 12px; line-height: 1.25; }
+  /* Its 11 px words make it wide beside so small a companion: it ends clear of the cheer. */
+  .moku-piece { right: 80%; gap: 5px; padding: 3px 9px 3px 3px; font-size: 11px; }
+  .moku-piece img { width: 18px; height: 18px; }
+  .moku-line { padding: 6px 10px; border-radius: 12px 12px 3px 12px; font-size: 12px; }
+}
+/* A small still beside two others keeps the close-up of the companion (reduced motion,
+   on tablets and desktops); a phone's stills stack, each the whole Mac. */
+@media (min-width: 600px) {
+  @container desk (max-width: 360px) {
+    .demo-stills .desk { aspect-ratio: 1 / .8; }
+    .demo-stills .desk-inner { --u: 2.6cqw; }
+    .demo-stills :is(.menubar, .scene) { display: none; }
+    .demo-stills .house-chip { z-index: 35; top: 6%; left: 5%; right: auto; width: 54%; }
+    .demo-stills .desk-moku { width: 112%; right: -6%; bottom: -46%; }
+    .demo-stills .desk-inner { transform: none !important; }
+    /* Beside so large a companion the piece would leave the still: it sits under the chip. */
+    .demo-stills .moku-piece { left: 9.8%; right: auto; top: 15.5%; }
+  }
+}
+
+@media (max-width: 959px) {
+  .live-hero { grid-template-columns: minmax(0, 1fr); min-height: 0; row-gap: 32px; padding-block: 12px 56px; }
+  .hero-copy { padding-bottom: 0; }
+  .hero-copy h1 { font-size: clamp(54px, 9vw, 80px); }
+  .live-demo { justify-self: stretch; width: 100%; min-width: 0; }
+}
+/* Phones: what it is and the button first, then the demo and its quiet line. */
+@media (max-width: 599px) {
+  .site-header { height: 64px; }
+  .live-hero { row-gap: 26px; padding-block: 6px 48px; }
+  .hero-copy h1 { font-size: clamp(46px, 13.6vw, 62px); }
+  .hero-sub { margin-top: 14px; font-size: 16px; }
+  .hero-get { margin-top: 22px; gap: 8px; }
+  .hero-get .button { width: 100%; min-height: 52px; }
+  .pitch-note { font-size: 12px; line-height: 1.5; }
+  .hero-privacy { margin-top: 14px; padding-top: 14px; font-size: 12px; }
+  /* The line keeps two lines' room and the pause has its own row, so a long welcome
+     back never moves the page. */
+  .demo-bar { flex-direction: column; align-items: stretch; gap: 6px; margin-top: 12px; min-height: 0; }
+  /* In the column the row's 14em basis would be its height (252 px of nothing): its own height here. */
+  .demo-line { flex: none; width: 100%; min-height: 2.6em; font-size: 18px; }
+  /* The companions on the left, the pause on the right, or on its own row when the
+     phone is too narrow for both: every control a full 44 px tap. */
+  .demo-actions { flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; margin-top: 0; }
+  .demo-actions .companion-pill { min-height: 44px; padding-right: 16px; font-size: 13px; }
+  .demo-actions .pill-face { width: 34px; height: 34px; }
+  .demo-actions .motion-toggle { min-height: 44px; padding-block: 12px; font-size: 11px; }
+  .work-tab { min-height: 44px; padding-block: 10px; }
+  .work-tabs { min-height: 44px; }
+  .demo-stills { grid-template-columns: minmax(0, 1fr); }
+}
+/* Tablets and small laptops: what a visitor reads on the screen never drops below
+   11 px, however small the scene's --u. 1280 px and up are unchanged. */
+@media (min-width: 600px) and (max-width: 1279px) {
+  .chip-label { font-size: max(11px, calc(var(--u) * .78)); letter-spacing: .06em; }
+  .chip-stats { font-size: max(12px, calc(var(--u) * 1.02)); }
+  .moku-line { font-size: max(12px, calc(var(--u) * 1.35)); }
+}
+/* Small laptops and landscape tablets (960 to 1279 px): beside the headline, a 16:9
+   screen sized from its height was a postage stamp (365 x 205 px at 1024 x 768). Here
+   the headline column is narrower, the companions are pills under the quiet line, and the
+   screen is the tablet's Mac, sized from its width. 1280 px and up are unchanged. */
+@media (min-width: 960px) and (max-width: 1279px) {
+  .live-hero { column-gap: 36px; }
+  .hero-copy { max-width: 23rem; }
+  .live-demo.has-dock { --dock-width: 0px; --dock-gap: 0px; }
+  .companion-dock { display: none !important; }
+  .demo-actions .companion-pills { display: flex !important; }
+  .live-demo { width: 100%; }
+  .live-demo > .desk-frame { container-type: inline-size; aspect-ratio: auto; }
+  .live-demo > .desk-frame > .desk { aspect-ratio: 1 / .86; height: auto; }
+  .live-demo > .desk-frame .desk-inner { --stage: 100cqw; }
+  .live-demo > .desk-frame .desk-moku { width: calc(var(--stage) * .3); right: calc(var(--stage) * .01); }
+  .demo-actions { flex-wrap: wrap; justify-content: flex-end; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chip-thumb img, .moku-line, .desk-wall::after { transition: none !important; }
+}
+
+/* Tetsu's small labels are set in a monospace face (moku-and-friends.md). */
+:root[data-companion='tetsu'] :is(.section-label, .eyebrow, .scene-pill, .chip-label, .house-scene-title > span, .timeline-labels, .house-preview-note) {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace; letter-spacing: .02em;
+}

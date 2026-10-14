@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- The hero's first still, asked for before the page's CSS streams in (vite.config.js puts that first in <head>). -->
+    <link rel="preload" as="image" href="/motion/content-idle.webp" imagesrcset="/motion/content-idle.320.webp 320w, /motion/content-idle.webp 640w" imagesizes="(max-width: 599px) 106px, (max-height: 499px) 106px, 640px" fetchpriority="high" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f5ee" />
+    <meta name="description" content="A small friend in the corner of your Mac notices when you wander off, and is glad when you’re back. No timers, no to-do lists, nothing to set up." />
+    <meta property="og:title" content="Moku — drift less, without a timer" />
+    <meta property="og:description" content="A small friend in the corner of your Mac notices when you wander off, and is glad when you’re back." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hellomoku.com/" />
+    <meta property="og:image" content="https://hellomoku.com/og-image.jpg?v=2" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Drift less, without a timer. Beside it, Moku the bunny beams, and a card reads: Today’s house, 2h 40m focused, 3 returns, plus the right roof." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://hellomoku.com/og-image.jpg?v=2" />
+    <title>Moku — drift less, without a timer</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/fonts.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/live-demo.css" />
+    <link rel="stylesheet" href="/src/demo-scenes.css" />
+    <link rel="stylesheet" href="/src/scroll-experience.css" />
+    <link rel="stylesheet" href="/src/finishing.css" />
+    <link rel="stylesheet" href="/src/sections.css" />
+    <link rel="stylesheet" href="/src/mobile.css" />
+    <link rel="stylesheet" href="/src/mobile-world.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <svg class="svg-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <symbol id="arrow-up" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12" /></symbol>
+        <symbol id="leaf" viewBox="0 0 24 24"><path d="M5 19c-4-8 2-14 15-15 0 12-6 18-13 13M4 21 15 10" /></symbol>
+        <symbol id="apple" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.3 12.7c0-2.2 1.8-3.3 1.9-3.4-1.1-1.6-2.8-1.8-3.4-1.8-1.5-.2-2.9.9-3.7.9-.7 0-1.9-.9-3.1-.8-1.6 0-3 1-3.8 2.4-1.6 2.8-.4 6.9 1.2 9.2.8 1.1 1.7 2.3 2.9 2.3 1.2-.1 1.6-.7 3.1-.7 1.4 0 1.8.7 3.1.7s2.1-1.1 2.9-2.3c.9-1.3 1.3-2.6 1.3-2.6-.1 0-2.4-.9-2.4-3.9ZM14.8 5.9c.6-.8 1.1-1.9 1-2.9-1 .1-2.2.7-2.9 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.2-.6 2.9-1.5Z" /></symbol>
+        <symbol id="bunny" viewBox="0 0 32 32"><path d="M10 16C5 5 9 0 12 5l3 9c1-14 8-15 7-8l-2 9c11 3 9 15-5 15C2 30 0 19 10 16Z"/><circle cx="11" cy="22" r="1"/><circle cx="21" cy="22" r="1"/><path d="m14 25 2 1 2-1"/></symbol>
+        <symbol id="wifi" viewBox="0 0 24 24"><path d="M2.5 9.2a14 14 0 0 1 19 0M5.6 12.4a9.6 9.6 0 0 1 12.8 0M8.7 15.6a5 5 0 0 1 6.6 0"/><circle cx="12" cy="18.8" r="1.2" fill="currentColor" stroke="none"/></symbol>
+        <symbol id="battery" viewBox="0 0 30 14"><rect x="1" y="1.5" width="24" height="11" rx="3.4"/><rect x="3" y="3.5" width="15" height="7" rx="1.8" fill="currentColor" stroke="none"/><path d="M27.5 5.5v3"/></symbol>
+        <symbol id="lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+        <symbol id="home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20h-5.5v-6h-5v6H4Z"/></symbol>
+        <symbol id="chev-left" viewBox="0 0 24 24"><path d="m14.5 6-6 6 6 6"/></symbol>
+        <symbol id="chev-right" viewBox="0 0 24 24"><path d="m9.5 6 6 6-6 6"/></symbol>
+        <symbol id="move" viewBox="0 0 24 24"><path d="M5 3.5 18 13l-6 .9 3.4 6.4-2.4 1.2-3.4-6.5L5 18Z"/></symbol>
+        <symbol id="spark" viewBox="0 0 24 24"><path d="M12 3.5c.6 4.4 2.1 6 6.5 6.5-4.4.6-5.9 2.1-6.5 6.5-.6-4.4-2.1-5.9-6.5-6.5 4.4-.5 5.9-2.1 6.5-6.5ZM18.5 15.5c.2 1.6.8 2.2 2.4 2.4-1.6.2-2.2.8-2.4 2.4-.2-1.6-.8-2.2-2.4-2.4 1.6-.2 2.2-.8 2.4-2.4Z" /></symbol>
+        <symbol id="ig-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.4a4.2 4.2 0 0 1 7.5 2.4C19.5 15.4 12 20 12 20Z"/></symbol>
+        <symbol id="ig-comment" viewBox="0 0 24 24"><path d="M4.6 19.6 5.8 15.8A7.6 7.6 0 1 1 8.6 18.6Z"/></symbol>
+        <symbol id="ig-send" viewBox="0 0 24 24"><path d="M20.5 4 3.8 9.8l6.4 2.6 2.6 6.6ZM10.2 12.4l4.6-4.6"/></symbol>
+        <symbol id="ig-save" viewBox="0 0 24 24"><path d="M6.5 4.5h11v15l-5.5-4-5.5 4Z"/></symbol>
+        <symbol id="mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="m4.5 7 7.5 6 7.5-6"/></symbol>
+      </defs>
+    </svg>
+
+    <nav class="chapter-nav" aria-label="Explore Moku"><a href="#hello" aria-label="Hello" aria-current="location"><span>01</span><span>Hello</span></a><a href="#friends" aria-label="Moku and Tetsu"><span>02</span><span>Friends</span></a><a href="#world" aria-label="A daily home"><span>03</span><span>Home</span></a><a href="#your-day" aria-label="Your day"><span>04</span><span>Your day</span></a></nav>
+    <header class="site-header wrap" role="banner">
+      <a class="brand" href="#" aria-label="Moku beta, home">moku<span class="brand-dot">✳</span><span class="beta-badge">beta</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#friends">Moku and Tetsu</a>
+        <a href="#world">A daily home</a>
+        <a href="#your-day">Your day</a>
+        <a href="#questions">Questions</a>
+      </nav>
+      <a class="button button-small button-outline header-get" href="/download" data-download="header">Get Moku <svg class="icon" aria-hidden="true"><use href="#arrow-up" /></svg></a>
+    </header>
+    <main id="main">
+      <section class="live-hero wrap" id="hello" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Drift less, <em>without a timer.</em></h1>
+          <p class="hero-sub">A small friend in the corner of your Mac notices when you wander off, and is glad when you’re back.</p>
+          <div class="hero-get">
+            <a class="button button-primary pitch-download" href="/download" data-download="hero"><svg class="icon" aria-hidden="true"><use href="#apple" /></svg> Download for Mac <svg class="icon" aria-hidden="true"><use href="#arrow-up" /></svg></a>
+            <a class="button button-primary pitch-mail" href="mailto:?subject=Moku%2C%20for%20my%20Mac&amp;body=Moku%2C%20a%20tiny%20friend%20for%20my%20Mac%3A%20https%3A%2F%2Fhellomoku.com%2Fdownload"><svg class="icon" aria-hidden="true"><use href="#mail" /></svg> Send me the link for my Mac</a>
+            <p class="pitch-note"><span class="for-mac">Beta · Apple silicon Macs with macOS 15 or later</span><span class="for-phone">Moku is for Macs. This opens an email from you, to you; nothing is collected.</span></p>
+          </div>
+          <p class="hero-privacy"><svg class="icon" aria-hidden="true"><use href="#lock" /></svg><span>Screenshots never leave your Mac. Only text goes to the AI, with zero data retention. <a href="#what-moku-reads" data-open-answer>What Moku reads</a></span></p>
+        </div>
+
+        <div class="live-demo has-dock" data-companion="moku">
+          <div class="work-tabs" role="group" aria-label="Choose the kind of work"></div>
+          <div class="desk-frame">
+            <div class="desk" role="img" aria-label="A sped-up demo on a pretend Mac. Someone is writing in Google Docs with Notes beside it; they drift to Instagram and Moku, a small bunny in the corner, turns sad; they come back and Moku cheers as a piece of today’s house lands.">
+              <div class="desk-inner" aria-hidden="true">
+                <div class="desk-wall"><div class="wall-screen"><i class="wall-sun"></i><i class="wall-hill wall-hill-far"></i><i class="wall-hill wall-hill-near"></i></div></div>
+
+                <div class="menubar">
+                  <div class="menubar-left"><strong data-app-name>Google Chrome</strong><span class="menubar-menus" data-app-menus><span>File</span><span>Edit</span><span>View</span><span>History</span><span>Bookmarks</span><span>Profiles</span><span>Tab</span><span>Window</span><span>Help</span></span></div>
+                  <div class="menubar-right">
+                    <svg class="g menubar-moku"><use href="#bunny" /></svg>
+                    <svg class="g menubar-wifi"><use href="#wifi" /></svg>
+                    <svg class="g menubar-battery"><use href="#battery" /></svg>
+                    <span class="menubar-clock" data-clock data-seam>Tue 10:50</span>
+                    <span class="sped-up">sped up</span>
+                  </div>
+                </div>
+
+                <!-- Four kinds of work, one at a time (demo-timeline.js scenes): two or three real apps side by side, and behind them a browser with a social feed, the drift. -->
+                <div class="scene is-active" data-scene="writing" data-front="doc">
+                  <section class="win win-browser win-ig" data-win="browser"><div class="browser-bar"><span class="lights"><i></i><i></i><i></i></span><div class="tabs"><span class="tab"><i class="fav fav-ig"></i><span>Instagram</span></span><span class="tab-plus">+</span></div><i class="at" data-at="tab" style="--ax: 26%; --ay: 50%"></i></div><div class="browser-tools"><svg class="g"><use href="#chev-left" /></svg><svg class="g dim"><use href="#chev-right" /></svg><div class="address"><svg class="g"><use href="#lock" /></svg><span>instagram.com</span></div></div><div class="ig"><nav class="ig-rail"><i></i><i></i><i></i><i></i><i></i><i></i></nav><div class="ig-view"><div class="ig-scroll" data-scroll="feed" data-seam><div class="ig-stories"><span class="ig-story ig-you" style="--h: 0"><i></i><b>your story</b></span><span class="ig-story" style="--h: 47"><i></i><b>mira.k</b></span><span class="ig-story" style="--h: 94"><i></i><b>sam_bakes</b></span><span class="ig-story" style="--h: 141"><i></i><b>noor.jpg</b></span><span class="ig-story" style="--h: 188"><i></i><b>leo.trails</b></span><span class="ig-story" style="--h: 235"><i></i><b>the.ana</b></span><span class="ig-story" style="--h: 282"><i></i><b>kofi.f</b></span></div><article class="ig-post"><header><i class="ig-av ph-bread"></i><b>sam_bakes</b><span>· 2h</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-bread"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">4,218 likes</p><p class="ig-cap"><b>sam_bakes</b> third loaf this week and it finally has an ear</p><p class="ig-com">View all 86 comments</p></article><article class="ig-post"><header><i class="ig-av ph-lake"></i><b>leo.trails</b><span>· 5h</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-lake"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">12.9K likes</p><p class="ig-cap"><b>leo.trails</b> woke up here. not going back</p><p class="ig-com">View all 312 comments</p></article><article class="ig-post"><header><i class="ig-av ph-sunset"></i><b>mira.k</b><span>· 1d</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-sunset"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">2,077 likes</p><p class="ig-cap"><b>mira.k</b> golden hour, again</p><p class="ig-com">View all 41 comments</p></article><article class="ig-post"><header><i class="ig-av ph-cafe"></i><b>the.ana</b><span>· 1d</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-cafe"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">8,530 likes</p><p class="ig-cap"><b>the.ana</b> office for the day</p><p class="ig-com">View all 120 comments</p></article></div></div><i class="at" data-at="drift-rest" style="--ax: 62%; --ay: 46%"></i></div></section>
+                  <section class="win win-work win-docs" data-win="doc">
+                    <div class="browser-bar"><span class="lights"><i></i><i></i><i></i></span><div class="tabs"><span class="tab"><i class="fav fav-docs"></i><span>The case for slow mornings – Google Docs</span></span><span class="tab tab-back"><i class="fav"></i><span>Morning routines: a study</span></span></div></div>
+                    <div class="browser-tools"><svg class="g"><use href="#chev-left" /></svg><svg class="g dim"><use href="#chev-right" /></svg><div class="address"><svg class="g"><use href="#lock" /></svg><span>docs.google.com/document/d/1qX7r/edit</span></div></div>
+                    <div class="gd-head"><i class="gd-icon"></i><div class="gd-titles"><p class="gd-name">The case for slow mornings</p><p class="gd-menus"><span>File</span><span>Edit</span><span>View</span><span>Insert</span><span>Format</span><span>Tools</span><span>Help</span></p></div><span class="gd-share">Share</span></div>
+                    <div class="gd-tools"><span>100%</span><i></i><span>Normal text</span><i></i><span>Georgia</span><i></i><span>11</span><i></i><b>B</b><em>I</em><u>U</u></div>
+                    <div class="gd-canvas"><div class="doc-page">
+                      <p class="doc-title">The case for slow mornings</p>
+                      <p class="doc-meta">Draft 3 · <span data-words="1184">1,184</span> words</p>
+                      <p>Most days begin at a sprint: inbox, messages, the news, all before a single real thought.</p>
+                      <p data-seam><span data-type="p2">This month I tried something smaller. One window, one page, and a cup of tea going cold beside the keyboard.</span></p>
+                      <p data-seam><span data-type="p3">The work didn’t get easier. It got quieter, and quiet turned out to be most of it.</span></p>
+                    </div></div>
+                    <i class="at" data-at="work-click" style="--ax: 46%; --ay: 78%"></i>
+                  </section>
+                  <section class="win win-side win-notes" data-win="notes">
+                    <div class="win-bar"><span class="lights"><i></i><i></i><i></i></span><span class="win-title"><b>Notes</b> <em>— Essay ideas</em></span></div>
+                    <div class="nt-body">
+                      <p class="nt-date">Today at 9:52</p>
+                      <p class="nt-title">Essay ideas</p>
+                      <p class="nt-item is-done"><i></i>No phone before nine</p>
+                      <p class="nt-item nt-tick" data-seam><i><i class="at" data-at="notes-tick" style="--ax: 50%; --ay: 50%"></i></i>Open with the cold tea</p>
+                      <p class="nt-item"><i></i>Quiet, not easier</p>
+                      <p class="nt-line" data-seam><span data-type="n1">Ending: quiet was most of it</span></p>
+                    </div>
+                  </section>
+                  <section class="win win-third win-dict" data-win="dict">
+                    <div class="win-bar"><span class="lights"><i></i><i></i><i></i></span><span class="win-title"><b>Dictionary</b> <em>— unhurried</em></span></div>
+                    <div class="dc-body">
+                      <p class="dc-word">unhurried</p>
+                      <p class="dc-say">un·hur·ried | adjective</p>
+                      <p class="dc-def">done or happening without hurry; relaxed and unrushed.</p>
+                      <p class="dc-syn"><b>Similar</b> leisurely, easy, calm, slow</p>
+                    </div>
+                  </section>
+                  <svg class="pointer" viewBox="0 0 24 24"><use href="#move" /></svg><i class="pointer-ring"></i>
+                </div>
+
+                <div class="scene" data-scene="design" data-front="canvas" hidden>
+                  <section class="win win-browser win-ig" data-win="browser"><div class="browser-bar"><span class="lights"><i></i><i></i><i></i></span><div class="tabs"><span class="tab"><i class="fav fav-ig"></i><span>Instagram</span></span><span class="tab-plus">+</span></div><i class="at" data-at="tab" style="--ax: 26%; --ay: 50%"></i></div><div class="browser-tools"><svg class="g"><use href="#chev-left" /></svg><svg class="g dim"><use href="#chev-right" /></svg><div class="address"><svg class="g"><use href="#lock" /></svg><span>instagram.com</span></div></div><div class="ig"><nav class="ig-rail"><i></i><i></i><i></i><i></i><i></i><i></i></nav><div class="ig-view"><div class="ig-scroll" data-scroll="feed" data-seam><div class="ig-stories"><span class="ig-story ig-you" style="--h: 120"><i></i><b>your story</b></span><span class="ig-story" style="--h: 167"><i></i><b>mira.k</b></span><span class="ig-story" style="--h: 214"><i></i><b>sam_bakes</b></span><span class="ig-story" style="--h: 261"><i></i><b>noor.jpg</b></span><span class="ig-story" style="--h: 308"><i></i><b>leo.trails</b></span><span class="ig-story" style="--h: 355"><i></i><b>the.ana</b></span><span class="ig-story" style="--h: 42"><i></i><b>kofi.f</b></span></div><article class="ig-post"><header><i class="ig-av ph-sunset"></i><b>noor.jpg</b><span>· 1h</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-sunset"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">3,402 likes</p><p class="ig-cap"><b>noor.jpg</b> this palette though</p><p class="ig-com">View all 58 comments</p></article><article class="ig-post"><header><i class="ig-av ph-cafe"></i><b>kofi.f</b><span>· 4h</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-cafe"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">9,114 likes</p><p class="ig-cap"><b>kofi.f</b> monday fuel</p><p class="ig-com">View all 201 comments</p></article><article class="ig-post"><header><i class="ig-av ph-lake"></i><b>leo.trails</b><span>· 9h</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-lake"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">21K likes</p><p class="ig-cap"><b>leo.trails</b> still thinking about this lake</p><p class="ig-com">View all 640 comments</p></article><article class="ig-post"><header><i class="ig-av ph-bread"></i><b>sam_bakes</b><span>· 1d</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-bread"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">1,880 likes</p><p class="ig-cap"><b>sam_bakes</b> crumb shot, as promised</p><p class="ig-com">View all 33 comments</p></article></div></div><i class="at" data-at="drift-rest" style="--ax: 62%; --ay: 46%"></i></div></section>
+                  <section class="win win-work win-canvas" data-win="canvas">
+                    <div class="win-bar fg-bar"><span class="lights"><i></i><i></i><i></i></span><span class="fg-tab">Onboarding</span><span class="win-title"><b>Figma</b> <em>— Welcome</em></span></div>
+                    <div class="cv-toolbar"><span class="cv-tools"><b class="on">↖</b><b>#</b><b>▢</b><b>✎</b><b>T</b><b>◯</b></span><span class="cv-share">Share</span><span class="cv-zoom">100%</span></div>
+                    <div class="cv-body">
+                      <aside class="cv-layers">
+                        <p class="cv-head">Layers</p>
+                        <p class="cv-layer cv-layer-top">▾ # Welcome</p>
+                        <p class="cv-layer" data-layer="title">T&nbsp; Title</p>
+                        <p class="cv-layer">◇&nbsp; Illustration</p>
+                        <p class="cv-layer" data-layer="button">◆&nbsp; Button / Primary</p>
+                        <p class="cv-layer">▭&nbsp; Status bar</p>
+                        <p class="cv-layer cv-layer-top">▸ # Sign in</p>
+                        <p class="cv-layer cv-layer-top">▸ # Your day</p>
+                      </aside>
+                      <div class="cv-canvas">
+                        <span class="cv-frame-name">Welcome</span>
+                        <div class="cv-frame" data-seam>
+                          <i class="cv-status"></i>
+                          <div class="cv-art"><i></i><i></i><i></i></div>
+                          <p class="cv-title"><span class="cv-title-old">Welcome</span><span class="cv-title-new" data-type="dtitle">Small steps, every day</span><i class="at" data-at="cv-title" style="--ax: 40%; --ay: 50%"></i></p>
+                          <p class="cv-sub"><b></b><b></b></p>
+                          <div class="cv-button"><span>Get started</span><span class="cv-size">264 × 48</span><i class="at" data-at="cv-button" style="--ax: 62%; --ay: 60%"></i></div>
+                        </div>
+                        <span class="cv-frame-name cv-frame-name-2">Sign in</span>
+                        <div class="cv-frame cv-frame-2"><i class="cv-status"></i><b></b><b></b><b></b><i class="cv-pill"></i></div>
+                        <div class="cv-inspector"><span>X <b>56</b></span><span>Y <b data-text="y" data-seam>412</b></span><span>W <b>264</b></span><span class="cv-fill">Fill <i class="cv-chip" data-seam></i><i class="at" data-at="cv-fill" style="--ax: 70%; --ay: 50%"></i></span></div>
+                        <div class="cv-picker"><i></i><i></i><i></i><i class="cv-green"><i class="at" data-at="cv-swatch" style="--ax: 50%; --ay: 50%"></i></i><i></i><i></i><i></i><i></i></div>
+                        <i class="at" data-at="cv-rest" style="--ax: 88%; --ay: 34%"></i>
+                      </div>
+                    </div>
+                    <i class="at" data-at="work-click" style="--ax: 62%; --ay: 70%"></i>
+                  </section>
+                  <section class="win win-side win-refs" data-win="refs">
+                    <div class="win-bar"><span class="lights"><i></i><i></i><i></i></span><span class="win-title"><b>Preview</b> <em>— references.png</em></span></div>
+                    <div class="rf-board" data-seam>
+                      <i class="rf rf-hills"></i><i class="rf rf-type">Aa</i><i class="rf rf-swatch"><i></i><i></i><i></i><i></i><i class="at" data-at="ref-tile" style="--ax: 50%; --ay: 50%"></i></i>
+                      <i class="rf rf-mug"></i><i class="rf rf-phone"><i></i><i></i></i><i class="rf rf-leaf"></i>
+                    </div>
+                  </section>
+                  <section class="win win-third win-fonts" data-win="fonts">
+                    <div class="win-bar"><span class="lights"><i></i><i></i><i></i></span><span class="win-title"><b>Font Book</b> <em>— Instrument Serif</em></span></div>
+                    <div class="fb-body"><p class="fb-aa">Aa</p><p class="fb-name">Instrument Serif · Regular</p><p class="fb-sample">Small steps, every day</p></div>
+                  </section>
+                  <svg class="pointer" viewBox="0 0 24 24"><use href="#move" /></svg><i class="pointer-ring"></i>
+                </div>
+
+                <div class="scene" data-scene="code" data-front="editor" hidden>
+                  <section class="win win-browser win-ig" data-win="browser"><div class="browser-bar"><span class="lights"><i></i><i></i><i></i></span><div class="tabs"><span class="tab"><i class="fav fav-ig"></i><span>Instagram</span></span><span class="tab-plus">+</span></div><i class="at" data-at="tab" style="--ax: 26%; --ay: 50%"></i></div><div class="browser-tools"><svg class="g"><use href="#chev-left" /></svg><svg class="g dim"><use href="#chev-right" /></svg><div class="address"><svg class="g"><use href="#lock" /></svg><span>instagram.com</span></div></div><div class="ig"><nav class="ig-rail"><i></i><i></i><i></i><i></i><i></i><i></i></nav><div class="ig-view"><div class="ig-scroll" data-scroll="feed" data-seam><div class="ig-stories"><span class="ig-story ig-you" style="--h: 240"><i></i><b>your story</b></span><span class="ig-story" style="--h: 287"><i></i><b>mira.k</b></span><span class="ig-story" style="--h: 334"><i></i><b>sam_bakes</b></span><span class="ig-story" style="--h: 21"><i></i><b>noor.jpg</b></span><span class="ig-story" style="--h: 68"><i></i><b>leo.trails</b></span><span class="ig-story" style="--h: 115"><i></i><b>the.ana</b></span><span class="ig-story" style="--h: 162"><i></i><b>kofi.f</b></span></div><article class="ig-post"><header><i class="ig-av ph-cafe"></i><b>kofi.f</b><span>· 3h</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-cafe"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">6,021 likes</p><p class="ig-cap"><b>kofi.f</b> new desk, who dis</p><p class="ig-com">View all 97 comments</p></article><article class="ig-post"><header><i class="ig-av ph-sunset"></i><b>mira.k</b><span>· 6h</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-sunset"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">4,770 likes</p><p class="ig-cap"><b>mira.k</b> the sky did a thing</p><p class="ig-com">View all 64 comments</p></article><article class="ig-post"><header><i class="ig-av ph-bread"></i><b>sam_bakes</b><span>· 8h</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-bread"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">2,315 likes</p><p class="ig-cap"><b>sam_bakes</b> sourdough update nobody asked for</p><p class="ig-com">View all 52 comments</p></article><article class="ig-post"><header><i class="ig-av ph-lake"></i><b>leo.trails</b><span>· 1d</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-lake"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">15.2K likes</p><p class="ig-cap"><b>leo.trails</b> day 4, no signal</p><p class="ig-com">View all 288 comments</p></article></div></div><i class="at" data-at="drift-rest" style="--ax: 62%; --ay: 46%"></i></div></section>
+                  <section class="win win-work win-editor" data-win="editor">
+                    <div class="win-bar"><span class="lights"><i></i><i></i><i></i></span><span class="win-title"><b>Cursor</b> <em>— streak.ts — focus-log</em></span></div>
+                    <div class="ed-body">
+                      <aside class="ed-tree">
+                        <p class="ed-head">FOCUS-LOG</p>
+                        <p class="ed-dir">▾ src</p><p class="ed-file on">streak.ts</p><p class="ed-file">day.ts</p><p class="ed-file">format.ts</p>
+                        <p class="ed-dir">▾ test</p><p class="ed-file">streak.test.ts</p><p class="ed-file ed-root">package.json</p>
+                      </aside>
+                      <div class="ed-main">
+                        <div class="ed-tabs"><span class="on">streak.ts</span><span>streak.test.ts</span></div>
+                        <div class="ed-code" data-seam><p><i>1</i><span class="k">import type</span> { <span class="ty">Day</span> } <span class="k">from</span> <span class="s">'./day'</span></p><p><i>2</i></p><p><i>3</i><span class="c">// The longest run of focused days</span></p><p><i>4</i><span class="k">export function</span> <span class="f">streak</span>(days: <span class="ty">Day</span>[]) {</p><p><i>5</i>  <span class="k">let</span> best = <span class="n">0</span></p><p><i>6</i>  <span class="k">let</span> run = <span class="n">0</span></p><p><i>7</i>  <span class="k">for</span> (<span class="k">const</span> day <span class="k">of</span> days) {</p><p><i>8</i><span data-type="c1">    run = day.pieces ? run + <span class="n">1</span> : <span class="n">0</span></span></p><p><i>9</i><span data-type="c2">    best = Math.<span class="f">max</span>(best, run)</span></p><p><i>10</i>  }</p><p><i>11</i>  <span class="k">return</span> best</p><p><i>12</i>}</p><p><i>13</i></p><p><i>14</i><span data-type="c3"><span class="k">export const</span> <span class="f">onStreak</span> = (days: <span class="ty">Day</span>[]) =&gt;</span></p><p><i>15</i><span data-type="c4">  <span class="f">streak</span>(days) &gt;= <span class="n">3</span></span></p></div>
+                        <div class="ed-status"><span>main</span><span>TypeScript</span><span>Ln 9, Col 33</span></div>
+                      </div>
+                    </div>
+                    <i class="at" data-at="work-click" style="--ax: 60%; --ay: 62%"></i>
+                  </section>
+                  <section class="win win-side win-term" data-win="term">
+                    <div class="win-bar"><span class="lights"><i></i><i></i><i></i></span><span class="win-title"><b>Terminal</b> <em>— focus-log — zsh</em></span></div>
+                    <div class="term-lines" data-seam>
+                      <p><span class="prompt">focus-log %</span> npm test</p>
+                      <p class="bad"> ✗ test/streak.test.ts (4 tests | 1 failed)</p>
+                      <p class="bad">   ✗ a day without focus breaks the run</p>
+                      <p class="dim">     expected 3 to be 2</p>
+                      <p><span class="prompt">focus-log %</span> <span data-type="cmd">npm test</span></p>
+                      <p class="out dim" style="--i: 1">&gt; vitest run</p>
+                      <p class="out good" style="--i: 2"> ✓ test/streak.test.ts (4 tests) 6ms</p>
+                      <p class="out" style="--i: 3">   <span class="good">✓</span> counts a run of days</p>
+                      <p class="out" style="--i: 4">   <span class="good">✓</span> a day without focus breaks the run</p>
+                      <p class="out" style="--i: 5">   <span class="good">✓</span> the best run wins</p>
+                      <p class="out" style="--i: 6"> Tests  <span class="good">4 passed</span> (4)</p>
+                      <p class="out" style="--i: 7"><span class="prompt">focus-log %</span></p>
+                    </div>
+                    <i class="at" data-at="term-click" style="--ax: 60%; --ay: 70%"></i>
+                  </section>
+                  <section class="win win-third win-mdn" data-win="docs">
+                    <div class="browser-bar"><span class="lights"><i></i><i></i><i></i></span><div class="tabs"><span class="tab"><i class="fav fav-mdn"></i><span>Math.max() – JavaScript | MDN</span></span></div></div>
+                    <div class="mdn-body"><p class="mdn-crumb">References › JavaScript › Math</p><p class="mdn-h">Math.max()</p><p class="mdn-p">Returns the largest of the numbers given as input parameters.</p><p class="mdn-code">Math.max(1, 3, 2) <span>// 3</span></p><p class="mdn-lines"><b></b><b></b><b></b></p></div>
+                  </section>
+                  <svg class="pointer" viewBox="0 0 24 24"><use href="#move" /></svg><i class="pointer-ring"></i>
+                </div>
+
+                <div class="scene" data-scene="study" data-front="reader" hidden>
+                  <section class="win win-browser win-ig" data-win="browser"><div class="browser-bar"><span class="lights"><i></i><i></i><i></i></span><div class="tabs"><span class="tab"><i class="fav fav-ig"></i><span>Instagram</span></span><span class="tab-plus">+</span></div><i class="at" data-at="tab" style="--ax: 26%; --ay: 50%"></i></div><div class="browser-tools"><svg class="g"><use href="#chev-left" /></svg><svg class="g dim"><use href="#chev-right" /></svg><div class="address"><svg class="g"><use href="#lock" /></svg><span>instagram.com</span></div></div><div class="ig"><nav class="ig-rail"><i></i><i></i><i></i><i></i><i></i><i></i></nav><div class="ig-view"><div class="ig-scroll" data-scroll="feed" data-seam><div class="ig-stories"><span class="ig-story ig-you" style="--h: 60"><i></i><b>your story</b></span><span class="ig-story" style="--h: 107"><i></i><b>mira.k</b></span><span class="ig-story" style="--h: 154"><i></i><b>sam_bakes</b></span><span class="ig-story" style="--h: 201"><i></i><b>noor.jpg</b></span><span class="ig-story" style="--h: 248"><i></i><b>leo.trails</b></span><span class="ig-story" style="--h: 295"><i></i><b>the.ana</b></span><span class="ig-story" style="--h: 342"><i></i><b>kofi.f</b></span></div><article class="ig-post"><header><i class="ig-av ph-lake"></i><b>leo.trails</b><span>· 2h</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-lake"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">18.4K likes</p><p class="ig-cap"><b>leo.trails</b> take me back</p><p class="ig-com">View all 402 comments</p></article><article class="ig-post"><header><i class="ig-av ph-cafe"></i><b>the.ana</b><span>· 3h</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-cafe"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">5,260 likes</p><p class="ig-cap"><b>the.ana</b> one more coffee and then I study</p><p class="ig-com">View all 144 comments</p></article><article class="ig-post"><header><i class="ig-av ph-sunset"></i><b>noor.jpg</b><span>· 7h</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-sunset"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">3,118 likes</p><p class="ig-cap"><b>noor.jpg</b> walked home the long way</p><p class="ig-com">View all 27 comments</p></article><article class="ig-post"><header><i class="ig-av ph-bread"></i><b>sam_bakes</b><span>· 1d</span><span class="ig-dots">•••</span></header><div class="ig-photo ph-bread"><i></i><i></i></div><div class="ig-actions"><svg class="ig-i"><use href="#ig-heart" /></svg><svg class="ig-i"><use href="#ig-comment" /></svg><svg class="ig-i"><use href="#ig-send" /></svg><span></span><svg class="ig-i"><use href="#ig-save" /></svg></div><p class="ig-likes">2,904 likes</p><p class="ig-cap"><b>sam_bakes</b> flour everywhere, no regrets</p><p class="ig-com">View all 61 comments</p></article></div></div><i class="at" data-at="drift-rest" style="--ax: 62%; --ay: 46%"></i></div></section>
+                  <section class="win win-work win-reader" data-win="reader">
+                    <div class="win-bar"><span class="lights"><i></i><i></i><i></i></span><span class="win-title"><b>Preview</b> <em>— Lecture 7 – Memory.pdf</em></span></div>
+                    <div class="rd-toolbar"><span>▤</span><span>Page 12 of 31</span><span class="rd-pen"><i></i>Highlight</span></div>
+                    <div class="rd-body">
+                      <aside class="rd-thumbs"><i></i><i></i><i class="on"></i><i></i><i></i></aside>
+                      <div class="rd-slides">
+                        <div class="rd-slide" data-seam>
+                          <p class="rd-kicker">PSYC 101 · Lecture 7</p>
+                          <p class="rd-h">The spacing effect</p>
+                          <svg class="rd-chart" viewBox="0 0 200 74" aria-hidden="true"><path class="ax" d="M14 6V64H196" /><path class="crammed" d="M16 12C40 46 70 58 194 61" /><path class="spaced" d="M16 12C30 24 38 26 46 16C58 28 66 30 76 18C92 30 110 32 194 34" /><text x="150" y="56">crammed</text><text x="150" y="28">spaced</text></svg>
+                          <p class="rd-p">Reviews spread over days <mark class="hl hl1"><i class="at" data-at="hl1-start"></i>beat one long session<i class="at" data-at="hl1-end"></i></mark> for recall a week later.</p>
+                          <p class="rd-p"><mark class="hl hl2"><i class="at" data-at="hl2-start"></i>Short, spaced reviews<i class="at" data-at="hl2-end"></i></mark> also take less time in total.</p>
+                          <i class="at" data-at="rd-rest" style="--ax: 88%; --ay: 14%"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <i class="at" data-at="work-click" style="--ax: 50%; --ay: 84%"></i>
+                  </section>
+                  <section class="win win-side win-notes" data-win="notes">
+                    <div class="win-bar"><span class="lights"><i></i><i></i><i></i></span><span class="win-title"><b>Notes</b> <em>— PSYC 101</em></span></div>
+                    <div class="nt-body">
+                      <p class="nt-date">Today at 10:05</p>
+                      <p class="nt-title">PSYC 101 · Week 7</p>
+                      <p class="nt-bullet">Memory: encode, store, retrieve</p>
+                      <p class="nt-bullet" data-seam><span data-type="n1">Spacing: review over days, not one night</span></p>
+                      <p class="nt-bullet" data-seam><span data-type="n2">Plan: 3 short reviews before Thursday</span></p>
+                    </div>
+                    <i class="at" data-at="notes-click" style="--ax: 70%; --ay: 80%"></i>
+                  </section>
+                  <section class="win win-third win-cards" data-win="cards">
+                    <div class="win-bar"><span class="lights"><i></i><i></i><i></i></span><span class="win-title"><b>Anki</b> <em>— PSYC 101 · 12 due</em></span></div>
+                    <div class="ak-body"><p class="ak-q">What does the spacing effect predict?</p><span class="ak-show">Show answer</span><p class="ak-due"><b>12</b> new · <b>8</b> to review</p></div>
+                  </section>
+                  <svg class="pointer" viewBox="0 0 24 24"><use href="#move" /></svg><i class="pointer-ring"></i>
+                </div>
+
+                <div class="house-chip">
+                  <span class="chip-thumb" data-seam><img data-house-now src="/images/house/thumb/150.webp" alt="" width="800" height="760" /><img data-house-next alt="" width="800" height="760" loading="lazy" /></span>
+                  <span class="chip-copy"><span class="chip-label" data-home-name>Today’s house</span><span class="chip-stats" data-seam><span><span data-focus>2h 39m</span> focused</span><span><span data-comebacks>2</span> returns</span></span></span>
+                </div>
+
+                <div class="desk-moku">
+                  <span class="moku-art"><img src="/motion/content-idle.webp" srcset="/motion/content-idle.320.webp 320w, /motion/content-idle.webp 640w" sizes="(max-width: 599px) 106px, (max-height: 499px) 106px, 640px" alt="" width="640" height="640" fetchpriority="high" /></span>
+                  <span class="moku-line" data-moku-line></span>
+                  <span class="moku-piece" data-piece-tag><img data-piece-thumb alt="" width="800" height="760" loading="lazy" /><span data-piece>+ the right roof</span></span>
+                  <span class="talent-hologram" data-hologram hidden><i class="holo-cone"></i><img alt="" width="160" height="200" /></span>
+                  <svg class="talent-scan" data-scan viewBox="0 0 100 100" hidden></svg>
+                </div>
+              </div>
+              <div class="state-label" data-state-label aria-hidden="true"><i class="state-dot"></i><span class="state-word" data-state-word></span><span class="state-detail" data-state-detail></span></div>
+            </div>
+          </div>
+          <div class="companion-dock" role="group" aria-label="Choose a companion" hidden></div>
+          <div class="demo-bar">
+            <p class="demo-line" data-line>Look away. It’ll notice.</p>
+            <div class="demo-actions">
+              <div class="companion-pills" role="group" aria-label="Choose a companion" hidden></div>
+              <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false">Pause little movements</button>
+            </div>
+          </div>
+          <p class="sr-only" aria-live="polite" data-announcer></p>
+          <div class="demo-stills" hidden></div>
+        </div>
+      </section>
+
+      <section class="screen-section friends wrap" id="friends" aria-labelledby="friends-title">
+        <div class="friends-heading">
+          <div class="section-label"><span class="section-number">02 /</span> MOKU AND TETSU</div>
+          <h2 id="friends-title">Who’d you like <em>to work with?</em></h2>
+          <p>A bunny and a robot, with one job: notice when you drift, and be glad when you’re back. Each builds its own little home, a piece for every 10 focused minutes.</p>
+        </div>
+        <ul class="friend-list" aria-label="Companions" data-near-group>
+          <li class="friend" data-friend="moku">
+            <div class="friend-stage">
+              <img class="friend-home" data-near-src="/images/house/240.webp" alt="" width="800" height="760" />
+              <span class="friend-actor" role="img" aria-label="Moku, a small ivory bunny, beside today’s finished cottage"><span class="moku-art"><img data-near-src="/motion/content-idle.webp" alt="" width="640" height="640" /></span><span class="friend-line" aria-hidden="true"></span></span>
+            </div>
+            <div class="friend-copy">
+              <h3>Moku <span class="friend-kind">the bunny</span></h3>
+              <p class="friend-personality">Gentle, a little anxious for you, and overjoyed when you’re back.</p>
+              <p class="friend-detail"><svg class="icon" aria-hidden="true"><use href="#home" /></svg><span>Builds a cottage</span></p>
+              <button class="friend-pick" type="button" aria-pressed="true"><span class="pick-label">Work with Moku</span><span class="picked-label">Picked</span></button>
+            </div>
+          </li>
+          <li class="friend" data-friend="tetsu">
+            <div class="friend-stage">
+              <img class="friend-home" data-near-src="/images/house/tetsu/240.webp" alt="" width="800" height="760" />
+              <span class="friend-actor" role="img" aria-label="Tetsu, a small desk robot with a pixel face, beside today’s finished rocket on its launch pad"><span class="moku-art"><img data-near-src="/motion/tetsu/content-idle.webp" alt="" width="640" height="640" /></span><span class="friend-line" aria-hidden="true"></span></span>
+            </div>
+            <div class="friend-copy">
+              <h3>Tetsu <span class="friend-kind">the desk robot</span></h3>
+              <p class="friend-personality">Earnest, logical and quietly loyal. Your focus is its mission.</p>
+              <p class="friend-detail"><svg class="icon" aria-hidden="true"><use href="#home" /></svg><span>Builds a rocket on its launch pad</span></p>
+              <p class="friend-detail friend-talent"><svg class="icon" aria-hidden="true"><use href="#spark" /></svg><span>Scans your window with a thin beam of light, and projects today’s rocket over its head when a piece lands.</span></p>
+              <button class="friend-pick" type="button" aria-pressed="false"><span class="pick-label">Work with Tetsu</span><span class="picked-label">Picked</span></button>
+            </div>
+          </li>
+        </ul>
+        <a class="text-link friends-watch" href="#hello"><span>Watch <span data-picked-name>Moku</span> notice a drift</span> <svg class="icon" aria-hidden="true"><use href="#arrow-up" /></svg></a>
+      </section>
+
+      <div class="world-story" id="world"><section class="screen-section world-section world-pin" aria-labelledby="world-title">
+        <div class="world-scroll-cue" aria-hidden="true"><span>YOUR FOCUS, TAKING SHAPE</span><span>SCROLL TO BUILD ↓</span></div>
+        <div class="world-inner wrap">
+          <div class="world-copy">
+            <div class="section-label"><span class="section-number">03 /</span> A LITTLE HOME, EVERY DAY</div>
+            <h2 id="world-title">Small hours.<br /><em>Something real.</em></h2>
+            <p id="house-pitch">A beam. A window. A light left on for you. Every 10 focused minutes builds a little more of Moku’s home. A new house, every day.</p>
+            <div class="house-facts"><div><strong>10 <span>min</span></strong><span>A new piece</span></div><div><strong>24</strong><span>Little pieces</span></div><div><strong>1</strong><span>Home each day</span></div></div>
+            <div class="world-detail"><svg class="icon" aria-hidden="true"><use href="#leaf" /></svg><span>Tomorrow, a fresh beginning.<br />Look back at each day’s build in Your day.</span></div>
+          </div>
+          <div class="world-visual">
+            <div class="house-scene"><div class="house-canvas" tabindex="0" role="group" aria-label="Explore the 3D cottage. Drag left or right, or use the left and right arrow keys to rotate." aria-describedby="house-interaction-hint"></div><img id="world-image" alt="Moku’s finished daily cottage, with a teal tiled roof, a porch, flowers, a white fence, and glowing windows" width="800" height="760" /><div class="house-scene-title"><span id="house-name">TODAY’S HOUSE</span><h3 id="house-stage">Home, sweet home.</h3></div><div class="house-view-controls"><button type="button" class="house-light-toggle" aria-pressed="false" aria-label="Evening lighting"><span aria-hidden="true">☀</span> Daylight</button><button type="button" class="house-view-reset" aria-label="Reset the cottage view">↺</button></div><div class="house-home-note" aria-hidden="true">someone’s home.<svg viewBox="0 0 100 54"><path d="M90 5C88 30 55 36 12 33m12-9L12 33l10 9" /></svg></div><p class="house-drag-hint" id="house-interaction-hint"><span aria-hidden="true">↔</span> A little world. Go on, turn it.</p></div>
+            <div class="house-progress-panel"><div class="house-progress-topline"><p><strong id="house-percent">100%</strong><span>built</span></p><span id="house-time">4h of 4h</span></div><div id="house-meter" class="house-meter" aria-hidden="true" style="--house-progress:100%"><span></span></div><div id="house-stages" class="house-stages" aria-hidden="true"></div><p class="house-next" id="house-next">The lights are on. Moku’s home is finished for today.</p><div class="house-preview-note"><span id="house-pieces">24 / 24 pieces</span><span>A little preview of one day</span></div></div>
+          </div>
+          <div class="world-timeline"><div class="timeline-title"><label for="world-progress">One day, piece by piece.</label><button class="house-replay" type="button" aria-label="Replay the house being built">REPLAY BUILD <span aria-hidden="true">↻</span></button></div><input id="world-progress" type="range" min="0" max="240" step="10" value="240" aria-valuetext="4h focused. 100% built. Home, sweet home." aria-controls="world-image house-stage house-percent house-next" /><div class="timeline-labels" aria-hidden="true"><span>0 MIN · A FRESH PLOT</span><span>2H · TAKING SHAPE</span><span>4H · WELCOME HOME</span></div></div>
+        </div>
+      </section>
+
+      </div>
+
+      <section class="screen-section day-section wrap" id="your-day" aria-labelledby="day-title">
+        <div class="day-heading">
+          <div class="section-label"><span class="section-number">04 /</span> YOUR DAY</div>
+          <h2 id="day-title">Proof that <em>today counted.</em></h2>
+          <div class="day-intro">
+            <p>Open Your day any time: what you worked on, task by task, with the apps it took and the steps in plain words, how often you came back, and a note from your companion. Only you see it.</p>
+            <div class="day-works" role="group" aria-label="An example day of"><span aria-hidden="true">A day of</span><button type="button" data-day-work="writing" aria-pressed="true">Writing</button><button type="button" data-day-work="design" aria-pressed="false">Design</button><button type="button" data-day-work="code" aria-pressed="false">Code</button><button type="button" data-day-work="study" aria-pressed="false">Study</button></div>
+          </div>
+        </div>
+        <article class="day-window" data-your-day aria-labelledby="day-card-date"></article>
+      </section>
+
+      <section class="screen-section faq-section wrap section-space" id="questions" aria-labelledby="faq-title"><div><div class="section-label">A FEW THINGS YOU MIGHT WONDER</div><h2 id="faq-title">Little questions.<br /><em>Honest answers.</em></h2><img class="faq-bunny" data-near-src="/images/moku-tea.webp" alt="Moku taking a quiet tea break" width="768" height="768" /></div><div class="faq-list">
+        <details id="what-moku-reads"><summary>Can Moku see what’s on my screen?<span aria-hidden="true"></span></summary><div><p>Moku reads the text in the window you’re working in, with the app’s name, the window title and the web address, right on your Mac. The screen image is never saved or sent anywhere. To tell work from a detour, the app, the window title, the web address and a short excerpt of that text go to an AI model with zero data retention, through our relay, which doesn’t keep them either. He never reads the text in password managers, authenticator apps or crypto wallets. Your days and houses stay on your Mac. Moku counts how often you type, never which keys, and never records audio. Take a break and he stops watching until you’re back.</p><a class="text-link" href="/privacy">Read the privacy policy <svg class="icon" aria-hidden="true"><use href="#arrow-up" /></svg></a></div></details>
+        <details><summary>What if I have a very unproductive day?<span aria-hidden="true"></span></summary><div><p>Then you had a very human day. A few floorboards still count. Your day keeps a record of what you built, even if the house isn’t finished. Tomorrow brings a fresh plot, and Moku will be there with you.</p></div></details>
+        <details><summary>When can I bring Moku home?<span aria-hidden="true"></span></summary><div><p>Right now. Moku is in beta for Apple silicon Macs running macOS 15 or later. Download him, drag him into Applications, and he’ll say hi.</p><a class="text-link" href="/download" data-download="faq">Download for Mac <svg class="icon" aria-hidden="true"><use href="#arrow-up" /></svg></a></div></details>
+        <details><summary>Questions, feedback, or something not right?<span aria-hidden="true"></span></summary><div><p>For any queries, write to me at <a href="mailto:hello@hellomoku.com">hello@hellomoku.com</a>. Feedback and complaints too. I read every message. — Charles</p></div></details>
+      </div></section>
+
+      <section class="screen-section closing" aria-labelledby="closing-title"><div class="closing-inner wrap">
+        <div class="closing-art" role="img" aria-label="Moku waits beside a fresh plot marked out with stakes and string, with the plan for today’s house on an easel" data-closing-art><img class="closing-plot" src="/images/house/010.webp" alt="" width="800" height="760" loading="lazy" data-closing-plot /><img class="closing-moku" src="/motion/content-idle.webp" alt="" width="640" height="640" loading="lazy" data-closing-companion /></div>
+        <h2 id="closing-title"><span data-closing-home>Today’s house</span> <em>is waiting.</em></h2>
+        <a class="button button-primary pitch-download" href="/download" data-download="closing"><svg class="icon" aria-hidden="true"><use href="#apple" /></svg> Download for Mac <svg class="icon" aria-hidden="true"><use href="#arrow-up" /></svg></a><a class="button button-primary pitch-mail" href="mailto:?subject=Moku%2C%20for%20my%20Mac&amp;body=Moku%2C%20a%20tiny%20friend%20for%20my%20Mac%3A%20https%3A%2F%2Fhellomoku.com%2Fdownload"><svg class="icon" aria-hidden="true"><use href="#mail" /></svg> Send me the link for my Mac</a>
+        <span class="closing-note">Beta · Apple silicon Macs with macOS 15 or later</span>
+        <div class="closing-flower" aria-hidden="true">✳</div>
+      </div></section>
+    </main>
+
+    <footer class="site-footer wrap"><div><a class="brand" href="#" aria-label="Moku home">moku<span class="brand-dot">✳</span></a><p>A small friend for brighter days.</p><p class="footer-mail">For any queries, write to me at <a href="mailto:hello@hellomoku.com">hello@hellomoku.com</a></p></div><div class="footer-links"><a href="mailto:hello@hellomoku.com">Say hello</a><a href="/privacy">Privacy</a><a href="#" class="back-top" aria-label="Back to top">↑</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> Moku</span><span>Made with a little heart. <span aria-hidden="true">♡</span></span></div></footer>
+
+  </body>
+</html>

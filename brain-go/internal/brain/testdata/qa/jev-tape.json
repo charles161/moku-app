@@ -1,0 +1,958 @@
+[
+ {
+  "key": "Safari\u001fPrinting press - Wikipedia\u001fen.wikipedia.org/wiki/Printing_press",
+  "id": "w-wiki",
+  "app": "Safari",
+  "title": "Printing press - Wikipedia",
+  "site": "en.wikipedia.org/wiki/Printing_press",
+  "choice": "work",
+  "pWork": 0.79,
+  "latencyMs": 858,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Safari\u001fgutenberg bible copies surviving - Google Search\u001fgoogle.com/search",
+  "id": "w-search",
+  "app": "Safari",
+  "title": "gutenberg bible copies surviving - Google Search",
+  "site": "google.com/search",
+  "choice": "work",
+  "pWork": 0.89,
+  "latencyMs": 480,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Safari\u001fThe Printing Revolution in Early Modern Europe | Cambridge Core\u001fcambridge.org/core/books/printing-revolution-in-early-modern-europe/ABCD",
+  "id": "w-cambridge",
+  "app": "Safari",
+  "title": "The Printing Revolution in Early Modern Europe | Cambridge Core",
+  "site": "cambridge.org/core/books/printing-revolution-in-early-modern-europe/ABCD",
+  "choice": "work",
+  "pWork": 0.98,
+  "latencyMs": 386,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Safari\u001fA Bible That Changed the World, Page by Page - The New York Times\u001fnytimes.com/2024/05/12/books/review/gutenberg-bible-book.html",
+  "id": "w-nyt",
+  "app": "Safari",
+  "title": "A Bible That Changed the World, Page by Page - The New York Times",
+  "site": "nytimes.com/2024/05/12/books/review/gutenberg-bible-book.html",
+  "choice": "distraction",
+  "pWork": 0.02,
+  "latencyMs": 420,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Safari\u001fThe Gutenberg Revolution: How Printing Changed Europe | Oxford Lecture - YouTube\u001fyoutube.com/watch",
+  "id": "w-yt-lecture",
+  "app": "Safari",
+  "title": "The Gutenberg Revolution: How Printing Changed Europe | Oxford Lecture - YouTube",
+  "site": "youtube.com/watch",
+  "choice": "work",
+  "pWork": 0.82,
+  "latencyMs": 396,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Safari\u001fHow many Gutenberg Bibles survive today and how do we know? : r/AskHistorians\u001freddit.com/r/AskHistorians/comments/1abc23/how_many_gutenberg_bibles_survive_today",
+  "id": "w-reddit-ask",
+  "app": "Safari",
+  "title": "How many Gutenberg Bibles survive today and how do we know? : r/AskHistorians",
+  "site": "reddit.com/r/AskHistorians/comments/1abc23/how_many_gutenberg_bibles_survive_today",
+  "choice": "distraction",
+  "pWork": 0.38,
+  "latencyMs": 429,
+  "model": "typesafe-ai/jev",
+  "variants": [
+   {
+    "kind": "half the words",
+    "pWork": 0.25
+   },
+   {
+    "kind": "cookie banner and ads",
+    "pWork": 0.35
+   }
+  ]
+ },
+ {
+  "key": "Safari\u001fELOQUENT Synonyms: 120 Similar and Opposite Words | Thesaurus.com\u001fthesaurus.com/browse/eloquent",
+  "id": "w-thesaurus",
+  "app": "Safari",
+  "title": "ELOQUENT Synonyms: 120 Similar and Opposite Words | Thesaurus.com",
+  "site": "thesaurus.com/browse/eloquent",
+  "choice": "work",
+  "pWork": 0.82,
+  "latencyMs": 390,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fHemingway Editor\u001fhemingwayapp.com",
+  "id": "w-hemingway",
+  "app": "Google Chrome",
+  "title": "Hemingway Editor",
+  "site": "hemingwayapp.com",
+  "choice": "work",
+  "pWork": 0.99,
+  "latencyMs": 422,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fOn the lost art of the long paragraph - by Sana Lund\u001fsanalund.substack.com/p/on-the-lost-art-of-the-long-paragraph",
+  "id": "w-substack",
+  "app": "Google Chrome",
+  "title": "On the lost art of the long paragraph - by Sana Lund",
+  "site": "sanalund.substack.com/p/on-the-lost-art-of-the-long-paragraph",
+  "choice": "distraction",
+  "pWork": 0.17,
+  "latencyMs": 362,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Safari\u001fStorm hits east coast as thousands lose power - BBC News\u001fbbc.com/news/uk-66123456",
+  "id": "w-bbc-article",
+  "app": "Safari",
+  "title": "Storm hits east coast as thousands lose power - BBC News",
+  "site": "bbc.com/news/uk-66123456",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 393,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Adobe Photoshop 2026\u001fbag-label-mockup.psd @ 66% (Layer 12, RGB/8)\u001f",
+  "id": "d-ps",
+  "app": "Adobe Photoshop 2026",
+  "title": "bag-label-mockup.psd @ 66% (Layer 12, RGB/8)",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 405,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Sketch\u001fPackaging dieline - Edited\u001f",
+  "id": "d-sketch",
+  "app": "Sketch",
+  "title": "Packaging dieline - Edited",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 381,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Adobe Illustrator 2026\u001fbag-front.ai @ 100% (RGB/Preview)\u001f",
+  "id": "d-ai",
+  "app": "Adobe Illustrator 2026",
+  "title": "bag-front.ai @ 100% (RGB/Preview)",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 408,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Blender\u001fBlender [roast-bag-3d.blend]\u001f",
+  "id": "d-blender",
+  "app": "Blender",
+  "title": "Blender [roast-bag-3d.blend]",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 384,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fCoffee packaging inspiration - Pinterest\u001fpinterest.com/emberroasters/coffee-packaging-inspiration",
+  "id": "d-pinterest",
+  "app": "Google Chrome",
+  "title": "Coffee packaging inspiration - Pinterest",
+  "site": "pinterest.com/emberroasters/coffee-packaging-inspiration",
+  "choice": "work",
+  "pWork": 0.77,
+  "latencyMs": 373,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fCoffee Roaster Branding by Mira Okafor on Dribbble\u001fdribbble.com/shots/22914532-Coffee-Roaster-Branding",
+  "id": "d-dribbble",
+  "app": "Google Chrome",
+  "title": "Coffee Roaster Branding by Mira Okafor on Dribbble",
+  "site": "dribbble.com/shots/22914532-Coffee-Roaster-Branding",
+  "choice": "work",
+  "pWork": 0.63,
+  "latencyMs": 368,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fDribbble - Discover the World's Top Designers \u0026 Creative Professionals\u001fdribbble.com",
+  "id": "d-dribbble-home",
+  "app": "Google Chrome",
+  "title": "Dribbble - Discover the World's Top Designers \u0026 Creative Professionals",
+  "site": "dribbble.com",
+  "choice": "distraction",
+  "pWork": 0.03,
+  "latencyMs": 437,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fEmber Coffee Brand Identity on Behance\u001fbehance.net/gallery/188233545/Ember-Coffee-Brand-Identity",
+  "id": "d-behance",
+  "app": "Google Chrome",
+  "title": "Ember Coffee Brand Identity on Behance",
+  "site": "behance.net/gallery/188233545/Ember-Coffee-Brand-Identity",
+  "choice": "work",
+  "pWork": 0.88,
+  "latencyMs": 453,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fEmber Roasters - Awwwards Site of the Day\u001fawwwards.com/sites/ember-roasters",
+  "id": "d-awwwards",
+  "app": "Google Chrome",
+  "title": "Ember Roasters - Awwwards Site of the Day",
+  "site": "awwwards.com/sites/ember-roasters",
+  "choice": "distraction",
+  "pWork": 0.42,
+  "latencyMs": 369,
+  "model": "typesafe-ai/jev",
+  "variants": [
+   {
+    "kind": "half the words",
+    "pWork": 0.41
+   },
+   {
+    "kind": "cookie banner and ads",
+    "pWork": 0.33
+   }
+  ]
+ },
+ {
+  "key": "Google Chrome\u001fRoastery mood - Are.na\u001fare.na/charles-m/roastery-mood",
+  "id": "d-arena",
+  "app": "Google Chrome",
+  "title": "Roastery mood - Are.na",
+  "site": "are.na/charles-m/roastery-mood",
+  "choice": "distraction",
+  "pWork": 0.32,
+  "latencyMs": 403,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fDM Serif Display - Google Fonts\u001ffonts.google.com/specimen/DM+Serif+Display",
+  "id": "d-gfonts",
+  "app": "Google Chrome",
+  "title": "DM Serif Display - Google Fonts",
+  "site": "fonts.google.com/specimen/DM+Serif+Display",
+  "choice": "work",
+  "pWork": 0.91,
+  "latencyMs": 388,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fCoolors - The super fast color palettes generator\u001fcoolors.co/palette/6f4e37-c68b59-f5e6d3-2d1b12",
+  "id": "d-coolors",
+  "app": "Google Chrome",
+  "title": "Coolors - The super fast color palettes generator",
+  "site": "coolors.co/palette/6f4e37-c68b59-f5e6d3-2d1b12",
+  "choice": "work",
+  "pWork": 0.62,
+  "latencyMs": 420,
+  "model": "typesafe-ai/jev",
+  "variants": [
+   {
+    "kind": "half the words",
+    "pWork": 0.6
+   },
+   {
+    "kind": "cookie banner and ads",
+    "pWork": 0.59
+   }
+  ]
+ },
+ {
+  "key": "Google Chrome\u001fUntitled design - Canva\u001fcanva.com/design/DAFxyz/edit",
+  "id": "d-canva",
+  "app": "Google Chrome",
+  "title": "Untitled design - Canva",
+  "site": "canva.com/design/DAFxyz/edit",
+  "choice": "work",
+  "pWork": 0.97,
+  "latencyMs": 671,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fFigma Auto Layout 5.0 Full Tutorial (2025) - YouTube\u001fyoutube.com/watch",
+  "id": "d-yt-tut",
+  "app": "Google Chrome",
+  "title": "Figma Auto Layout 5.0 Full Tutorial (2025) - YouTube",
+  "site": "youtube.com/watch",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 659,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fPentagram (@pentagram) - Instagram photos and videos\u001finstagram.com/pentagram",
+  "id": "d-ig-studio",
+  "app": "Google Chrome",
+  "title": "Pentagram (@pentagram) - Instagram photos and videos",
+  "site": "instagram.com/pentagram",
+  "choice": "distraction",
+  "pWork": 0.08,
+  "latencyMs": 380,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Alacritty\u001fnvim\u001f",
+  "id": "c-alacritty",
+  "app": "Alacritty",
+  "title": "nvim",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 378,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Android Studio\u001fMainActivity.kt - app\u001f",
+  "id": "c-androidstudio",
+  "app": "Android Studio",
+  "title": "MainActivity.kt - app",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 369,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Obsidian\u001fArchitecture notes - dev-vault - Obsidian v1.8.4\u001f",
+  "id": "c-obsidian",
+  "app": "Obsidian",
+  "title": "Architecture notes - dev-vault - Obsidian v1.8.4",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 407,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fAdd rate limiting to /v1/judge by charles-m - Pull Request #482 - acme/dashboard-api\u001fgithub.com/acme/dashboard-api/pull/482",
+  "id": "c-gh-pr",
+  "app": "Google Chrome",
+  "title": "Add rate limiting to /v1/judge by charles-m - Pull Request #482 - acme/dashboard-api",
+  "site": "github.com/acme/dashboard-api/pull/482",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 365,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fCI - Run 9921 - acme/dashboard-api\u001fgithub.com/acme/dashboard-api/actions/runs/9921",
+  "id": "c-gh-actions",
+  "app": "Google Chrome",
+  "title": "CI - Run 9921 - acme/dashboard-api",
+  "site": "github.com/acme/dashboard-api/actions/runs/9921",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 425,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fgo - How do I cancel a context from another goroutine? - Stack Overflow\u001fstackoverflow.com/questions/58475332/how-do-i-cancel-a-context-from-another-goroutine",
+  "id": "c-so",
+  "app": "Google Chrome",
+  "title": "go - How do I cancel a context from another goroutine? - Stack Overflow",
+  "site": "stackoverflow.com/questions/58475332/how-do-i-cancel-a-context-from-another-goroutine",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 374,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fIntersectionObserver - Web APIs | MDN\u001fdeveloper.mozilla.org/en-US/docs/Web/API/IntersectionObserver",
+  "id": "c-mdn",
+  "app": "Google Chrome",
+  "title": "IntersectionObserver - Web APIs | MDN",
+  "site": "developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 342,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fhttp package - net/http - Go Packages\u001fpkg.go.dev/net/http",
+  "id": "c-pkggo",
+  "app": "Google Chrome",
+  "title": "http package - net/http - Go Packages",
+  "site": "pkg.go.dev/net/http",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 474,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fDashboard - Acme\u001flocalhost",
+  "id": "c-localhost",
+  "app": "Google Chrome",
+  "title": "Dashboard - Acme",
+  "site": "localhost",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 361,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fTypeError: Cannot read properties of undefined (reading 'rows') - Sentry\u001fsentry.io/organizations/acme/issues/48211",
+  "id": "c-sentry",
+  "app": "Google Chrome",
+  "title": "TypeError: Cannot read properties of undefined (reading 'rows') - Sentry",
+  "site": "sentry.io/organizations/acme/issues/48211",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 434,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fSimple Made Easy - Rich Hickey - YouTube\u001fyoutube.com/watch",
+  "id": "c-yt-talk",
+  "app": "Google Chrome",
+  "title": "Simple Made Easy - Rich Hickey - YouTube",
+  "site": "youtube.com/watch",
+  "choice": "work",
+  "pWork": 0.9,
+  "latencyMs": 371,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fUnderstanding React Server Components | by Dan Reyes | Medium\u001fmedium.com/@danreyes/understanding-react-server-components-4f2a9",
+  "id": "c-medium",
+  "app": "Google Chrome",
+  "title": "Understanding React Server Components | by Dan Reyes | Medium",
+  "site": "medium.com/@danreyes/understanding-react-server-components-4f2a9",
+  "choice": "work",
+  "pWork": 0.94,
+  "latencyMs": 425,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fLRU Cache - LeetCode\u001fleetcode.com/problems/lru-cache",
+  "id": "c-leetcode",
+  "app": "Google Chrome",
+  "title": "LRU Cache - LeetCode",
+  "site": "leetcode.com/problems/lru-cache",
+  "choice": "work",
+  "pWork": 0.99,
+  "latencyMs": 464,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fSQLite is not a toy database | Hacker News\u001fnews.ycombinator.com/item",
+  "id": "c-hn-item",
+  "app": "Google Chrome",
+  "title": "SQLite is not a toy database | Hacker News",
+  "site": "news.ycombinator.com/item",
+  "choice": "distraction",
+  "pWork": 0.05,
+  "latencyMs": 370,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fAnyone else hit this context cancellation bug? : r/golang\u001freddit.com/r/golang/comments/1x2y3z/anyone_else_hit_this_context_cancellation_bug",
+  "id": "c-reddit-golang",
+  "app": "Google Chrome",
+  "title": "Anyone else hit this context cancellation bug? : r/golang",
+  "site": "reddit.com/r/golang/comments/1x2y3z/anyone_else_hit_this_context_cancellation_bug",
+  "choice": "work",
+  "pWork": 0.61,
+  "latencyMs": 483,
+  "model": "typesafe-ai/jev",
+  "variants": [
+   {
+    "kind": "half the words",
+    "pWork": 0.38
+   },
+   {
+    "kind": "cookie banner and ads",
+    "pWork": 0.57
+   }
+  ]
+ },
+ {
+  "key": "PDF Expert\u001fClayden Organic Chemistry - Ch.7 Nucleophilic substitution\u001f",
+  "id": "s-pdfexpert",
+  "app": "PDF Expert",
+  "title": "Clayden Organic Chemistry - Ch.7 Nucleophilic substitution",
+  "choice": "work",
+  "pWork": 0.99,
+  "latencyMs": 525,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Zotero\u001fMy Library - Zotero\u001f",
+  "id": "s-zotero",
+  "app": "Zotero",
+  "title": "My Library - Zotero",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 414,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Notes\u001fLecture 12 - Thermodynamics\u001f",
+  "id": "s-notes",
+  "app": "Notes",
+  "title": "Lecture 12 - Thermodynamics",
+  "choice": "work",
+  "pWork": 0.95,
+  "latencyMs": 409,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Obsidian\u001fCS101 - Week 5 - student-vault - Obsidian v1.8.4\u001f",
+  "id": "s-obsidian",
+  "app": "Obsidian",
+  "title": "CS101 - Week 5 - student-vault - Obsidian v1.8.4",
+  "choice": "work",
+  "pWork": 0.99,
+  "latencyMs": 888,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Anki\u001fOrganic Chem Reactions - Anki\u001f",
+  "id": "s-anki",
+  "app": "Anki",
+  "title": "Organic Chem Reactions - Anki",
+  "choice": "work",
+  "pWork": 0.87,
+  "latencyMs": 416,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fAssignments: CHEM 201\u001fcanvas.instructure.com/courses/48211/assignments",
+  "id": "s-canvas",
+  "app": "Google Chrome",
+  "title": "Assignments: CHEM 201",
+  "site": "canvas.instructure.com/courses/48211/assignments",
+  "choice": "work",
+  "pWork": 0.99,
+  "latencyMs": 377,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fGradient descent | Coursera\u001fcoursera.org/learn/machine-learning/lecture/GFFPB/gradient-descent",
+  "id": "s-coursera",
+  "app": "Google Chrome",
+  "title": "Gradient descent | Coursera",
+  "site": "coursera.org/learn/machine-learning/lecture/GFFPB/gradient-descent",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 382,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fLecture 5: Dynamic Programming | MIT 6.006 Introduction to Algorithms - YouTube\u001fyoutube.com/watch",
+  "id": "s-yt-mit",
+  "app": "Google Chrome",
+  "title": "Lecture 5: Dynamic Programming | MIT 6.006 Introduction to Algorithms - YouTube",
+  "site": "youtube.com/watch",
+  "choice": "work",
+  "pWork": 0.99,
+  "latencyMs": 558,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fSN2 Reaction Mechanism - Organic Chemistry - YouTube\u001fyoutube.com/watch",
+  "id": "s-yt-crash",
+  "app": "Google Chrome",
+  "title": "SN2 Reaction Mechanism - Organic Chemistry - YouTube",
+  "site": "youtube.com/watch",
+  "choice": "work",
+  "pWork": 0.99,
+  "latencyMs": 350,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fOrganic Chemistry Reactions Flashcards | Quizlet\u001fquizlet.com/483221/organic-chemistry-reactions-flash-cards",
+  "id": "s-quizlet",
+  "app": "Google Chrome",
+  "title": "Organic Chemistry Reactions Flashcards | Quizlet",
+  "site": "quizlet.com/483221/organic-chemistry-reactions-flash-cards",
+  "choice": "work",
+  "pWork": 0.71,
+  "latencyMs": 379,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fLab Report 3 - Overleaf, Online LaTeX Editor\u001foverleaf.com/project/64f1a2b3",
+  "id": "s-overleaf",
+  "app": "Google Chrome",
+  "title": "Lab Report 3 - Overleaf, Online LaTeX Editor",
+  "site": "overleaf.com/project/64f1a2b3",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 434,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fSN2 stereochemistry inversion - Google Scholar\u001fscholar.google.com/scholar",
+  "id": "s-scholar",
+  "app": "Google Chrome",
+  "title": "SN2 stereochemistry inversion - Google Scholar",
+  "site": "scholar.google.com/scholar",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 450,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fintegrate x^2 sin x - Wolfram|Alpha\u001fwolframalpha.com/input",
+  "id": "s-wolfram",
+  "app": "Google Chrome",
+  "title": "integrate x^2 sin x - Wolfram|Alpha",
+  "site": "wolframalpha.com/input",
+  "choice": "work",
+  "pWork": 0.99,
+  "latencyMs": 435,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Discord\u001f#study-group | CHEM 201 - Discord\u001f",
+  "id": "s-discord-study",
+  "app": "Discord",
+  "title": "#study-group | CHEM 201 - Discord",
+  "choice": "work",
+  "pWork": 0.81,
+  "latencyMs": 433,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "WhatsApp\u001fWhatsApp\u001f",
+  "id": "s-whatsapp-class",
+  "app": "WhatsApp",
+  "title": "WhatsApp",
+  "choice": "work",
+  "pWork": 0.73,
+  "latencyMs": 386,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fMeet - abc-defg-hij\u001fmeet.google.com/abc-defg-hij",
+  "id": "m-meet",
+  "app": "Google Chrome",
+  "title": "Meet - abc-defg-hij",
+  "site": "meet.google.com/abc-defg-hij",
+  "choice": "work",
+  "pWork": 0.99,
+  "latencyMs": 432,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fMeet - xyz-wvut-rst\u001fmeet.google.com/xyz-wvut-rst",
+  "id": "m-meet-listen",
+  "app": "Google Chrome",
+  "title": "Meet - xyz-wvut-rst",
+  "site": "meet.google.com/xyz-wvut-rst",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 401,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Notes\u001fMeeting recap\u001f",
+  "id": "dict-notes",
+  "app": "Notes",
+  "title": "Meeting recap",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 460,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fNew story - Medium\u001fmedium.com/new-story",
+  "id": "dict-medium",
+  "app": "Google Chrome",
+  "title": "New story - Medium",
+  "site": "medium.com/new-story",
+  "choice": "work",
+  "pWork": 0.89,
+  "latencyMs": 414,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fUntitled - Substack\u001fsubstack.com/publish/post/17234",
+  "id": "dict-substack",
+  "app": "Google Chrome",
+  "title": "Untitled - Substack",
+  "site": "substack.com/publish/post/17234",
+  "choice": "work",
+  "pWork": 0.99,
+  "latencyMs": 387,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fPricing \u0026 Fees | Stripe\u001fstripe.com/pricing",
+  "id": "x-stripe-pricing",
+  "app": "Google Chrome",
+  "title": "Pricing \u0026 Fees | Stripe",
+  "site": "stripe.com/pricing",
+  "choice": "work",
+  "pWork": 0.98,
+  "latencyMs": 351,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fIntercom Reviews 2025 | G2\u001fg2.com/products/intercom/reviews",
+  "id": "x-g2",
+  "app": "Google Chrome",
+  "title": "Intercom Reviews 2025 | G2",
+  "site": "g2.com/products/intercom/reviews",
+  "choice": "distraction",
+  "pWork": 0.17,
+  "latencyMs": 374,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fPriya Nair - Head of Product - Orbit | LinkedIn\u001flinkedin.com/in/priya-nair-product",
+  "id": "x-linkedin-profile",
+  "app": "Google Chrome",
+  "title": "Priya Nair - Head of Product - Orbit | LinkedIn",
+  "site": "linkedin.com/in/priya-nair-product",
+  "choice": "work",
+  "pWork": 0.98,
+  "latencyMs": 429,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fSenior Product Designer - Orbit | LinkedIn\u001flinkedin.com/jobs/view/3912345678",
+  "id": "x-linkedin-job",
+  "app": "Google Chrome",
+  "title": "Senior Product Designer - Orbit | LinkedIn",
+  "site": "linkedin.com/jobs/view/3912345678",
+  "choice": "work",
+  "pWork": 1,
+  "latencyMs": 361,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fWhat do you use for customer feedback? : r/SaaS\u001freddit.com/r/SaaS/comments/1ab2cd/what_do_you_use_for_customer_feedback",
+  "id": "x-reddit-saas",
+  "app": "Google Chrome",
+  "title": "What do you use for customer feedback? : r/SaaS",
+  "site": "reddit.com/r/SaaS/comments/1ab2cd/what_do_you_use_for_customer_feedback",
+  "choice": "distraction",
+  "pWork": 0.39,
+  "latencyMs": 408,
+  "model": "typesafe-ai/jev",
+  "variants": [
+   {
+    "kind": "half the words",
+    "pWork": 0.43
+   },
+   {
+    "kind": "cookie banner and ads",
+    "pWork": 0.47
+   }
+  ]
+ },
+ {
+  "key": "Google Chrome\u001fLenny Rachitsky on X: 'The best onboarding is the one users never notice'\u001fx.com/lennysan/status/1840000000000000000",
+  "id": "x-tweet",
+  "app": "Google Chrome",
+  "title": "Lenny Rachitsky on X: 'The best onboarding is the one users never notice'",
+  "site": "x.com/lennysan/status/1840000000000000000",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 387,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fNotion Calendar - Full Walkthrough 2025 - YouTube\u001fyoutube.com/watch",
+  "id": "x-yt-demo",
+  "app": "Google Chrome",
+  "title": "Notion Calendar - Full Walkthrough 2025 - YouTube",
+  "site": "youtube.com/watch",
+  "choice": "distraction",
+  "pWork": 0.35,
+  "latencyMs": 348,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fOrbit raises $40M to rethink customer feedback | TechCrunch\u001ftechcrunch.com/2026/09/30/orbit-raises-40m-customer-feedback",
+  "id": "x-techcrunch",
+  "app": "Google Chrome",
+  "title": "Orbit raises $40M to rethink customer feedback | TechCrunch",
+  "site": "techcrunch.com/2026/09/30/orbit-raises-40m-customer-feedback",
+  "choice": "distraction",
+  "pWork": 0.07,
+  "latencyMs": 381,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fFlexispot E7 Standing Desk, Electric Height Adjustable - Amazon.in\u001famazon.in/dp/B09XYZ1234",
+  "id": "x-amazon-desk",
+  "app": "Google Chrome",
+  "title": "Flexispot E7 Standing Desk, Electric Height Adjustable - Amazon.in",
+  "site": "amazon.in/dp/B09XYZ1234",
+  "choice": "distraction",
+  "pWork": 0.09,
+  "latencyMs": 388,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fOrbit - Product Hunt\u001fproducthunt.com/posts/orbit-feedback",
+  "id": "x-producthunt",
+  "app": "Google Chrome",
+  "title": "Orbit - Product Hunt",
+  "site": "producthunt.com/posts/orbit-feedback",
+  "choice": "work",
+  "pWork": 0.6,
+  "latencyMs": 414,
+  "model": "typesafe-ai/jev",
+  "variants": [
+   {
+    "kind": "half the words",
+    "pWork": 0.22
+   },
+   {
+    "kind": "cookie banner and ads",
+    "pWork": 0.48
+   }
+  ]
+ },
+ {
+  "key": "Google Chrome\u001fElon Musk on X: 'Starship flight 12 next week'\u001fx.com/elonmusk/status/1841111111111111111",
+  "id": "r-x-status",
+  "app": "Google Chrome",
+  "title": "Elon Musk on X: 'Starship flight 12 next week'",
+  "site": "x.com/elonmusk/status/1841111111111111111",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 477,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fI Beat the HARDEST Elden Ring Boss With a Guitar - YouTube\u001fyoutube.com/watch",
+  "id": "r-yt-gaming",
+  "app": "Google Chrome",
+  "title": "I Beat the HARDEST Elden Ring Boss With a Guitar - YouTube",
+  "site": "youtube.com/watch",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 382,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fColdplay - Yellow (Official Video) - YouTube\u001fyoutube.com/watch",
+  "id": "r-yt-music",
+  "app": "Google Chrome",
+  "title": "Coldplay - Yellow (Official Video) - YouTube",
+  "site": "youtube.com/watch",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 394,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fMy cat discovered the vacuum cleaner : r/funny\u001freddit.com/r/funny/comments/1k9z8/my_cat_discovered_the_vacuum_cleaner",
+  "id": "r-reddit-funny",
+  "app": "Google Chrome",
+  "title": "My cat discovered the vacuum cleaner : r/funny",
+  "site": "reddit.com/r/funny/comments/1k9z8/my_cat_discovered_the_vacuum_cleaner",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 407,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fSony WH-1000XM5 Wireless Headphones - Amazon.in\u001famazon.in/dp/B09XS7JWHH",
+  "id": "r-amazon-product",
+  "app": "Google Chrome",
+  "title": "Sony WH-1000XM5 Wireless Headphones - Amazon.in",
+  "site": "amazon.in/dp/B09XS7JWHH",
+  "choice": "distraction",
+  "pWork": 0.01,
+  "latencyMs": 400,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fNBA Scoreboard - ESPN\u001fespn.com/nba/scoreboard",
+  "id": "r-espn",
+  "app": "Google Chrome",
+  "title": "NBA Scoreboard - ESPN",
+  "site": "espn.com/nba/scoreboard",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 405,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fLive Cricket Score - Cricbuzz\u001fcricbuzz.com/live-cricket-scores/89021",
+  "id": "r-cricbuzz",
+  "app": "Google Chrome",
+  "title": "Live Cricket Score - Cricbuzz",
+  "site": "cricbuzz.com/live-cricket-scores/89021",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 398,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fSenate passes spending bill after marathon session | CNN Politics\u001fedition.cnn.com/2026/10/03/politics/senate-spending-bill/index.html",
+  "id": "r-cnn-article",
+  "app": "Google Chrome",
+  "title": "Senate passes spending bill after marathon session | CNN Politics",
+  "site": "edition.cnn.com/2026/10/03/politics/senate-spending-bill/index.html",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 389,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001f25 Celebrity Couples Who Looked Totally Different Before They Were Famous | BuzzFeed\u001fbuzzfeed.com/quiz/celebrity-couples-before-fame",
+  "id": "r-buzzfeed",
+  "app": "Google Chrome",
+  "title": "25 Celebrity Couples Who Looked Totally Different Before They Were Famous | BuzzFeed",
+  "site": "buzzfeed.com/quiz/celebrity-couples-before-fame",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 485,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fWordle - The New York Times\u001fnytimes.com/games/wordle/index.html",
+  "id": "r-wordle",
+  "app": "Google Chrome",
+  "title": "Wordle - The New York Times",
+  "site": "nytimes.com/games/wordle/index.html",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 365,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Google Chrome\u001fPlay Chess Online - Chess.com\u001fchess.com/play/online",
+  "id": "r-chess",
+  "app": "Google Chrome",
+  "title": "Play Chess Online - Chess.com",
+  "site": "chess.com/play/online",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 420,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "WhatsApp\u001fWhatsApp\u001f",
+  "id": "r-whatsapp-friends",
+  "app": "WhatsApp",
+  "title": "WhatsApp",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 473,
+  "model": "typesafe-ai/jev"
+ },
+ {
+  "key": "Discord\u001f#memes | Gaming Hangout - Discord\u001f",
+  "id": "r-discord-memes",
+  "app": "Discord",
+  "title": "#memes | Gaming Hangout - Discord",
+  "choice": "distraction",
+  "pWork": 0,
+  "latencyMs": 440,
+  "model": "typesafe-ai/jev"
+ }
+]

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "hello": {
+    "clip": "hello_wave",
+    "file": "character/anims/hello_wave.usdz",
+    "preview": "previews/poses/hello_wave.png",
+    "durationSeconds": 3,
+    "reduceMotion": "crossfade content to happy; no hop"
+  },
+  "nameTagHold": {
+    "optional": true,
+    "blendShapes": {
+      "blink_L": 0.18000000715255737,
+      "blink_R": 0.18000000715255737,
+      "smile": 0.30000001192092896
+    },
+    "jointEulerDegrees": {
+      "head": [
+        0.0,
+        0.0,
+        -3.0000000834826057
+      ],
+      "arm_L": [
+        -20.997837121958636,
+        4.760864259533736,
+        25.286260184810352
+      ],
+      "arm_R": [
+        -20.997837121958636,
+        -4.760864259533736,
+        -25.286260184810352
+      ]
+    },
+    "attachment": "character/prop_attachments.json#name_tag_hold",
+    "preview": "previews/onboarding/name-tag-hold.png",
+    "paperTextAreaModelUnits": {
+      "center": [
+        0,
+        0,
+        0.007
+      ],
+      "size": [
+        0.22,
+        0.065
+      ],
+      "frontNormal": [
+        0,
+        0,
+        1
+      ]
+    },
+    "text": "Empty by design; use the person\u2019s entered name, or keep the optional prop hidden. Do not bake personal names into shared assets."
+  }
+}
